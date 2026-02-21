@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>earmarkIQ — Smart Money, No Effort</title>
+<meta name="description" content="Earmark connects to your bank via Open Banking, analyses your spending, and shows you exactly how to allocate your salary. AI-powered financial clarity for UK professionals.">
+<meta property="og:title" content="earmarkIQ — Smart Money, No Effort">
+<meta property="og:description" content="AI-powered salary allocation for UK professionals. Connect your bank and make every pound work harder.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,400&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#06080f;--bg2:#0a0d17;--bg3:#0e1220;--sf:#141929;--sf2:#191f33;--bd:#1e2540;--bd2:#283050;--tx:#eaecf5;--tx2:#a0a5bc;--tx3:#686e88;--tx4:#464c64;--mint:#4ECDC4;--mintL:#7EDDD6;--mintD:#3aada6;--mintG:rgba(78,205,196,0.15);--coral:#FF6B6B;--amber:#F5A623;--blue:#5B8DEF;--purple:#9B8FE8;--green:#4ADE80;--appBg:#F8F9FC;--appCard:#FFFFFF;--appBd:#E8EBF0;--appTx:#1A1D26;--appTx2:#6B7082;--grad:linear-gradient(135deg,#4ECDC4 0%,#5B8DEF 60%,#9B8FE8 100%);--f:'DM Sans',-apple-system,sans-serif;--m:'IBM Plex Mono',monospace;--ease:cubic-bezier(0.16,1,0.3,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}::selection{background:rgba(78,205,196,0.25);color:#fff}html{scroll-behavior:smooth}body{font-family:var(--f);background:var(--bg);color:var(--tx);overflow-x:hidden;-webkit-font-smoothing:antialiased;line-height:1.6}a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:var(--f)}
+
+/* Ambient */
+.amb{position:fixed;inset:0;pointer-events:none;z-index:0}.amb-g{position:absolute;inset:0;background-image:linear-gradient(rgba(78,205,196,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(78,205,196,0.02) 1px,transparent 1px);background-size:64px 64px}.amb-o{position:absolute;border-radius:50%;filter:blur(120px);opacity:.35}.amb-o1{width:700px;height:700px;top:-300px;right:-200px;background:radial-gradient(circle,rgba(78,205,196,0.1),transparent 70%)}.amb-o2{width:500px;height:500px;bottom:20%;left:-200px;background:radial-gradient(circle,rgba(91,141,239,0.07),transparent 70%)}
+
+/* Nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 0;transition:all .4s}.nav.scrolled{background:rgba(6,8,15,.88);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid var(--bd);padding:14px 0}.nav-i{max-width:1200px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between}.nav-l{font-size:24px;font-weight:400;letter-spacing:-.02em}.nav-l b{font-weight:800;color:var(--mint)}.nav-links{display:flex;align-items:center;gap:36px}.nav-a{color:var(--tx2);font-size:14px;font-weight:500;transition:color .2s;position:relative}.nav-a:hover{color:var(--tx)}.nav-a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:var(--mint);transition:width .3s var(--ease)}.nav-a:hover::after{width:100%}.nav-cta{padding:10px 24px;background:var(--mint);color:var(--bg);font-size:14px;font-weight:700;border-radius:100px;border:none;transition:all .3s}.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(78,205,196,.3)}.mob-tog{display:none;background:none;border:none;color:var(--tx);padding:4px}
+
+/* Reveal */
+.r{opacity:0;transform:translateY(50px);transition:all .9s var(--ease)}.r.v{opacity:1;transform:translateY(0)}.rl{opacity:0;transform:translateX(-60px);transition:all .9s var(--ease)}.rl.v{opacity:1;transform:translateX(0)}.rr{opacity:0;transform:translateX(60px);transition:all .9s var(--ease)}.rr.v{opacity:1;transform:translateX(0)}.d1{transition-delay:.06s}.d2{transition-delay:.13s}.d3{transition-delay:.2s}.d4{transition-delay:.27s}
+
+/* Hero */
+.hero{position:relative;z-index:1;min-height:100vh;display:flex;align-items:center;padding:140px 32px 80px;overflow:hidden}.hero-i{max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 16px 7px 10px;background:rgba(78,205,196,.08);border:1px solid rgba(78,205,196,.2);border-radius:100px;font-size:13px;font-weight:500;color:var(--mint);margin-bottom:28px;animation:fu .7s var(--ease) both}
+.hero-dot{width:8px;height:8px;border-radius:50%;background:var(--mint);animation:pd 2s ease infinite}
+@keyframes pd{0%,100%{box-shadow:0 0 0 0 rgba(78,205,196,.4)}50%{box-shadow:0 0 0 8px rgba(78,205,196,0)}}
+.hero-h{font-size:clamp(40px,5.2vw,68px);font-weight:900;line-height:1.06;letter-spacing:-.04em;margin-bottom:24px;animation:fu .7s var(--ease) .08s both}.hero-h em{font-style:normal;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-p{font-size:18px;color:var(--tx2);line-height:1.75;max-width:500px;margin-bottom:36px;animation:fu .7s var(--ease) .16s both}
+.hero-btns{display:flex;align-items:center;gap:14px;animation:fu .7s var(--ease) .24s both}
+.btn-m{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:var(--mint);color:var(--bg);font-size:16px;font-weight:700;border-radius:100px;border:none;transition:all .3s}.btn-m:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(78,205,196,.35)}
+.btn-g{display:inline-flex;align-items:center;gap:8px;padding:16px 28px;background:transparent;color:var(--tx2);font-size:15px;font-weight:500;border-radius:100px;border:1px solid var(--bd2);transition:all .3s}.btn-g:hover{border-color:var(--mint);color:var(--mint);background:rgba(78,205,196,.04)}
+.hero-trust{display:flex;align-items:center;gap:24px;margin-top:40px;animation:fu .7s var(--ease) .32s both;flex-wrap:wrap}.hero-ti{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--tx3)}.hero-ti svg{width:16px;height:16px;color:var(--mint)}
+@keyframes fu{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+
+/* Hero visual */
+.hero-vis{position:relative;display:flex;justify-content:center;animation:fu .9s var(--ease) .2s both}
+.ph-wrap{position:relative}
+.ph-glow{position:absolute;inset:-60px;background:radial-gradient(ellipse at center,rgba(78,205,196,.1) 0%,transparent 65%);pointer-events:none;animation:gb 5s ease infinite}
+@keyframes gb{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.03)}}
+.phone{width:270px;height:570px;background:var(--appBg);border-radius:36px;border:2px solid #2a3050;overflow:hidden;position:relative;box-shadow:0 0 0 1px rgba(255,255,255,.04),0 25px 70px rgba(0,0,0,.6),0 0 120px rgba(78,205,196,.06);z-index:2}
+.ph-notch{width:110px;height:26px;background:#1a1d26;border-radius:0 0 18px 18px;margin:0 auto;position:relative;z-index:5}
+.ph-scr{padding:14px 16px 16px;font-family:var(--f);overflow:hidden}
+.ph-hdr{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}.ph-brand{font-size:14px;font-weight:400;color:var(--appTx)}.ph-brand b{font-weight:800;color:var(--mint)}.ph-inc-l{font-size:9px;color:var(--appTx2);text-align:right;text-transform:uppercase;letter-spacing:.06em}.ph-inc{font-size:18px;font-weight:800;color:var(--appTx);font-family:var(--m);letter-spacing:-.02em}
+.ph-sl{font-size:8.5px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--appTx2);margin-bottom:6px;display:flex;align-items:center;gap:5px}
+.ph-dw{display:flex;justify-content:center;margin:8px 0 4px;position:relative}.ph-dc{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center}.ph-dl{font-size:8px;color:var(--appTx2);text-transform:uppercase;letter-spacing:.04em}.ph-dv{font-size:16px;font-weight:800;font-family:var(--m);color:var(--amber)}
+.ph-leg{display:flex;justify-content:center;gap:10px;margin-bottom:10px;flex-wrap:wrap}.ph-li{display:flex;align-items:center;gap:3px;font-size:8px;color:var(--appTx2)}.ph-ld{width:6px;height:6px;border-radius:50%}
+.ph-snap{background:var(--appCard);border:1px solid var(--appBd);border-radius:10px;padding:10px 12px;margin-bottom:8px}.ph-snt{font-size:8.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--appTx2);margin-bottom:4px;display:flex;align-items:center;gap:4px}.ph-snx{font-size:9.5px;color:var(--appTx);line-height:1.5}.ph-snx .h{color:var(--mint);font-weight:700}.ph-snx .ha{color:var(--amber);font-weight:700}
+.ph-ig{display:grid;grid-template-columns:1fr 1fr;gap:6px}.ph-ic{background:var(--appCard);border:1px solid var(--appBd);border-radius:8px;padding:8px 10px}.ph-ii{font-size:10px;margin-bottom:3px}.ph-il{font-size:7px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--appTx2);margin-bottom:2px}.ph-iv{font-size:13px;font-weight:800;font-family:var(--m);letter-spacing:-.02em}.ph-id{font-size:7.5px;color:var(--appTx2);line-height:1.4;margin-top:2px}
+.ph-tb{position:absolute;bottom:0;left:0;right:0;display:flex;justify-content:space-around;padding:8px 0 18px;background:var(--appCard);border-top:1px solid var(--appBd)}.ph-t{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:8px;color:var(--appTx2)}.ph-t.act{color:var(--mint)}.ph-t svg{width:16px;height:16px}
+
+/* Floating */
+.fc{position:absolute;background:var(--sf);border:1px solid var(--bd2);border-radius:14px;padding:14px 18px;box-shadow:0 16px 48px rgba(0,0,0,.5);z-index:3;animation:fl 7s ease infinite;backdrop-filter:blur(8px)}.fc1{top:50px;left:-70px}.fc2{bottom:120px;right:-60px;animation-delay:-2.5s}.fc3{top:240px;right:-80px;animation-delay:-5s}@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}.fc-l{font-size:9px;color:var(--tx3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}.fc-v{font-family:var(--m);font-weight:700;font-size:17px}.fc-s{font-size:9px;color:var(--tx4);margin-top:2px}
+
+/* Ticker */
+.ticker{overflow:hidden;padding:18px 0;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);background:var(--bg2);position:relative;z-index:1}.ticker-t{display:flex;animation:st 35s linear infinite;width:max-content}.ticker-i{display:flex;align-items:center;gap:12px;padding:0 36px;white-space:nowrap;font-size:14px;font-weight:500;color:var(--tx3)}.ticker-d{width:5px;height:5px;border-radius:50%;background:var(--mint);opacity:.5}@keyframes st{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* Sections */
+.sec{position:relative;z-index:1;padding:120px 32px}.sec-i{max-width:1200px;margin:0 auto}.sec-l{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:var(--mint);text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px;font-family:var(--m)}.sec-l::before{content:'';width:20px;height:1.5px;background:var(--mint);border-radius:1px}.sec-h{font-size:clamp(30px,3.8vw,50px);font-weight:800;line-height:1.1;letter-spacing:-.035em;margin-bottom:16px}.sec-d{font-size:17px;color:var(--tx2);max-width:540px;line-height:1.75}.sec-c{text-align:center}.sec-c .sec-d{margin:0 auto}.sec-c .sec-l{justify-content:center}
+
+/* Steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px}.step{background:var(--sf);border:1px solid var(--bd);border-radius:18px;padding:32px 24px;position:relative;overflow:hidden;transition:all .4s}.step:hover{border-color:var(--mint);transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.25),0 0 30px var(--mintG)}.step::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad);opacity:0;transition:opacity .4s}.step:hover::before{opacity:1}.step-n{font-family:var(--m);font-size:56px;font-weight:800;line-height:1;background:linear-gradient(180deg,rgba(78,205,196,.15),rgba(78,205,196,.02));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:16px}.step-ic{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:20px}.step-t{font-size:19px;font-weight:700;margin-bottom:8px;letter-spacing:-.02em}.step-x{font-size:14px;color:var(--tx2);line-height:1.7}
+
+/* Stats */
+.stats{border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);background:var(--bg2)}.stats-g{display:grid;grid-template-columns:repeat(4,1fr)}.stat{text-align:center;padding:44px 16px;position:relative}.stat:not(:last-child)::after{content:'';position:absolute;right:0;top:25%;height:50%;width:1px;background:var(--bd)}.stat-v{font-family:var(--m);font-size:38px;font-weight:800;letter-spacing:-.03em;line-height:1;margin-bottom:6px}.stat-l{font-size:13px;color:var(--tx3)}
+
+/* Features */
+.feat-bg{background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 50%,var(--bg) 100%)}.fr{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:120px}.fr:last-child{margin-bottom:0}.fr.rev{direction:rtl}.fr.rev>*{direction:ltr}.ft{max-width:480px}.ft-tag{display:inline-flex;padding:5px 14px;border-radius:100px;font-size:12px;font-weight:600;font-family:var(--m);margin-bottom:16px;letter-spacing:.02em}.ft-h{font-size:34px;font-weight:800;letter-spacing:-.03em;line-height:1.15;margin-bottom:14px}.ft-d{font-size:15px;color:var(--tx2);line-height:1.8;margin-bottom:22px}.ft-ul{list-style:none;display:flex;flex-direction:column;gap:10px}.ft-ul li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--tx2)}.ft-ck{width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}.fv{display:flex;justify-content:center}
+
+/* Mocks */
+.mk{background:var(--sf);border:1px solid var(--bd);border-radius:18px;padding:22px;width:100%;max-width:420px;position:relative;overflow:hidden}
+.mk-bar{display:flex;height:8px;border-radius:4px;overflow:hidden;gap:2px;margin-bottom:18px}.mk-seg{border-radius:4px}
+.mk-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--bd)}.mk-row:last-child{border-bottom:none}.mk-rl{display:flex;align-items:center;gap:10px}.mk-dot{width:8px;height:8px;border-radius:50%}.mk-lab{font-size:13px;color:var(--tx2)}.mk-val{font-family:var(--m);font-weight:600;font-size:13px}.mk-pct{font-family:var(--m);font-size:10px;color:var(--tx4);margin-left:6px}
+.mk-ins{border-radius:12px;padding:14px 16px;margin-bottom:8px}.mk-ins-t{font-size:12px;font-weight:700;margin-bottom:4px;display:flex;align-items:center;gap:6px}.mk-ins-sv{font-family:var(--m);font-size:11px;font-weight:700;margin-left:auto}.mk-ins-x{font-size:11px;color:var(--tx2);line-height:1.6}.mk-ins-a{font-size:10px;color:var(--mint);margin-top:4px;line-height:1.5}
+.mk-bill{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-radius:10px;margin-bottom:4px;transition:background .2s}.mk-bill:hover{background:rgba(255,255,255,.02)}.mk-bl{display:flex;align-items:center;gap:10px}.mk-bi{width:32px;height:32px;border-radius:8px;background:var(--sf2);display:flex;align-items:center;justify-content:center;font-size:14px}.mk-bn{font-size:13px;font-weight:600}.mk-bc{font-size:10px;color:var(--tx3)}.mk-ba{font-family:var(--m);font-weight:600;font-size:13px}.mk-cr{display:inline-flex;padding:2px 7px;border-radius:4px;font-size:9px;font-weight:700;background:rgba(255,107,107,.1);color:var(--coral);border:1px solid rgba(255,107,107,.2);margin-left:6px}
+.mk-ai{background:linear-gradient(135deg,rgba(91,141,239,.06),rgba(155,143,232,.04));border:1px solid rgba(91,141,239,.15);border-radius:12px;padding:16px;margin-top:14px}.mk-aih{display:flex;align-items:center;gap:8px;margin-bottom:8px}.mk-aii{width:22px;height:22px;border-radius:6px;background:linear-gradient(135deg,var(--blue),var(--purple));display:flex;align-items:center;justify-content:center;font-size:11px}.mk-ail{font-size:11px;font-weight:700;color:var(--blue)}.mk-aix{font-size:11.5px;color:var(--tx2);line-height:1.65}
+.cursor-b{display:inline-block;width:2px;height:13px;background:var(--blue);margin-left:2px;animation:bl 1s step-end infinite;vertical-align:middle}@keyframes bl{0%,100%{opacity:1}50%{opacity:0}}
+.mk-msg-u{background:var(--mint);color:var(--bg);font-size:12px;font-weight:600;padding:10px 14px;border-radius:14px 14px 4px 14px;margin-left:auto;max-width:75%;margin-bottom:6px;width:fit-content}.mk-msg-a{background:var(--sf2);border:1px solid var(--bd);font-size:11px;color:var(--tx2);padding:12px 14px;border-radius:14px 14px 14px 4px;line-height:1.6;max-width:90%;margin-bottom:4px}
+.mk-pf{background:rgba(78,205,196,.04);border:1px solid rgba(78,205,196,.15);border-radius:12px;padding:16px;text-align:center;margin-bottom:12px}.mk-pf-e{font-size:28px;margin-bottom:6px}.mk-pf-t{font-size:15px;font-weight:700;color:var(--mint);margin-bottom:4px}.mk-pf-d{font-size:11px;color:var(--tx2);line-height:1.5}
+.mk-rhy{display:flex;align-items:flex-end;gap:6px;height:70px;margin:12px 0}.mk-rb{flex:1;border-radius:4px 4px 0 0;position:relative}.mk-rbl{position:absolute;bottom:-16px;left:50%;transform:translateX(-50%);font-size:8px;color:var(--tx3);font-family:var(--m)}.mk-rbv{position:absolute;top:-14px;left:50%;transform:translateX(-50%);font-size:8px;color:var(--tx2);font-family:var(--m);font-weight:600}
+
+/* Trust */
+.tg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px}.tc{background:var(--sf);border:1px solid var(--bd);border-radius:16px;padding:28px 22px;text-align:center;transition:all .4s}.tc:hover{border-color:var(--bd2);transform:translateY(-4px)}.tc-i{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:24px}.tc-t{font-size:16px;font-weight:700;margin-bottom:6px;letter-spacing:-.02em}.tc-d{font-size:13px;color:var(--tx2);line-height:1.65}
+
+/* Investors */
+.inv-s{background:linear-gradient(180deg,var(--bg) 0%,var(--bg3) 100%);border-top:1px solid var(--bd)}.inv-g{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px}.inv-c{background:var(--sf);border:1px solid var(--bd);border-radius:16px;padding:28px 24px;transition:all .4s}.inv-c:hover{border-color:var(--bd2);transform:translateY(-3px)}.inv-ci{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:14px}.inv-ct{font-size:17px;font-weight:700;margin-bottom:6px}.inv-cx{font-size:13px;color:var(--tx2);line-height:1.7}.inv-cv{font-family:var(--m);font-size:24px;font-weight:800;margin-top:10px}.inv-cta{text-align:center;margin-top:48px}.btn-inv{display:inline-flex;align-items:center;gap:10px;padding:14px 32px;background:transparent;color:var(--mint);font-size:15px;font-weight:700;border-radius:100px;border:2px solid var(--mint);transition:all .3s;font-family:var(--f)}.btn-inv:hover{background:var(--mint);color:var(--bg);transform:translateY(-2px);box-shadow:0 8px 24px rgba(78,205,196,.25)}
+
+/* CTA */
+.cta-s{text-align:center;position:relative;overflow:hidden}.cta-gl{position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(78,205,196,.06) 0%,transparent 50%),radial-gradient(ellipse at 70% 50%,rgba(91,141,239,.04) 0%,transparent 50%);pointer-events:none}.cta-c{position:relative;z-index:2}.cta-h{font-size:clamp(34px,4.5vw,56px);font-weight:900;letter-spacing:-.04em;line-height:1.1;margin-bottom:18px}.cta-h em{font-style:normal;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}.cta-p{font-size:17px;color:var(--tx2);max-width:480px;margin:0 auto 36px;line-height:1.7}
+.wl-f{display:flex;gap:10px;max-width:440px;margin:0 auto}.wl-in{flex:1;padding:16px 22px;background:var(--sf);border:1px solid var(--bd2);border-radius:100px;color:var(--tx);font-family:var(--f);font-size:15px;outline:none;transition:border-color .3s}.wl-in::placeholder{color:var(--tx4)}.wl-in:focus{border-color:var(--mint);box-shadow:0 0 0 3px var(--mintG)}.wl-btn{padding:16px 30px;background:var(--mint);color:var(--bg);font-family:var(--f);font-size:15px;font-weight:700;border:none;border-radius:100px;transition:all .3s;white-space:nowrap}.wl-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(78,205,196,.3)}.cta-n{font-size:12px;color:var(--tx4);margin-top:14px}
+
+/* Footer */
+.footer{position:relative;z-index:1;border-top:1px solid var(--bd);padding:56px 32px 36px;background:var(--bg)}.footer-i{max-width:1200px;margin:0 auto}.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}.footer-bt{font-size:13px;color:var(--tx2);line-height:1.7;margin-top:14px;max-width:280px}.footer-hd{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--tx4);margin-bottom:16px}.footer-ul{list-style:none;display:flex;flex-direction:column;gap:8px}.footer-ul a{color:var(--tx2);font-size:13px;transition:color .2s}.footer-ul a:hover{color:var(--mint)}.footer-bot{padding-top:28px;border-top:1px solid var(--bd);display:flex;justify-content:space-between;align-items:flex-start;gap:20px}.footer-leg{font-size:10.5px;color:var(--tx4);line-height:1.8;max-width:680px}.footer-cp{font-size:11px;color:var(--tx4);white-space:nowrap}
+
+/* Responsive */
+@media(max-width:960px){.hero-i{grid-template-columns:1fr;text-align:center}.hero-p{margin-left:auto;margin-right:auto}.hero-btns{justify-content:center}.hero-trust{justify-content:center}.hero-vis{margin-top:32px}.fc{display:none}.fr,.fr.rev{grid-template-columns:1fr;direction:ltr;gap:32px}.fr.rev>*{direction:ltr}.ft{max-width:100%}.steps{grid-template-columns:1fr}.stats-g{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2)::after{display:none}.tg{grid-template-columns:1fr}.inv-g{grid-template-columns:1fr}.footer-top{grid-template-columns:1fr 1fr;gap:28px}.nav-links{display:none}.mob-tog{display:block}.wl-f{flex-direction:column}.footer-bot{flex-direction:column}}
+@media(max-width:600px){.hero{padding:120px 20px 48px}.sec{padding:80px 20px}.phone{width:230px;height:490px}.stats-g{grid-template-columns:1fr 1fr}.footer-top{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="amb"><div class="amb-g"></div><div class="amb-o amb-o1"></div><div class="amb-o amb-o2"></div></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav"><div class="nav-i"><a href="#" class="nav-l">earmark<b>IQ</b></a><div class="nav-links"><a href="#how" class="nav-a">How it works</a><a href="#features" class="nav-a">Features</a><a href="#security" class="nav-a">Security</a><a href="#investors" class="nav-a">Investors</a><a href="#waitlist" class="nav-cta">Join Waitlist →</a></div><button class="mob-tog" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></nav>
+
+<!-- HERO -->
+<section class="hero"><div class="hero-i">
+<div>
+  <div class="hero-badge"><span class="hero-dot"></span>Open Banking · UK-first · AI-powered</div>
+  <h1 class="hero-h">Your salary,<br><em>actually working<br>for you.</em></h1>
+  <p class="hero-p">Earmark connects to your bank, analyses every pound you spend, and tells you exactly how to split your paycheck — so your money works before you touch it.</p>
+  <div class="hero-btns"><a href="#waitlist" class="btn-m">Join the Waitlist <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a><a href="#how" class="btn-g">See how it works</a></div>
+  <div class="hero-trust"><div class="hero-ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>FCA compliant</div><div class="hero-ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Bank-level encryption</div><div class="hero-ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>Read-only access</div></div>
+</div>
+<div class="hero-vis"><div class="ph-wrap"><div class="ph-glow"></div>
+  <div class="fc fc1"><div class="fc-l">Savings Rate</div><div class="fc-v" style="color:var(--mint)">15.6%</div><div class="fc-s">↑ 2.3% vs last month</div></div>
+  <div class="fc fc2"><div class="fc-l">Could Save</div><div class="fc-v" style="color:var(--green)">£588<span style="font-size:11px;color:var(--tx3)">/yr</span></div><div class="fc-s">Found across 3 areas</div></div>
+  <div class="fc fc3"><div class="fc-l">Price Creep</div><div class="fc-v" style="color:var(--coral)">+£45<span style="font-size:11px;color:var(--tx3)">/yr</span></div><div class="fc-s">5 subs increased</div></div>
+  <div class="phone"><div class="ph-notch"></div><div class="ph-scr">
+    <div class="ph-hdr"><div class="ph-brand">earmark<b>IQ</b></div><div><div class="ph-inc-l">Monthly Income</div><div class="ph-inc">£2,942</div></div></div>
+    <div class="ph-sl">📊 Paycheck Allocation</div>
+    <div class="ph-dw">
+      <svg width="120" height="120" style="transform:rotate(-90deg)"><circle cx="60" cy="60" r="46" fill="none" stroke="#E8EBF0" stroke-width="12"/><circle cx="60" cy="60" r="46" fill="none" stroke="#FF6B6B" stroke-width="12" stroke-dasharray="29 260" stroke-dashoffset="0" stroke-linecap="round"><animate attributeName="stroke-dasharray" from="0 289" to="29 260" dur="1s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/></circle><circle cx="60" cy="60" r="46" fill="none" stroke="#4ECDC4" stroke-width="12" stroke-dasharray="3 286" stroke-dashoffset="-30" stroke-linecap="round"><animate attributeName="stroke-dasharray" from="0 289" to="3 286" dur="1s" begin=".15s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/></circle><circle cx="60" cy="60" r="46" fill="none" stroke="#5B8DEF" stroke-width="12" stroke-dasharray="1 288" stroke-dashoffset="-34" stroke-linecap="round"><animate attributeName="stroke-dasharray" from="0 289" to="1 288" dur="1s" begin=".25s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/></circle><circle cx="60" cy="60" r="46" fill="none" stroke="#F5A623" stroke-width="12" stroke-dasharray="255 34" stroke-dashoffset="-36" stroke-linecap="round"><animate attributeName="stroke-dasharray" from="0 289" to="255 34" dur="1s" begin=".35s" fill="freeze" calcMode="spline" keySplines="0.4 0 0.2 1"/></circle></svg>
+      <div class="ph-dc"><div class="ph-dl">free to spend</div><div class="ph-dv">£2.6k</div></div>
+    </div>
+    <div class="ph-leg"><div class="ph-li"><span class="ph-ld" style="background:#FF6B6B"></span>Bills 10%</div><div class="ph-li"><span class="ph-ld" style="background:#4ECDC4"></span>Savings 1%</div><div class="ph-li"><span class="ph-ld" style="background:#5B8DEF"></span>Invest 0%</div><div class="ph-li"><span class="ph-ld" style="background:#F5A623"></span>Discretionary 89%</div></div>
+    <div class="ph-snap"><div class="ph-snt">☀️ Today's Snapshot</div><div class="ph-snx">It's Wednesday — you typically spend <span class="ha">£45</span> on Wednesdays. You're at <span class="ha">£23</span>, <span class="h">well under budget</span>.</div></div>
+    <div class="ph-sl" style="margin-top:8px">💡 Weekly Insights</div>
+    <div class="ph-ig"><div class="ph-ic"><div class="ph-ii">📈</div><div class="ph-il">Payday Spike</div><div class="ph-iv" style="color:var(--coral)">+21%</div><div class="ph-id">Extra spend week 1 after payday</div></div><div class="ph-ic"><div class="ph-ii">📅</div><div class="ph-il">Wknd vs Wkday</div><div class="ph-iv" style="color:var(--blue)">£132/£165</div><div class="ph-id">Weekday spending higher</div></div></div>
+  </div>
+  <div class="ph-tb"><div class="ph-t act"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/></svg>Home</div><div class="ph-t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>Activity</div><div class="ph-t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Plan</div><div class="ph-t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>Chat</div></div>
+</div></div></div>
+</div></section>
+
+<!-- TICKER -->
+<div class="ticker"><div class="ticker-t"><div class="ticker-i"><span class="ticker-d"></span>Open Banking API</div><div class="ticker-i"><span class="ticker-d"></span>AI Financial Advisor</div><div class="ticker-i"><span class="ticker-d"></span>Spending Rhythm Analysis</div><div class="ticker-i"><span class="ticker-d"></span>Money Personality</div><div class="ticker-i"><span class="ticker-d"></span>Subscription Radar</div><div class="ticker-i"><span class="ticker-d"></span>Price Creep Alerts</div><div class="ticker-i"><span class="ticker-d"></span>Smart Marketplace</div><div class="ticker-i"><span class="ticker-d"></span>Investment Calculator</div><div class="ticker-i"><span class="ticker-d"></span>Salary Allocation</div><div class="ticker-i"><span class="ticker-d"></span>Goal Tracking</div><div class="ticker-i"><span class="ticker-d"></span>Open Banking API</div><div class="ticker-i"><span class="ticker-d"></span>AI Financial Advisor</div><div class="ticker-i"><span class="ticker-d"></span>Spending Rhythm Analysis</div><div class="ticker-i"><span class="ticker-d"></span>Money Personality</div><div class="ticker-i"><span class="ticker-d"></span>Subscription Radar</div><div class="ticker-i"><span class="ticker-d"></span>Price Creep Alerts</div><div class="ticker-i"><span class="ticker-d"></span>Smart Marketplace</div><div class="ticker-i"><span class="ticker-d"></span>Investment Calculator</div><div class="ticker-i"><span class="ticker-d"></span>Salary Allocation</div><div class="ticker-i"><span class="ticker-d"></span>Goal Tracking</div></div></div>
+
+<!-- HOW IT WORKS -->
+<section class="sec" id="how"><div class="sec-i">
+  <div class="r"><div class="sec-l">How it works</div></div>
+  <h2 class="sec-h r d1">Three steps to financial clarity.<br>Two minutes to set up.</h2>
+  <p class="sec-d r d2">No spreadsheets. No budgeting apps you'll abandon. Connect and let Earmark do the thinking.</p>
+  <div class="steps">
+    <div class="step r d1"><div class="step-n">01</div><div class="step-ic" style="background:rgba(78,205,196,.1);color:var(--mint)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div><h3 class="step-t">Connect your bank</h3><p class="step-x">Link your account in seconds via Open Banking. Monzo, Starling, Barclays, HSBC — we support them all. Read-only, we never touch your money.</p></div>
+    <div class="step r d2"><div class="step-n">02</div><div class="step-ic" style="background:rgba(91,141,239,.1);color:var(--blue)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h3 class="step-t">Get your financial profile</h3><p class="step-x">Our AI analyses your spending DNA — patterns, rhythms, habits, and blind spots. You get a Money Personality, Quick Wins, and a recommended paycheck split.</p></div>
+    <div class="step r d3"><div class="step-n">03</div><div class="step-ic" style="background:rgba(155,143,232,.1);color:var(--purple)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div><h3 class="step-t">Watch your money grow</h3><p class="step-x">Track weekly budgets, catch subscription creep, hit savings goals, and get AI recommendations from our smart marketplace — tailored to your data.</p></div>
+  </div>
+</div></section>
+
+<!-- STATS -->
+<section class="stats sec" style="padding:0"><div class="sec-i"><div class="stats-g">
+  <div class="stat r d1"><div class="stat-v" style="color:var(--mint)" data-count="12">0</div><div class="stat-l">Categories tracked</div></div>
+  <div class="stat r d2"><div class="stat-v" style="color:var(--coral)" data-count="42" data-suffix="%">0%</div><div class="stat-l">Post-payday spike detected</div></div>
+  <div class="stat r d3"><div class="stat-v" style="color:var(--green)" data-prefix="£" data-count="588">£0</div><div class="stat-l">Annual savings found</div></div>
+  <div class="stat r d4"><div class="stat-v" style="color:var(--purple)" data-count="2" data-suffix=" min">0 min</div><div class="stat-l">Setup time</div></div>
+</div></div></section>
+
+<!-- FEATURES -->
+<section class="sec feat-bg" id="features"><div class="sec-i">
+
+  <!-- F1: AI Profile -->
+  <div class="fr">
+    <div class="ft rl">
+      <div class="ft-tag" style="background:rgba(78,205,196,.08);color:var(--mint);border:1px solid rgba(78,205,196,.2)">AI Financial Profile</div>
+      <h3 class="ft-h">Your money has a<br>personality. Meet it.</h3>
+      <p class="ft-d">The moment you connect, Earmark builds a financial profile — your spending type, danger zones, quick wins, and a roadmap to your goals.</p>
+      <ul class="ft-ul"><li><div class="ft-ck" style="background:rgba(78,205,196,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Money Personality analysis (Feast or Famine, Steady Eddie, etc.)</li><li><div class="ft-ck" style="background:rgba(78,205,196,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Spending rhythm — which days cost you most</li><li><div class="ft-ck" style="background:rgba(78,205,196,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Quick Wins with exact £ amounts you could save</li></ul>
+    </div>
+    <div class="fv rr"><div class="mk">
+      <div class="mk-pf"><div class="mk-pf-e">🎢</div><div class="mk-pf-t">The Feast or Famine Spender</div><div class="mk-pf-d">Your spending swings significantly month to month. A baseline weekly budget could smooth the peaks.</div></div>
+      <div style="font-size:13px;font-weight:700;margin-bottom:8px">Spending Rhythm</div>
+      <div class="mk-rhy"><div class="mk-rb" style="height:10%;background:var(--mint)"><div class="mk-rbv">£35</div><div class="mk-rbl">Mon</div></div><div class="mk-rb" style="height:41%;background:var(--mint)"><div class="mk-rbv">£143</div><div class="mk-rbl">Tue</div></div><div class="mk-rb" style="height:100%;background:var(--mint)"><div class="mk-rbv">£350</div><div class="mk-rbl">Wed</div></div><div class="mk-rb" style="height:15%;background:var(--mint)"><div class="mk-rbv">£52</div><div class="mk-rbl">Thu</div></div><div class="mk-rb" style="height:60%;background:var(--mint)"><div class="mk-rbv">£211</div><div class="mk-rbl">Fri</div></div><div class="mk-rb" style="height:54%;background:var(--amber)"><div class="mk-rbv">£188</div><div class="mk-rbl">Sat</div></div><div class="mk-rb" style="height:15%;background:var(--amber)"><div class="mk-rbv">£54</div><div class="mk-rbl">Sun</div></div></div>
+      <div style="margin-top:22px;padding:12px;background:rgba(78,205,196,.04);border:1px solid rgba(78,205,196,.12);border-radius:10px"><div style="font-size:12px;font-weight:700;color:var(--mint);margin-bottom:4px">Could you save?</div><div style="font-family:var(--m);font-size:20px;font-weight:800;color:var(--green);margin-bottom:4px">£588/year</div><div style="font-size:10px;color:var(--tx2);line-height:1.5">£21/mo transport · £20/mo entertainment · £7/mo tiny subs</div></div>
+    </div></div>
+  </div>
+
+  <!-- F2: Bills -->
+  <div class="fr rev">
+    <div class="ft rr">
+      <div class="ft-tag" style="background:rgba(255,107,107,.08);color:var(--coral);border:1px solid rgba(255,107,107,.2)">Subscription Radar</div>
+      <h3 class="ft-h">Catch every price<br>increase instantly.</h3>
+      <p class="ft-d">Earmark watches your recurring payments. The moment a subscription creeps up, you'll know — along with the annual impact.</p>
+      <ul class="ft-ul"><li><div class="ft-ck" style="background:rgba(255,107,107,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--coral)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Automatic price change detection across all subscriptions</li><li><div class="ft-ck" style="background:rgba(255,107,107,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--coral)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Annual impact calculations — the real cost of small increases</li><li><div class="ft-ck" style="background:rgba(255,107,107,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--coral)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Bills, subscriptions, and daily habits — auto-categorised</li></ul>
+    </div>
+    <div class="fv rl"><div class="mk">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px"><div style="font-size:14px;font-weight:700">Bills & Recurring</div><div style="font-family:var(--m);font-size:18px;font-weight:800">£291.72<span style="font-size:11px;color:var(--tx3);font-weight:400">/mo</span></div></div>
+      <div style="display:flex;gap:0;margin-bottom:16px;text-align:center"><div style="flex:1;padding:8px;border-right:1px solid var(--bd)"><div style="font-family:var(--m);font-size:14px;font-weight:700;color:var(--coral)">£80</div><div style="font-size:9px;color:var(--tx3)">Bills</div></div><div style="flex:1;padding:8px;border-right:1px solid var(--bd)"><div style="font-family:var(--m);font-size:14px;font-weight:700;color:var(--blue)">£79.73</div><div style="font-size:9px;color:var(--tx3)">Subscriptions</div></div><div style="flex:1;padding:8px"><div style="font-family:var(--m);font-size:14px;font-weight:700;color:var(--amber)">£131.99</div><div style="font-size:9px;color:var(--tx3)">Daily Habits</div></div></div>
+      <div class="mk-bill" style="background:rgba(255,107,107,.03)"><div class="mk-bl"><div class="mk-bi">📊</div><div><div class="mk-bn">Datacamp</div><div class="mk-bc">£33.55 → £34.27</div></div></div><span class="mk-cr">+£9/yr</span></div>
+      <div class="mk-bill" style="background:rgba(255,107,107,.03)"><div class="mk-bl"><div class="mk-bi">✈️</div><div><div class="mk-bn">easyJet</div><div class="mk-bc">£3.75 → £3.95</div></div></div><span class="mk-cr">+£2/yr</span></div>
+      <div class="mk-bill" style="background:rgba(255,107,107,.03)"><div class="mk-bl"><div class="mk-bi">💈</div><div><div class="mk-bn">Seabarber</div><div class="mk-bc">£33.00 → £35.00</div></div></div><span class="mk-cr">+£24/yr</span></div>
+      <div style="margin-top:12px;padding:10px;background:rgba(255,107,107,.05);border:1px solid rgba(255,107,107,.12);border-radius:8px"><span style="font-size:11px;color:var(--tx2)">⚠️ Subscription creep: <b style="color:var(--coral)">+£3.78/mo</b> · <b style="color:var(--coral)">£45/year</b></span></div>
+    </div></div>
+  </div>
+
+  <!-- F3: Weekly Insights -->
+  <div class="fr">
+    <div class="ft rl">
+      <div class="ft-tag" style="background:rgba(91,141,239,.08);color:var(--blue);border:1px solid rgba(91,141,239,.2)">Weekly Insights</div>
+      <h3 class="ft-h">Insights that actually<br>save you money.</h3>
+      <p class="ft-d">Earmark spots duplicate charges, identifies spending spikes, and tells you exactly where to cut — with pound amounts, not platitudes.</p>
+      <ul class="ft-ul"><li><div class="ft-ck" style="background:rgba(91,141,239,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Duplicate charge detection — "You're being charged twice"</li><li><div class="ft-ck" style="background:rgba(91,141,239,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Buffer warnings when surplus gets dangerously thin</li><li><div class="ft-ck" style="background:rgba(91,141,239,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Actionable savings with alternatives and next steps</li></ul>
+    </div>
+    <div class="fv rr"><div class="mk">
+      <div style="font-size:14px;font-weight:700;margin-bottom:12px">📋 Weekly Insights</div>
+      <div class="mk-ins" style="background:rgba(255,107,107,.05);border-left:3px solid var(--coral)"><div class="mk-ins-t" style="color:var(--tx)">Duplicate charges <span class="mk-ins-sv" style="color:var(--mint)">Save £177/mo</span></div><div class="mk-ins-x">You're being charged twice for Microsoft (£8.49 × 2) and Diesel Ak Cic (£80 × 2).</div><div class="mk-ins-a">Check your subscription list →</div></div>
+      <div class="mk-ins" style="background:rgba(245,166,35,.04);border-left:3px solid var(--amber)"><div class="mk-ins-t" style="color:var(--tx)">Price creep spotted <span class="mk-ins-sv" style="color:var(--mint)">Save £4/mo</span></div><div class="mk-ins-x">5 subscriptions increased — costing +£3.78/month (£45/year).</div><div class="mk-ins-a">Review each increase →</div></div>
+      <div class="mk-ins" style="background:rgba(255,107,107,.03);border-left:3px solid var(--coral)"><div class="mk-ins-t" style="color:var(--tx)">Tight monthly buffer</div><div class="mk-ins-x">Surplus is only £43.86 — less than 2% of income. You're spending 98.5% of what you earn.</div><div class="mk-ins-a">Consider pausing subscriptions →</div></div>
+    </div></div>
+  </div>
+
+  <!-- F4: AI Chat -->
+  <div class="fr rev">
+    <div class="ft rr">
+      <div class="ft-tag" style="background:rgba(155,143,232,.08);color:var(--purple);border:1px solid rgba(155,143,232,.2)">AI Chat</div>
+      <h3 class="ft-h">Ask anything about<br>your finances.</h3>
+      <p class="ft-d">Earmark AI knows your transactions, goals, and habits. Ask "Can I afford a holiday?" and get an answer based on your real data — not generic advice.</p>
+      <ul class="ft-ul"><li><div class="ft-ck" style="background:rgba(155,143,232,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Context-aware — knows your income, bills, goals, patterns</li><li><div class="ft-ck" style="background:rgba(155,143,232,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Suggested prompts to get started quickly</li><li><div class="ft-ck" style="background:rgba(155,143,232,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Honest answers — if you can't afford it, it tells you why</li></ul>
+    </div>
+    <div class="fv rl"><div class="mk">
+      <div style="font-size:14px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px"><span style="font-size:18px">💬</span> Earmark AI</div>
+      <div class="mk-msg-u">Can I afford a holiday?</div>
+      <div class="mk-msg-a">A holiday is doable, but it'll need planning.<br><br>You've got a £2,000 goal at £0 saved. With your £43.86 surplus, that's ~46 months.<br><br><b style="color:var(--tx)">To speed this up:</b> redirect some discretionary spend, or cancel unused subs worth £7.22/mo (£87/yr you likely won't miss).<span class="cursor-b"></span></div>
+      <div style="margin-top:12px;display:flex;gap:8px;align-items:center"><div style="flex:1;padding:10px 14px;background:var(--sf);border:1px solid var(--bd);border-radius:100px;font-size:11px;color:var(--tx3)">Ask about your finances...</div><div style="width:28px;height:28px;border-radius:50%;background:var(--mint);display:flex;align-items:center;justify-content:center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--bg)" stroke-width="3"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></div></div>
+    </div></div>
+  </div>
+
+  <!-- F5: Marketplace -->
+  <div class="fr">
+    <div class="ft rl">
+      <div class="ft-tag" style="background:rgba(74,222,128,.08);color:var(--green);border:1px solid rgba(74,222,128,.2)">Smart Marketplace</div>
+      <h3 class="ft-h">Recommendations that<br>fit your actual life.</h3>
+      <p class="ft-d">Not a generic comparison site. Earmark analyses your data and recommends the exact products that would benefit you most — ISAs, savings accounts, investments, pensions.</p>
+      <ul class="ft-ul"><li><div class="ft-ck" style="background:rgba(74,222,128,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Personalised picks ranked by benefit — not by commission</li><li><div class="ft-ck" style="background:rgba(74,222,128,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Investment growth calculator with compound return projections</li><li><div class="ft-ck" style="background:rgba(74,222,128,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Goals: holiday, house deposit, emergency fund, debt payoff</li></ul>
+    </div>
+    <div class="fv rr"><div class="mk">
+      <div style="font-size:14px;font-weight:700;margin-bottom:4px">Smart Recommendations</div>
+      <div style="font-size:11px;color:var(--tx3);margin-bottom:4px">Personalised picks based on your spending & goals</div>
+      <div style="font-size:10px;color:var(--mint);margin-bottom:14px">✨ Powered by earmarkIQ</div>
+      <div style="padding:14px;background:rgba(78,205,196,.04);border:1px solid rgba(78,205,196,.12);border-radius:10px;margin-bottom:10px;font-size:11px;color:var(--tx2);line-height:1.5">💡 We've found ways to make your money work harder based on your spending patterns and goals.</div>
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--tx3);margin-bottom:8px">Best Savings Accounts</div>
+      <div style="padding:14px;background:var(--sf2);border:1px solid var(--bd);border-radius:10px;margin-bottom:6px">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"><div style="display:flex;align-items:center;gap:8px"><div style="width:28px;height:28px;border-radius:50%;background:#1C6BFF;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:800">C</div><div style="font-size:13px;font-weight:700">Chase Saver</div></div><div style="font-size:9px;padding:2px 8px;background:var(--sf);border:1px solid var(--bd);border-radius:4px;color:var(--tx3)">Affiliate</div></div>
+        <div style="font-family:var(--m);font-size:15px;font-weight:700;color:var(--mint);margin-bottom:4px">4.50% AER</div>
+        <div style="font-size:10px;color:var(--tx2);line-height:1.5">Instant access, no minimum deposit. Up to £250,000.</div>
+        <div style="margin-top:8px;padding:8px;background:var(--mint);color:var(--bg);text-align:center;border-radius:6px;font-size:11px;font-weight:700">Learn More →</div>
+      </div>
+      <div style="padding:12px;background:var(--sf2);border:1px solid var(--bd);border-radius:10px"><div style="display:flex;align-items:center;gap:8px"><div style="width:28px;height:28px;border-radius:50%;background:#3D2F8C;display:flex;align-items:center;justify-content:center;color:#fff;font-size:9px;font-weight:800">Ch</div><div><div style="font-size:13px;font-weight:700">Chip Easy Access</div><div style="font-family:var(--m);font-size:12px;font-weight:700;color:var(--mint)">4.34% AER</div></div></div></div>
+    </div></div>
+  </div>
+
+</div></section>
+
+<!-- SECURITY -->
+<section class="sec" id="security"><div class="sec-i sec-c">
+  <div class="r"><div class="sec-l">Security & Trust</div></div>
+  <h2 class="sec-h r d1">Your money data is sacred.<br>We treat it that way.</h2>
+  <p class="sec-d r d2">Earmark uses the same Open Banking infrastructure trusted by millions of UK bank customers.</p>
+  <div class="tg">
+    <div class="tc r d1"><div class="tc-i" style="background:rgba(78,205,196,.06)">🔒</div><h4 class="tc-t">Read-Only Access</h4><p class="tc-d">We see your transactions but can never move money, make payments, or modify accounts.</p></div>
+    <div class="tc r d2"><div class="tc-i" style="background:rgba(91,141,239,.06)">🏛️</div><h4 class="tc-t">FCA Regulated</h4><p class="tc-d">Open Banking is FCA-regulated and GDPR-protected. Backed by UK government policy.</p></div>
+    <div class="tc r d3"><div class="tc-i" style="background:rgba(155,143,232,.06)">🛡️</div><h4 class="tc-t">256-bit Encryption</h4><p class="tc-d">Bank-level encryption. You authenticate directly with your bank — we never see your password.</p></div>
+    <div class="tc r d1"><div class="tc-i" style="background:rgba(245,166,35,.06)">💳</div><h4 class="tc-t">FSCS Protected</h4><p class="tc-d">Deposits protected up to £85,000. We don't hold funds — they stay in your bank.</p></div>
+    <div class="tc r d2"><div class="tc-i" style="background:rgba(78,205,196,.06)">📱</div><h4 class="tc-t">Your Data, Your Control</h4><p class="tc-d">Revoke access anytime. We delete your data immediately on request.</p></div>
+    <div class="tc r d3"><div class="tc-i" style="background:rgba(91,141,239,.06)">🤝</div><h4 class="tc-t">No Data Selling</h4><p class="tc-d">We never sell financial data to third parties. Transactions are only used for your insights.</p></div>
+  </div>
+</div></section>
+
+<!-- INVESTORS -->
+<section class="sec inv-s" id="investors"><div class="sec-i sec-c">
+  <div class="r"><div class="sec-l">For Investors</div></div>
+  <h2 class="sec-h r d1">Building the financial operating<br>system for the UK.</h2>
+  <p class="sec-d r d2">Open Banking × AI × Affiliate commerce — a high-margin, data-driven fintech with multiple revenue streams.</p>
+  <div class="inv-g">
+    <div class="inv-c r d1"><div class="inv-ci" style="background:rgba(78,205,196,.08)">💰</div><div class="inv-ct">Affiliate Revenue Engine</div><div class="inv-cx">AI-powered product recommendations drive high-intent conversions. Users matched to savings accounts, ISAs, and investments based on actual spending data.</div><div class="inv-cv" style="color:var(--mint)">£25k–£150k+</div><div style="font-size:11px;color:var(--tx3);margin-top:2px">Target earner range per user</div></div>
+    <div class="inv-c r d2"><div class="inv-ci" style="background:rgba(91,141,239,.08)">📊</div><div class="inv-ct">Viral Product Mechanics</div><div class="inv-cx">Money Personality profiles, spending rhythms, and "Could you save?" insights are inherently shareable. Every insight card is a potential viral moment.</div><div class="inv-cv" style="color:var(--blue)">B2C → B2B</div><div style="font-size:11px;color:var(--tx3);margin-top:2px">Bottom-up adoption strategy</div></div>
+    <div class="inv-c r d3"><div class="inv-ci" style="background:rgba(155,143,232,.08)">🧠</div><div class="inv-ct">AI-Native Architecture</div><div class="inv-cx">Built on Claude AI with Open Banking data. The system gets smarter with every user — detecting patterns, predicting overspend, personalising recommendations.</div><div class="inv-cv" style="color:var(--purple)">2 min</div><div style="font-size:11px;color:var(--tx3);margin-top:2px">Download to full financial profile</div></div>
+    <div class="inv-c r d4"><div class="inv-ci" style="background:rgba(74,222,128,.08)">🇬🇧</div><div class="inv-ct">UK-First Market</div><div class="inv-cx">The UK has the world's most mature Open Banking ecosystem. 7.5m+ users already connected. Purpose-built for this regulated, trust-first market.</div><div class="inv-cv" style="color:var(--green)">7.5M+</div><div style="font-size:11px;color:var(--tx3);margin-top:2px">UK Open Banking users</div></div>
+  </div>
+  <div class="inv-cta r"><a href="mailto:invest@earmark.app" class="btn-inv">Get in Touch <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
+</div></section>
+
+<!-- CTA -->
+<section class="sec cta-s" id="waitlist"><div class="cta-gl"></div><div class="sec-i cta-c">
+  <div class="r">
+    <h2 class="cta-h">Ready to make your<br><em>salary work harder?</em></h2>
+    <p class="cta-p">Join the waitlist and be first to know when Earmark launches. Early members get lifetime premium access.</p>
+    <form class="wl-f" id="wl-form"><input type="email" class="wl-in" placeholder="Enter your email" required><button type="submit" class="wl-btn">Join Waitlist</button></form>
+    <p class="cta-n">No spam. We'll only email you about launch updates.</p>
+  </div>
+</div></section>
+
+<!-- FOOTER -->
+<footer class="footer"><div class="footer-i">
+  <div class="footer-top">
+    <div><a href="#" class="nav-l" style="font-size:22px">earmark<b>IQ</b></a><p class="footer-bt">AI-powered salary allocation for UK professionals. Connect your bank and make every pound work harder.</p></div>
+    <div><h5 class="footer-hd">Product</h5><ul class="footer-ul"><li><a href="#how">How it works</a></li><li><a href="#features">Features</a></li><li><a href="#security">Security</a></li><li><a href="#waitlist">Join Waitlist</a></li></ul></div>
+    <div><h5 class="footer-hd">Company</h5><ul class="footer-ul"><li><a href="#">About</a></li><li><a href="#">Blog</a></li><li><a href="#">Careers</a></li><li><a href="#investors">Investors</a></li></ul></div>
+    <div><h5 class="footer-hd">Legal</h5><ul class="footer-ul"><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Cookie Policy</a></li><li><a href="#">Affiliate Disclosure</a></li></ul></div>
+  </div>
+  <div class="footer-bot">
+    <div class="footer-leg">Earmark does not provide financial advice. Products in the marketplace are for information only, ranked by consumer benefit. Earmark may receive a commission from affiliate links — this does not affect product ranking. Eligible deposits with UK-regulated banks are protected up to £85,000 by the FSCS.</div>
+    <div class="footer-cp">© 2026 Earmark Ltd. All rights reserved.</div>
+  </div>
+</div></footer>
+
+<script>
+const nav=document.getElementById('nav');window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>60)});
+const rEls=document.querySelectorAll('.r,.rl,.rr');const rObs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('v')})},{threshold:.08,rootMargin:'0px 0px -40px 0px'});rEls.forEach(el=>rObs.observe(el));
+const ctrs=document.querySelectorAll('[data-count]');const cObs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){const el=x.target,t=parseInt(el.dataset.count),p=el.dataset.prefix||'',s=el.dataset.suffix||'';let c=0;const inc=Math.max(1,Math.ceil(t/35));const tmr=setInterval(()=>{c+=inc;if(c>=t){c=t;clearInterval(tmr)}el.textContent=p+c+s},25);cObs.unobserve(el)}})},{threshold:.5});ctrs.forEach(el=>cObs.observe(el));
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{e.preventDefault();const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
+window.addEventListener('mousemove',e=>{const cs=document.querySelectorAll('.fc');const x=(e.clientX/window.innerWidth-.5)*2,y=(e.clientY/window.innerHeight-.5)*2;cs.forEach((c,i)=>{const s=(i+1)*4;c.style.transform=`translateY(${Math.sin(Date.now()/1000+i*2)*14}px) translate(${x*s}px,${y*s}px)`})});
+document.getElementById('wl-form').addEventListener('submit',function(e){e.preventDefault();const inp=this.querySelector('input'),btn=this.querySelector('button'),em=inp.value;console.log('Waitlist:',em);const ex=JSON.parse(localStorage.getItem('earmark_wl')||'[]');ex.push({email:em,ts:new Date().toISOString()});localStorage.setItem('earmark_wl',JSON.stringify(ex));btn.textContent='✓ You\'re in!';btn.style.background='#4ADE80';inp.value='';inp.placeholder='We\'ll be in touch!';setTimeout(()=>{btn.textContent='Join Waitlist';btn.style.background='';inp.placeholder='Enter your email'},3500)});
+document.querySelector('.mob-tog').addEventListener('click',()=>{const l=document.querySelector('.nav-links');if(l.style.display==='flex'){l.style.display='none'}else{l.style.display='flex';l.style.flexDirection='column';l.style.position='fixed';l.style.top='70px';l.style.left='0';l.style.right='0';l.style.background='rgba(6,8,15,.95)';l.style.padding='24px 32px';l.style.backdropFilter='blur(20px)';l.style.borderBottom='1px solid var(--bd)';l.style.zIndex='99'}});
+</script>
+</body>
+</html>
