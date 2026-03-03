@@ -23,6 +23,10 @@
   16 smart marketplace.webp                    Market — Smart Recommendations: mobile plan, pension, audit, Bill Health Check
   17 ask IQ.webp                               Ask IQ — AI Chat: intro + 5 suggested prompts
   18 succesfull bank connection.webp           Bank Connection success (Finexer/Safari): green checkmark, returning to app
+  19 IMG_1418.PNG                              AI Profile — Shareable "Feast or Famine Spender" card: 0.8x weekend/weekday, £1,431 avg/mo, 29% housing, £373/wk Wed, £588/yr savings
+  20 IMG_1483.PNG                              Partner Finance — Connect: share code RGNV6G, enter partner code, waiting for partner status
+  21 IMG_1484.PNG                              Partner Finance — Couple Insights: AI cards (savings rate, transport £114, eating out £137, spending patterns)
+  22 IMG_1485.PNG                              Partner Finance — Combined Overview: connected, £7,200/mo income, £4,800/mo expenses, 33% savings rate, couple insights
   =====================================================================
 -->
 <html lang="en">
@@ -94,6 +98,7 @@
 
 /* Steps */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px}.step{background:var(--sf);border:1px solid var(--bd);border-radius:18px;padding:32px 24px;position:relative;overflow:hidden;transition:all .4s}.step:hover{border-color:var(--mint);transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.25),0 0 30px var(--mintG)}.step::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad);opacity:0;transition:opacity .4s}.step:hover::before{opacity:1}.step-n{font-family:var(--m);font-size:56px;font-weight:800;line-height:1;background:linear-gradient(180deg,rgba(78,205,196,.15),rgba(78,205,196,.02));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:16px}.step-ic{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:20px}.step-t{font-size:19px;font-weight:700;margin-bottom:8px;letter-spacing:-.02em}.step-x{font-size:14px;color:var(--tx2);line-height:1.7}
+.step-ph{width:200px;height:420px;background:var(--bg);border-radius:28px;border:2px solid #2a3050;overflow:hidden;margin:24px auto 0;box-shadow:0 0 0 1px rgba(255,255,255,.04),0 16px 48px rgba(0,0,0,.5),0 0 80px rgba(78,205,196,.04)}.step-ph img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
 
 /* Stats */
 .stats{border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);background:var(--bg2)}.stats-g{display:grid;grid-template-columns:repeat(4,1fr)}.stat{text-align:center;padding:44px 16px;position:relative}.stat:not(:last-child)::after{content:'';position:absolute;right:0;top:25%;height:50%;width:1px;background:var(--bd)}.stat-v{font-family:var(--m);font-size:38px;font-weight:800;letter-spacing:-.03em;line-height:1;margin-bottom:6px}.stat-l{font-size:13px;color:var(--tx3)}
@@ -128,7 +133,7 @@
 
 /* Responsive */
 @media(max-width:960px){.hero-i{grid-template-columns:1fr;text-align:center}.hero-p{margin-left:auto;margin-right:auto}.hero-btns{justify-content:center}.hero-trust{justify-content:center}.hero-vis{margin-top:32px}.fc{display:none}.fr,.fr.rev{grid-template-columns:1fr;direction:ltr;gap:32px}.fr.rev>*{direction:ltr}.ft{max-width:100%}.steps{grid-template-columns:1fr}.stats-g{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2)::after{display:none}.tg{grid-template-columns:1fr}.inv-g{grid-template-columns:1fr}.footer-top{grid-template-columns:1fr 1fr;gap:28px}.nav-links{display:none}.mob-tog{display:block}.wl-f{flex-direction:column}.footer-bot{flex-direction:column}}
-@media(max-width:600px){.hero{padding:120px 20px 48px}.sec{padding:80px 20px}.phone{width:230px;height:490px}.stats-g{grid-template-columns:1fr 1fr}.footer-top{grid-template-columns:1fr}}
+@media(max-width:600px){.hero{padding:120px 20px 48px}.sec{padding:80px 20px}.phone{width:230px;height:490px}.step-ph{width:180px;height:380px}.stats-g{grid-template-columns:1fr 1fr}.footer-top{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -155,7 +160,7 @@
 </div></section>
 
 <!-- TICKER -->
-<div class="ticker"><div class="ticker-t"><div class="ticker-i"><span class="ticker-d"></span>Open Banking API</div><div class="ticker-i"><span class="ticker-d"></span>AI Financial Advisor</div><div class="ticker-i"><span class="ticker-d"></span>Spending Rhythm Analysis</div><div class="ticker-i"><span class="ticker-d"></span>Money Personality</div><div class="ticker-i"><span class="ticker-d"></span>Subscription Radar</div><div class="ticker-i"><span class="ticker-d"></span>Price Creep Alerts</div><div class="ticker-i"><span class="ticker-d"></span>Smart Marketplace</div><div class="ticker-i"><span class="ticker-d"></span>Investment Calculator</div><div class="ticker-i"><span class="ticker-d"></span>Salary Allocation</div><div class="ticker-i"><span class="ticker-d"></span>Goal Tracking</div><div class="ticker-i"><span class="ticker-d"></span>Open Banking API</div><div class="ticker-i"><span class="ticker-d"></span>AI Financial Advisor</div><div class="ticker-i"><span class="ticker-d"></span>Spending Rhythm Analysis</div><div class="ticker-i"><span class="ticker-d"></span>Money Personality</div><div class="ticker-i"><span class="ticker-d"></span>Subscription Radar</div><div class="ticker-i"><span class="ticker-d"></span>Price Creep Alerts</div><div class="ticker-i"><span class="ticker-d"></span>Smart Marketplace</div><div class="ticker-i"><span class="ticker-d"></span>Investment Calculator</div><div class="ticker-i"><span class="ticker-d"></span>Salary Allocation</div><div class="ticker-i"><span class="ticker-d"></span>Goal Tracking</div></div></div>
+<div class="ticker"><div class="ticker-t"><div class="ticker-i"><span class="ticker-d"></span>Open Banking API</div><div class="ticker-i"><span class="ticker-d"></span>AI Financial Advisor</div><div class="ticker-i"><span class="ticker-d"></span>Spending Rhythm Analysis</div><div class="ticker-i"><span class="ticker-d"></span>Money Personality</div><div class="ticker-i"><span class="ticker-d"></span>Subscription Radar</div><div class="ticker-i"><span class="ticker-d"></span>Price Creep Alerts</div><div class="ticker-i"><span class="ticker-d"></span>Smart Marketplace</div><div class="ticker-i"><span class="ticker-d"></span>Investment Calculator</div><div class="ticker-i"><span class="ticker-d"></span>Salary Allocation</div><div class="ticker-i"><span class="ticker-d"></span>Goal Tracking</div><div class="ticker-i"><span class="ticker-d"></span>Partner Finance</div><div class="ticker-i"><span class="ticker-d"></span>Open Banking API</div><div class="ticker-i"><span class="ticker-d"></span>AI Financial Advisor</div><div class="ticker-i"><span class="ticker-d"></span>Spending Rhythm Analysis</div><div class="ticker-i"><span class="ticker-d"></span>Money Personality</div><div class="ticker-i"><span class="ticker-d"></span>Subscription Radar</div><div class="ticker-i"><span class="ticker-d"></span>Price Creep Alerts</div><div class="ticker-i"><span class="ticker-d"></span>Smart Marketplace</div><div class="ticker-i"><span class="ticker-d"></span>Investment Calculator</div><div class="ticker-i"><span class="ticker-d"></span>Salary Allocation</div><div class="ticker-i"><span class="ticker-d"></span>Goal Tracking</div><div class="ticker-i"><span class="ticker-d"></span>Partner Finance</div></div></div>
 
 <!-- HOW IT WORKS -->
 <section class="sec" id="how"><div class="sec-i">
@@ -163,18 +168,18 @@
   <h2 class="sec-h r d1">Three steps to financial clarity.<br>Two minutes to set up.</h2>
   <p class="sec-d r d2">No spreadsheets. No budgeting apps you'll abandon. Connect and let Earmark do the thinking.</p>
   <div class="steps">
-    <div class="step r d1"><div class="step-n">01</div><div class="step-ic" style="background:rgba(78,205,196,.1);color:var(--mint)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div><h3 class="step-t">Connect your bank</h3><p class="step-x">Link your account in seconds via Open Banking. Monzo, Starling, Barclays, HSBC — we support them all. Read-only, we never touch your money.</p></div>
-    <div class="step r d2"><div class="step-n">02</div><div class="step-ic" style="background:rgba(91,141,239,.1);color:var(--blue)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h3 class="step-t">Get your financial profile</h3><p class="step-x">Our AI analyses your spending DNA — patterns, rhythms, habits, and blind spots. You get a Money Personality, Quick Wins, and a recommended paycheck split.</p></div>
-    <div class="step r d3"><div class="step-n">03</div><div class="step-ic" style="background:rgba(155,143,232,.1);color:var(--purple)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div><h3 class="step-t">Watch your money grow</h3><p class="step-x">Track weekly budgets, catch subscription creep, hit savings goals, and get AI recommendations from our smart marketplace — tailored to your data.</p></div>
+    <div class="step r d1"><div class="step-n">01</div><div class="step-ic" style="background:rgba(78,205,196,.1);color:var(--mint)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div><h3 class="step-t">Connect in Seconds</h3><p class="step-x">Link your bank through Open Banking — Monzo, Starling, Barclays, HSBC and 50+ more. Read-only access, we never see your password. Takes under 30 seconds.</p><div class="step-ph"><img src="assets/succesfull bank connection.webp" alt="earmarkIQ bank connection success screen via Open Banking"></div></div>
+    <div class="step r d2"><div class="step-n">02</div><div class="step-ic" style="background:rgba(91,141,239,.1);color:var(--blue)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h3 class="step-t">Get Your AI Profile</h3><p class="step-x">Our AI analyses months of spending data and builds your complete financial profile — your money personality, spending rhythm, danger zones, and quick wins. All in under 2 minutes.</p><div class="step-ph"><img src="assets/IMG_1418.PNG" alt="earmarkIQ AI financial profile — The Feast or Famine Spender with spending stats"></div></div>
+    <div class="step r d3"><div class="step-n">03</div><div class="step-ic" style="background:rgba(155,143,232,.1);color:var(--purple)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div><h3 class="step-t">Watch Your Money Work</h3><p class="step-x">Track goals, catch subscription price creep, get weekly insights, and ask your AI advisor anything about your finances. Your money on autopilot.</p><div class="step-ph"><img src="assets/for you ai insights .webp" alt="earmarkIQ weekly insights with AI-powered financial advice"></div></div>
   </div>
 </div></section>
 
 <!-- STATS -->
 <section class="stats sec" style="padding:0"><div class="sec-i"><div class="stats-g">
-  <div class="stat r d1"><div class="stat-v" style="color:var(--mint)" data-count="50" data-suffix="+">0+</div><div class="stat-l">UK banks supported</div></div>
-  <div class="stat r d2"><div class="stat-v" style="color:var(--green)">£0</div><div class="stat-l">to find out where your money goes</div></div>
-  <div class="stat r d3"><div class="stat-v" style="color:var(--purple)" data-count="7">0</div><div class="stat-l">money personality types</div></div>
-  <div class="stat r d4"><div class="stat-v" style="color:var(--blue)">24/7</div><div class="stat-l">AI financial advisor</div></div>
+  <div class="stat r d1"><div class="stat-v" style="color:var(--coral)" data-count="528" data-prefix="£" data-suffix="/yr">£0/yr</div><div class="stat-l">wasted on forgotten subscriptions by the average UK household</div></div>
+  <div class="stat r d2"><div class="stat-v" style="color:var(--mint)" data-count="2" data-suffix=" min">0 min</div><div class="stat-l">from download to your full AI financial profile</div></div>
+  <div class="stat r d3"><div class="stat-v" style="color:var(--amber)" data-count="43" data-suffix="%">0%</div><div class="stat-l">of UK workers live paycheck to paycheck</div></div>
+  <div class="stat r d4"><div class="stat-v" style="color:var(--purple)" data-count="10">0</div><div class="stat-l">pro financial tools, zero spreadsheets</div></div>
 </div></div></section>
 
 <!-- FEATURES -->
@@ -188,12 +193,7 @@
       <p class="ft-d">The moment you connect, Earmark builds a financial profile — your spending type, danger zones, quick wins, and a roadmap to your goals.</p>
       <ul class="ft-ul"><li><div class="ft-ck" style="background:rgba(78,205,196,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Money Personality analysis (Feast or Famine, Steady Eddie, etc.)</li><li><div class="ft-ck" style="background:rgba(78,205,196,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Spending rhythm — which days cost you most</li><li><div class="ft-ck" style="background:rgba(78,205,196,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Quick Wins with exact £ amounts you could save</li></ul>
     </div>
-    <div class="fv rr"><div class="mk">
-      <div class="mk-pf"><div class="mk-pf-e">🎢</div><div class="mk-pf-t">The Feast or Famine Spender</div><div class="mk-pf-d">Your spending swings significantly month to month. A baseline weekly budget could smooth the peaks.</div></div>
-      <div style="font-size:13px;font-weight:700;margin-bottom:8px">Spending Rhythm</div>
-      <div class="mk-rhy"><div class="mk-rb" style="height:10%;background:var(--mint)"><div class="mk-rbv">£35</div><div class="mk-rbl">Mon</div></div><div class="mk-rb" style="height:41%;background:var(--mint)"><div class="mk-rbv">£143</div><div class="mk-rbl">Tue</div></div><div class="mk-rb" style="height:100%;background:var(--mint)"><div class="mk-rbv">£350</div><div class="mk-rbl">Wed</div></div><div class="mk-rb" style="height:15%;background:var(--mint)"><div class="mk-rbv">£52</div><div class="mk-rbl">Thu</div></div><div class="mk-rb" style="height:60%;background:var(--mint)"><div class="mk-rbv">£211</div><div class="mk-rbl">Fri</div></div><div class="mk-rb" style="height:54%;background:var(--amber)"><div class="mk-rbv">£188</div><div class="mk-rbl">Sat</div></div><div class="mk-rb" style="height:15%;background:var(--amber)"><div class="mk-rbv">£54</div><div class="mk-rbl">Sun</div></div></div>
-      <div style="margin-top:22px;padding:12px;background:rgba(78,205,196,.04);border:1px solid rgba(78,205,196,.12);border-radius:10px"><div style="font-size:12px;font-weight:700;color:var(--mint);margin-bottom:4px">Could you save?</div><div style="font-family:var(--m);font-size:20px;font-weight:800;color:var(--green);margin-bottom:4px">£588/year</div><div style="font-size:10px;color:var(--tx2);line-height:1.5">£21/mo transport · £20/mo entertainment · £7/mo tiny subs</div></div>
-    </div></div>
+    <div class="fv rr"><div class="phone"><img class="ph-img" src="assets/IMG_1418.PNG" alt="earmarkIQ AI Financial Profile — The Feast or Famine Spender with spending stats and £588/year savings potential"></div></div>
   </div>
 
   <!-- F2: Bills -->
@@ -268,6 +268,17 @@
       </div>
       <div style="padding:12px;background:var(--sf2);border:1px solid var(--bd);border-radius:10px"><div style="display:flex;align-items:center;gap:8px"><div style="width:28px;height:28px;border-radius:50%;background:#3D2F8C;display:flex;align-items:center;justify-content:center;color:#fff;font-size:9px;font-weight:800">Ch</div><div><div style="font-size:13px;font-weight:700">Chip Easy Access</div><div style="font-family:var(--m);font-size:12px;font-weight:700;color:var(--mint)">4.34% AER</div></div></div></div>
     </div></div>
+  </div>
+
+  <!-- F6: Partner Finance -->
+  <div class="fr rev">
+    <div class="ft rr">
+      <div class="ft-tag" style="background:rgba(244,114,182,.08);color:#F472B6;border:1px solid rgba(244,114,182,.2)">Partner Finance</div>
+      <h3 class="ft-h">Manage money together.<br>No awkward spreadsheets.</h3>
+      <p class="ft-d">Link with your partner to see combined income, shared expenses, and couple insights — all powered by AI. Set joint goals and track progress together.</p>
+      <ul class="ft-ul"><li><div class="ft-ck" style="background:rgba(244,114,182,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#F472B6" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Combined overview — income, expenses, and savings rate at a glance</li><li><div class="ft-ck" style="background:rgba(244,114,182,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#F472B6" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>AI Couple Insights — personalised advice for both of you</li><li><div class="ft-ck" style="background:rgba(244,114,182,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#F472B6" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Joint goals — house deposit, holiday, emergency fund</li></ul>
+    </div>
+    <div class="fv rl"><div class="phone"><img class="ph-img" src="assets/IMG_1485.PNG" alt="earmarkIQ Partner Finance — Combined overview with £7,200/mo income, 33% savings rate, and couple insights"></div></div>
   </div>
 
 </div></section>
