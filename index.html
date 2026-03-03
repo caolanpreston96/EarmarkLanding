@@ -104,7 +104,9 @@
 .stats{border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);background:var(--bg2)}.stats-g{display:grid;grid-template-columns:repeat(4,1fr)}.stat{text-align:center;padding:44px 16px;position:relative}.stat:not(:last-child)::after{content:'';position:absolute;right:0;top:25%;height:50%;width:1px;background:var(--bd)}.stat-v{font-family:var(--m);font-size:38px;font-weight:800;letter-spacing:-.03em;line-height:1;margin-bottom:6px}.stat-l{font-size:13px;color:var(--tx3)}
 
 /* Features */
-.feat-bg{background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 50%,var(--bg) 100%)}.fr{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:120px}.fr:last-child{margin-bottom:0}.fr.rev{direction:rtl}.fr.rev>*{direction:ltr}.ft{max-width:480px}.ft-tag{display:inline-flex;padding:5px 14px;border-radius:100px;font-size:12px;font-weight:600;font-family:var(--m);margin-bottom:16px;letter-spacing:.02em}.ft-h{font-size:34px;font-weight:800;letter-spacing:-.03em;line-height:1.15;margin-bottom:14px}.ft-d{font-size:15px;color:var(--tx2);line-height:1.8;margin-bottom:22px}.ft-ul{list-style:none;display:flex;flex-direction:column;gap:10px}.ft-ul li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--tx2)}.ft-ck{width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}.fv{display:flex;justify-content:center}
+.feat-bg{background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 50%,var(--bg) 100%)}.fr{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:120px}.fr:last-child{margin-bottom:0}.fr.rev{direction:rtl}.fr.rev>*{direction:ltr}.ft{max-width:520px}.ft-tag{display:inline-flex;padding:5px 14px;border-radius:100px;font-size:12px;font-weight:600;font-family:var(--m);margin-bottom:16px;letter-spacing:.06em;text-transform:uppercase}.ft-h{font-size:clamp(32px,3.5vw,48px);font-weight:800;letter-spacing:-.03em;line-height:1.15;margin-bottom:14px}.ft-d{font-size:18px;color:var(--tx2);line-height:1.8;margin-bottom:22px;max-width:520px}.ft-ul{list-style:none;display:flex;flex-direction:column;gap:10px}.ft-ul li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--tx2)}.ft-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:7px}.ft-ck{width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}.fv{display:flex;justify-content:center}
+.feat-phone{width:260px;height:548px;background:var(--bg);border-radius:32px;border:2px solid #2a3050;overflow:hidden;position:relative;box-shadow:0 0 0 1px rgba(255,255,255,.04),0 25px 70px rgba(0,0,0,.6)}.feat-phone img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}.feat-glow{position:relative;display:flex;justify-content:center}.feat-glow::before{content:'';position:absolute;inset:-40px;border-radius:50%;pointer-events:none;opacity:.5;filter:blur(60px)}
+.ft-callout{padding:14px 16px;border-radius:10px;margin-top:18px;font-size:13px;color:var(--tx2);line-height:1.6;border-left:3px solid}
 
 /* Mocks */
 .mk{background:var(--sf);border:1px solid var(--bd);border-radius:18px;padding:22px;width:100%;max-width:420px;position:relative;overflow:hidden}
@@ -132,8 +134,8 @@
 .footer{position:relative;z-index:1;border-top:1px solid var(--bd);padding:56px 32px 36px;background:var(--bg)}.footer-i{max-width:1200px;margin:0 auto}.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}.footer-bt{font-size:13px;color:var(--tx2);line-height:1.7;margin-top:14px;max-width:280px}.footer-hd{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--tx4);margin-bottom:16px}.footer-ul{list-style:none;display:flex;flex-direction:column;gap:8px}.footer-ul a{color:var(--tx2);font-size:13px;transition:color .2s}.footer-ul a:hover{color:var(--mint)}.footer-bot{padding-top:28px;border-top:1px solid var(--bd);display:flex;justify-content:space-between;align-items:flex-start;gap:20px}.footer-leg{font-size:10.5px;color:var(--tx4);line-height:1.8;max-width:680px}.footer-cp{font-size:11px;color:var(--tx4);white-space:nowrap}
 
 /* Responsive */
-@media(max-width:960px){.hero-i{grid-template-columns:1fr;text-align:center}.hero-p{margin-left:auto;margin-right:auto}.hero-btns{justify-content:center}.hero-trust{justify-content:center}.hero-vis{margin-top:32px}.fc{display:none}.fr,.fr.rev{grid-template-columns:1fr;direction:ltr;gap:32px}.fr.rev>*{direction:ltr}.ft{max-width:100%}.steps{grid-template-columns:1fr}.stats-g{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2)::after{display:none}.tg{grid-template-columns:1fr}.inv-g{grid-template-columns:1fr}.footer-top{grid-template-columns:1fr 1fr;gap:28px}.nav-links{display:none}.mob-tog{display:block}.wl-f{flex-direction:column}.footer-bot{flex-direction:column}}
-@media(max-width:600px){.hero{padding:120px 20px 48px}.sec{padding:80px 20px}.phone{width:230px;height:490px}.step-ph{width:180px;height:380px}.stats-g{grid-template-columns:1fr 1fr}.footer-top{grid-template-columns:1fr}}
+@media(max-width:960px){.hero-i{grid-template-columns:1fr;text-align:center}.hero-p{margin-left:auto;margin-right:auto}.hero-btns{justify-content:center}.hero-trust{justify-content:center}.hero-vis{margin-top:32px}.fc{display:none}.fr,.fr.rev{grid-template-columns:1fr;direction:ltr;gap:32px}.fr.rev>*{direction:ltr}.ft{max-width:100%}.feat-glow{margin-top:16px}.steps{grid-template-columns:1fr}.stats-g{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2)::after{display:none}.tg{grid-template-columns:1fr}.inv-g{grid-template-columns:1fr}.footer-top{grid-template-columns:1fr 1fr;gap:28px}.nav-links{display:none}.mob-tog{display:block}.wl-f{flex-direction:column}.footer-bot{flex-direction:column}}
+@media(max-width:600px){.hero{padding:120px 20px 48px}.sec{padding:80px 20px}.phone{width:230px;height:490px}.step-ph{width:180px;height:380px}.feat-phone{width:220px;height:464px}.stats-g{grid-template-columns:1fr 1fr}.footer-top{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -185,100 +187,71 @@
 <!-- FEATURES -->
 <section class="sec feat-bg" id="features"><div class="sec-i">
 
-  <!-- F1: AI Profile -->
+  <!-- S1: Spending Analysis -->
   <div class="fr">
     <div class="ft rl">
-      <div class="ft-tag" style="background:rgba(78,205,196,.08);color:var(--mint);border:1px solid rgba(78,205,196,.2)">AI Financial Profile</div>
-      <h3 class="ft-h">Your money has a<br>personality. Meet it.</h3>
-      <p class="ft-d">The moment you connect, Earmark builds a financial profile — your spending type, danger zones, quick wins, and a roadmap to your goals.</p>
-      <ul class="ft-ul"><li><div class="ft-ck" style="background:rgba(78,205,196,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Money Personality analysis (Feast or Famine, Steady Eddie, etc.)</li><li><div class="ft-ck" style="background:rgba(78,205,196,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Spending rhythm — which days cost you most</li><li><div class="ft-ck" style="background:rgba(78,205,196,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Quick Wins with exact £ amounts you could save</li></ul>
+      <div class="ft-tag" style="background:rgba(78,205,196,.12);color:var(--bg);border:none">Spending Analysis</div>
+      <h3 class="ft-h">See where every pound<br>actually goes.</h3>
+      <p class="ft-d">earmarkIQ categorises every transaction automatically — groceries, subscriptions, transport, eating out — and shows you patterns you'd never spot yourself.</p>
+      <ul class="ft-ul"><li><span class="ft-dot" style="background:var(--mint)"></span>Spending by category with expandable transaction lists</li><li><span class="ft-dot" style="background:var(--mint)"></span>Payday spike detection — how much more you spend after payday</li><li><span class="ft-dot" style="background:var(--mint)"></span>Weekend vs weekday spending comparison</li><li><span class="ft-dot" style="background:var(--mint)"></span>Merchant-level insights with frequency and trends</li></ul>
     </div>
-    <div class="fv rr"><div class="phone"><img class="ph-img" src="assets/IMG_1418.PNG" alt="earmarkIQ AI Financial Profile — The Feast or Famine Spender with spending stats and £588/year savings potential"></div></div>
+    <div class="fv rr"><div class="feat-glow" style="--glow:rgba(78,205,196,.15)"><div style="position:absolute;inset:-40px;border-radius:50%;background:var(--glow);filter:blur(60px);opacity:.5;pointer-events:none"></div><div class="feat-phone"><img src="assets/spending 2 .webp" alt="earmarkIQ spending chart with yearly bar graph, payday spike and weekend vs weekday insights"></div></div></div>
   </div>
 
-  <!-- F2: Bills -->
+  <!-- S2: Subscription Radar -->
   <div class="fr rev">
     <div class="ft rr">
-      <div class="ft-tag" style="background:rgba(255,107,107,.08);color:var(--coral);border:1px solid rgba(255,107,107,.2)">Subscription Radar</div>
-      <h3 class="ft-h">Catch every price<br>increase instantly.</h3>
-      <p class="ft-d">Earmark watches your recurring payments. The moment a subscription creeps up, you'll know — along with the annual impact.</p>
-      <ul class="ft-ul"><li><div class="ft-ck" style="background:rgba(255,107,107,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--coral)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Automatic price change detection across all subscriptions</li><li><div class="ft-ck" style="background:rgba(255,107,107,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--coral)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Annual impact calculations — the real cost of small increases</li><li><div class="ft-ck" style="background:rgba(255,107,107,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--coral)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Bills, subscriptions, and daily habits — auto-categorised</li></ul>
+      <div class="ft-tag" style="background:rgba(255,107,107,.15);color:var(--bg);border:none">Subscription Radar</div>
+      <h3 class="ft-h">Catch price creeps<br>before they cost you.</h3>
+      <p class="ft-d">Tracks every subscription and recurring bill. Flags price increases the moment they happen, spots duplicate charges, and alerts you before contracts renew.</p>
+      <ul class="ft-ul"><li><span class="ft-dot" style="background:var(--coral)"></span>Price increase alerts with old vs new amount and annual impact</li><li><span class="ft-dot" style="background:var(--coral)"></span>Duplicate charge detection</li><li><span class="ft-dot" style="background:var(--coral)"></span>Daily habit tracking (coffees, lunches) with estimated monthly cost</li><li><span class="ft-dot" style="background:var(--coral)"></span>Contract renewal warnings with "Compare Deals" options</li></ul>
+      <div class="ft-callout" style="border-color:var(--coral);background:rgba(255,107,107,.04)">The average UK household wastes <b style="color:var(--coral)">£528/year</b> on forgotten subscriptions.</div>
     </div>
-    <div class="fv rl"><div class="mk">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px"><div style="font-size:14px;font-weight:700">Bills & Recurring</div><div style="font-family:var(--m);font-size:18px;font-weight:800">£291.72<span style="font-size:11px;color:var(--tx3);font-weight:400">/mo</span></div></div>
-      <div style="display:flex;gap:0;margin-bottom:16px;text-align:center"><div style="flex:1;padding:8px;border-right:1px solid var(--bd)"><div style="font-family:var(--m);font-size:14px;font-weight:700;color:var(--coral)">£80</div><div style="font-size:9px;color:var(--tx3)">Bills</div></div><div style="flex:1;padding:8px;border-right:1px solid var(--bd)"><div style="font-family:var(--m);font-size:14px;font-weight:700;color:var(--blue)">£79.73</div><div style="font-size:9px;color:var(--tx3)">Subscriptions</div></div><div style="flex:1;padding:8px"><div style="font-family:var(--m);font-size:14px;font-weight:700;color:var(--amber)">£131.99</div><div style="font-size:9px;color:var(--tx3)">Daily Habits</div></div></div>
-      <div class="mk-bill" style="background:rgba(255,107,107,.03)"><div class="mk-bl"><div class="mk-bi">📊</div><div><div class="mk-bn">Datacamp</div><div class="mk-bc">£33.55 → £34.27</div></div></div><span class="mk-cr">+£9/yr</span></div>
-      <div class="mk-bill" style="background:rgba(255,107,107,.03)"><div class="mk-bl"><div class="mk-bi">✈️</div><div><div class="mk-bn">easyJet</div><div class="mk-bc">£3.75 → £3.95</div></div></div><span class="mk-cr">+£2/yr</span></div>
-      <div class="mk-bill" style="background:rgba(255,107,107,.03)"><div class="mk-bl"><div class="mk-bi">💈</div><div><div class="mk-bn">Seabarber</div><div class="mk-bc">£33.00 → £35.00</div></div></div><span class="mk-cr">+£24/yr</span></div>
-      <div style="margin-top:12px;padding:10px;background:rgba(255,107,107,.05);border:1px solid rgba(255,107,107,.12);border-radius:8px"><span style="font-size:11px;color:var(--tx2)">⚠️ Subscription creep: <b style="color:var(--coral)">+£3.78/mo</b> · <b style="color:var(--coral)">£45/year</b></span></div>
-    </div></div>
+    <div class="fv rl"><div class="feat-glow" style="--glow:rgba(255,107,107,.12)"><div style="position:absolute;inset:-40px;border-radius:50%;background:var(--glow);filter:blur(60px);opacity:.5;pointer-events:none"></div><div class="feat-phone"><img src="assets/top of bills and recurring .webp" alt="earmarkIQ bills and recurring with subscription audit and £840/yr potential savings"></div></div></div>
   </div>
 
-  <!-- F3: Weekly Insights -->
+  <!-- S3: AI Allocation -->
   <div class="fr">
     <div class="ft rl">
-      <div class="ft-tag" style="background:rgba(91,141,239,.08);color:var(--blue);border:1px solid rgba(91,141,239,.2)">Weekly Insights</div>
-      <h3 class="ft-h">Insights that actually<br>save you money.</h3>
-      <p class="ft-d">Earmark spots duplicate charges, identifies spending spikes, and tells you exactly where to cut — with pound amounts, not platitudes.</p>
-      <ul class="ft-ul"><li><div class="ft-ck" style="background:rgba(91,141,239,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Duplicate charge detection — "You're being charged twice"</li><li><div class="ft-ck" style="background:rgba(91,141,239,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Buffer warnings when surplus gets dangerously thin</li><li><div class="ft-ck" style="background:rgba(91,141,239,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Actionable savings with alternatives and next steps</li></ul>
+      <div class="ft-tag" style="background:rgba(91,141,239,.15);color:var(--bg);border:none">AI Allocation</div>
+      <h3 class="ft-h">Your paycheck,<br>optimised by AI.</h3>
+      <p class="ft-d">When you get paid, earmarkIQ tells you exactly how to split your salary: bills, savings, investments, and guilt-free spending. The AI adapts to your spending patterns, upcoming bills, and financial goals.</p>
+      <ul class="ft-ul"><li><span class="ft-dot" style="background:var(--blue)"></span>AI-optimised allocation: Bills, Savings, Investments, Discretionary</li><li><span class="ft-dot" style="background:var(--blue)"></span>Visual donut chart with free-to-spend amount in the centre</li><li><span class="ft-dot" style="background:var(--blue)"></span>Payday countdown with automation rules</li><li><span class="ft-dot" style="background:var(--blue)"></span>Adjustable in Settings if you want manual control</li></ul>
     </div>
-    <div class="fv rr"><div class="mk">
-      <div style="font-size:14px;font-weight:700;margin-bottom:12px">📋 Weekly Insights</div>
-      <div class="mk-ins" style="background:rgba(255,107,107,.05);border-left:3px solid var(--coral)"><div class="mk-ins-t" style="color:var(--tx)">Duplicate charges <span class="mk-ins-sv" style="color:var(--mint)">Save £177/mo</span></div><div class="mk-ins-x">You're being charged twice for Microsoft (£8.49 × 2) and Diesel Ak Cic (£80 × 2).</div><div class="mk-ins-a">Check your subscription list →</div></div>
-      <div class="mk-ins" style="background:rgba(245,166,35,.04);border-left:3px solid var(--amber)"><div class="mk-ins-t" style="color:var(--tx)">Price creep spotted <span class="mk-ins-sv" style="color:var(--mint)">Save £4/mo</span></div><div class="mk-ins-x">5 subscriptions increased — costing +£3.78/month (£45/year).</div><div class="mk-ins-a">Review each increase →</div></div>
-      <div class="mk-ins" style="background:rgba(255,107,107,.03);border-left:3px solid var(--coral)"><div class="mk-ins-t" style="color:var(--tx)">Tight monthly buffer</div><div class="mk-ins-x">Surplus is only £43.86 — less than 2% of income. You're spending 98.5% of what you earn.</div><div class="mk-ins-a">Consider pausing subscriptions →</div></div>
-    </div></div>
+    <div class="fv rr"><div class="feat-glow" style="--glow:rgba(91,141,239,.15)"><div style="position:absolute;inset:-40px;border-radius:50%;background:var(--glow);filter:blur(60px);opacity:.5;pointer-events:none"></div><div class="feat-phone"><img src="assets/pay check allocation .webp" alt="earmarkIQ dashboard with donut chart showing £2.6k free to spend and paycheck allocation"></div></div></div>
   </div>
 
-  <!-- F4: AI Chat -->
+  <!-- S4: Ask IQ -->
   <div class="fr rev">
     <div class="ft rr">
-      <div class="ft-tag" style="background:rgba(155,143,232,.08);color:var(--purple);border:1px solid rgba(155,143,232,.2)">AI Chat</div>
-      <h3 class="ft-h">Ask anything about<br>your finances.</h3>
-      <p class="ft-d">Earmark AI knows your transactions, goals, and habits. Ask "Can I afford a holiday?" and get an answer based on your real data — not generic advice.</p>
-      <ul class="ft-ul"><li><div class="ft-ck" style="background:rgba(155,143,232,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Context-aware — knows your income, bills, goals, patterns</li><li><div class="ft-ck" style="background:rgba(155,143,232,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Suggested prompts to get started quickly</li><li><div class="ft-ck" style="background:rgba(155,143,232,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Honest answers — if you can't afford it, it tells you why</li></ul>
+      <div class="ft-tag" style="background:rgba(155,143,232,.15);color:var(--bg);border:none">AI Advisor</div>
+      <h3 class="ft-h">Ask anything about your<br>money. Get real answers.</h3>
+      <p class="ft-d">Ask IQ knows your transactions, bills, and goals. Ask "Can I afford a holiday?" or "How can I save £200 this month?" and get specific, actionable answers based on your actual data. Not generic advice. Your advice.</p>
+      <ul class="ft-ul"><li><span class="ft-dot" style="background:var(--purple)"></span>Conversational AI with full transaction context</li><li><span class="ft-dot" style="background:var(--purple)"></span>Suggested prompts to get you started</li><li><span class="ft-dot" style="background:var(--purple)"></span>Exportable AI reports as branded PDFs</li><li><span class="ft-dot" style="background:var(--purple)"></span>5 messages/day free, unlimited with Premium</li></ul>
     </div>
-    <div class="fv rl"><div class="mk">
-      <div style="font-size:14px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px"><span style="font-size:18px">💬</span> Earmark AI</div>
-      <div class="mk-msg-u">Can I afford a holiday?</div>
-      <div class="mk-msg-a">A holiday is doable, but it'll need planning.<br><br>You've got a £2,000 goal at £0 saved. With your £43.86 surplus, that's ~46 months.<br><br><b style="color:var(--tx)">To speed this up:</b> redirect some discretionary spend, or cancel unused subs worth £7.22/mo (£87/yr you likely won't miss).<span class="cursor-b"></span></div>
-      <div style="margin-top:12px;display:flex;gap:8px;align-items:center"><div style="flex:1;padding:10px 14px;background:var(--sf);border:1px solid var(--bd);border-radius:100px;font-size:11px;color:var(--tx3)">Ask about your finances...</div><div style="width:28px;height:28px;border-radius:50%;background:var(--mint);display:flex;align-items:center;justify-content:center"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--bg)" stroke-width="3"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg></div></div>
-    </div></div>
+    <div class="fv rl"><div class="feat-glow" style="--glow:rgba(155,143,232,.12)"><div style="position:absolute;inset:-40px;border-radius:50%;background:var(--glow);filter:blur(60px);opacity:.5;pointer-events:none"></div><div class="feat-phone"><img src="assets/ask IQ.webp" alt="earmarkIQ Ask IQ AI chat with suggested prompts for spending, budgets, and savings"></div></div></div>
   </div>
 
-  <!-- F5: Marketplace -->
+  <!-- S5: Goal Tracking -->
   <div class="fr">
     <div class="ft rl">
-      <div class="ft-tag" style="background:rgba(74,222,128,.08);color:var(--green);border:1px solid rgba(74,222,128,.2)">Smart Marketplace</div>
-      <h3 class="ft-h">Recommendations that<br>fit your actual life.</h3>
-      <p class="ft-d">Not a generic comparison site. Earmark analyses your data and recommends the exact products that would benefit you most — ISAs, savings accounts, investments, pensions.</p>
-      <ul class="ft-ul"><li><div class="ft-ck" style="background:rgba(74,222,128,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Personalised picks ranked by benefit — not by commission</li><li><div class="ft-ck" style="background:rgba(74,222,128,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Investment growth calculator with compound return projections</li><li><div class="ft-ck" style="background:rgba(74,222,128,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Goals: holiday, house deposit, emergency fund, debt payoff</li></ul>
+      <div class="ft-tag" style="background:rgba(74,222,128,.15);color:var(--bg);border:none">Goal Tracking</div>
+      <h3 class="ft-h">Set it. Track it.<br>Hit it.</h3>
+      <p class="ft-d">House deposit, emergency fund, holiday, debt payoff — earmarkIQ tracks your progress and suggests how to get there faster with AI-powered budget recommendations that learn from your spending.</p>
+      <ul class="ft-ul"><li><span class="ft-dot" style="background:var(--green)"></span>6 preset goal types with progress bars and deadlines</li><li><span class="ft-dot" style="background:var(--green)"></span>AI budget suggestions based on 3 months of spending data</li><li><span class="ft-dot" style="background:var(--green)"></span>Partner goals with shared tracking and split contributions</li><li><span class="ft-dot" style="background:var(--green)"></span>Celebrate milestones with shareable achievement cards</li></ul>
     </div>
-    <div class="fv rr"><div class="mk">
-      <div style="font-size:14px;font-weight:700;margin-bottom:4px">Smart Recommendations</div>
-      <div style="font-size:11px;color:var(--tx3);margin-bottom:4px">Personalised picks based on your spending & goals</div>
-      <div style="font-size:10px;color:var(--mint);margin-bottom:14px">✨ Powered by earmarkIQ</div>
-      <div style="padding:14px;background:rgba(78,205,196,.04);border:1px solid rgba(78,205,196,.12);border-radius:10px;margin-bottom:10px;font-size:11px;color:var(--tx2);line-height:1.5">💡 We've found ways to make your money work harder based on your spending patterns and goals.</div>
-      <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--tx3);margin-bottom:8px">Best Savings Accounts</div>
-      <div style="padding:14px;background:var(--sf2);border:1px solid var(--bd);border-radius:10px;margin-bottom:6px">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px"><div style="display:flex;align-items:center;gap:8px"><div style="width:28px;height:28px;border-radius:50%;background:#1C6BFF;display:flex;align-items:center;justify-content:center;color:#fff;font-size:11px;font-weight:800">C</div><div style="font-size:13px;font-weight:700">Chase Saver</div></div><div style="font-size:9px;padding:2px 8px;background:var(--sf);border:1px solid var(--bd);border-radius:4px;color:var(--tx3)">Affiliate</div></div>
-        <div style="font-family:var(--m);font-size:15px;font-weight:700;color:var(--mint);margin-bottom:4px">4.50% AER</div>
-        <div style="font-size:10px;color:var(--tx2);line-height:1.5">Instant access, no minimum deposit. Up to £250,000.</div>
-        <div style="margin-top:8px;padding:8px;background:var(--mint);color:var(--bg);text-align:center;border-radius:6px;font-size:11px;font-weight:700">Learn More →</div>
-      </div>
-      <div style="padding:12px;background:var(--sf2);border:1px solid var(--bd);border-radius:10px"><div style="display:flex;align-items:center;gap:8px"><div style="width:28px;height:28px;border-radius:50%;background:#3D2F8C;display:flex;align-items:center;justify-content:center;color:#fff;font-size:9px;font-weight:800">Ch</div><div><div style="font-size:13px;font-weight:700">Chip Easy Access</div><div style="font-family:var(--m);font-size:12px;font-weight:700;color:var(--mint)">4.34% AER</div></div></div></div>
-    </div></div>
+    <div class="fv rr"><div class="feat-glow" style="--glow:rgba(74,222,128,.15)"><div style="position:absolute;inset:-40px;border-radius:50%;background:var(--glow);filter:blur(60px);opacity:.5;pointer-events:none"></div><div class="feat-phone"><img src="assets/goals but with partner finance.webp" alt="earmarkIQ goals with house deposit tracking, partner goals, and budget categories"></div></div></div>
   </div>
 
-  <!-- F6: Partner Finance -->
+  <!-- S6: Smart Marketplace -->
   <div class="fr rev">
     <div class="ft rr">
-      <div class="ft-tag" style="background:rgba(244,114,182,.08);color:#F472B6;border:1px solid rgba(244,114,182,.2)">Partner Finance</div>
-      <h3 class="ft-h">Manage money together.<br>No awkward spreadsheets.</h3>
-      <p class="ft-d">Link with your partner to see combined income, shared expenses, and couple insights — all powered by AI. Set joint goals and track progress together.</p>
-      <ul class="ft-ul"><li><div class="ft-ck" style="background:rgba(244,114,182,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#F472B6" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Combined overview — income, expenses, and savings rate at a glance</li><li><div class="ft-ck" style="background:rgba(244,114,182,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#F472B6" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>AI Couple Insights — personalised advice for both of you</li><li><div class="ft-ck" style="background:rgba(244,114,182,.1)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#F472B6" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>Joint goals — house deposit, holiday, emergency fund</li></ul>
+      <div class="ft-tag" style="background:rgba(74,222,128,.15);color:var(--bg);border:none">Smart Marketplace</div>
+      <h3 class="ft-h">Recommendations that<br>actually fit your life.</h3>
+      <p class="ft-d">earmarkIQ analyses your spending and recommends financial products that genuinely save you money — better savings rates, cheaper energy, smarter investments. Every recommendation explains WHY it's right for you, based on your data.</p>
+      <ul class="ft-ul"><li><span class="ft-dot" style="background:var(--green)"></span>AI-prioritised recommendations with personalised reasoning</li><li><span class="ft-dot" style="background:var(--green)"></span>Savings accounts, credit cards, investments, energy, broadband, pensions</li><li><span class="ft-dot" style="background:var(--green)"></span>Affiliate-funded — the app is free because partners pay us, not you</li><li><span class="ft-dot" style="background:var(--green)"></span>No ads, no noise — just relevant, money-saving suggestions</li></ul>
     </div>
-    <div class="fv rl"><div class="phone"><img class="ph-img" src="assets/IMG_1485.PNG" alt="earmarkIQ Partner Finance — Combined overview with £7,200/mo income, 33% savings rate, and couple insights"></div></div>
+    <div class="fv rl"><div class="feat-glow" style="--glow:rgba(74,222,128,.12)"><div style="position:absolute;inset:-40px;border-radius:50%;background:var(--glow);filter:blur(60px);opacity:.5;pointer-events:none"></div><div class="feat-phone"><img src="assets/marketplace .webp" alt="earmarkIQ marketplace with Chase, Chip, and Marcus savings accounts ranked by AI"></div></div></div>
   </div>
 
 </div></section>
