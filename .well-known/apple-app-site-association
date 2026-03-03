@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["M6Z6BDBR7B.app.earmarkiq.mobile"],
+        "components": [
+          {
+            "/": "/bank-callback*",
+            "comment": "Finexer Open Banking callback"
+          }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["M6Z6BDBR7B.app.earmarkiq.mobile"]
+  }
+}

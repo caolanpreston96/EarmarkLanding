@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bank Connected — earmarkIQ</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2306080f'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='system-ui,sans-serif' font-size='16' font-weight='800' fill='%234ECDC4'%3EIQ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'DM Sans', -apple-system, sans-serif;
+    background: #0A0F1A;
+    color: #eaecf5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  .logo {
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    margin-bottom: 48px;
+    opacity: 0;
+    animation: fadeIn 0.6s ease forwards;
+  }
+  .logo b {
+    font-weight: 800;
+    color: #6EE7B7;
+  }
+
+  .checkmark-wrap {
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 32px;
+    position: relative;
+    opacity: 0;
+    animation: fadeIn 0.6s ease 0.2s forwards;
+  }
+
+  .checkmark-circle {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background: rgba(110, 231, 183, 0.1);
+    border: 2px solid rgba(110, 231, 183, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulseRing 2s ease infinite;
+  }
+
+  .checkmark-svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  .checkmark-path {
+    stroke: #6EE7B7;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    stroke-dasharray: 36;
+    stroke-dashoffset: 36;
+    animation: drawCheck 0.5s ease 0.5s forwards;
+  }
+
+  @keyframes drawCheck {
+    to { stroke-dashoffset: 0; }
+  }
+
+  @keyframes pulseRing {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(110, 231, 183, 0.2); }
+    50% { box-shadow: 0 0 0 16px rgba(110, 231, 183, 0); }
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .heading {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+    opacity: 0;
+    animation: fadeIn 0.6s ease 0.4s forwards;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    color: #a0a5bc;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeIn 0.6s ease 0.6s forwards;
+  }
+
+  .spinner {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid rgba(110, 231, 183, 0.3);
+    border-top-color: #6EE7B7;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  .btn-open {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 36px;
+    background: #6EE7B7;
+    color: #0A0F1A;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    opacity: 0;
+    animation: fadeIn 0.6s ease 0.8s forwards;
+  }
+  .btn-open:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(110, 231, 183, 0.3);
+  }
+
+  .download-link {
+    display: block;
+    margin-top: 24px;
+    font-size: 14px;
+    color: #a0a5bc;
+    opacity: 0;
+    animation: fadeIn 0.6s ease 1s forwards;
+  }
+  .download-link a {
+    color: #6EE7B7;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .download-link a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">earmark<b>IQ</b></div>
+
+    <div class="checkmark-wrap">
+      <div class="checkmark-circle">
+        <svg class="checkmark-svg" viewBox="0 0 48 48">
+          <path class="checkmark-path" d="M14 24 L22 32 L34 16" />
+        </svg>
+      </div>
+    </div>
+
+    <h1 class="heading">Bank Connected!</h1>
+    <p class="subtitle"><span class="spinner"></span>Returning you to earmarkIQ...</p>
+
+    <a id="openApp" class="btn-open" href="#">Open earmarkIQ</a>
+
+    <p class="download-link">Don't have the app? <a href="#" id="downloadLink">Download it</a></p>
+  </div>
+
+  <script>
+    (function() {
+      var search = window.location.search;
+      var deepLink = 'earmark://bank-callback/' + search;
+
+      // Set button hrefs
+      document.getElementById('openApp').href = deepLink;
+
+      // Auto-redirect to app
+      window.location.href = deepLink;
+    })();
+  </script>
+</body>
+</html>
