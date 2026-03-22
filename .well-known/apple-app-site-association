@@ -8,6 +8,10 @@
           {
             "/": "/bank-callback*",
             "comment": "Finexer Open Banking callback"
+          },
+          {
+            "/": "/payment-callback*",
+            "comment": "Payment consent callback"
           }
         ]
       }

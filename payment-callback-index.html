@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>earmarkIQ — Payment Complete</title>
+  <meta http-equiv="refresh" content="0;url=https://earmarkiq.app/payment-callback">
+  <script>
+    // Try Universal Link first, then custom scheme fallback
+    window.location = 'https://earmarkiq.app/payment-callback';
+    setTimeout(function() {
+      window.location = 'earmark://payment-callback';
+    }, 500);
+  </script>
+</head>
+<body style="background:#0B1120;color:#F9FAFB;text-align:center;padding-top:40vh;font-family:-apple-system,system-ui,sans-serif">
+  <div style="background:#4AEDC4;width:60px;height:60px;border-radius:30px;margin:0 auto 16px;display:flex;align-items:center;justify-content:center">
+    <span style="font-size:32px;color:#0B1120">✓</span>
+  </div>
+  <h2 style="color:#4AEDC4;margin-bottom:8px">Payment Authorised</h2>
+  <p style="color:#94A3B8">Returning to earmarkIQ...</p>
+</body>
+</html>
