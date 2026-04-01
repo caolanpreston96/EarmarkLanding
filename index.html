@@ -102,7 +102,7 @@
 .fc{position:absolute;background:var(--sf);border:1px solid var(--bd2);border-radius:14px;padding:14px 18px;box-shadow:0 16px 48px rgba(0,0,0,.5);z-index:3;animation:fl 7s ease infinite;backdrop-filter:blur(8px)}.fc1{top:50px;left:-70px}.fc2{bottom:120px;right:-60px;animation-delay:-2.5s}.fc3{top:240px;right:-80px;animation-delay:-5s}@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}.fc-l{font-size:9px;color:var(--tx3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}.fc-v{font-family:var(--m);font-weight:700;font-size:17px}.fc-s{font-size:9px;color:var(--tx4);margin-top:2px}
 
 /* Ticker */
-.ticker{overflow:hidden;padding:18px 0;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);background:var(--bg2);position:relative;z-index:1}.ticker-t{display:flex;animation:st 35s linear infinite;width:max-content}.ticker-i{display:flex;align-items:center;gap:12px;padding:0 36px;white-space:nowrap;font-size:14px;font-weight:500;color:var(--tx3)}.ticker-d{width:5px;height:5px;border-radius:50%;background:var(--mint);opacity:.5}@keyframes st{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.ticker{overflow:hidden;padding:18px 0;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);background:var(--bg2);position:relative;z-index:1}.ticker-t{display:flex;animation:st 45s linear infinite;width:max-content}.ticker-i{display:flex;align-items:center;gap:12px;padding:0 36px;white-space:nowrap;font-size:14px;font-weight:500;color:var(--tx3)}.ticker-d{width:5px;height:5px;border-radius:50%;background:var(--mint);opacity:.5}@keyframes st{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
 /* Sections */
 .sec{position:relative;z-index:1;padding:120px 32px}.sec-i{max-width:1200px;margin:0 auto}.sec-l{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:var(--mint);text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px;font-family:var(--m)}.sec-l::before{content:'';width:20px;height:1.5px;background:var(--mint);border-radius:1px}.sec-h{font-size:clamp(30px,3.8vw,50px);font-weight:800;line-height:1.1;letter-spacing:-.035em;margin-bottom:16px}.sec-d{font-size:17px;color:var(--tx2);max-width:540px;line-height:1.75}.sec-c{text-align:center}.sec-c .sec-d{margin:0 auto}.sec-c .sec-l{justify-content:center}
@@ -131,8 +131,8 @@
 
 
 /* Pricing */
-.pricing-g{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:740px;margin:56px auto 0;align-items:start}.price-card{background:var(--sf);border:1px solid var(--bd);border-radius:20px;padding:36px 28px;position:relative;transition:all .4s}.price-card:hover{transform:translateY(-4px)}.price-card.pop{border-color:rgba(78,205,196,.3);box-shadow:0 20px 60px rgba(78,205,196,.08),0 0 80px rgba(78,205,196,.04)}.price-card.pop::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);border-radius:20px 20px 0 0}.price-badge{position:absolute;top:16px;right:16px;font-size:10px;font-weight:700;font-family:var(--m);text-transform:uppercase;letter-spacing:.06em;padding:4px 10px;border-radius:6px;background:rgba(78,205,196,.12);color:var(--mint)}.price-title{font-size:20px;font-weight:800;margin-bottom:4px}.price-amt{font-family:var(--m);font-size:44px;font-weight:800;letter-spacing:-.03em;line-height:1;margin-bottom:4px}.price-per{font-size:14px;color:var(--tx3);font-weight:400}.price-list{list-style:none;margin:24px 0;display:flex;flex-direction:column;gap:10px}.price-list li{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--tx2)}.price-list li svg{flex-shrink:0}.btn-price{display:block;text-align:center;padding:14px;border-radius:100px;font-family:var(--f);font-size:14px;font-weight:700;transition:all .3s;text-decoration:none}.btn-price.ghost{background:transparent;border:2px solid var(--mint);color:var(--mint)}.btn-price.ghost:hover{background:var(--mint);color:var(--bg)}.btn-price.solid{background:var(--mint);border:2px solid var(--mint);color:var(--bg)}.btn-price.solid:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(78,205,196,.3)}.price-ref{text-align:center;margin-top:32px;font-size:14px;color:var(--tx2)}.price-ref span{color:var(--mint);font-weight:700;border-bottom:2px solid rgba(78,205,196,.3)}
-@media(max-width:600px){.pricing-g{grid-template-columns:1fr}.price-card.pop{order:-1}}
+.pricing-g{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;max-width:1100px;margin:56px auto 0;align-items:start}.price-card{background:var(--sf);border:1px solid var(--bd);border-radius:20px;padding:36px 28px;position:relative;transition:all .4s}.price-card:hover{transform:translateY(-4px)}.price-card.pop{border-color:rgba(78,205,196,.3);box-shadow:0 20px 60px rgba(78,205,196,.08),0 0 80px rgba(78,205,196,.04)}.price-card.pop::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);border-radius:20px 20px 0 0}.price-badge{position:absolute;top:16px;right:16px;font-size:10px;font-weight:700;font-family:var(--m);text-transform:uppercase;letter-spacing:.06em;padding:4px 10px;border-radius:6px;background:rgba(78,205,196,.12);color:var(--mint)}.price-title{font-size:20px;font-weight:800;margin-bottom:4px}.price-amt{font-family:var(--m);font-size:44px;font-weight:800;letter-spacing:-.03em;line-height:1;margin-bottom:4px}.price-per{font-size:14px;color:var(--tx3);font-weight:400}.price-list{list-style:none;margin:24px 0;display:flex;flex-direction:column;gap:10px}.price-list li{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--tx2)}.price-list li svg{flex-shrink:0}.btn-price{display:block;text-align:center;padding:14px;border-radius:100px;font-family:var(--f);font-size:14px;font-weight:700;transition:all .3s;text-decoration:none}.btn-price.ghost{background:transparent;border:2px solid var(--mint);color:var(--mint)}.btn-price.ghost:hover{background:var(--mint);color:var(--bg)}.btn-price.solid{background:var(--mint);border:2px solid var(--mint);color:var(--bg)}.btn-price.solid:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(78,205,196,.3)}.price-ref{text-align:center;margin-top:32px;font-size:14px;color:var(--tx2)}.price-ref span{color:var(--mint);font-weight:700;border-bottom:2px solid rgba(78,205,196,.3)}
+@media(max-width:960px){.pricing-g{grid-template-columns:1fr 1fr}}@media(max-width:600px){.pricing-g{grid-template-columns:1fr}.price-card.pop{order:-1}}
 
 /* Trust */
 .tg{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px}.tc{background:var(--sf);border:1px solid var(--bd);border-radius:16px;padding:28px 22px;text-align:center;transition:all .4s}.tc:hover{border-color:var(--bd2);transform:translateY(-4px)}.tc-i{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:24px}.tc-t{font-size:16px;font-weight:700;margin-bottom:6px;letter-spacing:-.02em}.tc-d{font-size:13px;color:var(--tx2);line-height:1.65}
@@ -172,8 +172,22 @@
         },
         {
           "@type": "Offer",
-          "name": "Premium",
+          "name": "Plus",
           "price": "4.99",
+          "priceCurrency": "GBP",
+          "billingIncrement": "P1M"
+        },
+        {
+          "@type": "Offer",
+          "name": "Pro",
+          "price": "9.99",
+          "priceCurrency": "GBP",
+          "billingIncrement": "P1M"
+        },
+        {
+          "@type": "Offer",
+          "name": "Unlimited",
+          "price": "14.99",
           "priceCurrency": "GBP",
           "billingIncrement": "P1M"
         }
@@ -221,7 +235,7 @@
           "name": "Is earmarkIQ safe to use with my bank?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. earmarkIQ connects to your bank via Open Banking, which is regulated by the FCA. We use read-only access — we can never move your money or see your password. All data is encrypted to 256-bit bank-level standard."
+            "text": "Yes. earmarkIQ connects to your bank via Open Banking, which is regulated by the FCA. Account data is accessed via AIS (read-only). If you use salary allocation, payments are initiated via PIS — only with your explicit consent each time. We never see your password. All data is encrypted to 256-bit bank-level standard."
           }
         },
         {
@@ -237,7 +251,7 @@
           "name": "How much does earmarkIQ cost?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "earmarkIQ is free to use with core features including bank connection, spending analysis, AI salary allocation, and gamification. Premium is £4.99/month and unlocks unlimited AI chat, all pro tools, and advanced insights."
+            "text": "earmarkIQ is free to use with core features including bank connection, spending analysis, AI salary allocation, and gamification. Paid plans start at £4.99/month (Plus) for more AI messages and pro tools, £9.99/month (Pro) for unlimited AI chat and advanced insights, and £14.99/month (Unlimited) for everything including priority support."
           }
         },
         {
@@ -295,15 +309,15 @@
 </div></section>
 
 <!-- TICKER -->
-<div class="ticker"><div class="ticker-t"><div class="ticker-i"><span class="ticker-d"></span>Smart Allocation</div><div class="ticker-i"><span class="ticker-d"></span>Price Creep Detection</div><div class="ticker-i"><span class="ticker-d"></span>AI Advisor</div><div class="ticker-i"><span class="ticker-d"></span>Open Banking</div><div class="ticker-i"><span class="ticker-d"></span>Subscription Radar</div><div class="ticker-i"><span class="ticker-d"></span>Goal Tracking</div><div class="ticker-i"><span class="ticker-d"></span>Partner Finance</div><div class="ticker-i"><span class="ticker-d"></span>Pro Tools</div><div class="ticker-i"><span class="ticker-d"></span>Gamification</div><div class="ticker-i"><span class="ticker-d"></span>Marketplace</div><div class="ticker-i"><span class="ticker-d"></span>Smart Allocation</div><div class="ticker-i"><span class="ticker-d"></span>Price Creep Detection</div><div class="ticker-i"><span class="ticker-d"></span>AI Advisor</div><div class="ticker-i"><span class="ticker-d"></span>Open Banking</div><div class="ticker-i"><span class="ticker-d"></span>Subscription Radar</div><div class="ticker-i"><span class="ticker-d"></span>Goal Tracking</div><div class="ticker-i"><span class="ticker-d"></span>Partner Finance</div><div class="ticker-i"><span class="ticker-d"></span>Pro Tools</div><div class="ticker-i"><span class="ticker-d"></span>Gamification</div><div class="ticker-i"><span class="ticker-d"></span>Marketplace</div></div></div>
+<div class="ticker"><div class="ticker-t"><div class="ticker-i"><span class="ticker-d"></span>Smart Allocation</div><div class="ticker-i"><span class="ticker-d"></span>Price Creep Detection</div><div class="ticker-i"><span class="ticker-d"></span>AI Advisor</div><div class="ticker-i"><span class="ticker-d"></span>Open Banking</div><div class="ticker-i"><span class="ticker-d"></span>Subscription Radar</div><div class="ticker-i"><span class="ticker-d"></span>Goal Tracking</div><div class="ticker-i"><span class="ticker-d"></span>Partner Finance</div><div class="ticker-i"><span class="ticker-d"></span>Pro Tools</div><div class="ticker-i"><span class="ticker-d"></span>Gamification</div><div class="ticker-i"><span class="ticker-d"></span>Marketplace</div><div class="ticker-i"><span class="ticker-d"></span>Anomaly Detection</div><div class="ticker-i"><span class="ticker-d"></span>Tax Suite</div><div class="ticker-i"><span class="ticker-d"></span>Weekly Briefing</div><div class="ticker-i"><span class="ticker-d"></span>Monthly Recap</div><div class="ticker-i"><span class="ticker-d"></span>Smart Allocation</div><div class="ticker-i"><span class="ticker-d"></span>Price Creep Detection</div><div class="ticker-i"><span class="ticker-d"></span>AI Advisor</div><div class="ticker-i"><span class="ticker-d"></span>Open Banking</div><div class="ticker-i"><span class="ticker-d"></span>Subscription Radar</div><div class="ticker-i"><span class="ticker-d"></span>Goal Tracking</div><div class="ticker-i"><span class="ticker-d"></span>Partner Finance</div><div class="ticker-i"><span class="ticker-d"></span>Pro Tools</div><div class="ticker-i"><span class="ticker-d"></span>Gamification</div><div class="ticker-i"><span class="ticker-d"></span>Marketplace</div><div class="ticker-i"><span class="ticker-d"></span>Anomaly Detection</div><div class="ticker-i"><span class="ticker-d"></span>Tax Suite</div><div class="ticker-i"><span class="ticker-d"></span>Weekly Briefing</div><div class="ticker-i"><span class="ticker-d"></span>Monthly Recap</div></div></div>
 
 <!-- HOW IT WORKS -->
 <section class="sec" id="how"><div class="sec-i">
   <div class="r"><div class="sec-l">How it works</div></div>
   <h2 class="sec-h r d1">Three steps to financial clarity.<br>Two minutes to set up.</h2>
-  <p class="sec-d r d2">No spreadsheets. No budgeting apps you'll abandon. Connect and let Earmark do the thinking.</p>
+  <p class="sec-d r d2">No spreadsheets. No budgeting apps you'll abandon. Connect and let earmarkIQ do the thinking.</p>
   <div class="steps">
-    <div class="step r d1"><div class="step-n">01</div><div class="step-ic" style="background:rgba(78,205,196,.1);color:var(--mint)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div><h3 class="step-t">Connect in Seconds</h3><p class="step-x">Link your bank through Open Banking — Monzo, Starling, Barclays, HSBC and 50+ more. Read-only access, we never see your password. Takes under 30 seconds.</p><div class="iph iph-step"><div class="iph-scr"><img src="assets/succesfull bank connection.webp" alt="earmarkIQ bank connection success screen via Open Banking"></div></div></div>
+    <div class="step r d1"><div class="step-n">01</div><div class="step-ic" style="background:rgba(78,205,196,.1);color:var(--mint)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div><h3 class="step-t">Connect in Seconds</h3><p class="step-x">Link your bank through Open Banking — Monzo, Starling, Barclays, HSBC and 50+ more. Secure access via Open Banking — we never see your password. Takes under 30 seconds.</p><div class="iph iph-step"><div class="iph-scr"><img src="assets/succesfull bank connection.webp" alt="earmarkIQ bank connection success screen via Open Banking"></div></div></div>
     <div class="step r d2"><div class="step-n">02</div><div class="step-ic" style="background:rgba(91,141,239,.1);color:var(--blue)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h3 class="step-t">Get Your AI Profile</h3><p class="step-x">Our AI analyses months of spending data and builds your complete financial profile — your money personality, spending rhythm, danger zones, and quick wins. All in under 2 minutes.</p><div class="iph iph-step"><div class="iph-scr"><img src="assets/IMG_1418.PNG" alt="earmarkIQ AI financial profile — The Feast or Famine Spender with spending stats"></div></div></div>
     <div class="step r d3"><div class="step-n">03</div><div class="step-ic" style="background:rgba(155,143,232,.1);color:var(--purple)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div><h3 class="step-t">Watch Your Money Work</h3><p class="step-x">Track goals, catch subscription price creep, get weekly insights, and ask your AI advisor anything about your finances. Your money on autopilot.</p><div class="iph iph-step"><div class="iph-scr"><img src="assets/for you ai insights .webp" alt="earmarkIQ weekly insights with AI-powered financial advice"></div></div></div>
   </div>
@@ -334,8 +348,8 @@
     <div class="ft rl">
       <div class="ft-tag" style="background:rgba(78,205,196,.12);color:var(--bg);border:none">Spending Analysis</div>
       <h3 class="ft-h">See where every pound<br>actually goes.</h3>
-      <p class="ft-d">earmarkIQ categorises every transaction automatically — groceries, subscriptions, transport, eating out — and shows you patterns you'd never spot yourself.</p>
-      <ul class="ft-ul"><li><span class="ft-dot" style="background:var(--mint)"></span>Spending by category with expandable transaction lists</li><li><span class="ft-dot" style="background:var(--mint)"></span>Payday spike detection — how much more you spend after payday</li><li><span class="ft-dot" style="background:var(--mint)"></span>Weekend vs weekday spending comparison</li></ul>
+      <p class="ft-d">earmarkIQ categorises every transaction automatically and runs a 7-type anomaly scanner in the background — catching spending spikes, new recurring charges, dormant accounts, duplicate services, lifestyle inflation, unusual merchants, and payday overspend. Get a weekly briefing, daily insights, and a financial health score.</p>
+      <ul class="ft-ul"><li><span class="ft-dot" style="background:var(--mint)"></span>Spending by category with expandable transaction lists</li><li><span class="ft-dot" style="background:var(--mint)"></span>Payday spike detection — how much more you spend after payday</li><li><span class="ft-dot" style="background:var(--mint)"></span>Weekend vs weekday spending comparison</li><li><span class="ft-dot" style="background:var(--mint)"></span>7-type anomaly scanner running continuously in the background</li></ul>
     </div>
     <div class="fv"><div class="feat-glow" style="--glow:rgba(78,205,196,.15)"><div style="position:absolute;inset:-40px;border-radius:50%;background:var(--glow);filter:blur(60px);opacity:.5;pointer-events:none"></div><div class="iph iph-feat"><div class="iph-scr"><img src="assets/spending 2 .webp" alt="earmarkIQ spending chart with yearly bar graph, payday spike and weekend vs weekday insights"></div></div></div></div>
   </div>
@@ -357,8 +371,8 @@
     <div class="ft rl">
       <div class="ft-tag" style="background:rgba(91,141,239,.15);color:var(--bg);border:none">AI Allocation</div>
       <h3 class="ft-h">Your paycheck,<br>optimised by AI.</h3>
-      <p class="ft-d">When you get paid, earmarkIQ tells you exactly how to split your salary: bills, savings, investments, and guilt-free spending. The AI adapts to your spending patterns, upcoming bills, and financial goals.</p>
-      <ul class="ft-ul"><li><span class="ft-dot" style="background:var(--blue)"></span>AI-optimised allocation: Bills, Savings, Investments, Discretionary</li><li><span class="ft-dot" style="background:var(--blue)"></span>Visual donut chart with free-to-spend amount in the centre</li><li><span class="ft-dot" style="background:var(--blue)"></span>Payday countdown with automation rules</li></ul>
+      <p class="ft-d">When you get paid, earmarkIQ splits your salary into bills, savings, investments, and guilt-free spending — then actually moves the money for you via Open Banking Payment Initiation. The AI adapts to your spending patterns, upcoming bills, and financial goals.</p>
+      <ul class="ft-ul"><li><span class="ft-dot" style="background:var(--blue)"></span>AI-optimised allocation: Bills, Savings, Investments, Discretionary</li><li><span class="ft-dot" style="background:var(--blue)"></span>Visual donut chart with free-to-spend amount in the centre</li><li><span class="ft-dot" style="background:var(--blue)"></span>Payday countdown with automation rules</li><li><span class="ft-dot" style="background:var(--blue)"></span>Payment Initiation — money moves between your accounts with consent</li></ul>
     </div>
     <div class="fv"><div class="feat-glow" style="--glow:rgba(91,141,239,.15)"><div style="position:absolute;inset:-40px;border-radius:50%;background:var(--glow);filter:blur(60px);opacity:.5;pointer-events:none"></div><div class="iph iph-feat"><div class="iph-scr"><img src="assets/pay check allocation .webp" alt="earmarkIQ dashboard with donut chart showing £2.6k free to spend and paycheck allocation"></div></div></div></div>
   </div>
@@ -368,8 +382,8 @@
     <div class="ft rr">
       <div class="ft-tag" style="background:rgba(155,143,232,.15);color:var(--bg);border:none">AI Advisor</div>
       <h3 class="ft-h">Ask anything about your<br>money. Get real answers.</h3>
-      <p class="ft-d">Ask IQ knows your transactions, bills, and goals. Ask "Can I afford a holiday?" or "How can I save £200 this month?" and get specific, actionable answers based on your actual data. Not generic advice. Your advice.</p>
-      <ul class="ft-ul"><li><span class="ft-dot" style="background:var(--purple)"></span>Conversational AI with full transaction context</li><li><span class="ft-dot" style="background:var(--purple)"></span>Suggested prompts to get you started</li><li><span class="ft-dot" style="background:var(--purple)"></span>Exportable AI reports as branded PDFs</li></ul>
+      <p class="ft-d">Ask IQ has persistent memory, remembers every conversation, and knows your transactions, bills, and goals. Ask "Can I afford a holiday?" or "How can I save £200 this month?" and get specific, actionable answers from 12+ agentic tools — not generic advice.</p>
+      <ul class="ft-ul"><li><span class="ft-dot" style="background:var(--purple)"></span>Persistent memory across conversations with full transaction context</li><li><span class="ft-dot" style="background:var(--purple)"></span>12+ agentic tools: spending lookup, budget check, goal progress, tax estimate, and more</li><li><span class="ft-dot" style="background:var(--purple)"></span>Exportable AI reports as branded PDFs</li><li><span class="ft-dot" style="background:var(--purple)"></span>5 free messages/day — up to 500/month on premium plans</li></ul>
     </div>
     <div class="fv"><div class="feat-glow" style="--glow:rgba(155,143,232,.12)"><div style="position:absolute;inset:-40px;border-radius:50%;background:var(--glow);filter:blur(60px);opacity:.5;pointer-events:none"></div><div class="iph iph-feat"><div class="iph-scr"><img src="assets/ask IQ.webp" alt="earmarkIQ Ask IQ AI chat with suggested prompts for spending, budgets, and savings"></div></div></div></div>
   </div>
@@ -380,7 +394,7 @@
       <div class="ft-tag" style="background:rgba(74,222,128,.15);color:var(--bg);border:none">Goal Tracking</div>
       <h3 class="ft-h">Set it. Track it.<br>Hit it.</h3>
       <p class="ft-d">House deposit, emergency fund, holiday, debt payoff — earmarkIQ tracks your progress and suggests how to get there faster with AI-powered budget recommendations that learn from your spending.</p>
-      <ul class="ft-ul"><li><span class="ft-dot" style="background:var(--green)"></span>6 preset goal types with progress bars and deadlines</li><li><span class="ft-dot" style="background:var(--green)"></span>AI budget suggestions based on 3 months of spending data</li><li><span class="ft-dot" style="background:var(--green)"></span>Partner goals with shared tracking and split contributions</li></ul>
+      <ul class="ft-ul"><li><span class="ft-dot" style="background:var(--green)"></span>6 preset goal types with progress bars and deadlines</li><li><span class="ft-dot" style="background:var(--green)"></span>AI budget suggestions based on 3 months of spending data</li><li><span class="ft-dot" style="background:var(--green)"></span>Partner goals with shared tracking and split contributions</li><li><span class="ft-dot" style="background:var(--green)"></span>Milestone celebrations with shareable progress cards</li></ul>
     </div>
     <div class="fv"><div class="feat-glow" style="--glow:rgba(74,222,128,.15)"><div style="position:absolute;inset:-40px;border-radius:50%;background:var(--glow);filter:blur(60px);opacity:.5;pointer-events:none"></div><div class="iph iph-feat"><div class="iph-scr"><img src="assets/goals but with partner finance.webp" alt="earmarkIQ goals with house deposit tracking, partner goals, and budget categories"></div></div></div></div>
   </div>
@@ -403,11 +417,11 @@
       <h3 class="ft-h">10 financial tools,<br>zero spreadsheets.</h3>
       <p class="ft-d">Everything you need to plan your financial future — from modelling a salary raise to mapping your fastest route out of debt. All powered by your real spending data.</p>
       <div class="tool-grid">
-        <div class="tool-card"><div class="tool-card-ic">🔮</div><div class="tool-card-n">What-If Simulator</div><div class="tool-card-d">Model salary changes, new expenses, investment returns</div></div>
+        <div class="tool-card"><div class="tool-card-ic">🔮</div><div class="tool-card-n">What-If Simulator</div><div class="tool-card-d">Model salary changes, new expenses, investment returns — monthly, annual, and 5-year projections</div></div>
         <div class="tool-card"><div class="tool-card-ic">💳</div><div class="tool-card-n">Debt Payoff Planner</div><div class="tool-card-d">Avalanche vs Snowball with debt-free date</div></div>
-        <div class="tool-card"><div class="tool-card-ic">🧾</div><div class="tool-card-n">Tax Optimiser</div><div class="tool-card-d">Tax bands, pension savings, ISA status</div></div>
+        <div class="tool-card"><div class="tool-card-ic">🧾</div><div class="tool-card-n">Tax Optimiser</div><div class="tool-card-d">Full UK tax suite: income tax bands, NI, pension optimiser, ISA tracker, student loan, salary sacrifice, marriage allowance</div></div>
         <div class="tool-card"><div class="tool-card-ic">💰</div><div class="tool-card-n">Raise Calculator</div><div class="tool-card-d">Exact take-home after a salary increase</div></div>
-        <div class="tool-card"><div class="tool-card-ic">📈</div><div class="tool-card-n">Net Worth Tracker</div><div class="tool-card-d">Assets minus debts with trend chart</div></div>
+        <div class="tool-card"><div class="tool-card-ic">📈</div><div class="tool-card-n">Net Worth Tracker</div><div class="tool-card-d">Assets, debts, mortgage equity, LTV ratio, and trend chart</div></div>
         <div class="tool-card"><div class="tool-card-ic">📊</div><div class="tool-card-n">Investment Calculator</div><div class="tool-card-d">Project growth with compound interest</div></div>
         <div class="tool-card"><div class="tool-card-ic">🎯</div><div class="tool-card-n">Risk Profile Quiz</div><div class="tool-card-d">6 questions to find your investor profile</div></div>
         <div class="tool-card"><div class="tool-card-ic">🔍</div><div class="tool-card-n">Subscription Audit</div><div class="tool-card-d">AI-detected overlaps and cancellations</div></div>
@@ -458,8 +472,8 @@
     <div class="ft rl">
       <div class="ft-tag" style="background:rgba(245,166,35,.15);color:var(--bg);border:none">Gamification</div>
       <h3 class="ft-h">Get rewarded for smart<br>money moves.</h3>
-      <p class="ft-d">Earn XP for every positive financial action — checking your spending, completing challenges, taking quizzes, hitting savings goals. Level up, maintain streaks, and share your progress.</p>
-      <ul class="ft-ul"><li><span class="ft-dot" style="background:var(--amber)"></span>XP for actions: AI chat, categorise spending, complete challenges, take quizzes</li><li><span class="ft-dot" style="background:var(--amber)"></span>Named levels with progress bars (Saver, Builder, Strategist...)</li><li><span class="ft-dot" style="background:var(--amber)"></span>Weekly spending streaks with milestones</li></ul>
+      <p class="ft-d">Earn XP for every positive financial action — checking your spending, completing challenges, taking quizzes, hitting savings goals. Level up, maintain streaks, and get a Wrapped-style monthly recap of your financial highlights.</p>
+      <ul class="ft-ul"><li><span class="ft-dot" style="background:var(--amber)"></span>XP for actions: AI chat, categorise spending, complete challenges, take quizzes</li><li><span class="ft-dot" style="background:var(--amber)"></span>Named levels with progress bars (Saver, Builder, Strategist...)</li><li><span class="ft-dot" style="background:var(--amber)"></span>Weekly spending streaks with milestones</li><li><span class="ft-dot" style="background:var(--amber)"></span>Monthly &amp; Annual Recap — swipeable summary cards with spending personality, top categories, shareable highlights</li></ul>
     </div>
     <div class="fv rr">
       <div class="xp-ill">
@@ -500,35 +514,57 @@
       <div class="price-title">Free</div>
       <div class="price-amt">£0<span class="price-per"> /forever</span></div>
       <ul class="price-list">
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Bank connection & spending analysis</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Bank connection &amp; spending analysis</li>
         <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>AI paycheck allocation</li>
         <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>5 AI messages per day</li>
         <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Weekly insights</li>
         <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>1 What-If scenario</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Basic marketplace recommendations</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>3 AI reports per month</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Gamification & XP</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Gamification &amp; XP</li>
       </ul>
       <a href="#waitlist" class="btn-price ghost">Get Started Free</a>
     </div>
     <div class="price-card pop r d2">
       <div class="price-badge">Most Popular</div>
-      <div class="price-title">Premium</div>
+      <div class="price-title">Plus</div>
       <div class="price-amt">£4.99<span class="price-per"> /month</span></div>
       <ul class="price-list">
         <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Everything in Free, plus:</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Unlimited AI chat</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>50 AI messages per day</li>
         <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Daily insights</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>All What-If scenarios & pro tools</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>All What-If scenarios</li>
         <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Advanced budget suggestions</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>10 AI reports per month</li>
+      </ul>
+      <a href="#waitlist" class="btn-price solid">Go Plus</a>
+    </div>
+    <div class="price-card r d3">
+      <div class="price-title">Pro</div>
+      <div class="price-amt">£9.99<span class="price-per"> /month</span></div>
+      <ul class="price-list">
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Everything in Plus, plus:</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>200 AI messages per day</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>All pro tools &amp; tax suite</li>
         <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Detailed debt payoff strategies</li>
         <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Unlimited AI reports</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Priority support</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Payment Initiation (PIS)</li>
       </ul>
-      <a href="#waitlist" class="btn-price solid">Go Premium</a>
+      <a href="#waitlist" class="btn-price ghost">Go Pro</a>
+    </div>
+    <div class="price-card r d4" style="border-top:3px solid var(--purple)">
+      <div class="price-title">Unlimited</div>
+      <div class="price-amt">£14.99<span class="price-per"> /month</span></div>
+      <ul class="price-list">
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Everything in Pro, plus:</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>500 AI messages per day</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Priority support</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Early access to new features</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Partner Finance mode</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Monthly &amp; Annual Recap</li>
+      </ul>
+      <a href="#waitlist" class="btn-price ghost">Go Unlimited</a>
     </div>
   </div>
-  <div class="price-ref r d3">Refer 3 friends → <span>Premium free forever</span></div>
+  <div class="price-ref r d3">Refer 3 friends → <span>Plus free forever</span></div>
 </div></section>
 
 <!-- SECURITY -->
@@ -540,7 +576,7 @@
     <div class="tc r d1"><div class="tc-i" style="background:rgba(78,205,196,.06)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="1.5"><path d="M9 12a3 3 0 106 0 3 3 0 00-6 0z"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M17 12a5 5 0 01-10 0"/></svg></div><h4 class="tc-t">Biometric Authentication</h4><p class="tc-d">Face ID and Touch ID keep your data behind your face or fingerprint.</p></div>
     <div class="tc r d2"><div class="tc-i" style="background:rgba(91,141,239,.06)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div><h4 class="tc-t">FCA Regulated</h4><p class="tc-d">Open Banking through Finexer Ltd (firm ref 925695).</p></div>
     <div class="tc r d3"><div class="tc-i" style="background:rgba(155,143,232,.06)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--purple)" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div><h4 class="tc-t">256-bit Encryption</h4><p class="tc-d">All data encrypted in transit and at rest — bank-level standard.</p></div>
-    <div class="tc r d1"><div class="tc-i" style="background:rgba(245,166,35,.06)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/><line x1="2" y1="2" x2="22" y2="22" stroke-width="2"/></svg></div><h4 class="tc-t">Read-Only Access</h4><p class="tc-d">We can never move your money or make payments on your behalf.</p></div>
+    <div class="tc r d1"><div class="tc-i" style="background:rgba(245,166,35,.06)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--amber)" stroke-width="1.5"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></div><h4 class="tc-t">Open Banking &amp; PIS</h4><p class="tc-d">Read your accounts securely via AIS. Move money between your own accounts via PIS — only with your explicit consent each time.</p></div>
     <div class="tc r d2"><div class="tc-i" style="background:rgba(78,205,196,.06)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h4 class="tc-t">Auto-Lock</h4><p class="tc-d">App locks after 2 minutes of inactivity and when backgrounded.</p></div>
     <div class="tc r d3"><div class="tc-i" style="background:rgba(255,107,107,.06)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--coral)" stroke-width="1.5"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg></div><h4 class="tc-t">Your Data, Your Control</h4><p class="tc-d">Delete your account and all data at any time from Settings.</p></div>
   </div>
@@ -564,7 +600,7 @@
 <section class="sec cta-s" id="waitlist"><div class="cta-gl"></div><div class="sec-i cta-c">
   <div class="r">
     <h2 class="cta-h">Ready to make your<br><em>salary work harder?</em></h2>
-    <p class="cta-p">Join the waitlist and be first to know when Earmark launches. Early members get lifetime premium access.</p>
+    <p class="cta-p">Join the waitlist and be first to know when earmarkIQ launches. Early members get lifetime premium access.</p>
     <form class="wl-f" id="wl-form"><input type="email" class="wl-in" placeholder="Enter your email" required><button type="submit" class="wl-btn">Join Waitlist</button></form>
     <p class="cta-n">No spam. We'll only email you about launch updates.</p>
   </div>
@@ -579,7 +615,7 @@
     <div><h5 class="footer-hd">Legal</h5><ul class="footer-ul"><li><a href="/privacy">Privacy Policy</a></li><li><a href="/terms">Terms of Service</a></li><li><a href="mailto:hello@earmarkiq.app">Support</a></li></ul></div>
   </div>
   <div class="footer-mid">
-    <div class="footer-cp">&copy; 2025 earmarkIQ Ltd. All rights reserved.</div>
+    <div class="footer-cp">&copy; 2026 earmarkIQ Ltd. All rights reserved.</div>
     <div class="footer-fca">FCA regulated through Finexer Ltd (firm ref 925695)</div>
     <div class="footer-social">
       <a href="#" aria-label="Twitter/X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
