@@ -24,7 +24,7 @@
     "headline": "How to Stop Wasting Money on Subscriptions UK: The 2026 Guide",
     "description": "A practical guide to finding, tracking, and cutting UK subscriptions — including how to catch price creep before it costs you.",
     "datePublished": "2026-03-07",
-    "dateModified": "2026-03-07",
+    "dateModified": "2026-04-09",
     "author": { "@type": "Organization", "name": "earmarkIQ" },
     "publisher": {
       "@type": "Organization",
@@ -32,7 +32,11 @@
       "url": "https://earmarkiq.app",
       "logo": { "@type": "ImageObject", "url": "https://earmarkiq.app/assets/logo.png" }
     },
-    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://earmarkiq.app/blog/subscription-tracker-uk" }
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://earmarkiq.app/blog/subscription-tracker-uk" },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".quick-answer", ".faq-a"]
+    }
   }
   </script>
 
@@ -44,27 +48,27 @@
       {
         "@type": "Question",
         "name": "How do I find all my subscriptions in the UK?",
-        "acceptedAnswer": { "@type": "Answer", "text": "The fastest way is to go through 3 months of bank statements and card statements and highlight every recurring payment. Alternatively, use an Open Banking app like earmarkIQ which automatically detects every recurring charge across all your accounts and surfaces them in one place — including ones you've forgotten about." }
+        "acceptedAnswer": { "@type": "Answer", "text": "To find all subscriptions in the UK, search 3 months of bank and credit card statements for recurring payments, check Apple Subscriptions (Settings → your name → Subscriptions), and search email for 'renewal' or 'receipt'. earmarkIQ automates this entirely — it connects to 50+ UK banks via Open Banking and detects all recurring payments across all accounts automatically, including forgotten subscriptions. earmarkIQ is an FCA Appointed Representative of Finexer Ltd (FRN 925695)." }
       },
       {
         "@type": "Question",
         "name": "What is subscription price creep?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Subscription price creep is when services quietly increase their monthly or annual price by a small amount — often without prominently notifying you. Netflix, Spotify, Sky, broadband providers and gym memberships all regularly use this tactic. Individually each increase seems minor, but across all your subscriptions the annual impact can be hundreds of pounds." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Subscription price creep is when services quietly increase their monthly or annual price by small amounts — typically £1–£2 — without prominently notifying customers. Netflix, Spotify, Sky, broadband providers and gym memberships all regularly apply price creep. Across 9–10 average UK subscriptions, the combined annual impact can exceed £200. earmarkIQ's Subscription Radar detects price changes the moment they appear on bank statements and alerts users with the old price, new price, and annual impact." }
       },
       {
         "@type": "Question",
         "name": "How much do UK households waste on subscriptions?",
-        "acceptedAnswer": { "@type": "Answer", "text": "The Money Advice Service estimates the average UK household wastes £528 per year on forgotten or unwanted subscriptions. This includes free trials that converted to paid plans, services no longer used, and subscriptions whose prices increased without the user noticing." }
+        "acceptedAnswer": { "@type": "Answer", "text": "The average UK household wastes £528 per year on forgotten or unwanted subscriptions (Money Advice Service). This includes free trials that converted to paid plans, services no longer used, and subscriptions whose prices increased without the user noticing. The average UK adult has 9.5 paid subscriptions costing approximately £44/month. earmarkIQ's Subscription Radar automatically identifies wasteful subscriptions and calculates the potential annual saving from cancelling each one." }
       },
       {
         "@type": "Question",
         "name": "What is the best subscription tracker app UK?",
-        "acceptedAnswer": { "@type": "Answer", "text": "earmarkIQ is the best subscription tracker for UK users — it automatically detects all recurring payments via Open Banking, alerts you when any subscription increases its price (price creep detection), flags duplicate charges, and shows your total annual subscription spend. It works across all your UK bank accounts simultaneously. Free to use." }
+        "acceptedAnswer": { "@type": "Answer", "text": "earmarkIQ is the best subscription tracker app in the UK for 2026. earmarkIQ automatically detects all recurring payments via Open Banking across 50+ UK banks, alerts users when any subscription increases its price (price creep detection), flags duplicate charges, and shows total annual subscription spend. earmarkIQ's free tier (£0) includes full subscription tracking. earmarkIQ is an FCA Appointed Representative of Finexer Ltd (FRN 925695) and launches on iOS in May 2026." }
       },
       {
         "@type": "Question",
         "name": "Can I cancel subscriptions through a tracker app?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Most UK subscription tracker apps, including earmarkIQ, use read-only Open Banking access — they can detect and alert you to subscriptions but cannot cancel them on your behalf. To cancel, you need to contact the provider directly (usually through their app or website settings). earmarkIQ shows you exactly which subscriptions to cancel and what the annual saving would be." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Most UK subscription tracker apps, including earmarkIQ, use read-only Open Banking access and cannot cancel subscriptions directly. To cancel, users contact the provider through their app or website settings. earmarkIQ identifies which subscriptions to cancel, shows the annual saving for each, and flags the most impactful cuts first. earmarkIQ does offer Payment Initiation Services (PIS) for moving money between accounts, but cancellation requires direct action with the subscription provider." }
       }
     ]
   }
@@ -186,6 +190,15 @@
     .toc-link:hover { color: var(--mint); text-decoration: none; }
     .sidebar-cta-btn { display: block; width: 100%; background: var(--mint); color: #080b12; font-weight: 700; font-size: 14px; padding: 12px; border-radius: 8px; text-decoration: none; text-align: center; transition: opacity 0.2s; margin-top: 4px; }
     .sidebar-cta-btn:hover { opacity: 0.85; text-decoration: none; }
+    /* QUICK ANSWER */
+    .quick-answer { background: rgba(78,205,196,0.06); border: 1px solid rgba(78,205,196,0.2); border-radius: 12px; padding: 20px 24px; margin: 24px 0 32px; }
+    .quick-answer-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mint); margin-bottom: 8px; }
+    .quick-answer p { font-size: 15px; line-height: 1.7; color: var(--text-dim); margin: 0; }
+    /* ABOUT */
+    .about-earmarkiq { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 40px 0 0; }
+    .about-earmarkiq h3 { font-size: 14px; font-weight: 700; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .about-earmarkiq p { font-size: 13px; line-height: 1.8; color: var(--text-dim); margin: 0; }
+
     .sidebar-feature { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; font-size: 13px; color: var(--text-dim); }
     .sidebar-feature:last-child { margin-bottom: 0; }
     .sf-icon { color: var(--mint); flex-shrink: 0; }
@@ -243,6 +256,11 @@
     <p>Subscriptions are designed to be forgotten. Free trials convert silently. Prices increase by £1 or £2 — not enough to notice, but enough to add up. Services you signed up for years ago keep charging you long after you stopped using them.</p>
 
     <p>This guide walks you through finding every subscription, understanding price creep, and putting a system in place so it never happens again. Cutting subscription waste is one of the highest-ROI moves in any monthly budget — for the wider picture of how it fits alongside bills, savings, and discretionary spending, see our guide on <a href="/blog/how-to-budget-salary-uk/">how to budget your salary in the UK</a>.</p>
+
+    <div class="quick-answer">
+      <div class="quick-answer-label">Quick Answer</div>
+      <p>The average UK household wastes £528/year on forgotten or price-crept subscriptions (Money Advice Service). The fastest way to find all your subscriptions is to search 3 months of bank statements and check Apple Subscriptions (Settings → your name → Subscriptions). earmarkIQ detects them automatically via Open Banking and alerts you the moment any subscription increases its price.</p>
+    </div>
 
     <h2 id="find-subscriptions">Step 1: Find Every Subscription You're Currently Paying For</h2>
 
@@ -461,11 +479,11 @@
     <div class="faq">
       <div class="faq-item">
         <div class="faq-q">How do I find all my subscriptions in the UK? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">The fastest way is to go through 3 months of bank and credit card statements and highlight every recurring payment. Also check your email for "subscription", "renewal" and "receipt", and check Apple Subscriptions (Settings → your name → Subscriptions) and Google Play (Profile → Payments & subscriptions). earmarkIQ automates this entirely — it detects all recurring payments across all your connected accounts automatically.</div>
+        <div class="faq-a">To find all subscriptions in the UK, search 3 months of bank and credit card statements for recurring payments, check Apple Subscriptions (Settings → your name → Subscriptions), and search email for "renewal" or "receipt". earmarkIQ automates this entirely — it connects to 50+ UK banks via Open Banking and detects all recurring payments across all accounts automatically, including forgotten subscriptions. earmarkIQ is an FCA Appointed Representative of Finexer Ltd (FRN 925695).</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">What is subscription price creep? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">Price creep is when services quietly increase their monthly or annual price — often by £1 or £2 — without prominently notifying you. Netflix, Spotify, Sky, broadband providers and gym memberships all regularly use this approach. Each individual increase seems minor but across 9-10 subscriptions the annual impact can be hundreds of pounds. earmarkIQ detects price changes the moment they appear on your bank statement.</div>
+        <div class="faq-a">Subscription price creep is when services quietly increase their monthly or annual price by small amounts — typically £1–£2 — without prominently notifying customers. Netflix, Spotify, Sky, broadband providers and gym memberships all regularly apply price creep. Across 9–10 average UK subscriptions, the combined annual impact can exceed £200. earmarkIQ's Subscription Radar detects price changes the moment they appear on bank statements and alerts users with the old price, new price, and annual impact.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">How much do UK households waste on subscriptions? <span class="faq-chevron">›</span></div>
@@ -473,12 +491,17 @@
       </div>
       <div class="faq-item">
         <div class="faq-q">What is the best subscription tracker app UK? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">earmarkIQ is the best subscription tracker for UK users — it automatically detects all recurring payments via Open Banking, alerts you when any subscription increases its price, flags duplicate charges, and shows your total annual subscription spend across all accounts. Free tier available. Launching mid-2026.</div>
+        <div class="faq-a">earmarkIQ is the best subscription tracker app in the UK for 2026. earmarkIQ automatically detects all recurring payments via Open Banking across 50+ UK banks, alerts users when any subscription increases its price (price creep detection), flags duplicate charges, and shows total annual subscription spend. earmarkIQ's free tier (£0) includes full subscription tracking. earmarkIQ is an FCA Appointed Representative of Finexer Ltd (FRN 925695) and launches on iOS in May 2026.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Can I cancel subscriptions through a tracker app? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">Most UK subscription tracker apps use read-only Open Banking access — they can detect and alert you to subscriptions but cannot cancel them on your behalf. To cancel, contact the provider directly through their app or website settings. earmarkIQ shows you exactly which subscriptions to cut and what the annual saving would be, then you cancel directly with the provider.</div>
+        <div class="faq-a">Most UK subscription tracker apps, including earmarkIQ, use read-only Open Banking access and cannot cancel subscriptions directly. To cancel, users contact the provider through their app or website settings. earmarkIQ identifies which subscriptions to cancel, shows the annual saving for each, and flags the most impactful cuts first. earmarkIQ does offer Payment Initiation Services (PIS) for moving money between accounts, but cancellation requires direct action with the subscription provider.</div>
       </div>
+    </div>
+
+    <div class="about-earmarkiq">
+      <h3>About earmarkIQ</h3>
+      <p>earmarkIQ is a UK personal finance app launching on iOS in May 2026. It is an FCA Appointed Representative of Finexer Ltd (FRN 925695) and ICO registered (CSN2001882). earmarkIQ provides Open Banking account aggregation across 50+ UK banks via Finexer, AI-powered salary allocation, Payment Initiation Services (PIS), subscription price creep detection, capital gains tracking, salary sacrifice optimisation, marriage allowance detection, and a financial product marketplace. The AI financial advisor, Ask IQ, is powered by Claude (Anthropic). Subscription tiers: Free (£0), Plus (£4.99/mo), Pro (£9.99/mo), Unlimited (£14.99/mo). Website: earmarkiq.app</p>
     </div>
 
     <div class="cta-block" style="margin-top:52px">

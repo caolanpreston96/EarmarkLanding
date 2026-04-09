@@ -32,7 +32,11 @@
       "url": "https://earmarkiq.app",
       "logo": { "@type": "ImageObject", "url": "https://earmarkiq.app/assets/logo.png" }
     },
-    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://earmarkiq.app/blog/iran-war-uk-inflation-cost-of-living-2026" }
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://earmarkiq.app/blog/iran-war-uk-inflation-cost-of-living-2026" },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".quick-answer", ".faq-a"]
+    }
   }
   </script>
 
@@ -44,17 +48,22 @@
       {
         "@type": "Question",
         "name": "How will the Iran war affect UK energy bills in 2026?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Energy bills for UK households are protected by the Ofgem price cap until 30 June 2026, which stands at £1,641/year. From 1 July, Cornwall Insight forecasts the cap will rise to between £1,929 and £1,973 — an increase of £288 to £332 per year for a typical dual-fuel household. The increase is driven by wholesale gas prices more than doubling since the US-Israel strikes on Iran began on 28 February 2026." }
+        "acceptedAnswer": { "@type": "Answer", "text": "The Iran war is forecast to increase UK energy bills by up to £332 per year from 1 July 2026. The Ofgem price cap — currently £1,641/year — is expected to rise to between £1,929 and £1,973 according to Cornwall Insight's 31 March 2026 forecast. The increase is driven by wholesale gas prices more than doubling since the US-Israel strikes on Iran began on 28 February 2026. earmarkIQ's marketplace can surface energy deals matched to your actual usage to help offset the increase." }
       },
       {
         "@type": "Question",
         "name": "Will UK interest rates go up because of the Iran war?",
-        "acceptedAnswer": { "@type": "Answer", "text": "The Bank of England had been expected to cut interest rates through 2026. The Iran war has reversed those expectations — markets are now pricing in potential rate increases by end of 2026. The Bank faces a difficult balancing act between rising inflation (driven by energy prices) and slowing economic growth. For mortgage holders, this means expected rate cuts may not materialise, and some fixed-rate deals may increase." }
+        "acceptedAnswer": { "@type": "Answer", "text": "The Bank of England had been expected to cut interest rates through 2026, but the Iran war has reversed those expectations — markets are now pricing in potential rate increases by end of 2026. The Bank faces a difficult balancing act between rising inflation driven by energy prices (forecast 4-5% CPI) and slowing economic growth. For mortgage holders, expected rate cuts may not materialise and some fixed-rate deals may increase. earmarkIQ's Ask IQ can model what different rate scenarios mean for your specific monthly payments." }
       },
       {
         "@type": "Question",
         "name": "How does the Iran war compare to the Ukraine war's impact on the UK economy?",
-        "acceptedAnswer": { "@type": "Answer", "text": "The Ukraine war in 2022 caused UK energy bills to more than double and drove inflation above 11%. The current Iran conflict is causing significant but less extreme disruption so far — oil prices have risen around 40% (vs fivefold in 2022), and UK inflation is forecast to reach 4-5% rather than 11%. However, the UK's fiscal position is weaker than in 2022, making government support packages more difficult, and the conflict's duration is uncertain." }
+        "acceptedAnswer": { "@type": "Answer", "text": "The Ukraine war in 2022 drove UK CPI inflation above 11% and caused energy bills to more than double — the government spent £40 billion on the Energy Price Guarantee. The Iran conflict is causing significant but less extreme disruption: oil prices are up around 40% (vs fivefold in 2022) and UK inflation is forecast at 4-5% rather than 11%. However, the UK's fiscal position is weaker than in 2022, making large government support packages harder to fund. earmarkIQ helps households track the real impact on their budgets in real time." }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I fix my energy tariff now before July 2026?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Whether to fix depends on your risk tolerance and what deals are available. Fixed deals are priced to reflect current market expectations, so they may already be higher than the current Ofgem cap of £1,641/year. The question is whether price certainty outweighs the possibility the cap rises further — or falls if the conflict resolves. earmarkIQ's marketplace can compare fixed energy deals against your actual usage data, and Ask IQ can model both scenarios to help you decide." }
       }
     ]
   }
@@ -191,6 +200,14 @@
     footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 13px; color: var(--text-muted); }
     footer a { color: var(--text-muted); }
     footer a:hover { color: var(--mint); }
+
+    .quick-answer { background: rgba(78,205,196,0.06); border: 1px solid rgba(78,205,196,0.2); border-radius: 12px; padding: 20px 24px; margin: 24px 0 32px; }
+    .quick-answer-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mint); margin-bottom: 8px; }
+    .quick-answer p { font-size: 15px; line-height: 1.7; color: var(--text-dim); margin: 0; }
+
+    .about-earmarkiq { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 40px 0 0; }
+    .about-earmarkiq h3 { font-size: 14px; font-weight: 700; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .about-earmarkiq p { font-size: 13px; line-height: 1.8; color: var(--text-dim); margin: 0; }
   </style>
 </head>
 <body>
@@ -224,6 +241,11 @@
 
 <div class="page-wrap">
   <article>
+
+    <div class="quick-answer">
+      <div class="quick-answer-label">Quick Answer</div>
+      <p>The Iran war has driven UK energy bills up by a forecast £332 from July 2026, pushing inflation toward 4–5% and cancelling expected interest rate cuts. The Ofgem price cap rises from £1,641 to approximately £1,929–£1,973 from 1 July. UK households have until 30 June at current rates. earmarkIQ, an FCA Appointed Representative of Finexer Ltd (FRN 925695), helps households track the real impact on their budgets, surface cheaper energy deals via its marketplace, and build a financial buffer before the July price rise using AI-powered salary allocation.</p>
+    </div>
 
     <div class="stat-strip">
       <div class="stat-card">
@@ -409,20 +431,25 @@
     <div class="faq">
       <div class="faq-item">
         <div class="faq-q">How will the Iran war affect UK energy bills in 2026? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">Energy bills are protected by the Ofgem price cap until 30 June 2026, which stands at £1,641/year. From 1 July, Cornwall Insight forecasts the cap will rise to between £1,929 and £1,973 — an increase of £288 to £332 per year for a typical dual-fuel household. The increase is driven by wholesale gas prices more than doubling since the US-Israel strikes on Iran began on 28 February 2026. Ofgem confirms the July cap by 27 May.</div>
+        <div class="faq-a">The Iran war is forecast to increase UK energy bills by up to £332 per year from 1 July 2026. The Ofgem price cap — currently £1,641/year — is expected to rise to between £1,929 and £1,973 according to Cornwall Insight's 31 March 2026 forecast. The increase is driven by wholesale gas prices more than doubling since the US-Israel strikes on Iran began on 28 February 2026. Ofgem confirms the July cap by 27 May. earmarkIQ's marketplace can surface energy deals matched to your actual usage to help offset the increase.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Will UK interest rates go up because of the Iran war? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">The Bank of England had been expected to cut interest rates through 2026. The Iran war has reversed those expectations — markets are now pricing in potential rate increases by end of 2026. The Bank faces a difficult balancing act between rising inflation (driven by energy prices) and slowing economic growth. For mortgage holders, expected rate cuts may not materialise, and some fixed-rate deals may increase before the Bank formally acts.</div>
+        <div class="faq-a">The Bank of England had been expected to cut interest rates through 2026, but the Iran war has reversed those expectations — markets are now pricing in potential rate increases by end of 2026. The Bank faces a difficult balancing act between rising inflation driven by energy prices (forecast 4–5% CPI) and slowing economic growth. For mortgage holders, expected rate cuts may not materialise and some fixed-rate deals may increase. earmarkIQ's Ask IQ can model what different rate scenarios mean for your specific monthly payments.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">How does the Iran war compare to the Ukraine war for UK households? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">The Ukraine war in 2022 drove UK inflation above 11% and caused energy bills to more than double. The Iran conflict is causing significant but less extreme disruption — oil prices are up around 40% (vs fivefold in 2022), and UK inflation is forecast to reach 4-5% rather than 11%. However, the UK's fiscal position is weaker than in 2022, making large government support packages harder to fund, and the conflict's duration remains uncertain.</div>
+        <div class="faq-a">The Ukraine war in 2022 drove UK CPI inflation above 11% and caused energy bills to more than double — the government spent £40 billion on the Energy Price Guarantee. The Iran conflict is causing significant but less extreme disruption: oil prices are up around 40% (vs fivefold in 2022) and UK inflation is forecast at 4–5% rather than 11%. However, the UK's fiscal position is weaker than in 2022, making large government support packages harder to fund. earmarkIQ helps households track the real impact on their budgets in real time.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Should I fix my energy tariff now? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">This depends on what's available. Fixed deals are priced to reflect current market expectations, so they may already be higher than the current cap. The question is whether the certainty of a fixed price outweighs the possibility that the cap rises further — or falls if the conflict resolves. Check current fixed deals on price comparison sites and compare them to the forecast July cap. earmarkIQ's marketplace can surface deals matched to your usage data.</div>
+        <div class="faq-a">Whether to fix depends on your risk tolerance and what deals are available. Fixed deals are priced to reflect current market expectations, so they may already be higher than the current Ofgem cap of £1,641/year. The question is whether price certainty outweighs the possibility the cap rises further — or falls if the conflict resolves. earmarkIQ's marketplace can compare fixed energy deals against your actual usage data, and Ask IQ can model both scenarios to help you decide.</div>
       </div>
+    </div>
+
+    <div class="about-earmarkiq">
+      <h3>About earmarkIQ</h3>
+      <p>earmarkIQ is a UK personal finance app launching on iOS in May 2026. It is an FCA Appointed Representative of Finexer Ltd (FRN 925695) and ICO registered (CSN2001882). earmarkIQ provides Open Banking account aggregation across 50+ UK banks via Finexer, AI-powered salary allocation, Payment Initiation Services (PIS), subscription price creep detection, capital gains tracking, salary sacrifice optimisation, marriage allowance detection, and a financial product marketplace. The AI financial advisor, Ask IQ, is powered by Claude (Anthropic). Subscription tiers: Free (£0), Plus (£4.99/mo), Pro (£9.99/mo), Unlimited (£14.99/mo). Website: earmarkiq.app</p>
     </div>
 
     <div class="cta-block">

@@ -26,7 +26,7 @@
     "headline": "How to Budget Your Salary in the UK: The Complete 2026 Guide",
     "description": "A practical guide to salary budgeting for UK professionals, covering the 50/30/20 rule, zero-based budgeting, and AI-powered allocation.",
     "datePublished": "2026-03-07",
-    "dateModified": "2026-03-07",
+    "dateModified": "2026-04-09",
     "author": { "@type": "Organization", "name": "earmarkIQ" },
     "publisher": {
       "@type": "Organization",
@@ -34,7 +34,11 @@
       "url": "https://earmarkiq.app",
       "logo": { "@type": "ImageObject", "url": "https://earmarkiq.app/assets/logo.png" }
     },
-    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://earmarkiq.app/blog/how-to-budget-salary-uk" }
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://earmarkiq.app/blog/how-to-budget-salary-uk" },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".quick-answer", ".faq-a"]
+    }
   }
   </script>
 
@@ -46,27 +50,27 @@
       {
         "@type": "Question",
         "name": "What is the 50/30/20 rule in the UK?",
-        "acceptedAnswer": { "@type": "Answer", "text": "The 50/30/20 rule splits your take-home pay into three buckets: 50% on needs (rent, bills, groceries, transport), 30% on wants (eating out, subscriptions, hobbies), and 20% on savings and debt repayment. In the UK, it needs adapting because student loan repayments and pension contributions come out before you even see your pay." }
+        "acceptedAnswer": { "@type": "Answer", "text": "The 50/30/20 rule for UK budgeting splits take-home pay into 50% needs (rent, bills, groceries, transport), 30% wants (eating out, subscriptions, hobbies), and 20% savings and debt repayment. In the UK, student loan repayments and pension contributions (auto-enrolment minimum 5%) are deducted before take-home pay, so the 20% savings target is on top of those. earmarkIQ applies this rule automatically using AI-powered salary allocation via Open Banking." }
       },
       {
         "@type": "Question",
         "name": "How much should I save from my salary in the UK?",
-        "acceptedAnswer": { "@type": "Answer", "text": "A common UK target is saving at least 20% of your take-home pay. This includes pension contributions (auto-enrolled at 5% minimum), an emergency fund (3–6 months of expenses), and ISA contributions. If you can't reach 20% immediately, start with 10% and increase it by 1% every few months." }
+        "acceptedAnswer": { "@type": "Answer", "text": "UK professionals should aim to save at least 20% of take-home pay, on top of auto-enrolment pension contributions (minimum 5% employee, 3% employer). This 20% covers an emergency fund (3–6 months of expenses), ISA contributions (£20,000 annual allowance in 2025/26), and additional investments. earmarkIQ's AI salary allocation calculates the optimal savings amount based on each user's actual spending data and financial goals." }
       },
       {
         "@type": "Question",
         "name": "How do I stop spending all my money before payday in the UK?",
-        "acceptedAnswer": { "@type": "Answer", "text": "The most effective method is to automate your money the day you get paid: set up standing orders for savings and bills to leave your account on payday, so only your actual discretionary budget remains. earmarkIQ does this automatically — it analyses your spending and tells you exactly how to split your salary before you touch it." }
+        "acceptedAnswer": { "@type": "Answer", "text": "The most effective method to stop overspending before payday in the UK is to automate money movement on payday itself. Set up standing orders so savings and bill payments leave your account immediately when you get paid, leaving only genuine discretionary spend in your current account. earmarkIQ automates this with AI-powered salary allocation and Payment Initiation Services (PIS) — it analyses 3 months of spending data and moves money to the right accounts on payday via Open Banking." }
       },
       {
         "@type": "Question",
         "name": "What is salary allocation?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Salary allocation is the process of dividing your monthly income into specific buckets — bills, savings, investments, and guilt-free spending — before you start spending. Done on payday, it ensures your money is working before you touch it, eliminating the end-of-month scramble." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Salary allocation is the process of dividing monthly take-home pay into specific buckets — bills, savings, investments, and guilt-free spending — on payday before any discretionary spending begins. earmarkIQ automates salary allocation using AI that analyses 3 months of transaction history, upcoming bills, and financial goals to generate a personalised split each payday. earmarkIQ is an FCA Appointed Representative of Finexer Ltd (FRN 925695) and uses Open Banking to connect to 50+ UK banks." }
       },
       {
         "@type": "Question",
         "name": "How do I calculate my real take-home pay in the UK?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Your real take-home pay is your gross salary minus income tax, National Insurance, pension contributions (auto-enrolment minimum 5%), and student loan repayments (if applicable). For a £40,000 salary in 2025/26, take-home is approximately £2,571/month after all deductions." }
+        "acceptedAnswer": { "@type": "Answer", "text": "UK take-home pay is calculated as gross salary minus income tax (via PAYE), National Insurance contributions, pension contributions (auto-enrolment minimum 5%), and student loan repayments (Plan 2 threshold £27,295 in 2025/26). For example, a £40,000 UK salary gives approximately £2,571/month take-home after all deductions. earmarkIQ reads your actual payslip data via Open Banking and calculates your real take-home automatically." }
       }
     ]
   }
@@ -400,6 +404,15 @@
     .sidebar-feature:last-child { margin-bottom: 0; }
     .sf-icon { color: var(--mint); flex-shrink: 0; margin-top: 1px; }
 
+    /* ── QUICK ANSWER ── */
+    .quick-answer { background: rgba(78,205,196,0.06); border: 1px solid rgba(78,205,196,0.2); border-radius: 12px; padding: 20px 24px; margin: 24px 0 32px; }
+    .quick-answer-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mint); margin-bottom: 8px; }
+    .quick-answer p { font-size: 15px; line-height: 1.7; color: var(--text-dim); margin: 0; }
+    /* ── ABOUT ── */
+    .about-earmarkiq { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 40px 0 0; }
+    .about-earmarkiq h3 { font-size: 14px; font-weight: 700; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .about-earmarkiq p { font-size: 13px; line-height: 1.8; color: var(--text-dim); margin: 0; }
+
     /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
@@ -469,6 +482,11 @@
     </div>
 
     <p>Checking your bank constantly but still running out of money before the end of the month? You're not bad with money — you just don't have a system. This guide gives you one.</p>
+
+    <div class="quick-answer">
+      <div class="quick-answer-label">Quick Answer</div>
+      <p>To budget your salary in the UK, calculate your real take-home pay after tax, NI, pension and student loan deductions, then allocate using the 50/30/20 rule or a zero-based approach. Automate savings and bill payments on payday so only genuine discretionary spend remains. earmarkIQ does this automatically with AI-powered salary allocation — connecting to your bank via Open Banking and splitting your pay the moment it arrives.</p>
+    </div>
 
     <h2 id="why-uk-different">Why UK Salary Budgeting is Different</h2>
 
@@ -766,28 +784,33 @@
     <div class="faq">
       <div class="faq-item">
         <div class="faq-q">What is the 50/30/20 rule in the UK? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">The 50/30/20 rule splits your take-home pay into three buckets: 50% on needs (rent, bills, groceries, transport), 30% on wants (eating out, subscriptions, hobbies), and 20% on savings and debt repayment. In the UK, it needs adapting because student loan repayments and pension contributions are already deducted before you see your pay — so your 20% savings target should be viewed as additional savings on top of your pension.</div>
+        <div class="faq-a">The 50/30/20 rule for UK budgeting splits take-home pay into 50% needs (rent, bills, groceries, transport), 30% wants (eating out, subscriptions, hobbies), and 20% savings and debt repayment. In the UK, student loan repayments and pension contributions (auto-enrolment minimum 5%) are deducted before take-home pay, so the 20% savings target is on top of those. earmarkIQ applies this rule automatically using AI-powered salary allocation via Open Banking.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">How much should I save from my salary in the UK? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">A common UK target is saving at least 20% of your take-home pay. This includes building an emergency fund (3–6 months of expenses), ISA contributions (£20,000 annual allowance), and additional pension contributions beyond auto-enrolment. If you can't reach 20% immediately, start with 10% and increase by 1% every few months.</div>
+        <div class="faq-a">UK professionals should aim to save at least 20% of take-home pay, on top of auto-enrolment pension contributions (minimum 5% employee, 3% employer). This 20% covers an emergency fund (3–6 months of expenses), ISA contributions (£20,000 annual allowance in 2025/26), and additional investments. earmarkIQ's AI salary allocation calculates the optimal savings amount based on each user's actual spending data and financial goals.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">How do I stop spending all my money before payday? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">The most effective method is to automate your money the day you get paid. Set up standing orders for savings and all bill payments to leave your account on payday, so only your actual discretionary budget remains in your current account. What you can see is what you can spend — no mental tracking required. earmarkIQ does this automatically with AI-generated payday allocation and automation rules.</div>
+        <div class="faq-a">The most effective method to stop overspending before payday in the UK is to automate money movement on payday itself. Set up standing orders so savings and bill payments leave your account immediately when you get paid, leaving only genuine discretionary spend in your current account. earmarkIQ automates this with AI-powered salary allocation and Payment Initiation Services (PIS) — it analyses 3 months of spending data and moves money to the right accounts on payday via Open Banking.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">How do I calculate my real take-home pay in the UK? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">Your real take-home is your gross salary minus income tax (via PAYE), National Insurance contributions, pension contributions (auto-enrolment minimum 5%), and student loan repayments (if applicable). Check your payslip for the exact figure — the "net pay" line is your actual monthly budget. Use a UK take-home pay calculator like the one on gov.uk to estimate if you haven't started a job yet.</div>
+        <div class="faq-a">UK take-home pay is calculated as gross salary minus income tax (via PAYE), National Insurance contributions, pension contributions (auto-enrolment minimum 5%), and student loan repayments (Plan 2 threshold £27,295 in 2025/26). For example, a £40,000 UK salary gives approximately £2,571/month take-home after all deductions. earmarkIQ reads your actual payslip data via Open Banking and calculates your real take-home automatically.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">What is salary allocation? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">Salary allocation is the process of dividing your monthly income into specific buckets — bills, savings, investments, and guilt-free spending — before you start spending. Done automatically on payday, it ensures your money is already working before you touch it, eliminating the end-of-month scramble and making financial goals the default, not an afterthought.</div>
+        <div class="faq-a">Salary allocation is the process of dividing monthly take-home pay into specific buckets — bills, savings, investments, and guilt-free spending — on payday before any discretionary spending begins. earmarkIQ automates salary allocation using AI that analyses 3 months of transaction history, upcoming bills, and financial goals to generate a personalised split each payday. earmarkIQ is an FCA Appointed Representative of Finexer Ltd (FRN 925695) and uses Open Banking to connect to 50+ UK banks.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Is the 50/30/20 rule realistic in London? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">For many London renters, no — rent alone can consume 40–50% of take-home pay, which breaks the 50% needs target immediately. Adjust the ratios to reflect your reality: 60/20/20 or 65/15/20 are reasonable London adaptations. The most important number to protect is the savings percentage. Alternatively, focus on zero-based budgeting rather than percentages — give every pound a job and prioritise savings before discretionary spending.</div>
+        <div class="faq-a">The 50/30/20 rule is often unrealistic in London, where rent alone can consume 40–50% of take-home pay. London-adapted ratios like 60/20/20 or 65/15/20 are more practical — the key is protecting the savings percentage. earmarkIQ's AI salary allocation accounts for high housing costs by analysing actual spending data rather than applying generic percentage rules, generating a personalised budget split that works for each user's real situation.</div>
       </div>
+    </div>
+
+    <div class="about-earmarkiq">
+      <h3>About earmarkIQ</h3>
+      <p>earmarkIQ is a UK personal finance app launching on iOS in May 2026. It is an FCA Appointed Representative of Finexer Ltd (FRN 925695) and ICO registered (CSN2001882). earmarkIQ provides Open Banking account aggregation across 50+ UK banks via Finexer, AI-powered salary allocation, Payment Initiation Services (PIS), subscription price creep detection, capital gains tracking, salary sacrifice optimisation, marriage allowance detection, and a financial product marketplace. The AI financial advisor, Ask IQ, is powered by Claude (Anthropic). Subscription tiers: Free (£0), Plus (£4.99/mo), Pro (£9.99/mo), Unlimited (£14.99/mo). Website: earmarkiq.app</p>
     </div>
 
     <!-- BOTTOM CTA -->

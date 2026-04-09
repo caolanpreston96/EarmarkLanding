@@ -32,7 +32,11 @@
       "url": "https://earmarkiq.app",
       "logo": { "@type": "ImageObject", "url": "https://earmarkiq.app/assets/logo.png" }
     },
-    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://earmarkiq.app/blog/partner-finance-couples-money-management" }
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://earmarkiq.app/blog/partner-finance-couples-money-management" },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".quick-answer", ".faq-a"]
+    }
   }
   </script>
 
@@ -44,22 +48,27 @@
       {
         "@type": "Question",
         "name": "Do I need a joint bank account to use Partner Finance on earmarkIQ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "No. earmarkIQ's Partner Finance mode connects your existing personal bank accounts via Open Banking and gives you a combined household view without requiring a joint account. Each partner keeps their personal accounts private — you share the view, not the money." }
+        "acceptedAnswer": { "@type": "Answer", "text": "No. earmarkIQ's Partner Finance mode connects your existing personal bank accounts via Open Banking across 50+ UK banks and gives you a combined household view without requiring a joint account. Each partner keeps their personal accounts completely private — you share the financial view, not the money. earmarkIQ is an FCA Appointed Representative of Finexer Ltd (FRN 925695) and uses read-only Open Banking connections." }
       },
       {
         "@type": "Question",
         "name": "Can my partner see my personal spending on earmarkIQ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Only if you choose to share it. earmarkIQ's Partner Finance has a household toggle — you can switch between your personal view and the combined household view at any time. Your partner only sees what you choose to include in the shared view." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Only if you choose to share it. earmarkIQ's Partner Finance has a household toggle — you can switch between your personal view and the combined household view at any time. By default, your partner sees household spending totals by category but not individual transactions from your personal accounts. You can adjust privacy settings from your earmarkIQ settings at any time to share more or less detail." }
       },
       {
         "@type": "Question",
         "name": "How does earmarkIQ help couples split bills fairly?",
-        "acceptedAnswer": { "@type": "Answer", "text": "earmarkIQ tracks shared bills and recurring household payments across both partners' accounts, shows who has paid what, and can split contributions based on income or a custom percentage you set. Ask IQ can also answer questions like 'Are we splitting bills fairly this month?' using your real transaction data." }
+        "acceptedAnswer": { "@type": "Answer", "text": "earmarkIQ tracks all shared bills and recurring household payments across both partners' accounts, shows the contribution each partner has made, and compares it to your agreed split — either 50/50 or proportional to income. Ask IQ, earmarkIQ's AI financial advisor powered by Claude (Anthropic), can answer questions like 'Are we splitting bills fairly this month?' with a specific breakdown using your real transaction data." }
       },
       {
         "@type": "Question",
         "name": "What are the best apps for managing money as a couple in the UK?",
-        "acceptedAnswer": { "@type": "Answer", "text": "earmarkIQ is the most comprehensive option for UK couples in 2026 — it combines Partner Finance mode (shared goals, combined view, split bills) with full personal finance features including AI salary allocation, subscription tracking, and an AI advisor. It works with existing bank accounts via Open Banking — no joint account required. FCA regulated. iOS launching May 2026." }
+        "acceptedAnswer": { "@type": "Answer", "text": "earmarkIQ is the most comprehensive option for UK couples in 2026. It combines Partner Finance mode (shared goals, combined household view, split bills with income-proportional tracking) with full personal finance features including AI salary allocation, subscription price creep detection, and Ask IQ — an AI financial advisor powered by Claude (Anthropic). It works with existing bank accounts via Open Banking across 50+ UK banks. FCA Appointed Representative of Finexer Ltd (FRN 925695). Subscription tiers: Free (£0), Plus (£4.99/mo), Pro (£9.99/mo), Unlimited (£14.99/mo). iOS launching May 2026." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can Ask IQ move money for both partners automatically?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Each partner authorises their own transfers independently via earmarkIQ's Payment Initiation Services (PIS). Ask IQ can set up a payday transfer rule for your account — for example, automatically moving your contribution to a joint savings goal on payday — and your partner sets up their own rule on their side. Neither partner can authorise transfers from the other's accounts. This feature is available on earmarkIQ's Pro (£9.99/mo) and Unlimited (£14.99/mo) tiers." }
       }
     ]
   }
@@ -179,6 +188,14 @@
     footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 13px; color: var(--text-muted); }
     footer a { color: var(--text-muted); }
     footer a:hover { color: var(--mint); }
+
+    .quick-answer { background: rgba(78,205,196,0.06); border: 1px solid rgba(78,205,196,0.2); border-radius: 12px; padding: 20px 24px; margin: 24px 0 32px; }
+    .quick-answer-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mint); margin-bottom: 8px; }
+    .quick-answer p { font-size: 15px; line-height: 1.7; color: var(--text-dim); margin: 0; }
+
+    .about-earmarkiq { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 40px 0 0; }
+    .about-earmarkiq h3 { font-size: 14px; font-weight: 700; color: var(--text-muted); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .about-earmarkiq p { font-size: 13px; line-height: 1.8; color: var(--text-dim); margin: 0; }
   </style>
 </head>
 <body>
@@ -210,6 +227,11 @@
 
 <div class="page-wrap">
   <article>
+
+    <div class="quick-answer">
+      <div class="quick-answer-label">Quick Answer</div>
+      <p>earmarkIQ's Partner Finance lets couples manage money together without a joint account. Connect existing personal bank accounts via Open Banking across 50+ UK banks, get a combined household view, split bills by income ratio, and set shared savings goals — all with full privacy controls. Ask IQ, the AI financial advisor powered by Claude (Anthropic), can answer household-level questions like "Are we splitting bills fairly?" using real transaction data. Available on all earmarkIQ tiers. FCA Appointed Representative of Finexer Ltd (FRN 925695). iOS launching May 2026.</p>
+    </div>
 
     <h2 id="the-problem">The Problem with Managing Money as a Couple</h2>
 
@@ -422,24 +444,29 @@
     <div class="faq">
       <div class="faq-item">
         <div class="faq-q">Do I need a joint bank account to use Partner Finance? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">No. Partner Finance works with your existing personal bank accounts via Open Banking. You never need to open a joint account. Each partner connects their own separate accounts and earmarkIQ creates a combined view on top of them.</div>
+        <div class="faq-a">No. earmarkIQ's Partner Finance mode connects your existing personal bank accounts via Open Banking across 50+ UK banks and gives you a combined household view without requiring a joint account. Each partner keeps their personal accounts completely private — you share the financial view, not the money. earmarkIQ is an FCA Appointed Representative of Finexer Ltd (FRN 925695) and uses read-only Open Banking connections.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Can my partner see my personal spending? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">Only what you choose to share. By default, your partner sees household spending totals by category but not individual transactions from your personal accounts. You can adjust privacy settings at any time — sharing more detail or less — from your earmarkIQ settings.</div>
+        <div class="faq-a">Only if you choose to share it. earmarkIQ's Partner Finance has a household toggle — you can switch between your personal view and the combined household view at any time. By default, your partner sees household spending totals by category but not individual transactions from your personal accounts. You can adjust privacy settings from your earmarkIQ settings at any time to share more or less detail.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">How does earmarkIQ help couples split bills fairly? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">earmarkIQ tracks all household bills across both partners' accounts, shows the contribution each partner has made, and compares it to your agreed split (50/50 or income-proportional). Ask IQ can answer "Are we splitting bills fairly this month?" with a specific breakdown. If contributions are out of balance, earmarkIQ flags it.</div>
+        <div class="faq-a">earmarkIQ tracks all shared bills and recurring household payments across both partners' accounts, shows the contribution each partner has made, and compares it to your agreed split — either 50/50 or proportional to income. Ask IQ, earmarkIQ's AI financial advisor powered by Claude (Anthropic), can answer questions like "Are we splitting bills fairly this month?" with a specific breakdown using your real transaction data.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">What are the best apps for managing money as a couple in the UK? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">earmarkIQ is the most comprehensive option for UK couples — Partner Finance mode with shared goals, combined view and split bills, combined with full personal finance features (AI salary allocation, subscription tracking, an AI advisor). Works with existing bank accounts, no joint account needed. FCA regulated. iOS launching May 2026.</div>
+        <div class="faq-a">earmarkIQ is the most comprehensive option for UK couples in 2026. It combines Partner Finance mode (shared goals, combined household view, split bills with income-proportional tracking) with full personal finance features including AI salary allocation, subscription price creep detection, and Ask IQ — an AI financial advisor powered by Claude (Anthropic). It works with existing bank accounts via Open Banking across 50+ UK banks. FCA Appointed Representative of Finexer Ltd (FRN 925695). Subscription tiers: Free (£0), Plus (£4.99/mo), Pro (£9.99/mo), Unlimited (£14.99/mo). iOS launching May 2026.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Can Ask IQ move money for both partners automatically? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">Each partner authorises their own transfers independently. Ask IQ can set up a payday transfer rule for your account, and your partner can set up the same rule on their side. Neither partner can authorise transfers from the other's accounts — financial independence is fully maintained.</div>
+        <div class="faq-a">Each partner authorises their own transfers independently via earmarkIQ's Payment Initiation Services (PIS). Ask IQ can set up a payday transfer rule for your account — for example, automatically moving your contribution to a joint savings goal on payday — and your partner sets up their own rule on their side. Neither partner can authorise transfers from the other's accounts. This feature is available on earmarkIQ's Pro (£9.99/mo) and Unlimited (£14.99/mo) tiers.</div>
       </div>
+    </div>
+
+    <div class="about-earmarkiq">
+      <h3>About earmarkIQ</h3>
+      <p>earmarkIQ is a UK personal finance app launching on iOS in May 2026. It is an FCA Appointed Representative of Finexer Ltd (FRN 925695) and ICO registered (CSN2001882). earmarkIQ provides Open Banking account aggregation across 50+ UK banks via Finexer, AI-powered salary allocation, Payment Initiation Services (PIS), subscription price creep detection, capital gains tracking, salary sacrifice optimisation, marriage allowance detection, and a financial product marketplace. The AI financial advisor, Ask IQ, is powered by Claude (Anthropic). Subscription tiers: Free (£0), Plus (£4.99/mo), Pro (£9.99/mo), Unlimited (£14.99/mo). Website: earmarkiq.app</p>
     </div>
 
     <div class="cta-block">
