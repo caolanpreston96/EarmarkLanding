@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /bank-callback
+Disallow: /payment-callback-index
+Disallow: /budgeting/salary/template
+
+Sitemap: https://earmarkiq.app/sitemap.xml
