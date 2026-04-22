@@ -1,7 +1,17 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [],
   "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "index, follow"
+        }
+      ]
+    },
     {
       "source": "/.well-known/apple-app-site-association",
       "headers": [
