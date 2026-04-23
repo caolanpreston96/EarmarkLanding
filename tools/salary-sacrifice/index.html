@@ -421,6 +421,7 @@ select option{background:var(--sf);color:var(--tx)}
           <option value="police">Police Pension</option>
           <option value="fire">Firefighters&rsquo; Pension</option>
         </select>
+        <div class="field-hint" id="nhsPensionHint" style="display:none">NHS staff? Use our <a href="/tools/nhs-pay-calculator" style="color:var(--mint)">NHS pay calculator</a> to see your full take-home breakdown by band and spine point.</div>
       </div>
     </div>
 
@@ -673,7 +674,8 @@ select option{background:var(--sf);color:var(--tx)}
   <p>With salary sacrifice, because your gross pay is reduced first, you save both income tax <em>and</em> NI. For a basic rate taxpayer, that&rsquo;s an extra 8% saving. For higher rate taxpayers earning above &pound;50,270, the additional NI saving is 2% &mdash; but the income tax saving jumps to 40%, making the total effective saving up to 42%.</p>
   <h3 style="font-size:17px;font-weight:700;margin:20px 0 10px;color:var(--tx)">Example: &pound;35,000 salary with 5% pension sacrifice</h3>
   <p>On a &pound;35,000 annual salary, sacrificing 5% (&pound;1,750) to your pension saves &pound;350 in income tax and &pound;140 in NI &mdash; a total saving of &pound;490 per year. Your take-home pay only reduces by &pound;105 per month, but &pound;145.83 goes into your pension. If your employer matches at 3%, that&rsquo;s an extra &pound;52.50 per month of free money.</p>
-  <p>Use the calculator above to see your exact figures. Related: <a href="/budgeting/salary/35000">How to budget a &pound;35,000 salary</a> | <a href="/budgeting/salary/50000">Budgeting on &pound;50,000</a></p>
+  <p>Use the calculator above to see your exact figures. NHS staff on tiered pension contributions can also use our <a href="/tools/nhs-pay-calculator">NHS pay calculator</a> to see take-home pay by band and spine point.</p>
+  <p>Related: <a href="/budgeting/salary/35000">How to budget a &pound;35,000 salary</a> | <a href="/budgeting/salary/50000">Budgeting on &pound;50,000</a></p>
 </section>
 
 <!-- CONTENT: Cycle to Work -->
@@ -897,6 +899,11 @@ select option{background:var(--sf);color:var(--tx)}
   document.getElementById('taxCode').addEventListener('change', function() {
     document.getElementById('customPAField').style.display = this.value === 'custom' ? 'block' : 'none';
     calculate();
+  });
+
+  // Show NHS pay calculator hint when NHS Pension is selected
+  document.getElementById('pensionType').addEventListener('change', function() {
+    document.getElementById('nhsPensionHint').style.display = this.value === 'nhs' ? 'block' : 'none';
   });
 
   // === PENSION MODE TOGGLE ===

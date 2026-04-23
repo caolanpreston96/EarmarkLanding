@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NHS Pay Calculator 2026/27 | Take-Home Pay Tool &mdash; earmarkIQ</title>
+<meta name="description" content="Calculate your NHS take-home pay for 2026/27. All AfC bands 2-9, spine points, London weighting, NHS pension contributions. Free, instant, no sign-up.">
+<link rel="canonical" href="https://earmarkiq.app/tools/nhs-pay-calculator">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://earmarkiq.app/tools/nhs-pay-calculator">
+<meta property="og:title" content="NHS Pay Calculator 2026/27 | AfC Bands Take-Home Pay Tool">
+<meta property="og:description" content="Calculate your NHS take-home pay for 2026/27. All AfC bands 2-9, spine points, London weighting, NHS pension contributions. Free, instant.">
+<meta property="og:image" content="https://earmarkiq.app/assets/og-image.webp">
+<meta property="og:site_name" content="earmarkIQ">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@earmarkiq">
+<meta name="twitter:title" content="NHS Pay Calculator 2026/27 | AfC Bands Take-Home Pay Tool">
+<meta name="twitter:description" content="Calculate your NHS take-home pay for 2026/27. All AfC bands 2-9, spine points, London weighting, NHS pension contributions. Free, instant.">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="theme-color" content="#06080f">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "NHS Pay Calculator UK 2026/27",
+      "url": "https://earmarkiq.app/tools/nhs-pay-calculator",
+      "description": "Free NHS pay calculator for the 2026/27 UK tax year. Calculate take-home pay for all Agenda for Change bands 2-9, with London weighting, NHS pension contributions, and student loan deductions.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "GBP"
+      },
+      "featureList": [
+        "All NHS AfC pay bands 2-9",
+        "Spine point selection",
+        "London weighting calculator",
+        "NHS pension contribution tiers",
+        "Part-time pro-rata calculator",
+        "2026/27 UK tax and NI rates"
+      ],
+      "publisher": {
+        "@type": "Organization",
+        "name": "earmarkIQ",
+        "url": "https://earmarkiq.app"
+      },
+      "inLanguage": "en-GB",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".subtitle", ".content-section h2", ".content-section p"]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the NHS pay bands for 2026/27?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NHS Agenda for Change (AfC) pay bands for 2026/27 range from Band 2 (£23,615) to Band 9 (£105,385–£121,271). Each band has multiple spine points that staff progress through annually based on experience. Band 5 starts at £29,970, Band 6 at £37,338, and Band 7 at £46,148. Higher bands (8a–8d) range from £53,755 to £101,677."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is NHS take-home pay calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NHS take-home pay is calculated by starting with your gross salary (base pay plus any location supplement), then deducting NHS pension contributions, income tax, National Insurance, and any student loan repayments. NHS pension is deducted before tax (net pay arrangement) but not before NI. For a Band 5 nurse on £29,970, monthly take-home is approximately £1,938 after all deductions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does London weighting affect my NHS pension?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, High Cost Area Supplements (London weighting) are pensionable in the NHS. This means your pension contributions are calculated on your total pay including the supplement. Inner London adds £6,469, Outer London adds £4,693, and Fringe areas add £1,192 to your base salary. The higher pensionable pay means slightly higher contributions but also a higher pension in retirement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much is the NHS pension contribution?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NHS pension contributions for 2026/27 are tiered based on your pensionable pay. Rates range from 5.1% (earnings up to £13,259) to 10.0% (earnings above £49,472). Most Band 5 nurses pay 7.7%, Band 6 staff pay 8.8%, and Band 7 and above pay 8.8%–10.0%. Your employer contributes an additional 20.6% on top of your contribution."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I opt out of the NHS pension?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can opt out of the NHS pension scheme, which will increase your monthly take-home pay. However, this is rarely recommended because you lose the employer contribution (20.6% of your salary), tax relief on your contributions, and one of the most generous defined benefit pensions available. For a Band 7 on £46,148, opting out increases take-home by approximately £227 per month but forfeits £9,506 per year in employer contributions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does part-time NHS pay work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Part-time NHS pay is calculated pro-rata based on your contracted hours compared to the standard 37.5-hour full-time week. If you work 22.5 hours (0.6 WTE), you receive 60% of the full-time salary for your band and spine point. Location supplements are also pro-rated. Tax, NI, and pension are then calculated on your pro-rated salary."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://earmarkiq.app" },
+        { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://earmarkiq.app/tools" },
+        { "@type": "ListItem", "position": 3, "name": "NHS Pay Calculator" }
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-62JW90868T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-62JW90868T');
+</script>
+
+<style>
+:root{--bg:#06080f;--bg2:#0a0d17;--sf:#141929;--sf2:#191f33;--bd:#1e2540;--bd2:#283050;--tx:#eaecf5;--tx2:#a0a5bc;--tx3:#686e88;--tx4:#464c64;--mint:#4ECDC4;--mintG:rgba(78,205,196,0.15);--green:#4ADE80;--amber:#F5A623;--blue:#5B8DEF;--purple:#9B8FE8;--coral:#FF6B6B;--f:'DM Sans',-apple-system,sans-serif;--m:'IBM Plex Mono',monospace;--ease:cubic-bezier(0.16,1,0.3,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}::selection{background:rgba(78,205,196,0.25);color:#fff}html{scroll-behavior:smooth}body{font-family:var(--f);background:var(--bg);color:var(--tx);overflow-x:hidden;-webkit-font-smoothing:antialiased;line-height:1.6}a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:var(--f)}
+
+/* Nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rgba(6,8,15,.92);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid var(--bd)}.nav-i{max-width:1200px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between}.nav-l{font-size:22px;font-weight:400;letter-spacing:-.02em;color:var(--tx)}.nav-l b{font-weight:800;color:var(--mint)}.nav-l span{display:block;font-family:var(--m);font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--tx3);font-weight:500}.nav-cta{padding:9px 22px;background:var(--mint);color:var(--bg);font-size:13px;font-weight:700;border-radius:100px;border:none;transition:all .3s}.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(78,205,196,.3)}
+
+/* Page hero */
+.page-hero{padding:120px 32px 48px;max-width:1200px;margin:0 auto}.breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--tx3);margin-bottom:20px;flex-wrap:wrap}.breadcrumb a{color:var(--tx3);transition:color .2s}.breadcrumb a:hover{color:var(--mint)}.breadcrumb svg{width:14px;height:14px;opacity:.5}.page-hero h1{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-.03em;line-height:1.15;margin-bottom:12px}.page-hero h1 em{font-style:normal;color:var(--mint)}.page-hero .subtitle{font-size:17px;color:var(--tx2);max-width:620px;line-height:1.7}.page-hero .badges{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap}.page-hero .badge{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;background:rgba(78,205,196,.06);border:1px solid rgba(78,205,196,.15);border-radius:100px;font-size:12px;font-weight:600;color:var(--mint);font-family:var(--m)}
+
+/* Calculator layout */
+.calc-section{padding:0 32px 80px;max-width:1200px;margin:0 auto}
+.calc-wrap{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.calc-inputs{display:flex;flex-direction:column;gap:24px}
+.calc-results{position:sticky;top:100px}
+
+/* Input cards */
+.input-card{background:var(--sf);border:1px solid var(--bd);border-radius:16px;padding:28px 24px}.input-card-h{font-size:15px;font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:10px}.input-card-h svg{color:var(--mint);flex-shrink:0}
+.field{margin-bottom:18px}.field:last-child{margin-bottom:0}
+.field label{display:block;font-size:13px;font-weight:600;color:var(--tx2);margin-bottom:6px;letter-spacing:.01em}
+.field-row{display:flex;align-items:center;gap:10px}
+.input-wrap{position:relative;flex:1}
+.input-wrap .prefix{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:14px;color:var(--tx3);font-family:var(--m);font-weight:600;pointer-events:none}
+.input-wrap .suffix{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:13px;color:var(--tx3);font-family:var(--m);pointer-events:none}
+input[type="number"],input[type="text"],select{width:100%;padding:12px 14px;background:var(--bg);border:1px solid var(--bd2);border-radius:10px;color:var(--tx);font-family:var(--f);font-size:14px;outline:none;transition:border-color .2s,box-shadow .2s;-moz-appearance:textfield}
+input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+input:focus,select:focus{border-color:var(--mint);box-shadow:0 0 0 3px var(--mintG)}
+select{cursor:pointer;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23686e88' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+select option{background:var(--sf);color:var(--tx)}
+.has-prefix input{padding-left:32px}
+.has-suffix input{padding-right:44px}
+.field-hint{font-size:11px;color:var(--tx4);margin-top:4px;line-height:1.5}
+.salary-display{font-family:var(--m);font-size:20px;font-weight:700;color:var(--mint);padding:12px 14px;background:var(--bg);border:1px solid var(--bd2);border-radius:10px;letter-spacing:-.02em}
+
+/* Toggle */
+.toggle-wrap{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.toggle{position:relative;width:44px;height:24px;background:var(--bd2);border-radius:12px;cursor:pointer;transition:background .2s;border:none;flex-shrink:0}
+.toggle.active{background:var(--mint)}
+.toggle::after{content:'';position:absolute;top:2px;left:2px;width:20px;height:20px;border-radius:10px;background:#fff;transition:transform .2s}
+.toggle.active::after{transform:translateX(20px)}
+.toggle-label{font-size:13px;font-weight:600;color:var(--tx2)}
+
+/* Tooltip */
+.tip{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:var(--bd2);color:var(--tx3);font-size:10px;font-weight:700;cursor:help;position:relative;margin-left:4px;flex-shrink:0}.tip:hover::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:var(--sf2);border:1px solid var(--bd2);border-radius:8px;padding:10px 14px;font-size:12px;font-weight:400;color:var(--tx2);line-height:1.5;width:260px;white-space:normal;z-index:50;box-shadow:0 8px 24px rgba(0,0,0,.4);pointer-events:none}
+
+/* Results panel */
+.results-card{background:var(--sf);border:1px solid var(--bd);border-radius:20px;padding:28px 24px;margin-bottom:16px}
+.result-hero{text-align:center;padding:24px 0;margin-bottom:24px;border-bottom:1px solid var(--bd)}
+.result-label{font-size:13px;color:var(--tx2);margin-bottom:4px}
+.result-amount{font-family:var(--m);font-size:clamp(36px,5vw,52px);font-weight:800;color:var(--green);letter-spacing:-.03em;line-height:1}
+.result-sub{font-size:14px;color:var(--tx3);margin-top:8px;font-family:var(--m)}
+
+/* Breakdown table */
+.breakdown-table{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:20px}
+.breakdown-table th{text-align:left;padding:8px 10px;color:var(--tx3);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;border-bottom:1px solid var(--bd)}
+.breakdown-table th:not(:first-child){text-align:right}
+.breakdown-table td{padding:8px 10px;border-bottom:1px solid rgba(30,37,64,.5)}
+.breakdown-table .row-label{color:var(--tx2);font-weight:500}
+.breakdown-table .val{font-family:var(--m);font-weight:600;text-align:right;white-space:nowrap}
+.breakdown-table .val.deduct{color:var(--coral)}
+.breakdown-table .val.add{color:var(--green)}
+.breakdown-table .row-total{border-top:2px solid var(--bd);font-weight:700}
+.breakdown-table .row-total .val{color:var(--green)}
+.breakdown-table .row-supplement{color:var(--tx3);font-size:12px}
+
+/* Summary cards */
+.summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}
+.summary-item{background:var(--bg);border-radius:10px;padding:14px}
+.summary-item .s-label{font-size:11px;color:var(--tx3);margin-bottom:2px}
+.summary-item .s-value{font-family:var(--m);font-size:16px;font-weight:700;color:var(--mint)}
+.summary-item.full-width{grid-column:1/-1;text-align:center;background:rgba(78,205,196,.06);border:1px solid rgba(78,205,196,.15)}
+.summary-item.full-width .s-value{font-size:20px;color:var(--green)}
+
+/* Pension info */
+.pension-info{border-top:1px solid var(--bd);padding-top:20px;margin-top:4px}
+.pension-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;font-size:13px}
+.pension-row .p-label{color:var(--tx2)}.pension-row .p-value{font-family:var(--m);font-weight:600}
+.tier-badge{display:inline-flex;padding:3px 10px;background:rgba(91,141,239,.1);border:1px solid rgba(91,141,239,.2);border-radius:6px;color:var(--blue);font-family:var(--m);font-size:12px;font-weight:700}
+
+/* Content sections */
+.content-section{max-width:1200px;margin:0 auto;padding:80px 32px}
+.content-section h2{font-size:clamp(22px,3vw,32px);font-weight:800;letter-spacing:-.02em;margin-bottom:16px;line-height:1.2}
+.content-section h3{font-size:17px;font-weight:700;margin:20px 0 10px;color:var(--tx)}
+.content-section p{font-size:15px;color:var(--tx2);line-height:1.8;margin-bottom:14px;max-width:720px}
+.content-section a{color:var(--mint);font-weight:500;transition:opacity .2s}.content-section a:hover{opacity:.8;text-decoration:underline}
+.content-divider{max-width:1200px;margin:0 auto;padding:0 32px}.content-divider hr{border:none;border-top:1px solid var(--bd)}
+
+/* Pay band table */
+.band-table{width:100%;max-width:700px;border-collapse:collapse;margin:20px 0;font-size:14px}
+.band-table th{text-align:left;padding:10px 12px;color:var(--tx);font-weight:700;border-bottom:2px solid var(--bd);background:var(--sf)}
+.band-table th:not(:first-child){text-align:right}
+.band-table td{padding:10px 12px;border-bottom:1px solid var(--bd)}
+.band-table td:not(:first-child){text-align:right;font-family:var(--m)}
+.band-table .band-name{font-weight:600;color:var(--tx)}
+.band-table .band-range{color:var(--tx2)}
+
+/* Scenario cards */
+.scenario-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.scenario-card{background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:24px 20px;transition:all .3s}
+.scenario-card:hover{border-color:var(--bd2);transform:translateY(-3px)}
+.scenario-card .sc-icon{font-size:28px;margin-bottom:12px}
+.scenario-card .sc-title{font-size:15px;font-weight:700;margin-bottom:6px}
+.scenario-card .sc-desc{font-size:13px;color:var(--tx2);line-height:1.65}
+
+/* CTA section */
+.cta-section{max-width:1200px;margin:0 auto;padding:60px 32px 80px;text-align:center}
+.cta-box{background:var(--sf);border:1px solid rgba(78,205,196,.2);border-radius:20px;padding:48px 32px;max-width:640px;margin:0 auto}
+.cta-box h2{font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:-.02em;margin-bottom:10px}
+.cta-box p{font-size:15px;color:var(--tx2);line-height:1.7;margin-bottom:24px}
+.btn-download{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:var(--mint);color:var(--bg);font-size:16px;font-weight:700;border-radius:100px;border:none;transition:all .3s;text-decoration:none}
+.btn-download:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(78,205,196,.35)}
+
+/* Footer */
+.footer{border-top:1px solid var(--bd);padding:48px 32px 32px;background:var(--bg)}.footer-i{max-width:1200px;margin:0 auto}.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:36px}.footer-bt{font-size:13px;color:var(--tx2);line-height:1.7;margin-top:12px;max-width:280px}.footer-hd{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--tx4);margin-bottom:14px}.footer-ul{list-style:none;display:flex;flex-direction:column;gap:8px}.footer-ul a{color:var(--tx2);font-size:13px;transition:color .2s}.footer-ul a:hover{color:var(--mint)}.footer-mid{padding-top:24px;border-top:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:16px}.footer-cp{font-size:11px;color:var(--tx4)}.footer-fca{font-size:11px;color:var(--tx4);text-align:center}.footer-disc{font-size:10.5px;color:var(--tx4);line-height:1.8;padding-top:16px;border-top:1px solid var(--bd)}
+
+/* Responsive */
+@media(max-width:960px){
+  .calc-wrap{grid-template-columns:1fr}
+  .calc-results{position:static}
+  .scenario-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr 1fr;gap:24px}
+  .footer-mid{flex-direction:column;text-align:center}
+}
+@media(max-width:600px){
+  .page-hero{padding:100px 20px 36px}
+  .calc-section{padding:0 20px 60px}
+  .content-section{padding:60px 20px}
+  .cta-section{padding:40px 20px 60px}
+  .summary-grid{grid-template-columns:1fr}
+  .field-row{flex-direction:column;align-items:stretch}
+  .footer-top{grid-template-columns:1fr}
+  .band-table{font-size:12px}
+  .band-table th,.band-table td{padding:8px 6px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav"><div class="nav-i">
+  <a href="/" class="nav-l">earmark<b>IQ</b><span>Smart Money</span></a>
+  <a href="/#waitlist" class="nav-cta">Join Waitlist &rarr;</a>
+</div></nav>
+
+<main>
+<!-- HERO -->
+<section class="page-hero">
+  <div class="breadcrumb">
+    <a href="/">Home</a>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+    <a href="/tools">Tools</a>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+    <span>NHS Pay Calculator</span>
+  </div>
+  <h1>NHS Pay Calculator <em>UK 2026/27</em></h1>
+  <p class="subtitle">Calculate your exact NHS take-home pay after tax, National Insurance, and pension. All Agenda for Change bands 2&ndash;9, spine points, London weighting, and part-time pro-rata. Free, instant, no sign-up.</p>
+  <div class="badges">
+    <span class="badge">2026/27 tax year</span>
+    <span class="badge">AfC bands 2&ndash;9</span>
+    <span class="badge">London weighting</span>
+    <span class="badge">No sign-up</span>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="calc-section">
+<div class="calc-wrap">
+
+<!-- LEFT: INPUTS -->
+<div class="calc-inputs">
+
+  <!-- Section 1: Band & Spine Point -->
+  <div class="input-card">
+    <div class="input-card-h">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4-4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+      Your Band &amp; Role
+    </div>
+
+    <div class="field">
+      <label for="band">AfC pay band</label>
+      <select id="band">
+        <option value="2">Band 2</option>
+        <option value="3">Band 3</option>
+        <option value="4">Band 4</option>
+        <option value="5" selected>Band 5</option>
+        <option value="6">Band 6</option>
+        <option value="7">Band 7</option>
+        <option value="8a">Band 8a</option>
+        <option value="8b">Band 8b</option>
+        <option value="8c">Band 8c</option>
+        <option value="8d">Band 8d</option>
+        <option value="9">Band 9</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="spinePoint">Spine point</label>
+      <select id="spinePoint">
+        <!-- Populated dynamically -->
+      </select>
+    </div>
+
+    <div class="field">
+      <label>Base salary (full-time)</label>
+      <div class="salary-display" id="baseSalaryDisplay">&pound;29,970</div>
+    </div>
+  </div>
+
+  <!-- Section 2: Location & Hours -->
+  <div class="input-card">
+    <div class="input-card-h">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Location &amp; Hours
+    </div>
+
+    <div class="field">
+      <label for="location">Location</label>
+      <select id="location">
+        <option value="national" selected>England &mdash; National</option>
+        <option value="fringe">England &mdash; Fringe (&plus;&pound;1,192)</option>
+        <option value="outer-london">Outer London (&plus;&pound;4,693)</option>
+        <option value="inner-london">Inner London (&plus;&pound;6,469)</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <div class="toggle-wrap">
+        <button class="toggle" id="partTimeToggle" aria-label="Toggle part-time"></button>
+        <span class="toggle-label">Part-time</span>
+      </div>
+      <div id="hoursField" style="display:none">
+        <label for="hoursPerWeek">Hours per week</label>
+        <div class="field-row">
+          <div class="input-wrap has-suffix">
+            <input type="number" id="hoursPerWeek" value="22.5" min="1" max="37.5" step="0.5">
+            <span class="suffix">hrs</span>
+          </div>
+          <span id="wteDisplay" style="font-family:var(--m);font-size:13px;color:var(--tx3);white-space:nowrap">0.60 WTE</span>
+        </div>
+        <div class="field-hint">Standard NHS full-time is 37.5 hours per week</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3: Deductions -->
+  <div class="input-card">
+    <div class="input-card-h">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M2 10h20"/></svg>
+      Deductions
+    </div>
+
+    <div class="field">
+      <div class="toggle-wrap">
+        <button class="toggle active" id="pensionToggle" aria-label="Toggle NHS pension"></button>
+        <span class="toggle-label">NHS Pension <span class="tip" data-tip="The NHS Pension Scheme is a defined benefit pension. Your employer contributes 20.6% on top of your contribution. Opting out means losing this employer contribution.">?</span></span>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="taxCode">Tax code</label>
+      <select id="taxCode">
+        <option value="1257L" selected>1257L (Standard)</option>
+        <option value="BR">BR (All basic rate)</option>
+        <option value="0T">0T (No allowance)</option>
+        <option value="custom">Custom&hellip;</option>
+      </select>
+    </div>
+
+    <div class="field" id="customPAField" style="display:none">
+      <label for="customPA">Personal allowance (&pound;)</label>
+      <div class="input-wrap has-prefix">
+        <span class="prefix">&pound;</span>
+        <input type="number" id="customPA" value="12570" min="0" max="125140" step="10">
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="studentLoan">Student loan plan</label>
+      <select id="studentLoan">
+        <option value="none" selected>None</option>
+        <option value="plan1">Plan 1 (pre-2012)</option>
+        <option value="plan2">Plan 2 (post-2012)</option>
+        <option value="plan5">Plan 5 (post-2023)</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <div class="toggle-wrap">
+        <button class="toggle" id="sacrificeToggle" aria-label="Toggle salary sacrifice"></button>
+        <span class="toggle-label">Salary sacrifice <span class="tip" data-tip="Additional salary sacrifice (e.g. Cycle to Work, childcare vouchers). This amount is deducted before tax and NI are calculated.">?</span></span>
+      </div>
+      <div id="sacrificeField" style="display:none">
+        <label for="sacrificeAmount">Monthly sacrifice amount</label>
+        <div class="input-wrap has-prefix">
+          <span class="prefix">&pound;</span>
+          <input type="number" id="sacrificeAmount" value="100" min="0" max="10000" step="10">
+        </div>
+        <div class="field-hint">e.g. Cycle to Work, childcare, additional pension via sacrifice</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RIGHT: RESULTS -->
+<div class="calc-results">
+  <div class="results-card">
+
+    <!-- Big take-home number -->
+    <div class="result-hero">
+      <div class="result-label">Monthly take-home pay</div>
+      <div class="result-amount" id="takeHomeBig">&pound;0</div>
+      <div class="result-sub" id="takeHomeAnnual">&pound;0 per year</div>
+    </div>
+
+    <!-- Breakdown table -->
+    <table class="breakdown-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Monthly</th>
+          <th>Annual</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="row-label">Base salary</td>
+          <td class="val" id="rBaseMo"></td>
+          <td class="val" id="rBaseYr"></td>
+        </tr>
+        <tr id="rowSupplement" style="display:none">
+          <td class="row-label row-supplement">Location supplement</td>
+          <td class="val add" id="rSuppMo"></td>
+          <td class="val add" id="rSuppYr"></td>
+        </tr>
+        <tr id="rowPartTime" style="display:none">
+          <td class="row-label row-supplement">Part-time adjustment</td>
+          <td class="val" id="rPTMo" style="color:var(--tx3)"></td>
+          <td class="val" id="rPTYr" style="color:var(--tx3)"></td>
+        </tr>
+        <tr style="border-bottom:2px solid var(--bd)">
+          <td class="row-label" style="font-weight:700;color:var(--tx)">Gross pay</td>
+          <td class="val" id="rGrossMo" style="color:var(--tx)"></td>
+          <td class="val" id="rGrossYr" style="color:var(--tx)"></td>
+        </tr>
+        <tr id="rowSacrifice" style="display:none">
+          <td class="row-label">Salary sacrifice</td>
+          <td class="val deduct" id="rSacMo"></td>
+          <td class="val deduct" id="rSacYr"></td>
+        </tr>
+        <tr id="rowPension">
+          <td class="row-label">NHS Pension</td>
+          <td class="val deduct" id="rPenMo"></td>
+          <td class="val deduct" id="rPenYr"></td>
+        </tr>
+        <tr>
+          <td class="row-label">Income Tax</td>
+          <td class="val deduct" id="rTaxMo"></td>
+          <td class="val deduct" id="rTaxYr"></td>
+        </tr>
+        <tr>
+          <td class="row-label">National Insurance</td>
+          <td class="val deduct" id="rNIMo"></td>
+          <td class="val deduct" id="rNIYr"></td>
+        </tr>
+        <tr id="rowStudentLoan" style="display:none">
+          <td class="row-label">Student Loan</td>
+          <td class="val deduct" id="rSLMo"></td>
+          <td class="val deduct" id="rSLYr"></td>
+        </tr>
+        <tr class="row-total">
+          <td class="row-label">Take-home pay</td>
+          <td class="val" id="rNetMo"></td>
+          <td class="val" id="rNetYr"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Summary cards -->
+    <div class="summary-grid">
+      <div class="summary-item">
+        <div class="s-label">Tax band</div>
+        <div class="s-value" id="sTaxBand">Basic (20%)</div>
+      </div>
+      <div class="summary-item">
+        <div class="s-label">Pension tier</div>
+        <div class="s-value" id="sPenTier">7.7%</div>
+      </div>
+      <div class="summary-item">
+        <div class="s-label">Effective tax rate</div>
+        <div class="s-value" id="sEffRate">0%</div>
+      </div>
+      <div class="summary-item">
+        <div class="s-label">Daily take-home</div>
+        <div class="s-value" id="sDaily">&pound;0</div>
+      </div>
+    </div>
+
+    <!-- Pension detail -->
+    <div class="pension-info" id="pensionInfo">
+      <div class="pension-row">
+        <span class="p-label">Your contribution /yr</span>
+        <span class="p-value" id="pYourContrib">&pound;0</span>
+      </div>
+      <div class="pension-row">
+        <span class="p-label">Employer contribution /yr (20.6%)</span>
+        <span class="p-value" style="color:var(--green)" id="pEmployerContrib">&pound;0</span>
+      </div>
+      <div class="pension-row" style="border-top:1px solid var(--bd);padding-top:10px;margin-top:4px">
+        <span class="p-label" style="font-weight:700;color:var(--tx)">Total into pension /yr</span>
+        <span class="p-value" style="color:var(--mint)" id="pTotalContrib">&pound;0</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div>
+</section>
+
+<noscript>
+<div class="content-section" style="padding-top:40px">
+  <h2>NHS Pay Calculator &mdash; How It Works</h2>
+  <p>This NHS pay calculator requires JavaScript to run. Enable JavaScript to calculate your exact take-home pay for any NHS Agenda for Change band. All pay bands 2&ndash;9, spine points, London weighting, NHS pension contributions, and student loan deductions are included.</p>
+  <p><strong>Example:</strong> An NHS Band 5 nurse on spine point 1 (£29,970) in a national role takes home approximately £1,938 per month after pension, tax, and National Insurance deductions.</p>
+</div>
+</noscript>
+
+<!-- CONTENT: Understanding NHS Pay Bands -->
+<div class="content-divider"><hr></div>
+<section class="content-section">
+  <h2>NHS Agenda for Change pay bands 2026/27</h2>
+  <p>The NHS Agenda for Change (AfC) framework sets pay for most NHS staff in England, Wales, and Northern Ireland. Each role is assigned to a pay band (Band 2 to Band 9) based on the skills, responsibilities, and qualifications required. Within each band, staff progress through spine points based on years of experience. The NHS salary structure covers over 1.3 million workers and is reviewed annually through collective bargaining.</p>
+
+  <table class="band-table">
+    <tr><th>Band</th><th>Entry salary</th><th>Top of band</th><th>Spine points</th></tr>
+    <tr><td class="band-name">Band 2</td><td>&pound;23,615</td><td>&pound;23,615</td><td>1</td></tr>
+    <tr><td class="band-name">Band 3</td><td>&pound;24,071</td><td>&pound;25,674</td><td>2</td></tr>
+    <tr><td class="band-name">Band 4</td><td>&pound;26,530</td><td>&pound;27,596</td><td>2</td></tr>
+    <tr><td class="band-name">Band 5</td><td>&pound;29,970</td><td>&pound;36,483</td><td>5</td></tr>
+    <tr><td class="band-name">Band 6</td><td>&pound;37,338</td><td>&pound;44,962</td><td>5</td></tr>
+    <tr><td class="band-name">Band 7</td><td>&pound;46,148</td><td>&pound;52,809</td><td>5</td></tr>
+    <tr><td class="band-name">Band 8a</td><td>&pound;53,755</td><td>&pound;60,504</td><td>4</td></tr>
+    <tr><td class="band-name">Band 8b</td><td>&pound;62,215</td><td>&pound;72,293</td><td>4</td></tr>
+    <tr><td class="band-name">Band 8c</td><td>&pound;73,664</td><td>&pound;86,074</td><td>4</td></tr>
+    <tr><td class="band-name">Band 8d</td><td>&pound;86,970</td><td>&pound;101,677</td><td>4</td></tr>
+    <tr><td class="band-name">Band 9</td><td>&pound;105,385</td><td>&pound;121,271</td><td>4</td></tr>
+  </table>
+
+  <p>Band 5 is the entry point for newly qualified registered nurses, midwives, and allied health professionals. Band 6 covers experienced nurses and specialist practitioners. Band 7 is for advanced practitioners, ward managers, and team leaders. Bands 8a&ndash;9 are for senior managers, consultants, and directors.</p>
+  <p>Related: <a href="/budgeting/profession/nhs-nurse-band-5">Band 5 nurse budgeting guide</a> | <a href="/budgeting/profession/nhs-nurse-band-6">Band 6 nurse budgeting guide</a> | <a href="/budgeting/profession/nhs-nurse-band-7">Band 7 nurse budgeting guide</a></p>
+</section>
+
+<!-- CONTENT: London Weighting -->
+<div class="content-divider"><hr></div>
+<section class="content-section">
+  <h2>NHS London weighting and location supplements</h2>
+  <p>NHS staff working in and around London receive a High Cost Area Supplement (HCAS) to help with the increased cost of living. These supplements are added to your base salary and are pensionable, meaning they count towards your pension calculation.</p>
+  <h3>Location supplement rates</h3>
+  <p><strong>Inner London:</strong> &pound;6,469 per year &mdash; applies to NHS trusts within the M25 and central London boroughs. This covers hospitals like Guy&rsquo;s and St Thomas&rsquo;, UCLH, King&rsquo;s College, and Royal London.</p>
+  <p><strong>Outer London:</strong> &pound;4,693 per year &mdash; applies to NHS trusts in outer London boroughs. This includes hospitals like Croydon University Hospital, Barnet Hospital, and Queen&rsquo;s Hospital Romford.</p>
+  <p><strong>Fringe:</strong> &pound;1,192 per year &mdash; applies to areas surrounding London, including parts of Essex, Hertfordshire, Kent, Surrey, and Berkshire.</p>
+  <p>Part-time staff receive the supplement pro-rated based on their contracted hours. For example, a 0.6 WTE nurse in Inner London receives &pound;6,469 &times; 0.6 = &pound;3,881 per year.</p>
+  <p>Related: <a href="/budgeting/salary/45000">How to budget on &pound;45,000</a> | <a href="/budgeting/salary/50000">Budgeting on &pound;50,000</a></p>
+</section>
+
+<!-- CONTENT: NHS Pension -->
+<div class="content-divider"><hr></div>
+<section class="content-section">
+  <h2>NHS pension contributions explained</h2>
+  <p>The NHS Pension Scheme is one of the most generous pension schemes in the UK. It is a defined benefit (DB) scheme, meaning your pension is based on your career average earnings and years of service, not on investment performance. Your employer contributes 20.6% of your pensionable pay on top of your own contribution.</p>
+  <h3>Contribution rates for 2026/27</h3>
+  <p>NHS pension contributions are based on your pensionable pay (which includes base salary and any location supplement). The rate that applies is determined by which tier your total pensionable pay falls into:</p>
+
+  <table class="band-table">
+    <tr><th>Pensionable pay</th><th>Rate</th></tr>
+    <tr><td class="band-range">Up to &pound;13,259</td><td>5.1%</td></tr>
+    <tr><td class="band-range">&pound;13,260 &ndash; &pound;16,831</td><td>5.7%</td></tr>
+    <tr><td class="band-range">&pound;16,832 &ndash; &pound;22,878</td><td>6.1%</td></tr>
+    <tr><td class="band-range">&pound;22,879 &ndash; &pound;26,823</td><td>6.8%</td></tr>
+    <tr><td class="band-range">&pound;26,824 &ndash; &pound;32,691</td><td>7.7%</td></tr>
+    <tr><td class="band-range">&pound;32,692 &ndash; &pound;49,472</td><td>8.8%</td></tr>
+    <tr><td class="band-range">Above &pound;49,472</td><td>10.0%</td></tr>
+  </table>
+
+  <p>NHS pension contributions are deducted from your gross pay before income tax is calculated (a &ldquo;net pay&rdquo; arrangement). This means you automatically receive tax relief on your contributions. However, National Insurance is calculated on your gross pay before pension deductions.</p>
+  <p>While opting out of the NHS pension increases your monthly take-home pay, it is rarely recommended. You would lose the 20.6% employer contribution, the tax relief, and access to a secure defined benefit pension. For a Band 6 nurse on &pound;37,338, opting out forfeits &pound;7,692 per year in employer contributions alone.</p>
+  <p>Related: <a href="/tools/salary-sacrifice">Salary sacrifice calculator</a> | <a href="/budgeting/profession/junior-doctor">Junior doctor budgeting guide</a></p>
+</section>
+
+<!-- CONTENT: How to calculate take-home -->
+<div class="content-divider"><hr></div>
+<section class="content-section">
+  <h2>How to calculate your NHS take-home pay</h2>
+  <p>Your NHS take-home pay is calculated by applying deductions to your gross salary in a specific order. Understanding this helps you plan your budget and make informed decisions about overtime, additional hours, and salary sacrifice schemes.</p>
+  <h3>Step-by-step calculation</h3>
+  <p><strong>1. Start with your base salary</strong> &mdash; this is determined by your AfC band and spine point. Use the calculator above to find your exact figure.</p>
+  <p><strong>2. Add location supplement</strong> &mdash; if you work in or around London, add the relevant HCAS (Inner London &pound;6,469, Outer London &pound;4,693, Fringe &pound;1,192).</p>
+  <p><strong>3. Adjust for part-time</strong> &mdash; multiply by (your hours &divide; 37.5) if you work part-time.</p>
+  <p><strong>4. Deduct salary sacrifice</strong> &mdash; if you have any salary sacrifice arrangements (e.g. Cycle to Work), deduct this from your gross. This reduces both tax and NI.</p>
+  <p><strong>5. Deduct NHS pension</strong> &mdash; apply the pension tier rate to your pensionable pay. This reduces your taxable income but not your NI.</p>
+  <p><strong>6. Calculate income tax</strong> &mdash; apply 2026/27 tax rates to your taxable income (gross minus pension minus personal allowance).</p>
+  <p><strong>7. Calculate National Insurance</strong> &mdash; apply NI rates to your gross pay (after salary sacrifice but before pension). 8% on earnings between &pound;12,570 and &pound;50,270, then 2% above.</p>
+  <p><strong>8. Deduct student loan</strong> &mdash; if applicable, 9% of earnings above the threshold for your plan.</p>
+  <p>The calculator above does all of this automatically. Simply select your band, spine point, and options to see your exact take-home figure.</p>
+  <p>Related: <a href="/blog/how-to-budget-salary-uk">How to budget your salary in the UK</a> | <a href="/blog/best-budgeting-apps-uk">Best budgeting apps UK 2026</a></p>
+</section>
+
+<!-- CONTENT: FAQs (People Also Ask targets) -->
+<div class="content-divider"><hr></div>
+<section class="content-section">
+  <h2>Frequently asked questions about NHS pay</h2>
+  <h3>How much does a Band 5 NHS nurse earn after tax?</h3>
+  <p>A Band 5 nurse on the entry spine point earns a gross NHS salary of &pound;29,970 per year. After NHS pension contributions (7.7%), income tax, and National Insurance, the monthly take-home pay is approximately &pound;1,938. This rises to around &pound;2,460 per month at the top of Band 5 (&pound;36,483). London-based nurses earn more thanks to the High Cost Area Supplement.</p>
+  <h3>What is the average NHS salary in the UK?</h3>
+  <p>The average NHS salary varies significantly by band and role. Healthcare assistants (Band 2&ndash;3) earn &pound;23,615&ndash;&pound;25,674, while newly qualified nurses and AHPs (Band 5) earn &pound;29,970&ndash;&pound;36,483. Senior nurses and specialists (Band 6&ndash;7) earn &pound;37,338&ndash;&pound;52,809. The median NHS salary across all staff is approximately &pound;33,000&ndash;&pound;35,000. Use the calculator above to find the exact NHS salary for your band.</p>
+  <h3>Is NHS pension worth it or should I opt out?</h3>
+  <p>The NHS pension is almost always worth keeping. For every pound you contribute, your employer adds 20.6% of your pensionable pay to the scheme. A Band 5 nurse on &pound;29,970 who opts out gains around &pound;192 per month in take-home pay but forfeits &pound;6,174 per year in employer pension contributions. The NHS Pension Scheme is a defined benefit scheme &mdash; your retirement income is guaranteed regardless of stock market performance.</p>
+  <h3>Does NHS London weighting count towards my pension?</h3>
+  <p>Yes. The High Cost Area Supplement (HCAS) is pensionable, meaning it is included when calculating both your pension contributions and your eventual pension benefits. A Band 6 nurse with Inner London weighting has a pensionable pay of &pound;43,807 (&pound;37,338 + &pound;6,469) rather than just the base salary.</p>
+</section>
+
+<!-- CONTENT: Budgeting tips -->
+<div class="content-divider"><hr></div>
+<section class="content-section">
+  <h2>Budgeting tips for NHS staff</h2>
+  <div class="scenario-grid">
+    <div class="scenario-card">
+      <div class="sc-icon">💰</div>
+      <div class="sc-title">Use your pension wisely</div>
+      <div class="sc-desc">The NHS pension is incredibly valuable. Before opting out to increase take-home pay, calculate the true cost &mdash; you lose 20.6% employer contributions plus tax relief. Use the calculator above to compare.</div>
+    </div>
+    <div class="scenario-card">
+      <div class="sc-icon">🚲</div>
+      <div class="sc-title">Salary sacrifice benefits</div>
+      <div class="sc-desc">NHS employers often offer Cycle to Work and childcare salary sacrifice schemes. Use our <a href="/tools/salary-sacrifice" style="color:var(--mint)">salary sacrifice calculator</a> to see your exact savings before and after.</div>
+    </div>
+    <div class="scenario-card">
+      <div class="sc-icon">📊</div>
+      <div class="sc-title">Track unsocial hours pay</div>
+      <div class="sc-desc">Many NHS staff earn extra through unsocial hours enhancements, overtime, and bank shifts. Track your actual take-home with <a href="/#waitlist" style="color:var(--mint)">earmarkIQ</a> to see your real spending power each month.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTENT: 2026/27 Tax Rates -->
+<div class="content-divider"><hr></div>
+<section class="content-section">
+  <h2>2026/27 UK tax rates used in this calculator</h2>
+  <p>This calculator uses the following HMRC rates and thresholds for the 2026/27 tax year (6 April 2026 to 5 April 2027).</p>
+  <table class="band-table">
+    <tr><th>Band</th><th>Rate</th><th>Threshold</th></tr>
+    <tr><td class="band-name">Personal allowance</td><td>0%</td><td>Up to &pound;12,570</td></tr>
+    <tr><td class="band-name">Basic rate</td><td style="color:var(--mint)">20%</td><td>&pound;12,571 &ndash; &pound;50,270</td></tr>
+    <tr><td class="band-name">Higher rate</td><td style="color:var(--amber)">40%</td><td>&pound;50,271 &ndash; &pound;125,140</td></tr>
+    <tr><td class="band-name">Additional rate</td><td style="color:var(--coral)">45%</td><td>Over &pound;125,140</td></tr>
+  </table>
+  <table class="band-table" style="margin-top:20px">
+    <tr><th>NI / Student Loan</th><th>Rate</th><th>Threshold</th></tr>
+    <tr><td class="band-name">NI &mdash; primary</td><td style="color:var(--mint)">8%</td><td>&pound;12,570 &ndash; &pound;50,270</td></tr>
+    <tr><td class="band-name">NI &mdash; upper</td><td>2%</td><td>Above &pound;50,270</td></tr>
+    <tr><td class="band-name">Student loan Plan 1</td><td>9%</td><td>Above &pound;24,990</td></tr>
+    <tr><td class="band-name">Student loan Plan 2</td><td>9%</td><td>Above &pound;27,295</td></tr>
+    <tr><td class="band-name">Student loan Plan 5</td><td>9%</td><td>Above &pound;25,000</td></tr>
+  </table>
+  <p style="margin-top:16px">Personal allowance is reduced by &pound;1 for every &pound;2 of income above &pound;100,000, creating an effective 60% marginal rate between &pound;100,000 and &pound;125,140. This affects NHS staff on Band 8d and Band 9.</p>
+  <p>Related: <a href="/budgeting/salary/80000">Budgeting on &pound;80,000</a> | <a href="/budgeting/profession/solicitor">Solicitor salary guide</a></p>
+</section>
+
+<!-- CTA -->
+<div class="content-divider"><hr></div>
+<section class="cta-section">
+  <div class="cta-box">
+    <h2>Track your NHS pay with earmarkIQ</h2>
+    <p>earmarkIQ connects to your bank via Open Banking and automatically tracks your salary, pension, and spending. See exactly where your NHS pay goes each month and get personalised insights to save more.</p>
+    <a href="/#waitlist" class="btn-download">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Join the Waitlist &mdash; Free
+    </a>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer"><div class="footer-i">
+  <div class="footer-top">
+    <div><a href="/" class="nav-l" style="font-size:20px">earmark<b>IQ</b><span>Smart Money</span></a><p class="footer-bt">AI-powered salary allocation for UK professionals.</p></div>
+    <div><h5 class="footer-hd">Product</h5><ul class="footer-ul"><li><a href="/#how">How it works</a></li><li><a href="/#features">Features</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/#security">Security</a></li></ul></div>
+    <div><h5 class="footer-hd">Resources</h5><ul class="footer-ul"><li><a href="/blog">Blog</a></li><li><a href="/tools">Tools</a></li><li><a href="/budgeting/salary">Salary Guides</a></li><li><a href="/budgeting/profession">Profession Guides</a></li></ul></div>
+    <div><h5 class="footer-hd">Legal</h5><ul class="footer-ul"><li><a href="/privacy">Privacy Policy</a></li><li><a href="/terms">Terms of Service</a></li><li><a href="mailto:hello@earmarkiq.app">Support</a></li></ul></div>
+  </div>
+  <div class="footer-mid">
+    <div class="footer-cp">&copy; 2026 earmarkIQ Ltd. All rights reserved.</div>
+    <div class="footer-fca">FCA regulated through Finexer Ltd (firm ref 925695)</div>
+  </div>
+  <div class="footer-disc">earmarkIQ provides financial information and tools, not regulated financial advice. NHS pay calculations are estimates based on published Agenda for Change pay scales and 2026/27 HMRC tax rates. Your actual figures may differ due to unsocial hours enhancements, overtime, or other local agreements. Always check with your payroll department for your exact pay.</div>
+</div></footer>
+
+<script>
+(function(){
+  // === NHS PAY BAND DATA ===
+  var BANDS = {
+    '2':  { name: 'Band 2',  points: [23615] },
+    '3':  { name: 'Band 3',  points: [24071, 25674] },
+    '4':  { name: 'Band 4',  points: [26530, 27596] },
+    '5':  { name: 'Band 5',  points: [29970, 31469, 33285, 34581, 36483] },
+    '6':  { name: 'Band 6',  points: [37338, 38637, 41150, 42618, 44962] },
+    '7':  { name: 'Band 7',  points: [46148, 47498, 48526, 50056, 52809] },
+    '8a': { name: 'Band 8a', points: [53755, 55877, 58003, 60504] },
+    '8b': { name: 'Band 8b', points: [62215, 65262, 68312, 72293] },
+    '8c': { name: 'Band 8c', points: [73664, 77274, 80885, 86074] },
+    '8d': { name: 'Band 8d', points: [86970, 91048, 96376, 101677] },
+    '9':  { name: 'Band 9',  points: [105385, 109475, 115379, 121271] }
+  };
+
+  var LOCATIONS = {
+    'national':      { name: 'National',      supplement: 0 },
+    'fringe':        { name: 'Fringe',         supplement: 1192 },
+    'outer-london':  { name: 'Outer London',   supplement: 4693 },
+    'inner-london':  { name: 'Inner London',   supplement: 6469 }
+  };
+
+  // NHS Pension contribution tiers (flat rate on whole salary)
+  var PENSION_TIERS = [
+    { max: 13259,  rate: 0.051 },
+    { max: 16831,  rate: 0.057 },
+    { max: 22878,  rate: 0.061 },
+    { max: 26823,  rate: 0.068 },
+    { max: 32691,  rate: 0.077 },
+    { max: 49472,  rate: 0.088 },
+    { max: Infinity, rate: 0.100 }
+  ];
+
+  var EMPLOYER_PENSION_RATE = 0.206; // 20.6%
+  var FULL_TIME_HOURS = 37.5;
+
+  // === TAX ENGINE (2026/27) ===
+  var DEFAULT_PA = 12570;
+  var PA_TAPER_START = 100000;
+  var BASIC_BAND = 37700;
+  var HIGHER_BAND = 74870;
+  var TAX_BASIC = 0.20;
+  var TAX_HIGHER = 0.40;
+  var TAX_ADDITIONAL = 0.45;
+  var NI_PRIMARY = 12570;
+  var NI_UEL = 50270;
+  var NI_BASIC = 0.08;
+  var NI_UPPER = 0.02;
+  var SL_RATE = 0.09;
+  var SL_THRESHOLDS = { plan1: 24990, plan2: 27295, plan5: 25000 };
+
+  // === HELPER FUNCTIONS ===
+
+  function getPersonalAllowance(taxCode, gross) {
+    if (taxCode === 'BR') return 0;
+    if (taxCode === '0T') return 0;
+    var pa = (taxCode === 'custom') ? parseNum('customPA') : DEFAULT_PA;
+    if (gross > PA_TAPER_START) {
+      var reduction = Math.floor((gross - PA_TAPER_START) / 2);
+      pa = Math.max(0, pa - reduction);
+    }
+    return pa;
+  }
+
+  function getPensionRate(pensionablePay) {
+    for (var i = 0; i < PENSION_TIERS.length; i++) {
+      if (pensionablePay <= PENSION_TIERS[i].max) {
+        return PENSION_TIERS[i].rate;
+      }
+    }
+    return PENSION_TIERS[PENSION_TIERS.length - 1].rate;
+  }
+
+  function calcTax(taxableIncome) {
+    if (taxableIncome <= 0) return 0;
+    var tax = 0;
+    var basic = Math.min(taxableIncome, BASIC_BAND);
+    tax += basic * TAX_BASIC;
+    var higher = Math.min(Math.max(0, taxableIncome - BASIC_BAND), HIGHER_BAND);
+    tax += higher * TAX_HIGHER;
+    var additional = Math.max(0, taxableIncome - BASIC_BAND - HIGHER_BAND);
+    tax += additional * TAX_ADDITIONAL;
+    return tax;
+  }
+
+  function calcTaxForCode(gross, pensionDeduction, taxCode) {
+    if (taxCode === 'BR') return (gross - pensionDeduction) * TAX_BASIC;
+    var pa = getPersonalAllowance(taxCode, gross);
+    var taxable = Math.max(0, gross - pensionDeduction - pa);
+    return calcTax(taxable);
+  }
+
+  function calcNI(gross) {
+    var ni = 0;
+    if (gross > NI_PRIMARY) {
+      ni += (Math.min(gross, NI_UEL) - NI_PRIMARY) * NI_BASIC;
+    }
+    if (gross > NI_UEL) {
+      ni += (gross - NI_UEL) * NI_UPPER;
+    }
+    return ni;
+  }
+
+  function calcStudentLoan(gross, plan) {
+    if (!plan || plan === 'none') return 0;
+    var threshold = SL_THRESHOLDS[plan];
+    if (!threshold) return 0;
+    return Math.max(0, (gross - threshold) * SL_RATE);
+  }
+
+  function parseNum(id) {
+    var el = document.getElementById(id);
+    var v = parseFloat(el.value);
+    return isNaN(v) ? 0 : Math.max(0, v);
+  }
+
+  function fmt(n) {
+    return '\u00A3' + Math.abs(n).toLocaleString('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
+
+  function fmtInt(n) {
+    return '\u00A3' + Math.abs(n).toLocaleString('en-GB', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+  }
+
+  function setText(id, text) {
+    document.getElementById(id).textContent = text;
+  }
+
+  function getMarginalBand(gross, pensionDeduction, taxCode) {
+    if (taxCode === 'BR') return 'Basic (20%)';
+    var pa = getPersonalAllowance(taxCode, gross);
+    var taxable = Math.max(0, gross - pensionDeduction - pa);
+    if (taxable > BASIC_BAND + HIGHER_BAND) return 'Additional (45%)';
+    if (taxable > BASIC_BAND) return 'Higher (40%)';
+    if (taxable > 0) return 'Basic (20%)';
+    return 'Below threshold';
+  }
+
+  // === STATE ===
+  var pensionOptedIn = true;
+  var isPartTime = false;
+  var hasSacrifice = false;
+
+  // === SPINE POINT UPDATER ===
+
+  var bandSelect = document.getElementById('band');
+  var spineSelect = document.getElementById('spinePoint');
+
+  function updateSpinePoints() {
+    var band = bandSelect.value;
+    var points = BANDS[band].points;
+    spineSelect.innerHTML = '';
+    for (var i = 0; i < points.length; i++) {
+      var opt = document.createElement('option');
+      opt.value = i;
+      opt.textContent = 'Spine point ' + (i + 1) + ' — \u00A3' + points[i].toLocaleString('en-GB');
+      spineSelect.appendChild(opt);
+    }
+    calculate();
+  }
+
+  bandSelect.addEventListener('change', updateSpinePoints);
+  spineSelect.addEventListener('change', calculate);
+
+  // === TOGGLE HANDLERS ===
+
+  var pensionToggle = document.getElementById('pensionToggle');
+  pensionToggle.addEventListener('click', function() {
+    pensionOptedIn = !pensionOptedIn;
+    this.classList.toggle('active', pensionOptedIn);
+    calculate();
+  });
+
+  var partTimeToggle = document.getElementById('partTimeToggle');
+  partTimeToggle.addEventListener('click', function() {
+    isPartTime = !isPartTime;
+    this.classList.toggle('active', isPartTime);
+    document.getElementById('hoursField').style.display = isPartTime ? 'block' : 'none';
+    calculate();
+  });
+
+  var sacrificeToggle = document.getElementById('sacrificeToggle');
+  sacrificeToggle.addEventListener('click', function() {
+    hasSacrifice = !hasSacrifice;
+    this.classList.toggle('active', hasSacrifice);
+    document.getElementById('sacrificeField').style.display = hasSacrifice ? 'block' : 'none';
+    calculate();
+  });
+
+  // === TAX CODE CHANGE ===
+  document.getElementById('taxCode').addEventListener('change', function() {
+    document.getElementById('customPAField').style.display = this.value === 'custom' ? 'block' : 'none';
+    calculate();
+  });
+
+  // === LIVE CALCULATION ON ALL INPUTS ===
+  var allInputs = document.querySelectorAll('input, select');
+  allInputs.forEach(function(el) {
+    el.addEventListener('input', calculate);
+    el.addEventListener('change', calculate);
+  });
+
+  // === MAIN CALCULATION ===
+
+  function calculate() {
+    var band = bandSelect.value;
+    var spIdx = parseInt(spineSelect.value) || 0;
+    var baseSalary = BANDS[band].points[spIdx] || BANDS[band].points[0];
+    var location = document.getElementById('location').value;
+    var supplement = LOCATIONS[location].supplement;
+    var taxCode = document.getElementById('taxCode').value;
+    var studentLoan = document.getElementById('studentLoan').value;
+
+    // Display base salary
+    setText('baseSalaryDisplay', '\u00A3' + baseSalary.toLocaleString('en-GB'));
+
+    // Full-time gross (before part-time adjustment)
+    var fullTimeGross = baseSalary + supplement;
+
+    // Part-time adjustment
+    var hours = isPartTime ? parseNum('hoursPerWeek') : FULL_TIME_HOURS;
+    if (hours > FULL_TIME_HOURS) hours = FULL_TIME_HOURS;
+    if (hours < 0) hours = 0;
+    var wteFraction = hours / FULL_TIME_HOURS;
+
+    // Update WTE display
+    if (isPartTime) {
+      setText('wteDisplay', wteFraction.toFixed(2) + ' WTE');
+    }
+
+    // Actual gross pay
+    var actualGross = fullTimeGross * wteFraction;
+
+    // Salary sacrifice (annual)
+    var sacrificeAnnual = hasSacrifice ? (parseNum('sacrificeAmount') * 12) : 0;
+    if (sacrificeAnnual > actualGross) sacrificeAnnual = actualGross;
+
+    // Effective gross after sacrifice
+    var effectiveGross = actualGross - sacrificeAnnual;
+
+    // NHS Pension
+    var pensionRate = 0;
+    var pensionAnnual = 0;
+    var employerPensionAnnual = 0;
+    if (pensionOptedIn) {
+      // Pension calculated on pensionable pay (effective gross including supplement, after sacrifice)
+      pensionRate = getPensionRate(effectiveGross);
+      pensionAnnual = effectiveGross * pensionRate;
+      employerPensionAnnual = effectiveGross * EMPLOYER_PENSION_RATE;
+    }
+
+    // Income tax: calculated on effective gross minus pension minus PA
+    var incomeTax = calcTaxForCode(effectiveGross, pensionAnnual, taxCode);
+
+    // NI: calculated on effective gross (after sacrifice, before pension)
+    var nationalInsurance = calcNI(effectiveGross);
+
+    // Student loan: calculated on effective gross
+    var studentLoanAnnual = calcStudentLoan(effectiveGross, studentLoan);
+
+    // Net take-home
+    var annualNet = effectiveGross - pensionAnnual - incomeTax - nationalInsurance - studentLoanAnnual;
+    var monthlyNet = annualNet / 12;
+
+    // Effective tax rate (all deductions / actual gross)
+    var totalDeductions = pensionAnnual + incomeTax + nationalInsurance + studentLoanAnnual + sacrificeAnnual;
+    var effectiveTaxRate = actualGross > 0 ? ((totalDeductions / actualGross) * 100) : 0;
+
+    // === UPDATE UI ===
+
+    // Big number
+    setText('takeHomeBig', fmt(monthlyNet));
+    setText('takeHomeAnnual', fmtInt(annualNet) + ' per year');
+
+    // Breakdown table
+    var actualBase = baseSalary * wteFraction;
+    var actualSupp = supplement * wteFraction;
+
+    setText('rBaseMo', fmt(actualBase / 12));
+    setText('rBaseYr', fmtInt(actualBase));
+
+    // Location supplement row
+    var rowSupp = document.getElementById('rowSupplement');
+    if (supplement > 0) {
+      rowSupp.style.display = '';
+      setText('rSuppMo', '+' + fmt(actualSupp / 12));
+      setText('rSuppYr', '+' + fmtInt(actualSupp));
+    } else {
+      rowSupp.style.display = 'none';
+    }
+
+    // Part-time row
+    var rowPT = document.getElementById('rowPartTime');
+    if (isPartTime) {
+      rowPT.style.display = '';
+      setText('rPTMo', wteFraction.toFixed(2) + ' WTE');
+      setText('rPTYr', hours + 'h / ' + FULL_TIME_HOURS + 'h');
+    } else {
+      rowPT.style.display = 'none';
+    }
+
+    // Gross
+    setText('rGrossMo', fmt(actualGross / 12));
+    setText('rGrossYr', fmtInt(actualGross));
+
+    // Salary sacrifice row
+    var rowSac = document.getElementById('rowSacrifice');
+    if (hasSacrifice && sacrificeAnnual > 0) {
+      rowSac.style.display = '';
+      setText('rSacMo', '-' + fmt(sacrificeAnnual / 12));
+      setText('rSacYr', '-' + fmtInt(sacrificeAnnual));
+    } else {
+      rowSac.style.display = 'none';
+    }
+
+    // Pension row
+    var rowPen = document.getElementById('rowPension');
+    if (pensionOptedIn) {
+      rowPen.style.display = '';
+      setText('rPenMo', '-' + fmt(pensionAnnual / 12));
+      setText('rPenYr', '-' + fmtInt(pensionAnnual));
+    } else {
+      rowPen.style.display = 'none';
+    }
+
+    // Tax and NI
+    setText('rTaxMo', '-' + fmt(incomeTax / 12));
+    setText('rTaxYr', '-' + fmtInt(incomeTax));
+    setText('rNIMo', '-' + fmt(nationalInsurance / 12));
+    setText('rNIYr', '-' + fmtInt(nationalInsurance));
+
+    // Student loan row
+    var rowSL = document.getElementById('rowStudentLoan');
+    if (studentLoan !== 'none' && studentLoanAnnual > 0) {
+      rowSL.style.display = '';
+      setText('rSLMo', '-' + fmt(studentLoanAnnual / 12));
+      setText('rSLYr', '-' + fmtInt(studentLoanAnnual));
+    } else {
+      rowSL.style.display = 'none';
+    }
+
+    // Net
+    setText('rNetMo', fmt(monthlyNet));
+    setText('rNetYr', fmtInt(annualNet));
+
+    // Summary cards
+    setText('sTaxBand', getMarginalBand(effectiveGross, pensionAnnual, taxCode));
+    setText('sPenTier', pensionOptedIn ? (pensionRate * 100).toFixed(1) + '%' : 'Opted out');
+    setText('sEffRate', effectiveTaxRate.toFixed(1) + '%');
+    setText('sDaily', fmt(monthlyNet / 30.44));
+
+    // Pension info section
+    var pensionInfoEl = document.getElementById('pensionInfo');
+    if (pensionOptedIn) {
+      pensionInfoEl.style.display = 'block';
+      setText('pYourContrib', fmtInt(pensionAnnual));
+      setText('pEmployerContrib', fmtInt(employerPensionAnnual));
+      setText('pTotalContrib', fmtInt(pensionAnnual + employerPensionAnnual));
+    } else {
+      pensionInfoEl.style.display = 'none';
+    }
+  }
+
+  // === INITIAL SETUP ===
+  updateSpinePoints();
+})();
+</script>
+</body>
+</html>
