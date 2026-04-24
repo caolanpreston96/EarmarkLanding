@@ -151,8 +151,11 @@
 /* Footer */
 .footer{position:relative;z-index:1;border-top:1px solid var(--bd);padding:56px 32px 36px;background:var(--bg)}.footer-i{max-width:1200px;margin:0 auto}.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px}.footer-bt{font-size:13px;color:var(--tx2);line-height:1.7;margin-top:14px;max-width:280px}.footer-hd{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--tx4);margin-bottom:16px}.footer-ul{list-style:none;display:flex;flex-direction:column;gap:8px}.footer-ul a{color:var(--tx2);font-size:13px;transition:color .2s}.footer-ul a:hover{color:var(--mint)}.footer-mid{padding-top:28px;border-top:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:20px}.footer-cp{font-size:11px;color:var(--tx4);white-space:nowrap}.footer-fca{font-size:11px;color:var(--tx4);text-align:center}.footer-social{display:flex;gap:12px}.footer-social a{width:32px;height:32px;border-radius:8px;background:var(--sf);border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;color:var(--tx3);transition:all .3s}.footer-social a:hover{border-color:var(--mint);color:var(--mint)}.footer-disc{font-size:10.5px;color:var(--tx4);line-height:1.8;padding-top:20px;border-top:1px solid var(--bd)}
 
+/* Tools Section */
+.tools-cards{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}.tcrd{display:block;background:var(--sf);border:1px solid var(--bd);border-radius:20px;padding:36px 28px;position:relative;overflow:hidden;transition:all .4s;text-decoration:none;color:inherit}.tcrd:hover{border-color:var(--mint);transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.25),0 0 30px var(--mintG)}.tcrd::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);opacity:0;transition:opacity .3s}.tcrd:hover::before{opacity:1}.tcrd-ic{font-size:32px;margin-bottom:16px}.tcrd-t{font-size:22px;font-weight:800;letter-spacing:-.02em;margin-bottom:8px}.tcrd-d{font-size:15px;color:var(--tx2);line-height:1.7;margin-bottom:16px}.tcrd-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}.tcrd-tag{font-size:11px;font-weight:600;font-family:var(--m);padding:4px 10px;border-radius:6px;background:rgba(78,205,196,.08);color:var(--mint);letter-spacing:.02em}.tcrd-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:var(--mint);color:var(--bg);font-size:14px;font-weight:700;border-radius:100px;transition:all .3s}.tcrd:hover .tcrd-btn{box-shadow:0 8px 24px rgba(78,205,196,.3)}
+
 /* Responsive */
-@media(max-width:960px){.hero-i{grid-template-columns:1fr;text-align:center}.hero-p{margin-left:auto;margin-right:auto}.hero-btns{justify-content:center}.hero-trust{justify-content:center}.hero-vis{margin-top:32px}.iph-hero{width:260px}.fc{display:none}.fr,.fr.rev{grid-template-columns:1fr;direction:ltr;gap:32px}.fr.rev>*{direction:ltr}.ft{max-width:100%}.iph-feat{transform:none;opacity:0}.iph-feat.in-view,.fr.rev .iph-feat.in-view{transform:none;opacity:1;box-shadow:0 25px 60px rgba(0,0,0,.5),0 8px 40px var(--glow,transparent)}.feat-glow{margin-top:16px}.partner-ill{margin:0 auto}.xp-ill{margin:0 auto}.steps{grid-template-columns:1fr}.stats-g{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2)::after{display:none}.tg{grid-template-columns:1fr}.inv-g{grid-template-columns:1fr}.footer-top{grid-template-columns:1fr 1fr;gap:28px}.nav-links{display:none}.mob-tog{display:block}.wl-f{flex-direction:column}.footer-mid{flex-direction:column;text-align:center}}
+@media(max-width:960px){.hero-i{grid-template-columns:1fr;text-align:center}.hero-p{margin-left:auto;margin-right:auto}.hero-btns{justify-content:center}.hero-trust{justify-content:center}.hero-vis{margin-top:32px}.iph-hero{width:260px}.fc{display:none}.fr,.fr.rev{grid-template-columns:1fr;direction:ltr;gap:32px}.fr.rev>*{direction:ltr}.ft{max-width:100%}.iph-feat{transform:none;opacity:0}.iph-feat.in-view,.fr.rev .iph-feat.in-view{transform:none;opacity:1;box-shadow:0 25px 60px rgba(0,0,0,.5),0 8px 40px var(--glow,transparent)}.feat-glow{margin-top:16px}.partner-ill{margin:0 auto}.xp-ill{margin:0 auto}.steps{grid-template-columns:1fr}.stats-g{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2)::after{display:none}.tg{grid-template-columns:1fr}.inv-g{grid-template-columns:1fr}.footer-top{grid-template-columns:1fr 1fr;gap:28px}.nav-links{display:none}.mob-tog{display:block}.wl-f{flex-direction:column}.footer-mid{flex-direction:column;text-align:center}.tools-cards{grid-template-columns:1fr}}
 @media(max-width:600px){.hero{padding:120px 20px 48px}.sec{padding:80px 20px}.iph-hero{width:250px}.iph-step{width:180px}.iph-step::before{width:50px;height:14px;top:6px}.iph-feat{width:230px}.stats-g{grid-template-columns:1fr 1fr}.tool-grid{grid-template-columns:1fr}.footer-top{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}}
 </style>
@@ -292,7 +295,7 @@
 <div class="amb"><div class="amb-g"></div><div class="amb-o amb-o1"></div><div class="amb-o amb-o2"></div></div>
 
 <!-- NAV -->
-<nav class="nav" id="nav"><div class="nav-i"><a href="#" class="nav-l">earmark<b>IQ</b><span style="display:block;font-family:var(--m);font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--tx3);font-weight:500">Smart Money</span></a><div class="nav-links"><a href="#how" class="nav-a">How it works</a><a href="#features" class="nav-a">Features</a><a href="#security" class="nav-a">Security</a><a href="#pricing" class="nav-a">Pricing</a><a href="#investors" class="nav-a">Investors</a><a href="/blog" class="nav-a">Blog</a><a href="#waitlist" class="nav-cta">Join Waitlist →</a></div><button class="mob-tog" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></nav>
+<nav class="nav" id="nav"><div class="nav-i"><a href="#" class="nav-l">earmark<b>IQ</b><span style="display:block;font-family:var(--m);font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--tx3);font-weight:500">Smart Money</span></a><div class="nav-links"><a href="#how" class="nav-a">How it works</a><a href="#features" class="nav-a">Features</a><a href="#security" class="nav-a">Security</a><a href="#pricing" class="nav-a">Pricing</a><a href="#investors" class="nav-a">Investors</a><a href="/blog" class="nav-a">Blog</a><a href="/tools" class="nav-a">Tools</a><a href="#waitlist" class="nav-cta">Join Waitlist →</a></div><button class="mob-tog" aria-label="Menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button></div></nav>
 
 <!-- HERO -->
 <section class="hero"><div class="hero-i">
@@ -508,6 +511,30 @@
 
 </div></section>
 
+<!-- FREE TOOLS -->
+<section class="sec" id="tools"><div class="sec-i sec-c">
+  <div class="r"><div class="sec-l">Free Tools</div></div>
+  <h2 class="sec-h r d1">Financial calculators for<br>UK professionals.</h2>
+  <p class="sec-d r d2">No sign-up needed. Just useful numbers.</p>
+  <div class="tools-cards">
+    <a href="/tools/salary-sacrifice" class="tcrd r d1">
+      <div class="tcrd-ic">💰</div>
+      <div class="tcrd-t">Salary Sacrifice Calculator</div>
+      <div class="tcrd-d">See exactly how much you save after tax and NI from pension contributions, cycle to work and EV car schemes. Updated for 2026/27.</div>
+      <div class="tcrd-tags"><span class="tcrd-tag">Pension</span><span class="tcrd-tag">Cycle to Work</span><span class="tcrd-tag">EV Lease</span></div>
+      <span class="tcrd-btn">Try the calculator <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+    </a>
+    <a href="/tools/nhs-pay-calculator" class="tcrd r d2">
+      <div class="tcrd-ic">🏥</div>
+      <div class="tcrd-t">NHS Pay Calculator 2026/27</div>
+      <div class="tcrd-d">Calculate your exact take-home pay for every Agenda for Change band and spine point. Includes pension, NI, London weighting and student loans.</div>
+      <div class="tcrd-tags"><span class="tcrd-tag">AfC Bands</span><span class="tcrd-tag">NHS Pension</span><span class="tcrd-tag">London Weighting</span></div>
+      <span class="tcrd-btn">Try the calculator <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+    </a>
+  </div>
+  <p class="r d3" style="font-size:14px;color:var(--tx3);text-align:center;margin-top:28px">More tools coming soon &mdash; IR35 calculator, teacher pay calculator, and more.</p>
+</div></section>
+
 <!-- PRICING -->
 <section class="sec" id="pricing"><div class="sec-i sec-c">
   <div class="r"><div class="sec-l">Pricing</div></div>
@@ -615,7 +642,7 @@
   <div class="footer-top">
     <div><a href="#" class="nav-l" style="font-size:22px">earmark<b>IQ</b><span style="display:block;font-family:var(--m);font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--tx3);font-weight:500;margin-top:2px">Smart Money</span></a><p class="footer-bt">AI-powered salary allocation for UK professionals.</p></div>
     <div><h5 class="footer-hd">Product</h5><ul class="footer-ul"><li><a href="#how">How it works</a></li><li><a href="#features">Features</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#security">Security</a></li></ul></div>
-    <div><h5 class="footer-hd">Resources</h5><ul class="footer-ul"><li><a href="/blog">Blog</a></li><li><a href="/budgeting/salary">Salary Guides</a></li><li><a href="/budgeting/profession">Profession Guides</a></li><li><a href="mailto:hello@earmarkiq.app">Contact</a></li></ul></div>
+    <div><h5 class="footer-hd">Resources</h5><ul class="footer-ul"><li><a href="/blog">Blog</a></li><li><a href="/tools/salary-sacrifice">Salary Sacrifice Calculator</a></li><li><a href="/tools/nhs-pay-calculator">NHS Pay Calculator</a></li><li><a href="/tools">All Tools &rarr;</a></li><li><a href="/budgeting/salary">Salary Guides</a></li><li><a href="/budgeting/profession">Profession Guides</a></li></ul></div>
     <div><h5 class="footer-hd">Legal</h5><ul class="footer-ul"><li><a href="/privacy">Privacy Policy</a></li><li><a href="/terms">Terms of Service</a></li><li><a href="mailto:hello@earmarkiq.app">Support</a></li></ul></div>
   </div>
   <div class="footer-mid">
