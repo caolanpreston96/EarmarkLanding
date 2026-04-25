@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://earmarkiq.app/tools/nhs-pay-calculator">
 <meta property="og:title" content="NHS Pay Calculator 2026/27 | AfC Bands Take-Home Pay Tool">
 <meta property="og:description" content="Calculate your NHS take-home pay for 2026/27. All AfC bands 2-9, spine points, London weighting, NHS pension contributions. Free, instant.">
-<meta property="og:image" content="https://earmarkiq.app/assets/og-image.webp">
+<meta property="og:image" content="https://earmarkiq.app/api/og?title=NHS%20Pay%20Calculator%202026%2F27&subtitle=All%20AfC%20bands%2C%20spine%20points%20%26%20London%20weighting">
 <meta property="og:site_name" content="earmarkIQ">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
@@ -120,12 +120,64 @@
       ]
     },
     {
+      "@type": "HowTo",
+      "name": "How to Calculate Your NHS Take-Home Pay",
+      "description": "Use the earmarkIQ NHS pay calculator to find your exact monthly take-home pay based on your AfC band and spine point.",
+      "totalTime": "PT1M",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Select your AfC band",
+          "text": "Choose your Agenda for Change pay band from the dropdown — Band 2 through Band 9."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Select your spine point",
+          "text": "Pick your current spine point within your band. If you're unsure, check your most recent payslip or contract."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Select your location",
+          "text": "Choose your work location for High Cost Area Supplements — Inner London, Outer London, Fringe, or Rest of UK."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "View your take-home pay",
+          "text": "See your monthly and annual take-home pay, with a full breakdown of tax, NI, pension contributions, and student loan deductions."
+        }
+      ],
+      "tool": {
+        "@type": "HowToTool",
+        "name": "earmarkIQ NHS Pay Calculator"
+      }
+    },
+    {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://earmarkiq.app" },
         { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://earmarkiq.app/tools" },
         { "@type": "ListItem", "position": 3, "name": "NHS Pay Calculator" }
       ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://earmarkiq.app/#founder",
+      "name": "Caolan Preston",
+      "jobTitle": "Founder & CEO",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Professional Certification",
+        "name": "CF30 — CII Certificate in Financial Services"
+      },
+      "worksFor": {
+        "@type": "Organization",
+        "name": "earmarkIQ Ltd",
+        "url": "https://earmarkiq.app"
+      }
     }
   ]
 }

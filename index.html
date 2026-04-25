@@ -43,7 +43,7 @@
 <meta property="og:url" content="https://earmarkiq.app/" />
 <meta property="og:title" content="earmarkIQ — AI-Powered Salary Allocation for UK Professionals" />
 <meta property="og:description" content="Connect your bank, get your AI financial profile, and make every pound work harder. Free to start. UK-only. FCA regulated via Finexer." />
-<meta property="og:image" content="https://earmarkiq.app/assets/og-image.webp" />
+<meta property="og:image" content="https://earmarkiq.app/api/og?title=Your%20salary%2C%20actually%20working%20for%20you&subtitle=AI-powered%20budgeting%20for%20UK%20professionals&stat=%C2%A3588%2Fyr%20saved" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
 <meta property="og:site_name" content="earmarkIQ" />
@@ -169,33 +169,38 @@
       "url": "https://earmarkiq.app",
       "description": "AI-powered personal finance app for UK professionals. Connects to your bank via Open Banking to analyse spending, allocate your salary automatically, track subscriptions, and detect price creep.",
       "applicationCategory": "FinanceApplication",
+      "applicationSubCategory": "Personal Finance",
       "operatingSystem": "iOS, Android",
       "offers": [
         {
-          "@type": "Offer",
+          "@type": "UnitPriceSpecification",
           "name": "Free",
           "price": "0",
-          "priceCurrency": "GBP"
+          "priceCurrency": "GBP",
+          "referenceQuantity": { "@type": "QuantitativeValue", "value": "1", "unitCode": "MON" }
         },
         {
-          "@type": "Offer",
+          "@type": "UnitPriceSpecification",
           "name": "Plus",
           "price": "4.99",
           "priceCurrency": "GBP",
+          "referenceQuantity": { "@type": "QuantitativeValue", "value": "1", "unitCode": "MON" },
           "billingIncrement": "P1M"
         },
         {
-          "@type": "Offer",
+          "@type": "UnitPriceSpecification",
           "name": "Pro",
           "price": "9.99",
           "priceCurrency": "GBP",
+          "referenceQuantity": { "@type": "QuantitativeValue", "value": "1", "unitCode": "MON" },
           "billingIncrement": "P1M"
         },
         {
-          "@type": "Offer",
+          "@type": "UnitPriceSpecification",
           "name": "Unlimited",
           "price": "14.99",
           "priceCurrency": "GBP",
+          "referenceQuantity": { "@type": "QuantitativeValue", "value": "1", "unitCode": "MON" },
           "billingIncrement": "P1M"
         }
       ],
@@ -208,30 +213,62 @@
         "Net worth tracking",
         "Partner finance mode",
         "Tax optimisation tips",
-        "Smart marketplace"
+        "Smart marketplace",
+        "Weekly spending insights",
+        "Bill splitting",
+        "Salary sacrifice calculator"
       ],
       "screenshot": "https://earmarkiq.app/assets/paycheck-allocation.webp",
       "inLanguage": "en-GB",
       "availableOnDevice": "Mobile",
-      "publisher": {
-        "@type": "Organization",
-        "name": "earmarkIQ Ltd",
-        "url": "https://earmarkiq.app",
-        "email": "hello@earmarkiq.app"
+      "countriesSupported": "GB",
+      "downloadUrl": "https://earmarkiq.app",
+      "author": {
+        "@id": "#organization"
       }
     },
     {
       "@type": "Organization",
+      "@id": "#organization",
       "name": "earmarkIQ Ltd",
+      "legalName": "earmarkIQ Ltd",
       "url": "https://earmarkiq.app",
       "logo": "https://earmarkiq.app/assets/logo.png",
+      "foundingDate": "2025",
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      },
       "contactPoint": {
         "@type": "ContactPoint",
         "email": "hello@earmarkiq.app",
         "contactType": "customer support"
       },
+      "founder": {
+        "@type": "Person",
+        "@id": "#founder",
+        "name": "Caolan Preston",
+        "jobTitle": "Founder & CEO",
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Professional Certification",
+          "name": "CF30 — CII Certificate in Financial Services"
+        },
+        "worksFor": { "@id": "#organization" }
+      },
+      "knowsAbout": [
+        "Open Banking",
+        "Personal Finance",
+        "Salary Allocation",
+        "Subscription Tracking",
+        "AI Financial Advice",
+        "UK Tax System",
+        "Budgeting",
+        "Net Worth Tracking"
+      ],
       "sameAs": [
-        "https://twitter.com/earmarkiq"
+        "https://twitter.com/earmarkiq",
+        "https://www.linkedin.com/company/earmarkiq"
       ]
     },
     {

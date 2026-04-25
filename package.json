@@ -2,5 +2,8 @@
   "name": "earmark-landing",
   "version": "1.0.0",
   "private": true,
-  "description": "Landing page for earmarkIQ - AI-powered salary allocation for UK professionals"
+  "description": "Landing page for earmarkIQ - AI-powered salary allocation for UK professionals",
+  "dependencies": {
+    "@vercel/og": "^0.6.0"
+  }
 }
