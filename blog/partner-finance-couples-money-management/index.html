@@ -209,6 +209,10 @@
     footer a { color: var(--text-muted); }
     footer a:hover { color: var(--mint); }
 
+    .moneyhelper-embed { background: #111; border: 1px solid #222; border-radius: 12px; padding: 24px; margin: 40px 0; }
+    .moneyhelper-embed h3 { color: #fff; margin-top: 0; margin-bottom: 12px; }
+    .moneyhelper-embed p { color: #aaa; margin-bottom: 16px; }
+
     .quick-answer { background: rgba(78,205,196,0.06); border: 1px solid rgba(78,205,196,0.2); border-radius: 12px; padding: 20px 24px; margin: 24px 0 32px; }
     .quick-answer-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mint); margin-bottom: 8px; }
     .quick-answer p { font-size: 15px; line-height: 1.7; color: var(--text-dim); margin: 0; }
@@ -460,6 +464,13 @@
     <div class="callout callout-amber">
       <div class="callout-label">ℹ️ Important</div>
       <p>earmarkIQ uses read-only Open Banking connections. Neither partner can move money from the other's accounts — even in Partner Finance mode. Ask IQ's agentic actions (automated transfers) only affect the account of the partner who authorises them. Full financial independence is maintained throughout.</p>
+    </div>
+
+    <div class="moneyhelper-embed">
+      <h3>Build a household budget with MoneyHelper</h3>
+      <p>Working out a shared budget? Use the free MoneyHelper Budget Planner to map out both incomes and your combined household expenses. It's backed by the UK government and completely free. Then use earmarkIQ's Partner Finance to track it automatically across both your accounts.</p>
+      <iframe src="https://www.moneyhelper.org.uk/en/everyday-money/budgeting/budget-planner#/" width="100%" height="600" frameborder="0" scrolling="yes" title="MoneyHelper Budget Planner" style="border: 1px solid #333; border-radius: 8px;"></iframe>
+      <p style="font-size: 12px; color: #888; margin-top: 8px;">Budget Planner provided by <a href="https://www.moneyhelper.org.uk" target="_blank" rel="noopener">MoneyHelper</a>, backed by the UK government.</p>
     </div>
 
     <hr class="section-divider" />

@@ -102,6 +102,18 @@
   }
   </script>
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", "h2", ".speakable"]
+    },
+    "url": "https://earmarkiq.app/blog/best-budgeting-apps-uk"
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -278,6 +290,10 @@
     footer a { color: var(--text-muted); }
     footer a:hover { color: var(--mint); }
 
+    .moneyhelper-embed { background: #111; border: 1px solid #222; border-radius: 12px; padding: 24px; margin: 40px 0; }
+    .moneyhelper-embed h3 { color: #fff; margin-top: 0; margin-bottom: 12px; }
+    .moneyhelper-embed p { color: #aaa; margin-bottom: 16px; }
+
     /* RANKING BADGE */
     .rank-badge { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; flex-shrink: 0; }
     .rank-1 { background: rgba(110,231,183,0.15); color: var(--mint); border: 1px solid rgba(110,231,183,0.3); }
@@ -315,7 +331,7 @@
     <span class="hero-meta-dot"></span>
     <span>Updated for 2026 · Includes Moneyhub alternatives</span>
   </div>
-  <p class="hero-intro">
+  <p class="hero-intro speakable">
     We tested every major UK budgeting app so you don't have to. This guide covers the best options for 2026 — from fully free apps to AI-powered platforms — with honest pros, cons, and a clear recommendation for every type of user.
   </p>
 </div>
@@ -741,6 +757,13 @@
     <div class="callout callout-mint">
       <div class="callout-label">✦ earmarkIQ security</div>
       <p>earmarkIQ connects via Finexer Ltd (FCA firm ref 925695), uses 256-bit encryption, biometric authentication (Face ID / Touch ID), read-only access, and auto-locks after 2 minutes of inactivity. You can delete your account and all data at any time from Settings.</p>
+    </div>
+
+    <div class="moneyhelper-embed">
+      <h3>Try the government's free budget planner</h3>
+      <p>Before committing to any app, try the free MoneyHelper Budget Planner below. It's backed by the UK government and helps you map out your income and expenses. Once you've got a baseline, earmarkIQ can automate the tracking against your real bank transactions.</p>
+      <iframe src="https://www.moneyhelper.org.uk/en/everyday-money/budgeting/budget-planner#/" width="100%" height="600" frameborder="0" scrolling="yes" title="MoneyHelper Budget Planner" style="border: 1px solid #333; border-radius: 8px;"></iframe>
+      <p style="font-size: 12px; color: #888; margin-top: 8px;">Budget Planner provided by <a href="https://www.moneyhelper.org.uk" target="_blank" rel="noopener">MoneyHelper</a>, backed by the UK government.</p>
     </div>
 
     <!-- MID CTA -->
