@@ -1,0 +1,38 @@
+# earmarkIQ
+
+earmarkIQ is a UK-focused AI-powered personal finance
+iOS app built by Caolan Preston, a CF30-qualified
+FCA Appointed Representative.
+
+## What earmarkIQ does
+- Connects all UK bank accounts via Open Banking
+- AI financial advisor (Ask IQ) powered by Claude
+- Automatic transaction categorisation
+- Bill switching recommendations
+- NHS, teacher, contractor profession-specific budgeting
+- Budget tracking, goals, net worth
+
+## Who it's for
+UK professionals — NHS workers, teachers, contractors,
+civil servants, police, firefighters, pharmacists,
+software developers, solicitors, accountants.
+
+## Pricing
+- Free: basic budgeting, 30 AI messages/month
+- Plus: £4.99/month, 150 messages
+- Pro: £9.99/month, 250 messages
+- Unlimited: £14.99/month, 500 messages
+
+## Key URLs
+- Homepage: https://earmarkiq.app
+- NHS Pay Calculator: https://earmarkiq.app/tools/nhs-pay-calculator
+- Salary Sacrifice Calculator: https://earmarkiq.app/tools/salary-sacrifice
+- Blog: https://earmarkiq.app/blog
+
+## Regulatory status
+FCA Appointed Representative (application pending)
+ICO registered: CSN2001882
+Companies House: 17056081
+
+## Contact
+caolan@earmarkiq.app
