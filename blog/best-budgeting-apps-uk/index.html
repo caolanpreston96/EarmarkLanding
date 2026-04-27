@@ -290,9 +290,18 @@
     footer a { color: var(--text-muted); }
     footer a:hover { color: var(--mint); }
 
-    .moneyhelper-embed { background: #111; border: 1px solid #222; border-radius: 12px; padding: 24px; margin: 40px 0; }
+    .moneyhelper-embed { margin: 40px 0; }
     .moneyhelper-embed h3 { color: #fff; margin-top: 0; margin-bottom: 12px; }
     .moneyhelper-embed p { color: #aaa; margin-bottom: 16px; }
+    .moneyhelper-card { display: block; text-decoration: none; background: #111; border: 1px solid #2a2a2a; border-left: 4px solid #00c896; border-radius: 12px; padding: 24px; margin: 32px 0; transition: border-color 0.2s, background 0.2s; }
+    .moneyhelper-card:hover { background: #161616; border-color: #00c896; text-decoration: none; }
+    .moneyhelper-card-inner { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+    .moneyhelper-card-left { flex: 1; }
+    .moneyhelper-logo { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #00c896; margin-bottom: 8px; }
+    .moneyhelper-card-title { font-size: 18px; font-weight: 600; color: #fff; margin-bottom: 8px; }
+    .moneyhelper-card-desc { font-size: 14px; color: #888; line-height: 1.5; margin-bottom: 12px; }
+    .moneyhelper-card-cta { font-size: 14px; font-weight: 600; color: #00c896; }
+    .moneyhelper-card-badge { background: #00c89620; color: #00c896; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 20px; white-space: nowrap; }
 
     /* RANKING BADGE */
     .rank-badge { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 700; flex-shrink: 0; }
@@ -761,8 +770,18 @@
 
     <div class="moneyhelper-embed">
       <h3>Try the government's free budget planner</h3>
-      <p>Before committing to any app, try the free MoneyHelper Budget Planner below. It's backed by the UK government and helps you map out your income and expenses. Once you've got a baseline, earmarkIQ can automate the tracking against your real bank transactions.</p>
-      <iframe src="https://www.moneyhelper.org.uk/en/everyday-money/budgeting/budget-planner#/" width="100%" height="600" frameborder="0" scrolling="yes" title="MoneyHelper Budget Planner" style="border: 1px solid #333; border-radius: 8px;"></iframe>
+      <p>Before committing to any app, try the free MoneyHelper Budget Planner. It's backed by the UK government and helps you map out your income and expenses. Once you've got a baseline, earmarkIQ can automate the tracking against your real bank transactions.</p>
+      <a href="https://www.moneyhelper.org.uk/en/everyday-money/budgeting/budget-planner" target="_blank" rel="noopener" class="moneyhelper-card">
+        <div class="moneyhelper-card-inner">
+          <div class="moneyhelper-card-left">
+            <div class="moneyhelper-logo">MoneyHelper</div>
+            <div class="moneyhelper-card-title">Free Budget Planner</div>
+            <div class="moneyhelper-card-desc">Build a detailed monthly budget with this free tool from MoneyHelper — backed by the UK government.</div>
+            <div class="moneyhelper-card-cta">Open Budget Planner →</div>
+          </div>
+          <div class="moneyhelper-card-badge">Free</div>
+        </div>
+      </a>
       <p style="font-size: 12px; color: #888; margin-top: 8px;">Budget Planner provided by <a href="https://www.moneyhelper.org.uk" target="_blank" rel="noopener">MoneyHelper</a>, backed by the UK government.</p>
     </div>
 
