@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IR35 Calculator UK 2026/27 | Inside vs Outside Take-Home Pay | Free</title>
+<meta name="description" content="Calculate your exact take-home pay inside vs outside IR35. Compare Ltd company, umbrella and PAYE. See the real difference in 2026/27. Free, instant, no sign-up.">
+<link rel="canonical" href="https://earmarkiq.app/tools/ir35-calculator">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://earmarkiq.app/tools/ir35-calculator">
+<meta property="og:title" content="IR35 Calculator UK 2026/27 | Inside vs Outside Take-Home Pay | Free">
+<meta property="og:description" content="Calculate your exact take-home pay inside vs outside IR35. Compare Ltd company, umbrella and PAYE. See the real difference in 2026/27. Free, instant, no sign-up.">
+<meta property="og:image" content="https://earmarkiq.app/api/og?title=IR35%20Calculator%20UK%202026%2F27&subtitle=Inside%20vs%20outside%20IR35%20take-home%20comparison">
+<meta property="og:site_name" content="earmarkIQ">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@earmarkiq">
+<meta name="twitter:title" content="IR35 Calculator UK 2026/27 | Inside vs Outside Take-Home Pay | Free">
+<meta name="twitter:description" content="Calculate your exact take-home pay inside vs outside IR35. Compare Ltd company, umbrella and PAYE. See the real difference in 2026/27. Free, instant, no sign-up.">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="theme-color" content="#06080f">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "IR35 Calculator UK 2026/27",
+      "url": "https://earmarkiq.app/tools/ir35-calculator",
+      "description": "Free IR35 calculator for the 2026/27 UK tax year. Compare take-home pay outside IR35 (Ltd company), inside IR35 (deemed employee), and via an umbrella company.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Any",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
+      "featureList": [
+        "Outside IR35 Ltd company calculator",
+        "Inside IR35 deemed employee calculator",
+        "Umbrella company take-home calculator",
+        "Corporation tax with marginal relief",
+        "Dividend tax calculator 2026/27",
+        "Three-way comparison table"
+      ],
+      "publisher": { "@type": "Organization", "name": "earmarkIQ", "url": "https://earmarkiq.app" },
+      "inLanguage": "en-GB"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between inside and outside IR35?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Outside IR35 means HMRC considers you genuinely self-employed. You can pay yourself a low salary and take the rest as dividends through your Ltd company, which is significantly more tax-efficient. Inside IR35 means HMRC considers you a 'disguised employee' — your income is taxed as employment income with full income tax and National Insurance, even though you work through a company. The difference in take-home pay can be £10,000–£20,000+ per year on a typical contractor day rate." }
+        },
+        {
+          "@type": "Question",
+          "name": "How much more tax do I pay inside IR35?",
+          "acceptedAnswer": { "@type": "Answer", "text": "On a typical £450/day contract (46 weeks), you take home roughly £10,000–£15,000 less per year inside IR35 compared to outside. The exact difference depends on your day rate, expenses, and pension contributions. Inside IR35, you lose the ability to split income between a low salary and tax-efficient dividends, and you pay full employee and employer National Insurance." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it worth using an umbrella company?",
+          "acceptedAnswer": { "@type": "Answer", "text": "An umbrella company is the simplest option if you're inside IR35 or prefer not to run a Ltd company. The take-home pay is similar to inside IR35 but slightly lower due to the umbrella's weekly margin (typically £20–£30/week). The advantage is zero admin — no company accounts, no VAT returns, no corporation tax. For short contracts or contractors who value simplicity, an umbrella can make sense despite the slightly lower pay." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I still use a Ltd company inside IR35?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, you can still operate through a Ltd company even if a contract is inside IR35. The difference is how your income is taxed — inside IR35, the 'deemed payment' rules apply, meaning your income is treated as employment income for tax purposes. You lose the dividend advantage but retain a 5% flat-rate expense deduction. Many contractors keep their Ltd company and take a mix of inside and outside IR35 contracts." }
+        },
+        {
+          "@type": "Question",
+          "name": "What expenses can I claim as a contractor?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Outside IR35, you can claim legitimate business expenses through your Ltd company including: travel and subsistence (if no single client), equipment and software, professional subscriptions, training, accountancy fees, business insurance, home office costs, and phone/broadband. Inside IR35, you get a flat 5% expense deduction instead of claiming individual expenses. Umbrella company contractors can claim limited expenses for travel to temporary workplaces." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does IR35 affect my pension contributions?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Outside IR35, you can make employer pension contributions from your Ltd company, which are tax-deductible for the company and not subject to personal income tax or NI. This is one of the most tax-efficient ways to save for retirement as a contractor. Inside IR35, the deemed payment rules mean pension contributions via salary sacrifice still save you NI and income tax, similar to an employee. Via an umbrella, pension contributions through salary sacrifice are also available and reduce your taxable pay." }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://earmarkiq.app" },
+        { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://earmarkiq.app/tools" },
+        { "@type": "ListItem", "position": 3, "name": "IR35 Calculator" }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://earmarkiq.app/#founder",
+      "name": "Caolan Preston",
+      "jobTitle": "Founder & CEO",
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "Professional Certification",
+        "name": "CF30 — CII Certificate in Financial Services"
+      },
+      "worksFor": { "@type": "Organization", "name": "earmarkIQ Ltd", "url": "https://earmarkiq.app" }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2", ".speakable"] },
+  "url": "https://earmarkiq.app/tools/ir35-calculator"
+}
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-62JW90868T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-62JW90868T');
+</script>
+
+<style>
+:root{--bg:#06080f;--bg2:#0a0d17;--sf:#141929;--sf2:#191f33;--bd:#1e2540;--bd2:#283050;--tx:#eaecf5;--tx2:#a0a5bc;--tx3:#686e88;--tx4:#464c64;--mint:#4ECDC4;--mintG:rgba(78,205,196,0.15);--green:#4ADE80;--amber:#F5A623;--blue:#5B8DEF;--purple:#9B8FE8;--coral:#FF6B6B;--f:'DM Sans',-apple-system,sans-serif;--m:'IBM Plex Mono',monospace;--ease:cubic-bezier(0.16,1,0.3,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}::selection{background:rgba(78,205,196,0.25);color:#fff}html{scroll-behavior:smooth}body{font-family:var(--f);background:var(--bg);color:var(--tx);overflow-x:hidden;-webkit-font-smoothing:antialiased;line-height:1.6}a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:var(--f)}
+
+/* Nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rgba(6,8,15,.92);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid var(--bd)}.nav-i{max-width:1200px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between}.nav-l{font-size:22px;font-weight:400;letter-spacing:-.02em;color:var(--tx)}.nav-l b{font-weight:800;color:var(--mint)}.nav-l span{display:block;font-family:var(--m);font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--tx3);font-weight:500}.nav-cta{padding:9px 22px;background:var(--mint);color:var(--bg);font-size:13px;font-weight:700;border-radius:100px;border:none;transition:all .3s}.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(78,205,196,.3)}
+
+/* Page hero */
+.page-hero{padding:120px 32px 48px;max-width:1200px;margin:0 auto}.breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--tx3);margin-bottom:20px;flex-wrap:wrap}.breadcrumb a{color:var(--tx3);transition:color .2s}.breadcrumb a:hover{color:var(--mint)}.breadcrumb svg{width:14px;height:14px;opacity:.5}.page-hero h1{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-.03em;line-height:1.15;margin-bottom:12px}.page-hero h1 em{font-style:normal;color:var(--mint)}.page-hero .subtitle{font-size:17px;color:var(--tx2);max-width:620px;line-height:1.7}.page-hero .badges{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap}.page-hero .badge{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;background:rgba(78,205,196,.06);border:1px solid rgba(78,205,196,.15);border-radius:100px;font-size:12px;font-weight:600;color:var(--mint);font-family:var(--m)}
+
+/* Calculator layout */
+.calc-section{padding:0 32px 80px;max-width:1200px;margin:0 auto}
+.calc-wrap{display:grid;grid-template-columns:380px 1fr;gap:32px;align-items:start}
+.calc-inputs{display:flex;flex-direction:column;gap:24px}
+.calc-results{position:sticky;top:100px}
+
+/* Input cards */
+.input-card{background:var(--sf);border:1px solid var(--bd);border-radius:16px;padding:28px 24px}.input-card-h{font-size:15px;font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:10px}.input-card-h svg{color:var(--mint);flex-shrink:0}
+.field{margin-bottom:18px}.field:last-child{margin-bottom:0}
+.field label{display:block;font-size:13px;font-weight:600;color:var(--tx2);margin-bottom:6px;letter-spacing:.01em}
+.input-wrap{position:relative;flex:1}
+.input-wrap .prefix{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:14px;color:var(--tx3);font-family:var(--m);font-weight:600;pointer-events:none}
+.input-wrap .suffix{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:13px;color:var(--tx3);font-family:var(--m);pointer-events:none}
+input[type="number"],select{width:100%;padding:12px 14px;background:var(--bg);border:1px solid var(--bd2);border-radius:10px;color:var(--tx);font-family:var(--f);font-size:14px;outline:none;transition:border-color .2s,box-shadow .2s;-moz-appearance:textfield}
+input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+input:focus,select:focus{border-color:var(--mint);box-shadow:0 0 0 3px var(--mintG)}
+select{cursor:pointer;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23686e88' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+select option{background:var(--sf);color:var(--tx)}
+.has-prefix input{padding-left:32px}
+.has-suffix input{padding-right:44px}
+.field-hint{font-size:11px;color:var(--tx4);margin-top:4px;line-height:1.5}
+
+/* Gross summary */
+.gross-summary{background:var(--bg2);border:1px solid var(--bd);border-radius:12px;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
+.gross-summary .gs-label{font-size:13px;color:var(--tx2)}
+.gross-summary .gs-value{font-family:var(--m);font-size:20px;font-weight:800;color:var(--mint)}
+
+/* Results card */
+.results-card{background:var(--sf);border:1px solid var(--bd);border-radius:20px;padding:28px 24px}
+
+/* Diff hero */
+.diff-hero{text-align:center;padding:20px 0 24px;margin-bottom:24px;border-bottom:1px solid var(--bd)}
+.diff-label{font-size:13px;color:var(--tx2);margin-bottom:4px}
+.diff-amount{font-family:var(--m);font-size:clamp(28px,4vw,40px);font-weight:800;color:var(--green);letter-spacing:-.03em;line-height:1}
+.diff-sub{font-size:13px;color:var(--tx3);margin-top:6px;font-family:var(--m)}
+
+/* 3-col comparison table */
+.ir35-table{width:100%;border-collapse:collapse;font-size:13px}
+.ir35-table th{text-align:right;padding:8px 10px;color:var(--tx3);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;border-bottom:2px solid var(--bd)}
+.ir35-table th:first-child{text-align:left}
+.ir35-table th.col-best{color:var(--green)}
+.ir35-table td{padding:9px 10px;border-bottom:1px solid rgba(30,37,64,.5);text-align:right}
+.ir35-table td:first-child{text-align:left;color:var(--tx2);font-weight:500}
+.ir35-table td.val{font-family:var(--m);font-weight:600;white-space:nowrap}
+.ir35-table tr.row-total{border-top:2px solid var(--bd)}
+.ir35-table tr.row-total td{font-weight:700;padding-top:12px}
+.ir35-table td.best{color:var(--green)}
+.ir35-table td.worst{color:var(--tx4)}
+.ir35-table tr.section-header td{background:rgba(30,37,64,.4);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--tx3);padding:6px 10px}
+
+/* Net cards */
+.net-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:20px}
+.net-card{background:var(--bg);border-radius:10px;padding:14px;text-align:center;border:1px solid transparent;transition:border-color .2s}
+.net-card.best-card{border-color:rgba(74,222,128,.3);background:rgba(74,222,128,.04)}
+.net-card .nc-label{font-size:10px;color:var(--tx3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px;font-weight:600}
+.net-card .nc-title{font-size:11px;color:var(--tx2);margin-bottom:6px;font-weight:600}
+.net-card .nc-value{font-family:var(--m);font-size:18px;font-weight:800}
+.net-card.best-card .nc-value{color:var(--green)}
+.net-card .nc-monthly{font-size:11px;color:var(--tx3);font-family:var(--m);margin-top:2px}
+
+/* Content sections */
+.content-section{max-width:1200px;margin:0 auto;padding:80px 32px}
+.content-section h2{font-size:clamp(22px,3vw,32px);font-weight:800;letter-spacing:-.02em;margin-bottom:16px;line-height:1.2}
+.content-section p{font-size:15px;color:var(--tx2);line-height:1.8;margin-bottom:14px;max-width:720px}
+.content-section a{color:var(--mint);font-weight:500;transition:opacity .2s}.content-section a:hover{opacity:.8;text-decoration:underline}
+.content-divider{max-width:1200px;margin:0 auto;padding:0 32px}.content-divider hr{border:none;border-top:1px solid var(--bd)}
+
+/* CTA section */
+.cta-section{max-width:1200px;margin:0 auto;padding:60px 32px 80px;text-align:center}
+.cta-box{background:var(--sf);border:1px solid rgba(78,205,196,.2);border-radius:20px;padding:48px 32px;max-width:640px;margin:0 auto}
+.cta-box h2{font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:-.02em;margin-bottom:10px}
+.cta-box p{font-size:15px;color:var(--tx2);line-height:1.7;margin-bottom:24px}
+.btn-download{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;background:var(--mint);color:var(--bg);font-size:16px;font-weight:700;border-radius:100px;border:none;transition:all .3s;text-decoration:none}
+.btn-download:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(78,205,196,.35)}
+
+/* Footer */
+.footer{border-top:1px solid var(--bd);padding:48px 32px 32px;background:var(--bg)}.footer-i{max-width:1200px;margin:0 auto}.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:36px}.footer-bt{font-size:13px;color:var(--tx2);line-height:1.7;margin-top:12px;max-width:280px}.footer-hd{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--tx4);margin-bottom:14px}.footer-ul{list-style:none;display:flex;flex-direction:column;gap:8px}.footer-ul a{color:var(--tx2);font-size:13px;transition:color .2s}.footer-ul a:hover{color:var(--mint)}.footer-mid{padding-top:24px;border-top:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:16px}.footer-cp{font-size:11px;color:var(--tx4)}.footer-fca{font-size:11px;color:var(--tx4);text-align:center}.footer-disc{font-size:10.5px;color:var(--tx4);line-height:1.8;padding-top:16px;border-top:1px solid var(--bd)}
+
+/* Responsive */
+@media(max-width:960px){
+  .calc-wrap{grid-template-columns:1fr}
+  .calc-results{position:static}
+  .net-cards{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr 1fr;gap:24px}
+  .footer-mid{flex-direction:column;text-align:center}
+}
+@media(max-width:600px){
+  .page-hero{padding:100px 20px 36px}
+  .calc-section{padding:0 20px 60px}
+  .content-section{padding:60px 20px}
+  .cta-section{padding:40px 20px 60px}
+  .ir35-table{font-size:11px}
+  .ir35-table th,.ir35-table td{padding:7px 6px}
+  .footer-top{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav"><div class="nav-i">
+  <a href="/" class="nav-l">earmark<b>IQ</b><span>Smart Money</span></a>
+  <a href="/#waitlist" class="nav-cta">Join Waitlist &rarr;</a>
+</div></nav>
+
+<main>
+<!-- HERO -->
+<section class="page-hero">
+  <div class="breadcrumb">
+    <a href="/">Home</a>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+    <a href="/tools">Tools</a>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+    <span>IR35 Calculator</span>
+  </div>
+  <h1>IR35 Calculator <em>UK 2026/27</em></h1>
+  <p class="subtitle speakable">Compare your exact take-home pay outside IR35 (Ltd company), inside IR35 (deemed employee), and via an umbrella company. See the real difference in 2026/27 tax year. Free, instant, no sign-up.</p>
+  <div class="badges">
+    <span class="badge">2026/27 tax year</span>
+    <span class="badge">3-way comparison</span>
+    <span class="badge">No sign-up</span>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="calc-section">
+<div class="calc-wrap">
+
+<!-- LEFT: INPUTS -->
+<div class="calc-inputs">
+
+  <!-- Section 1: Your Contract -->
+  <div class="input-card">
+    <div class="input-card-h">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      Your Contract
+    </div>
+
+    <div class="field">
+      <label for="dayRate">Day rate</label>
+      <div class="input-wrap has-prefix">
+        <span class="prefix">&pound;</span>
+        <input type="number" id="dayRate" value="450" min="0" max="5000" step="25">
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="daysPerWeek">Days per week</label>
+      <select id="daysPerWeek">
+        <option value="1">1 day</option>
+        <option value="2">2 days</option>
+        <option value="3">3 days</option>
+        <option value="4">4 days</option>
+        <option value="5" selected>5 days</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="weeksPerYear">Weeks per year</label>
+      <div class="input-wrap has-suffix">
+        <input type="number" id="weeksPerYear" value="46" min="1" max="52" step="1">
+        <span class="suffix">wks</span>
+      </div>
+      <div class="field-hint">46 weeks is typical (6 weeks holiday/gap)</div>
+    </div>
+
+    <div class="gross-summary">
+      <span class="gs-label">Annual gross contract</span>
+      <span class="gs-value" id="grossAnnual">&pound;103,500</span>
+    </div>
+  </div>
+
+  <!-- Section 2: Ltd Settings -->
+  <div class="input-card">
+    <div class="input-card-h">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 00-8 0v2"/></svg>
+      Ltd Company Settings
+    </div>
+
+    <div class="field">
+      <label for="dirSalary">Director salary</label>
+      <div class="input-wrap has-prefix">
+        <span class="prefix">&pound;</span>
+        <input type="number" id="dirSalary" value="12570" min="0" max="200000" step="100">
+      </div>
+      <div class="field-hint">&pound;12,570 is optimal (uses full personal allowance, no NI)</div>
+    </div>
+
+    <div class="field">
+      <label for="bizExpenses">Annual business expenses</label>
+      <div class="input-wrap has-prefix">
+        <span class="prefix">&pound;</span>
+        <input type="number" id="bizExpenses" value="3000" min="0" max="100000" step="250">
+      </div>
+      <div class="field-hint">Accountant, insurance, software, travel, etc.</div>
+    </div>
+  </div>
+
+  <!-- Section 3: Umbrella -->
+  <div class="input-card">
+    <div class="input-card-h">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10a6 6 0 00-12 0"/><path d="M12 10v8"/><path d="M22 10C22 4.477 17.523 0 12 0S2 4.477 2 10"/><circle cx="12" cy="20" r="2"/></svg>
+      Umbrella Settings
+    </div>
+
+    <div class="field">
+      <label for="umbrellaMargin">Umbrella weekly margin</label>
+      <div class="input-wrap has-prefix">
+        <span class="prefix">&pound;</span>
+        <input type="number" id="umbrellaMargin" value="25" min="0" max="100" step="5">
+      </div>
+      <div class="field-hint">Typical range: &pound;20&ndash;&pound;35/week</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- RIGHT: RESULTS -->
+<div class="calc-results">
+  <div class="results-card">
+
+    <!-- Diff hero -->
+    <div class="diff-hero">
+      <div class="diff-label">Outside IR35 saves you</div>
+      <div class="diff-amount" id="diffAmount">&pound;0</div>
+      <div class="diff-sub">per year vs inside IR35</div>
+    </div>
+
+    <!-- 3-col comparison table -->
+    <table class="ir35-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th id="colOutside" class="col-best">Outside IR35</th>
+          <th>Inside IR35</th>
+          <th>Umbrella</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="section-header"><td colspan="4">Income</td></tr>
+        <tr>
+          <td>Gross contract</td>
+          <td class="val" id="rGrossOut"></td>
+          <td class="val" id="rGrossIn"></td>
+          <td class="val" id="rGrossUmb"></td>
+        </tr>
+        <tr id="rowExpenses">
+          <td>Business expenses</td>
+          <td class="val" id="rExpOut"></td>
+          <td class="val" id="rExpIn"></td>
+          <td class="val" id="rExpUmb"></td>
+        </tr>
+        <tr class="section-header"><td colspan="4">Deductions</td></tr>
+        <tr>
+          <td>Corporation tax</td>
+          <td class="val" id="rCorpTax"></td>
+          <td class="val" id="rCorpIn">&mdash;</td>
+          <td class="val" id="rCorpUmb">&mdash;</td>
+        </tr>
+        <tr>
+          <td>Employer NI</td>
+          <td class="val" id="rERNIOut">&mdash;</td>
+          <td class="val" id="rERNIIn"></td>
+          <td class="val" id="rERNIUmb"></td>
+        </tr>
+        <tr>
+          <td>Income tax</td>
+          <td class="val" id="rITOut"></td>
+          <td class="val" id="rITIn"></td>
+          <td class="val" id="rITUmb"></td>
+        </tr>
+        <tr>
+          <td>Employee NI</td>
+          <td class="val" id="rEENIOut"></td>
+          <td class="val" id="rEENIIn"></td>
+          <td class="val" id="rEENIUmb"></td>
+        </tr>
+        <tr>
+          <td>Dividend tax</td>
+          <td class="val" id="rDivTax"></td>
+          <td class="val" id="rDivIn">&mdash;</td>
+          <td class="val" id="rDivUmb">&mdash;</td>
+        </tr>
+        <tr id="rowMargin">
+          <td>Umbrella margin</td>
+          <td class="val">&mdash;</td>
+          <td class="val">&mdash;</td>
+          <td class="val" id="rMargin"></td>
+        </tr>
+        <tr class="row-total">
+          <td>Net annual</td>
+          <td class="val" id="rNetOut"></td>
+          <td class="val" id="rNetIn"></td>
+          <td class="val" id="rNetUmb"></td>
+        </tr>
+        <tr>
+          <td>Net monthly</td>
+          <td class="val" id="rMonOut"></td>
+          <td class="val" id="rMonIn"></td>
+          <td class="val" id="rMonUmb"></td>
+        </tr>
+        <tr>
+          <td>Effective daily rate</td>
+          <td class="val" id="rDayOut"></td>
+          <td class="val" id="rDayIn"></td>
+          <td class="val" id="rDayUmb"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Net cards -->
+    <div class="net-cards">
+      <div class="net-card" id="cardOut">
+        <div class="nc-label">Best</div>
+        <div class="nc-title">Outside IR35</div>
+        <div class="nc-value" id="ncNetOut">&pound;0</div>
+        <div class="nc-monthly" id="ncMonOut">&pound;0/mo</div>
+      </div>
+      <div class="net-card" id="cardIn">
+        <div class="nc-label">Inside IR35</div>
+        <div class="nc-title">Deemed Employee</div>
+        <div class="nc-value" id="ncNetIn">&pound;0</div>
+        <div class="nc-monthly" id="ncMonIn">&pound;0/mo</div>
+      </div>
+      <div class="net-card" id="cardUmb">
+        <div class="nc-label">Umbrella</div>
+        <div class="nc-title">Umbrella Co.</div>
+        <div class="nc-value" id="ncNetUmb">&pound;0</div>
+        <div class="nc-monthly" id="ncMonUmb">&pound;0/mo</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div>
+</section>
+
+<!-- CONTENT: What is IR35? -->
+<div class="content-divider"><hr></div>
+<section class="content-section">
+  <h2>What is IR35?</h2>
+  <p>IR35 is HMRC&rsquo;s anti-avoidance legislation designed to tax &ldquo;disguised employees&rdquo; &mdash; contractors who work like employees but operate through a limited company to pay less tax. The rules have existed since 2000, but the &ldquo;off-payroll working rules&rdquo; reformed in April 2021 shifted the responsibility for determining IR35 status from the contractor to the end client (for medium and large businesses).</p>
+  <p>If your contract is <strong style="color:var(--tx)">outside IR35</strong>, you&rsquo;re considered genuinely self-employed. You can pay yourself a tax-efficient salary through your Ltd company and extract remaining profits as dividends, which are taxed at lower rates than employment income.</p>
+  <p>If your contract is <strong style="color:var(--tx)">inside IR35</strong>, HMRC considers you a &ldquo;deemed employee&rdquo; for tax purposes. Your income is subject to full income tax and National Insurance, similar to a permanent employee, even though you work through a company. You do get a 5% flat-rate expense deduction.</p>
+  <p>IR35 status is determined by the end client (not you) using factors like control, substitution rights, and mutuality of obligation. HMRC&rsquo;s <a href="https://www.gov.uk/guidance/check-employment-status-for-tax" target="_blank" rel="noopener">CEST tool</a> provides an indicative assessment, though its accuracy has been disputed.</p>
+  <p>Related: <a href="/tools/salary-sacrifice">Salary sacrifice calculator</a> | <a href="/budgeting/profession/contractor">Contractor budgeting guide</a></p>
+</section>
+
+<!-- CONTENT: Ltd vs Umbrella -->
+<div class="content-divider"><hr></div>
+<section class="content-section">
+  <h2>Ltd company vs umbrella &mdash; which is better?</h2>
+  <p><strong style="color:var(--tx)">Ltd company (outside IR35)</strong> gives you the highest take-home pay. You control when and how you extract profits &mdash; typically a small salary at the personal allowance threshold plus dividends. Corporation tax is 19&ndash;25%, and dividends are taxed at 8.75&ndash;39.35%, but the combined rate is still lower than employment income tax plus NI. You can also claim business expenses, make employer pension contributions, and build retained profits in the company.</p>
+  <p><strong style="color:var(--tx)">Umbrella company</strong> is the simplest option. You become an employee of the umbrella, who invoices the agency on your behalf. They deduct their margin, employer NI, and then pay you via PAYE. Take-home is slightly less than inside IR35 due to the margin, but there&rsquo;s zero admin &mdash; no company accounts, no VAT, no self-assessment.</p>
+  <p><strong style="color:var(--tx)">When an umbrella makes sense:</strong> Short contracts (under 3 months), your first contract while setting up a Ltd, or if you simply want zero administrative burden. Many contractors use an umbrella for inside IR35 contracts and their Ltd for outside IR35 work.</p>
+  <p><strong style="color:var(--tx)">When Ltd company wins:</strong> Any outside IR35 contract, longer engagements, higher day rates, or when you want to retain profits in the company for future use. The tax savings compound significantly over time.</p>
+</section>
+
+<!-- CONTENT: Reduce IR35 tax bill -->
+<div class="content-divider"><hr></div>
+<section class="content-section">
+  <h2>How to reduce your IR35 tax bill</h2>
+  <p><strong style="color:var(--tx)">Pension contributions via salary sacrifice.</strong> Whether outside or inside IR35, pension contributions are one of the most effective ways to reduce your tax bill. Outside IR35, your Ltd company can make employer pension contributions that are fully deductible against corporation tax and free from personal income tax and NI. Inside IR35, salary sacrifice pension contributions reduce your deemed payment, saving both income tax and NI. Use our <a href="/tools/salary-sacrifice">salary sacrifice calculator</a> to see the impact.</p>
+  <p><strong style="color:var(--tx)">Claim all allowable expenses.</strong> Outside IR35, claim everything you&rsquo;re entitled to: accountancy fees (typically &pound;1,000&ndash;&pound;2,000/year), professional indemnity insurance, co-working space, software subscriptions, training courses relevant to your work, and travel to temporary workplaces. Inside IR35, you get the 5% flat-rate deduction instead.</p>
+  <p><strong style="color:var(--tx)">Optimise your salary/dividend split.</strong> Outside IR35, the most tax-efficient strategy in 2026/27 is typically a salary of &pound;12,570 (the personal allowance) and the rest as dividends. If you have no other employment income, this means zero income tax and zero NI on the salary portion. Dividends are then taxed at 8.75% (basic rate) up to the basic rate band, then 33.75% above.</p>
+  <p><strong style="color:var(--tx)">Use your &pound;500 dividend allowance.</strong> The first &pound;500 of dividends are tax-free each year. If your partner is also a shareholder (and does genuine work for the company), they can use their allowance too.</p>
+</section>
+
+<!-- CONTENT: Track in earmarkIQ -->
+<div class="content-divider"><hr></div>
+<section class="content-section">
+  <h2>Track contractor income in earmarkIQ</h2>
+  <p>earmarkIQ handles irregular income automatically &mdash; whether you invoice monthly or have gaps between contracts. Connect your business and personal accounts via Open Banking, and earmarkIQ&rsquo;s AI will detect your invoicing patterns, calculate your effective tax position, and help you plan for tax bills before they arrive.</p>
+  <p>Features for contractors: automatic income detection across multiple accounts, corporation tax and dividend tax estimates, IR35 income categorisation, quarterly tax bill forecasting, and an AI advisor that understands contractor finances.</p>
+  <p>Related: <a href="/budgeting/profession/freelancer">Freelancer budgeting guide</a> | <a href="/blog/best-budgeting-apps-uk">Best budgeting apps UK 2026</a></p>
+</section>
+
+<!-- CTA -->
+<div class="content-divider"><hr></div>
+<section class="cta-section">
+  <div class="cta-box">
+    <h2>Track your contractor income in earmarkIQ</h2>
+    <p>earmarkIQ connects to your business and personal accounts via Open Banking. See your full financial picture, forecast tax bills, and get AI insights built for irregular income.</p>
+    <a href="https://apps.apple.com/gb/app/earmarkiq" class="btn-download">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download earmarkIQ &mdash; Free
+    </a>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer"><div class="footer-i">
+  <div class="footer-top">
+    <div><a href="/" class="nav-l" style="font-size:20px">earmark<b>IQ</b><span>Smart Money</span></a><p class="footer-bt">AI-powered salary allocation for UK professionals.</p></div>
+    <div><h5 class="footer-hd">Product</h5><ul class="footer-ul"><li><a href="/#how">How it works</a></li><li><a href="/#features">Features</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/#security">Security</a></li></ul></div>
+    <div><h5 class="footer-hd">Resources</h5><ul class="footer-ul"><li><a href="/blog">Blog</a></li><li><a href="/tools">Tools</a></li><li><a href="/budgeting/salary">Salary Guides</a></li><li><a href="/budgeting/profession">Profession Guides</a></li></ul></div>
+    <div><h5 class="footer-hd">Legal</h5><ul class="footer-ul"><li><a href="/privacy">Privacy Policy</a></li><li><a href="/terms">Terms of Service</a></li><li><a href="mailto:hello@earmarkiq.app">Support</a></li></ul></div>
+  </div>
+  <div class="footer-mid">
+    <div class="footer-cp">&copy; 2026 earmarkIQ Ltd. All rights reserved.</div>
+    <div class="footer-fca">FCA regulated through Finexer Ltd (firm ref 925695)</div>
+  </div>
+  <div class="footer-disc">earmarkIQ provides financial information and tools, not regulated financial advice. IR35 calculations are estimates based on 2026/27 HMRC tax rates. Your actual figures may differ depending on expenses, VAT registration, and other factors. Always consult a qualified accountant for tax advice.</div>
+</div></footer>
+
+<script>
+(function(){
+  // === TAX CONSTANTS (2026/27) ===
+  var PA = 12570;
+  var PA_TAPER_START = 100000;
+  var BASIC_BAND = 37700;
+  var HIGHER_BAND = 74870;
+  var TAX_BASIC = 0.20;
+  var TAX_HIGHER = 0.40;
+  var TAX_ADDITIONAL = 0.45;
+
+  var NI_PRIMARY = 12570;
+  var NI_UEL = 50270;
+  var NI_EE_BASIC = 0.08;
+  var NI_EE_UPPER = 0.02;
+
+  var NI_ER_THRESHOLD = 5000;
+  var NI_ER_RATE = 0.15;
+
+  var DIV_ALLOWANCE = 500;
+  var DIV_BASIC = 0.0875;
+  var DIV_HIGHER = 0.3375;
+  var DIV_ADDITIONAL = 0.3935;
+
+  // Corp tax
+  var CORP_SMALL_RATE = 0.19;
+  var CORP_MAIN_RATE = 0.25;
+  var CORP_SMALL_LIMIT = 50000;
+  var CORP_UPPER_LIMIT = 250000;
+
+  // === HELPERS ===
+  function parseNum(id) {
+    var v = parseFloat(document.getElementById(id).value);
+    return isNaN(v) ? 0 : Math.max(0, v);
+  }
+  function fmt(n) {
+    return '\u00A3' + Math.abs(n).toLocaleString('en-GB', {minimumFractionDigits: 0, maximumFractionDigits: 0});
+  }
+  function fmt2(n) {
+    return '\u00A3' + Math.abs(n).toLocaleString('en-GB', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+  }
+  function setText(id, text) {
+    document.getElementById(id).textContent = text;
+  }
+
+  // === TAX CALCULATIONS ===
+  function getPA(gross) {
+    var pa = PA;
+    if (gross > PA_TAPER_START) {
+      pa = Math.max(0, pa - Math.floor((gross - PA_TAPER_START) / 2));
+    }
+    return pa;
+  }
+
+  function calcIncomeTax(gross) {
+    var pa = getPA(gross);
+    var taxable = Math.max(0, gross - pa);
+    var tax = 0;
+    var basic = Math.min(taxable, BASIC_BAND);
+    tax += basic * TAX_BASIC;
+    var higher = Math.min(Math.max(0, taxable - BASIC_BAND), HIGHER_BAND);
+    tax += higher * TAX_HIGHER;
+    var additional = Math.max(0, taxable - BASIC_BAND - HIGHER_BAND);
+    tax += additional * TAX_ADDITIONAL;
+    return tax;
+  }
+
+  function calcEmployeeNI(gross) {
+    var ni = 0;
+    if (gross > NI_PRIMARY) {
+      ni += (Math.min(gross, NI_UEL) - NI_PRIMARY) * NI_EE_BASIC;
+    }
+    if (gross > NI_UEL) {
+      ni += (gross - NI_UEL) * NI_EE_UPPER;
+    }
+    return ni;
+  }
+
+  function calcEmployerNI(gross) {
+    if (gross <= NI_ER_THRESHOLD) return 0;
+    return (gross - NI_ER_THRESHOLD) * NI_ER_RATE;
+  }
+
+  function calcCorpTax(profit) {
+    if (profit <= 0) return 0;
+    if (profit <= CORP_SMALL_LIMIT) return profit * CORP_SMALL_RATE;
+    if (profit >= CORP_UPPER_LIMIT) return profit * CORP_MAIN_RATE;
+    // Marginal relief
+    return profit * CORP_MAIN_RATE - (CORP_UPPER_LIMIT - profit) * 3 / 200;
+  }
+
+  function calcDividendTax(dividends, salaryGross) {
+    if (dividends <= 0) return 0;
+    // Work out how much of the basic rate band is used by salary
+    var pa = getPA(salaryGross + dividends);
+    var salaryTaxable = Math.max(0, salaryGross - pa);
+    var basicBandRemaining = Math.max(0, BASIC_BAND - salaryTaxable);
+    var higherBandRemaining = HIGHER_BAND;
+
+    // Apply dividend allowance
+    var taxableDividends = Math.max(0, dividends - DIV_ALLOWANCE);
+    var tax = 0;
+
+    // Basic rate dividends
+    var divBasic = Math.min(taxableDividends, basicBandRemaining);
+    tax += divBasic * DIV_BASIC;
+
+    // Higher rate dividends
+    var remaining = taxableDividends - divBasic;
+    var divHigher = Math.min(remaining, higherBandRemaining);
+    tax += divHigher * DIV_HIGHER;
+
+    // Additional rate dividends
+    var divAdditional = Math.max(0, remaining - divHigher);
+    tax += divAdditional * DIV_ADDITIONAL;
+
+    return tax;
+  }
+
+  // === MAIN CALCULATION ===
+  function calculate() {
+    var dayRate = parseNum('dayRate');
+    var daysPerWeek = parseInt(document.getElementById('daysPerWeek').value) || 5;
+    var weeksPerYear = parseNum('weeksPerYear');
+    var dirSalary = parseNum('dirSalary');
+    var bizExpenses = parseNum('bizExpenses');
+    var umbrellaMargin = parseNum('umbrellaMargin');
+
+    var grossAnnual = dayRate * daysPerWeek * weeksPerYear;
+    var totalDays = daysPerWeek * weeksPerYear;
+
+    setText('grossAnnual', fmt(grossAnnual));
+
+    // ==========================================
+    // SCENARIO A: Outside IR35 (Ltd Company)
+    // ==========================================
+    var ltdProfit = grossAnnual - dirSalary - bizExpenses;
+    if (ltdProfit < 0) {
+      dirSalary = grossAnnual - bizExpenses;
+      if (dirSalary < 0) { dirSalary = 0; bizExpenses = grossAnnual; }
+      ltdProfit = 0;
+    }
+    var corpTax = calcCorpTax(ltdProfit);
+    var afterCorpTax = ltdProfit - corpTax;
+    var dividends = afterCorpTax;
+
+    var salaryTax = calcIncomeTax(dirSalary);
+    var salaryNI = calcEmployeeNI(dirSalary);
+    var divTax = calcDividendTax(dividends, dirSalary);
+
+    var netOutside = dirSalary - salaryTax - salaryNI + dividends - divTax;
+    var totalTaxOut = corpTax + salaryTax + salaryNI + divTax;
+
+    // ==========================================
+    // SCENARIO B: Inside IR35 (Deemed Employee)
+    // ==========================================
+    // 5% flat-rate expense deduction
+    var ir35Expenses = grossAnnual * 0.05;
+    var relevantAmount = grossAnnual - ir35Expenses;
+
+    // Employer NI is deducted from the relevant amount
+    // deemed = (relevantAmount + erThreshold * erRate) / (1 + erRate)
+    var deemedPayment;
+    if (relevantAmount <= NI_ER_THRESHOLD) {
+      deemedPayment = relevantAmount;
+    } else {
+      deemedPayment = (relevantAmount + NI_ER_THRESHOLD * NI_ER_RATE) / (1 + NI_ER_RATE);
+    }
+    var erNIInside = relevantAmount - deemedPayment;
+    var inTax = calcIncomeTax(deemedPayment);
+    var inNI = calcEmployeeNI(deemedPayment);
+    var netInside = deemedPayment - inTax - inNI;
+    var totalTaxIn = erNIInside + inTax + inNI;
+
+    // ==========================================
+    // SCENARIO C: Umbrella Company
+    // ==========================================
+    var annualMargin = umbrellaMargin * weeksPerYear;
+    var afterMargin = grossAnnual - annualMargin;
+
+    // Employer NI deducted
+    var umbAssignment;
+    if (afterMargin <= NI_ER_THRESHOLD) {
+      umbAssignment = afterMargin;
+    } else {
+      umbAssignment = (afterMargin + NI_ER_THRESHOLD * NI_ER_RATE) / (1 + NI_ER_RATE);
+    }
+    var erNIUmb = afterMargin - umbAssignment;
+    var umbTax = calcIncomeTax(umbAssignment);
+    var umbNI = calcEmployeeNI(umbAssignment);
+    var netUmbrella = umbAssignment - umbTax - umbNI;
+    var totalTaxUmb = annualMargin + erNIUmb + umbTax + umbNI;
+
+    // === UPDATE UI ===
+    var diff = netOutside - netInside;
+    setText('diffAmount', fmt(Math.abs(diff)));
+
+    // Comparison table
+    setText('rGrossOut', fmt(grossAnnual));
+    setText('rGrossIn', fmt(grossAnnual));
+    setText('rGrossUmb', fmt(grossAnnual));
+
+    setText('rExpOut', '-' + fmt(bizExpenses));
+    setText('rExpIn', '-' + fmt(ir35Expenses));
+    setText('rExpUmb', '—');
+
+    setText('rCorpTax', '-' + fmt(corpTax));
+
+    setText('rERNIIn', '-' + fmt(erNIInside));
+    setText('rERNIUmb', '-' + fmt(erNIUmb));
+
+    setText('rITOut', '-' + fmt(salaryTax));
+    setText('rITIn', '-' + fmt(inTax));
+    setText('rITUmb', '-' + fmt(umbTax));
+
+    setText('rEENIOut', '-' + fmt(salaryNI));
+    setText('rEENIIn', '-' + fmt(inNI));
+    setText('rEENIUmb', '-' + fmt(umbNI));
+
+    setText('rDivTax', '-' + fmt(divTax));
+
+    setText('rMargin', '-' + fmt(annualMargin));
+
+    // Net rows
+    var nets = [netOutside, netInside, netUmbrella];
+    var bestIdx = 0;
+    nets.forEach(function(n, i) { if (n > nets[bestIdx]) bestIdx = i; });
+
+    var netIds = ['rNetOut', 'rNetIn', 'rNetUmb'];
+    var monIds = ['rMonOut', 'rMonIn', 'rMonUmb'];
+    var dayIds = ['rDayOut', 'rDayIn', 'rDayUmb'];
+    var cardIds = ['cardOut', 'cardIn', 'cardUmb'];
+    var ncNetIds = ['ncNetOut', 'ncNetIn', 'ncNetUmb'];
+    var ncMonIds = ['ncMonOut', 'ncMonIn', 'ncMonUmb'];
+
+    nets.forEach(function(n, i) {
+      var el = document.getElementById(netIds[i]);
+      el.textContent = fmt(n);
+      el.className = 'val' + (i === bestIdx ? ' best' : '');
+
+      setText(monIds[i], fmt(n / 12));
+      setText(dayIds[i], fmt2(totalDays > 0 ? n / totalDays : 0));
+
+      // Net cards
+      var card = document.getElementById(cardIds[i]);
+      card.className = 'net-card' + (i === bestIdx ? ' best-card' : '');
+      card.querySelector('.nc-label').textContent = i === bestIdx ? 'Best' : '';
+      setText(ncNetIds[i], fmt(n));
+      setText(ncMonIds[i], fmt(n / 12) + '/mo');
+    });
+
+    // Update column header highlight
+    document.getElementById('colOutside').className = bestIdx === 0 ? 'col-best' : '';
+  }
+
+  // === EVENT LISTENERS ===
+  var inputs = document.querySelectorAll('input, select');
+  inputs.forEach(function(el) {
+    el.addEventListener('input', calculate);
+    el.addEventListener('change', calculate);
+  });
+
+  // Initial calculation
+  calculate();
+})();
+</script>
+</body>
+</html>
