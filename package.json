@@ -4,6 +4,7 @@
   "private": true,
   "description": "Landing page for earmarkIQ - AI-powered salary allocation for UK professionals",
   "dependencies": {
-    "@vercel/og": "^0.6.0"
+    "@vercel/og": "^0.6.0",
+    "@vercel/speed-insights": "^2.0.0"
   }
 }
