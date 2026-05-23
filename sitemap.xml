@@ -19,6 +19,14 @@
     <priority>0.3</priority>
   </url>
 
+  <!-- FCA Regulation -->
+  <url>
+    <loc>https://earmarkiq.app/fca-regulated</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Blog -->
   <url>
     <loc>https://earmarkiq.app/blog</loc>
