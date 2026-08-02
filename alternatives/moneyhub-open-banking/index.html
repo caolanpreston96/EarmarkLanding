@@ -144,6 +144,11 @@
     .sf-icon { color: var(--mint); flex-shrink: 0; }
     .r { opacity: 0; transform: translateY(50px); transition: all 0.9s cubic-bezier(0.16,1,0.3,1); }
     .r.v { opacity: 1; transform: translateY(0); }
+    .quick-answer { background: rgba(110,231,183,0.06); border: 1px solid rgba(110,231,183,0.2); border-radius: 12px; padding: 20px 24px; margin: 8px 0 32px; }
+    .quick-answer-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mint); margin-bottom: 8px; }
+    .quick-answer p { font-size: 15px; line-height: 1.7; color: var(--text-dim); margin: 0; }
+    .hero-cta-btn { display: inline-block; background: var(--mint); color: #080b12; font-weight: 700; font-size: 15px; padding: 13px 28px; border-radius: 10px; text-decoration: none; transition: opacity 0.2s; margin-top: 24px; }
+    .hero-cta-btn:hover { opacity: 0.85; text-decoration: none; }
     footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 13px; color: var(--text-muted); }
     footer a { color: var(--text-muted); }
     footer a:hover { color: var(--mint); }
@@ -176,21 +181,27 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
   <div class="hero-meta">
     <span>By Caolan Preston, CF30</span>
     <span class="hero-meta-dot"></span>
-    <span>April 2026</span>
+    <span>Updated August 2026</span>
     <span class="hero-meta-dot"></span>
     <span>5 min read</span>
   </div>
   <p class="hero-intro">
     Moneyhub was one of the original Open Banking aggregators in the UK, connecting users to multiple banks from a single app. With the consumer app closing on 14 August 2026, earmarkIQ provides a direct replacement &mdash; connecting to 50+ UK banks via FCA-regulated Open Banking through Finexer, with read-only access (AIS), 256-bit encryption, and support for all major UK banks.
   </p>
+  <a href="https://apps.apple.com/gb/app/earmarkiq" class="hero-cta-btn">Download Free on the App Store &rarr;</a>
 </div>
 
 <div class="page-wrap">
   <article>
 
+    <div class="quick-answer">
+      <div class="quick-answer-label">Quick Answer</div>
+      <p>Moneyhub's consumer app closes on 14 August 2026, taking its Open Banking bank connections with it. The direct replacement for the aggregation side is earmarkIQ &mdash; it connects 50+ UK banks through FCA-regulated Open Banking (via Finexer, FRN 925695) with read-only access, and it's free to download on the App Store now. For the full switching walkthrough, see our <a href="/blog/moneyhub-alternative-uk">complete Moneyhub alternative guide</a>.</p>
+    </div>
+
     <div class="callout callout-amber r">
       <div class="callout-label">&#x26A0;&#xFE0F; Moneyhub Shutdown Notice</div>
-      <p>Moneyhub closes its consumer app on <strong>14 August 2026</strong>. All Open Banking connections, account aggregation, and transaction data access will become unavailable. Your bank accounts themselves are unaffected &mdash; you just need a new app to view them together.</p>
+      <p>Moneyhub closes its consumer app on <strong>14 August 2026</strong> &mdash; the deadline is days away. All Open Banking connections, account aggregation, and transaction data access will become unavailable. Your bank accounts themselves are unaffected &mdash; you just need a new app to view them together.</p>
     </div>
 
     <h2 id="what-moneyhub-offered" class="r">What Moneyhub Offered</h2>
@@ -237,6 +248,8 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
       </div>
     </div>
 
+    <p class="r">Once connected, earmarkIQ does more with the data than a plain aggregator: AI transaction classification sorts every transaction automatically, and recurring payments are detected so you can see every subscription and any price rises in one place &mdash; see our <a href="/blog/subscription-tracker-uk">UK subscription tracking guide</a> for how that works.</p>
+
     <h2 id="supported-banks" class="r">Supported Banks</h2>
     <p class="r">earmarkIQ connects to <strong>50+ UK banks</strong> via Finexer, including all the major high street banks, digital banks, and building societies:</p>
 
@@ -279,6 +292,8 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 
     <h2 id="migration-guide" class="r">Migration Guide: 3 Simple Steps</h2>
 
+    <p class="r">These are the essentials for moving your bank connections. For the complete walkthrough &mdash; including what to export before the shutdown and what carries over vs what starts fresh &mdash; see our <a href="/blog/moneyhub-alternative-uk">full Moneyhub migration guide</a>.</p>
+
     <div class="steps r">
       <div class="step">
         <div class="step-content">
@@ -308,10 +323,10 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
     </div>
 
     <div class="cta-block r">
-      <h2>Bank-grade security, AI-powered insights</h2>
-      <p>earmarkIQ connects to all your UK banks with the same security standards as Moneyhub &mdash; plus AI salary allocation, price creep detection, and an AI financial advisor.</p>
+      <h2>Reconnect your banks before 14 August</h2>
+      <p>earmarkIQ connects to all your UK banks with the same regulated Open Banking standards as Moneyhub &mdash; plus AI salary allocation planning, subscription detection, and an AI financial advisor.</p>
       <a href="https://apps.apple.com/gb/app/earmarkiq" class="cta-btn">Download Free on the App Store</a>
-      <p class="cta-sub">Free to download on the App Store.</p>
+      <p class="cta-sub">Free tier available &middot; FCA Appointed Representative of Finexer (FRN 925695)</p>
     </div>
 
   </article>
@@ -330,7 +345,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
       <div class="sidebar-feature"><span class="sf-icon">&#x2726;</span><span>FCA regulated (FRN 925695)</span></div>
       <div class="sidebar-feature"><span class="sf-icon">&#x2726;</span><span>ICO registered (CSN2001882)</span></div>
       <div class="sidebar-feature"><span class="sf-icon">&#x2726;</span><span>256-bit AES encryption</span></div>
-      <div class="sidebar-feature" style="margin-bottom:16px"><span class="sf-icon">&#x2726;</span><span>Read-only + optional PIS</span></div>
+      <div class="sidebar-feature" style="margin-bottom:16px"><span class="sf-icon">&#x2726;</span><span>Read-only access (AIS)</span></div>
       <a href="https://apps.apple.com/gb/app/earmarkiq" class="sidebar-cta-btn">Download on the App Store &rarr;</a>
     </div>
     <div class="sidebar-card">

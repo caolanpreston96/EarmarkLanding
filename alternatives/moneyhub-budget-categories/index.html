@@ -139,6 +139,11 @@
     .sf-icon { color: var(--mint); flex-shrink: 0; }
     .r { opacity: 0; transform: translateY(50px); transition: all 0.9s cubic-bezier(0.16,1,0.3,1); }
     .r.v { opacity: 1; transform: translateY(0); }
+    .quick-answer { background: rgba(110,231,183,0.06); border: 1px solid rgba(110,231,183,0.2); border-radius: 12px; padding: 20px 24px; margin: 8px 0 32px; }
+    .quick-answer-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mint); margin-bottom: 8px; }
+    .quick-answer p { font-size: 15px; line-height: 1.7; color: var(--text-dim); margin: 0; }
+    .hero-cta-btn { display: inline-block; background: var(--mint); color: #080b12; font-weight: 700; font-size: 15px; padding: 13px 28px; border-radius: 10px; text-decoration: none; transition: opacity 0.2s; margin-top: 24px; }
+    .hero-cta-btn:hover { opacity: 0.85; text-decoration: none; }
     footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 13px; color: var(--text-muted); }
     footer a { color: var(--text-muted); }
     footer a:hover { color: var(--mint); }
@@ -171,21 +176,27 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
   <div class="hero-meta">
     <span>By Caolan Preston, CF30</span>
     <span class="hero-meta-dot"></span>
-    <span>April 2026</span>
+    <span>Updated August 2026</span>
     <span class="hero-meta-dot"></span>
     <span>5 min read</span>
   </div>
   <p class="hero-intro">
     Moneyhub&rsquo;s budget categories let you set spending limits and track where your money went each month. With the app closing, earmarkIQ offers a more advanced replacement &mdash; AI-powered auto-categorisation across 12 spending categories, plus salary allocation that splits your pay into bills, savings, investing, and guilt-free discretionary spending on payday.
   </p>
+  <a href="https://apps.apple.com/gb/app/earmarkiq" class="hero-cta-btn">Download Free on the App Store &rarr;</a>
 </div>
 
 <div class="page-wrap">
   <article>
 
+    <div class="quick-answer">
+      <div class="quick-answer-label">Quick Answer</div>
+      <p>Moneyhub's consumer app &mdash; including its budget categories &mdash; closes on 14 August 2026. earmarkIQ replaces it with AI transaction classification across 12 spending categories plus payday salary-allocation planning, and it's free to download on the App Store now. See our <a href="/blog/moneyhub-alternative-uk">full Moneyhub alternative guide</a> for the complete migration walkthrough, and our <a href="/alternatives/moneyhub-open-banking">Open Banking comparison</a> for how bank connections work.</p>
+    </div>
+
     <div class="callout callout-amber r">
       <div class="callout-label">&#x26A0;&#xFE0F; Moneyhub Shutdown Notice</div>
-      <p>Moneyhub closes its consumer app on <strong>14 August 2026</strong>. All budget categories, spending limits, and historical spending data will become unavailable. Export your data and migrate before the deadline.</p>
+      <p>Moneyhub closes its consumer app on <strong>14 August 2026</strong> &mdash; the deadline is days away. All budget categories, spending limits, and historical spending data will become unavailable. Export your data and migrate before the deadline.</p>
     </div>
 
     <h2 id="what-moneyhub-offered" class="r">What Moneyhub Offered</h2>
@@ -244,7 +255,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
       <div class="step">
         <div class="step-content">
           <h3>Connect your bank and let AI analyse your spending</h3>
-          <p>Sign up for earmarkIQ and connect your bank accounts. The AI immediately analyses your transaction history and auto-categorises every transaction into 12 categories.</p>
+          <p>Sign up for earmarkIQ and connect your bank accounts via FCA-regulated Open Banking (<a href="/alternatives/moneyhub-open-banking">see how earmarkIQ's bank connections compare to Moneyhub's</a>). The AI immediately analyses your transaction history and auto-categorises every transaction into 12 categories.</p>
         </div>
       </div>
       <div class="step">
