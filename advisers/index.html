@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>earmarkIQ for Financial Advisers | Client Expenditure via Open Banking</title>
+  <meta name="description" content="Replace guesstimated expenditure spreadsheets with client-consented Open Banking data, categorised for cashflow modelling. Adviser pilot access coming — register interest." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://earmarkiq.app/advisers">
+  <meta name="theme-color" content="#080b12" />
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://earmarkiq.app/advisers" />
+  <meta property="og:title" content="earmarkIQ for Financial Advisers | Client Expenditure via Open Banking" />
+  <meta property="og:description" content="Real client expenditure for cashflow modelling — client-consented Open Banking data instead of guesstimated spreadsheets. Pilot access in development." />
+  <meta property="og:image" content="https://earmarkiq.app/api/og?title=earmarkIQ%20for%20Financial%20Advisers&subtitle=Client%20expenditure%20via%20Open%20Banking" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="earmarkIQ" />
+  <meta property="og:locale" content="en_GB" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@earmarkiq" />
+  <meta name="twitter:title" content="earmarkIQ for Financial Advisers" />
+  <meta name="twitter:description" content="Client-consented Open Banking expenditure data for cashflow modelling. Adviser pilot access in development — register interest." />
+  <meta name="twitter:image" content="https://earmarkiq.app/assets/og-image.webp" />
+
+  <!-- WebPage + Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "earmarkIQ for Financial Advisers",
+        "description": "Client-consented Open Banking expenditure data for UK financial planning firms, categorised for cashflow modelling. Adviser features in development with pilot access coming.",
+        "url": "https://earmarkiq.app/advisers",
+        "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2", ".quick-answer"] },
+        "publisher": { "@type": "Organization", "name": "earmarkIQ", "url": "https://earmarkiq.app" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://earmarkiq.app/" },
+          { "@type": "ListItem", "position": 2, "name": "For Advisers" }
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://earmarkiq.app/#founder",
+        "name": "Caolan Preston",
+        "jobTitle": "Founder & CEO",
+        "hasCredential": {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "Professional Certification",
+          "name": "CF30 — CII Certificate in Financial Services"
+        },
+        "worksFor": { "@type": "Organization", "name": "earmarkIQ Ltd", "url": "https://earmarkiq.app" }
+      }
+    ]
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is client bank data kept secure, and what are the FCA arrangements?",
+        "acceptedAnswer": { "@type": "Answer", "text": "earmarkIQ is an FCA Appointed Representative of Finexer Ltd (FRN 925695), which is authorised and regulated by the Financial Conduct Authority. Bank connections use Open Banking Account Information Services (AIS) — read-only access authorised by the client directly with their bank. earmarkIQ never sees bank credentials, cannot move money, and encrypts all data in transit and at rest to 256-bit bank-level standard. earmarkIQ is registered with the ICO (CSN2001882)." }
+      },
+      {
+        "@type": "Question",
+        "name": "Which cashflow modelling tools will earmarkIQ support?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Category-level expenditure exports shaped for Voyant, CashCalc, FinCalc and Phoebe are in development. Direct feeds into modelling tools, starting with Voyant and Intelliflo, are planned. During the pilot, exports are designed to map cleanly onto the expenditure screens of these tools so figures can be entered or imported without reworking categories." }
+      },
+      {
+        "@type": "Question",
+        "name": "What does the client see and use?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Clients use the standard earmarkIQ iOS app — live today on the App Store. They connect their UK bank accounts via Open Banking, and the app categorises spending automatically with AI transaction classification, tracks subscriptions, and builds a payday allocation plan. The adviser layer sits on top: clients grant their adviser access to category-level data through an explicit consent step that is in development." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does client consent for adviser access work?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Adviser access is being built consent-first. The client grants access to their adviser at category level from within the app, can see what is shared, and can revoke access at any time. Advisers see categorised expenditure summaries rather than raw transaction feeds by default. This consent flow is in development and will be refined with pilot firms." }
+      },
+      {
+        "@type": "Question",
+        "name": "What does earmarkIQ for advisers cost?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Adviser pricing is available on request. Pilot firms will help shape the packaging before general availability — register pilot interest and we will contact you with details." }
+      },
+      {
+        "@type": "Question",
+        "name": "When will adviser features be available?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The consumer app is live now on iOS. The adviser layer — client consent grants, category-level exports for cashflow modelling tools, and the adviser dashboard — is in development, with pilot access coming for a small group of UK planning firms. Direct integrations with modelling tools are planned to follow. Firms that register interest will be contacted in order as pilot places open." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do clients need to change bank or move money into earmarkIQ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. earmarkIQ connects to clients' existing accounts at 50+ UK banks via read-only Open Banking. Nothing changes about where clients bank, and earmarkIQ cannot move money or make payments from any account." }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080b12; --surface: #0f1420; --border: #1e2536;
+      --text: #e2e8f0; --text-dim: #94a3b8; --text-muted: #475569;
+      --mint: #6ee7b7; --mint-dim: rgba(110,231,183,0.12);
+      --blue: #60a5fa; --amber: #fbbf24; --red: #f87171;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(8,11,18,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-weight: 700; font-size: 18px; text-decoration: none; color: var(--text); letter-spacing: -0.02em; }
+    .nav-logo span { color: var(--mint); }
+    .nav-cta { background: var(--mint); color: #080b12; font-weight: 600; font-size: 13px; padding: 8px 18px; border-radius: 8px; text-decoration: none; transition: opacity 0.2s; }
+    .nav-cta:hover { opacity: 0.85; }
+
+    .page-wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 280px; gap: 64px; align-items: start; }
+    @media (max-width: 860px) { .page-wrap { grid-template-columns: 1fr; } .sidebar { display: none; } }
+
+    .hero { padding: 64px 24px 48px; max-width: 1100px; margin: 0 auto; }
+    .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+    .breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--mint); }
+    .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--mint-dim); border: 1px solid rgba(110,231,183,0.2); color: var(--mint); font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 20px; }
+    h1 { font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(30px, 4.5vw, 48px); line-height: 1.12; letter-spacing: -0.02em; color: var(--text); margin-bottom: 20px; }
+    h1 em { font-style: italic; color: var(--mint); }
+    .hero-intro { font-size: 19px; color: var(--text-dim); line-height: 1.7; max-width: 680px; border-left: 3px solid var(--mint); padding-left: 20px; }
+    .hero-cta-btn { display: inline-block; background: var(--mint); color: #080b12; font-weight: 700; font-size: 15px; padding: 13px 28px; border-radius: 10px; text-decoration: none; transition: opacity 0.2s; margin-top: 24px; }
+    .hero-cta-btn:hover { opacity: 0.85; text-decoration: none; }
+
+    article { padding-top: 8px; padding-bottom: 80px; }
+    h2 { font-family: 'Instrument Serif', Georgia, serif; font-size: 28px; line-height: 1.2; color: var(--text); margin: 52px 0 16px; letter-spacing: -0.01em; }
+    h3 { font-size: 18px; font-weight: 600; color: var(--text); margin: 28px 0 10px; }
+    p { margin-bottom: 20px; color: var(--text-dim); }
+    strong { color: var(--text); font-weight: 600; }
+    a { color: var(--mint); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr.section-divider { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+    .quick-answer { background: rgba(110,231,183,0.06); border: 1px solid rgba(110,231,183,0.2); border-radius: 12px; padding: 20px 24px; margin: 8px 0 32px; }
+    .quick-answer-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mint); margin-bottom: 8px; }
+    .quick-answer p { font-size: 15px; line-height: 1.7; color: var(--text-dim); margin: 0; }
+
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 28px 0; border: 1px solid; }
+    .callout-amber { background: rgba(251,191,36,0.06); border-color: rgba(251,191,36,0.2); }
+    .callout-mint { background: rgba(110,231,183,0.06); border-color: rgba(110,231,183,0.2); }
+    .callout-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+    .callout-amber .callout-label { color: var(--amber); }
+    .callout-mint .callout-label { color: var(--mint); }
+    .callout p { margin-bottom: 0; }
+
+    .feature-list { margin: 20px 0; }
+    .feature-item { display: flex; gap: 14px; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid rgba(30,37,54,0.5); }
+    .feature-item:last-child { border-bottom: none; }
+    .feature-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+    .feature-item p { margin-bottom: 0; font-size: 15px; }
+
+    .roadmap { margin: 24px 0; }
+    .roadmap-item { display: flex; gap: 16px; padding: 16px 0; border-bottom: 1px solid rgba(30,37,54,0.5); align-items: flex-start; }
+    .roadmap-item:last-child { border-bottom: none; }
+    .roadmap-status { flex-shrink: 0; font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; padding: 4px 10px; border-radius: 6px; margin-top: 3px; white-space: nowrap; }
+    .rs-live { background: rgba(110,231,183,0.12); color: var(--mint); border: 1px solid rgba(110,231,183,0.25); }
+    .rs-dev { background: rgba(96,165,250,0.12); color: var(--blue); border: 1px solid rgba(96,165,250,0.25); }
+    .rs-planned { background: rgba(251,191,36,0.1); color: var(--amber); border: 1px solid rgba(251,191,36,0.2); }
+    .roadmap-item h3 { margin: 0 0 4px; }
+    .roadmap-item p { margin: 0; font-size: 15px; }
+
+    .faq { margin: 16px 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+    .faq-q { padding: 16px 20px; font-weight: 600; font-size: 16px; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .faq-q:hover { background: rgba(255,255,255,0.02); }
+    .faq-chevron { color: var(--mint); flex-shrink: 0; transition: transform 0.2s; font-size: 18px; }
+    .faq-a { padding: 0 20px 16px; color: var(--text-dim); font-size: 15px; line-height: 1.7; display: none; }
+    .faq-item.open .faq-a { display: block; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+    .pilot-block { background: linear-gradient(135deg, rgba(110,231,183,0.08), rgba(96,165,250,0.05)); border: 1px solid rgba(110,231,183,0.2); border-radius: 16px; padding: 36px; text-align: center; margin: 52px 0; }
+    .pilot-block h2 { margin-top: 0; font-size: 26px; }
+    .pilot-block p { max-width: 500px; margin: 0 auto 24px; }
+    .pilot-form { display: flex; gap: 10px; max-width: 460px; margin: 0 auto; }
+    .pilot-in { flex: 1; min-width: 0; padding: 14px 20px; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 15px; outline: none; transition: border-color 0.2s; }
+    .pilot-in::placeholder { color: var(--text-muted); }
+    .pilot-in:focus { border-color: var(--mint); }
+    .pilot-btn { padding: 14px 24px; background: var(--mint); color: #080b12; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700; border: none; border-radius: 10px; cursor: pointer; transition: opacity 0.2s; white-space: nowrap; }
+    .pilot-btn:hover { opacity: 0.85; }
+    .pilot-btn:disabled { opacity: 0.6; cursor: default; }
+    .pilot-msg { font-size: 13px; margin-top: 10px; min-height: 20px; }
+    .pilot-msg.err { color: var(--red); }
+    .pilot-success { display: none; font-size: 17px; font-weight: 700; color: var(--mint); padding: 10px 0 0; }
+    .pilot-sub { font-size: 13px; color: var(--text-muted); margin-top: 12px; margin-bottom: 0; }
+    @media (max-width: 480px) { .pilot-form { flex-direction: column; } }
+
+    .sidebar { position: sticky; top: 76px; padding-top: 8px; }
+    .sidebar-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+    .sidebar-card h4 { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 14px; }
+    .toc-link { display: block; font-size: 14px; color: var(--text-dim); text-decoration: none; padding: 6px 0; border-bottom: 1px solid rgba(30,37,54,0.5); transition: color 0.15s; }
+    .toc-link:last-child { border-bottom: none; }
+    .toc-link:hover { color: var(--mint); text-decoration: none; }
+    .sidebar-cta-btn { display: block; width: 100%; background: var(--mint); color: #080b12; font-weight: 700; font-size: 14px; padding: 12px; border-radius: 8px; text-decoration: none; text-align: center; transition: opacity 0.2s; margin-top: 4px; }
+    .sidebar-cta-btn:hover { opacity: 0.85; text-decoration: none; }
+    .sidebar-feature { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; font-size: 13px; color: var(--text-dim); }
+    .sidebar-feature:last-child { margin-bottom: 0; }
+    .sf-icon { color: var(--mint); flex-shrink: 0; }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 13px; color: var(--text-muted); }
+    footer a { color: var(--text-muted); }
+    footer a:hover { color: var(--mint); }
+  </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-62JW90868T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-62JW90868T');
+</script>
+<script>
+window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">earmark<span>IQ</span></a>
+  <a href="#pilot" class="nav-cta">Register pilot interest →</a>
+</nav>
+
+<div class="hero">
+  <div class="breadcrumb">
+    <a href="/">Home</a> <span>›</span>
+    <span>For Advisers</span>
+  </div>
+  <div class="hero-tag">For Financial Planning Firms</div>
+  <h1>Client expenditure data<br>your cashflow models can<br><em>actually trust.</em></h1>
+  <p class="hero-intro">
+    Most expenditure figures in cashflow plans start life as a client's best guess in a spreadsheet. earmarkIQ replaces the guesswork with client-consented Open Banking data, categorised automatically and shaped for the modelling tools UK planning firms already use. Adviser features are in development — pilot access is coming.
+  </p>
+  <a href="#pilot" class="hero-cta-btn">Register pilot interest →</a>
+</div>
+
+<div class="page-wrap">
+  <article>
+
+    <div class="quick-answer">
+      <div class="quick-answer-label">In one paragraph</div>
+      <p>earmarkIQ is a live UK consumer Open Banking app that categorises real spending automatically. For advisers, we're building a consent-first layer on top: clients grant their adviser access to category-level expenditure, and the data exports in shapes designed for Voyant, CashCalc, FinCalc and Phoebe. An adviser dashboard and direct modelling-tool feeds are planned. Pilot access for a small group of UK planning firms is coming — <a href="#pilot">register interest below</a>.</p>
+    </div>
+
+    <h2 id="the-problem">The expenditure problem every planning firm knows</h2>
+
+    <p>Cashflow modelling lives or dies on the expenditure line, and the expenditure line is usually the least reliable number in the plan. The ritual is familiar. At onboarding, the client receives an expenditure questionnaire or a spreadsheet with forty categories. They fill it in from memory, in one sitting, weeks after you asked. The figures are round numbers — £400 on groceries, £200 on eating out — because nobody actually knows what they spend on eating out, and almost everyone guesses low.</p>
+
+    <p>Research on self-reported spending consistently finds people underestimate discretionary expenditure, sometimes dramatically. The result: a cashflow model built on a base year that never happened. Surpluses look bigger than they are. Retirement dates look earlier than they should. And the adviser carries the professional risk of advice built on numbers the client invented in good faith.</p>
+
+    <p>Then comes the annual review, and the ritual repeats — except this time the client updates last year's guesses rather than starting fresh, so the error compounds. For firms that pride themselves on cashflow-led planning, it's an uncomfortable foundation: rigorous modelling downstream of unrigorous data.</p>
+
+    <p>We've written up the full picture — where the spreadsheet ritual came from and why it persists — in <a href="/advisers/client-expenditure-data">how advisers collect client expenditure data (and why it breaks)</a>.</p>
+
+    <h2 id="how-it-works">How earmarkIQ replaces the guesswork</h2>
+
+    <p>earmarkIQ's consumer app is live on iOS today. Clients connect their UK bank accounts — 50+ banks supported — through read-only Open Banking, and the app categorises every transaction automatically using AI transaction classification. No spreadsheets, no shoeboxes of statements, no memory tests.</p>
+
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="feature-icon">🏦</div>
+        <div>
+          <strong>Open Banking connection, read-only by design.</strong>
+          <p>Clients authorise access directly with their bank. earmarkIQ never sees credentials and cannot move money — Account Information Services (AIS) only, provided through Finexer, an FCA-authorised provider.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🗂️</div>
+        <div>
+          <strong>Automatic categorisation with drill-down.</strong>
+          <p>Spending is classified into high-level groups — housing, bills, groceries, transport, discretionary and more — with the underlying detail available when a figure needs interrogating. Twelve months of real data instead of one evening of recall.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🔐</div>
+        <div>
+          <strong>Client-controlled consent for adviser access.</strong>
+          <p>In development: clients grant their adviser access at category level from inside the app, see exactly what's shared, and can revoke at any time. Advisers see categorised summaries, not raw transaction feeds, by default.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">📤</div>
+        <div>
+          <strong>Exports shaped for cashflow modelling.</strong>
+          <p>In development: category-level expenditure exports designed to map onto the expenditure screens of Voyant, CashCalc, FinCalc and Phoebe — so the numbers drop into your existing process rather than forcing a new one.</p>
+        </div>
+      </div>
+    </div>
+
+    <p>The practical effect at review time: instead of asking a client to guess what changed, you open twelve months of categorised reality and talk about what it means. The conversation moves from data collection to advice — which is the part clients are paying for.</p>
+
+    <p>New to Open Banking's plumbing? Our <a href="/advisers/open-banking-for-financial-planners">practical guide to Open Banking for financial planners</a> covers AIS, consent and security in plain terms.</p>
+
+    <h2 id="whats-coming">What's live, what's in development, what's planned</h2>
+
+    <p>We'd rather under-promise: here is the honest state of the adviser proposition.</p>
+
+    <div class="roadmap">
+      <div class="roadmap-item">
+        <span class="roadmap-status rs-live">Live</span>
+        <div>
+          <h3>Consumer app on iOS</h3>
+          <p>Open Banking connections to 50+ UK banks, automatic categorisation, subscription and price-rise detection, payday allocation planning, and Ask IQ — the in-app money coach.</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <span class="roadmap-status rs-dev">In development</span>
+        <div>
+          <h3>Client consent grants</h3>
+          <p>The in-app flow for clients to share category-level expenditure with their adviser, with visibility and revocation controls.</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <span class="roadmap-status rs-dev">In development</span>
+        <div>
+          <h3>Modelling-tool exports</h3>
+          <p>Category-level exports shaped for Voyant, CashCalc, FinCalc and Phoebe expenditure screens.</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <span class="roadmap-status rs-dev">In development</span>
+        <div>
+          <h3>Adviser dashboard</h3>
+          <p>A firm-level view of consented clients and their categorised expenditure, built with pilot firms.</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <span class="roadmap-status rs-planned">Planned</span>
+        <div>
+          <h3>Direct modelling-tool feeds</h3>
+          <p>Direct integrations starting with Voyant and Intelliflo, so consented data flows into the tools without an export step.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout callout-amber">
+      <div class="callout-label">⏳ Using Moneyhub with Voyant?</div>
+      <p>Moneyhub's consumer app closes on 14 August 2026. If your firm relied on client Moneyhub data reaching Voyant, see our guide to <a href="/advisers/replacing-moneyhub-voyant-integration">replacing the Moneyhub Voyant integration</a> — and register pilot interest below to be contacted as places open.</p>
+    </div>
+
+    <div class="pilot-block" id="pilot">
+      <h2>Register pilot interest</h2>
+      <p>We're opening pilot access to a small group of UK planning firms as the adviser layer ships. Leave your work email and we'll be in touch with details — no commitment.</p>
+      <form class="pilot-form" id="pilot-form" novalidate>
+        <input type="email" class="pilot-in" id="pilot-email" placeholder="you@yourfirm.co.uk" autocomplete="email" inputmode="email">
+        <button type="submit" class="pilot-btn" id="pilot-submit">Register interest</button>
+      </form>
+      <div class="pilot-msg" id="pilot-msg"></div>
+      <div class="pilot-success" id="pilot-success">Thanks — you're on the pilot list. We'll be in touch.</div>
+      <p class="pilot-sub">Pilot places are limited and offered in registration order. Pricing available on request.</p>
+    </div>
+
+    <hr class="section-divider" />
+
+    <h2 id="faq">Adviser FAQ</h2>
+
+    <div class="faq">
+      <div class="faq-item">
+        <div class="faq-q">How is client bank data kept secure, and what are the FCA arrangements? <span class="faq-chevron">›</span></div>
+        <div class="faq-a">earmarkIQ is an FCA Appointed Representative of Finexer Ltd (FRN 925695), which is authorised and regulated by the Financial Conduct Authority. Bank connections use Open Banking Account Information Services (AIS) — read-only access authorised by the client directly with their bank. earmarkIQ never sees bank credentials, cannot move money, and encrypts all data in transit and at rest to 256-bit bank-level standard. earmarkIQ is registered with the ICO (CSN2001882).</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Which cashflow modelling tools will earmarkIQ support? <span class="faq-chevron">›</span></div>
+        <div class="faq-a">Category-level expenditure exports shaped for Voyant, CashCalc, FinCalc and Phoebe are in development. Direct feeds into modelling tools, starting with Voyant and Intelliflo, are planned. During the pilot, exports are designed to map cleanly onto the expenditure screens of these tools so figures can be entered or imported without reworking categories.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What does the client see and use? <span class="faq-chevron">›</span></div>
+        <div class="faq-a">Clients use the standard earmarkIQ iOS app — live today on the App Store. They connect their UK bank accounts via Open Banking, and the app categorises spending automatically, tracks subscriptions, and builds a payday allocation plan. The adviser layer sits on top: clients grant their adviser access to category-level data through an explicit consent step that is in development.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How does client consent for adviser access work? <span class="faq-chevron">›</span></div>
+        <div class="faq-a">Adviser access is being built consent-first. The client grants access to their adviser at category level from within the app, can see what is shared, and can revoke access at any time. Advisers see categorised expenditure summaries rather than raw transaction feeds by default. This consent flow is in development and will be refined with pilot firms.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What does earmarkIQ for advisers cost? <span class="faq-chevron">›</span></div>
+        <div class="faq-a">Adviser pricing is available on request. Pilot firms will help shape the packaging before general availability — register pilot interest and we'll contact you with details.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">When will adviser features be available? <span class="faq-chevron">›</span></div>
+        <div class="faq-a">The consumer app is live now on iOS. The adviser layer — client consent grants, category-level exports for cashflow modelling tools, and the adviser dashboard — is in development, with pilot access coming for a small group of UK planning firms. Direct integrations with modelling tools are planned to follow. Firms that register interest will be contacted in order as pilot places open.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do clients need to change bank or move money into earmarkIQ? <span class="faq-chevron">›</span></div>
+        <div class="faq-a">No. earmarkIQ connects to clients' existing accounts at 50+ UK banks via read-only Open Banking. Nothing changes about where clients bank, and earmarkIQ cannot move money or make payments from any account.</div>
+      </div>
+    </div>
+
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <h4>Pilot access</h4>
+      <div class="sidebar-feature"><span class="sf-icon">✦</span><span>Client-consented expenditure data</span></div>
+      <div class="sidebar-feature"><span class="sf-icon">✦</span><span>Exports for Voyant, CashCalc, FinCalc, Phoebe — in development</span></div>
+      <div class="sidebar-feature" style="margin-bottom:16px"><span class="sf-icon">✦</span><span>Direct tool feeds — planned</span></div>
+      <a href="#pilot" class="sidebar-cta-btn">Register pilot interest →</a>
+    </div>
+    <div class="sidebar-card">
+      <h4>On this page</h4>
+      <a href="#the-problem" class="toc-link">The expenditure problem</a>
+      <a href="#how-it-works" class="toc-link">How earmarkIQ solves it</a>
+      <a href="#whats-coming" class="toc-link">What's coming</a>
+      <a href="#pilot" class="toc-link">Register pilot interest</a>
+      <a href="#faq" class="toc-link">Adviser FAQ</a>
+    </div>
+    <div class="sidebar-card">
+      <h4>Adviser guides</h4>
+      <a href="/advisers/replacing-moneyhub-voyant-integration" class="toc-link">Replacing the Moneyhub Voyant integration →</a>
+      <a href="/advisers/client-expenditure-data" class="toc-link">How advisers collect expenditure data →</a>
+      <a href="/advisers/pocketsmith-alternative-uk-advisers" class="toc-link">PocketSmith for advisers: UK alternative →</a>
+      <a href="/advisers/open-banking-for-financial-planners" class="toc-link">Open Banking for financial planners →</a>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <p>© 2026 earmarkIQ Ltd · <a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms</a> · <a href="mailto:hello@earmarkiq.app">Contact</a></p>
+  <p style="margin-top:8px">earmarkIQ is an FCA Appointed Representative of Finexer Ltd (FRN 925695). <a href="https://register.fca.org.uk/s/firm?id=001Sk000010irOJIAY" rel="nofollow" target="_blank">Verify on the FCA register</a>. Content on this site is for guidance only and does not constitute financial advice.</p>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  (function () {
+    // Pilot interest capture — reuses the existing Google Sheets endpoint with
+    // a distinct source tag so adviser signups are distinguishable.
+    var ENDPOINT = 'https://script.google.com/macros/s/AKfycbw_e7qnzBvo7o7SpR2T9Vzc3R4zJT35YlrqfNFjfobjho6BlIl9mCYAnrOmaA-djRnhrA/exec';
+    var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    var form = document.getElementById('pilot-form');
+    var input = document.getElementById('pilot-email');
+    var btn = document.getElementById('pilot-submit');
+    var msg = document.getElementById('pilot-msg');
+    var success = document.getElementById('pilot-success');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var email = input.value.trim();
+
+      if (!EMAIL_RE.test(email)) {
+        msg.textContent = 'Please enter a valid email address.';
+        msg.className = 'pilot-msg err';
+        input.focus();
+        return;
+      }
+
+      msg.textContent = '';
+      msg.className = 'pilot-msg';
+      btn.disabled = true;
+      btn.textContent = 'Sending\u2026';
+
+      fetch(ENDPOINT, {
+        method: 'POST',
+        body: JSON.stringify({ email: email, source: 'adviser_pilot' })
+      }).then(function () {
+        form.style.display = 'none';
+        msg.style.display = 'none';
+        success.style.display = 'block';
+      }).catch(function () {
+        msg.textContent = 'Something went wrong \u2014 please try again.';
+        msg.className = 'pilot-msg err';
+        btn.disabled = false;
+        btn.textContent = 'Register interest';
+      });
+    });
+  })();
+</script>
+</body>
+</html>

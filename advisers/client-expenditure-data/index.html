@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How Financial Advisers Collect Client Expenditure Data (And Why It Breaks)</title>
+  <meta name="description" content="The onboarding spreadsheet, the annual refresh, the guesstimates underneath — and how Open Banking changes expenditure data collection for UK planning firms." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://earmarkiq.app/advisers/client-expenditure-data">
+  <meta name="theme-color" content="#080b12" />
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://earmarkiq.app/advisers/client-expenditure-data" />
+  <meta property="og:title" content="How Financial Advisers Collect Client Expenditure Data (And Why It Breaks)" />
+  <meta property="og:description" content="The onboarding spreadsheet, the annual refresh, the guesstimates underneath — and how Open Banking changes expenditure collection for planning firms." />
+  <meta property="og:image" content="https://earmarkiq.app/api/og?title=How%20advisers%20collect%20expenditure%20data&subtitle=And%20why%20it%20breaks" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="earmarkIQ" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="article:published_time" content="2026-08-11T00:00:00+00:00" />
+  <meta property="article:section" content="For Advisers" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@earmarkiq" />
+  <meta name="twitter:title" content="How Financial Advisers Collect Client Expenditure Data (And Why It Breaks)" />
+  <meta name="twitter:description" content="The spreadsheet ritual, the guesstimation problem, and the Open Banking alternative for UK planning firms." />
+  <meta name="twitter:image" content="https://earmarkiq.app/assets/og-image.webp" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "How Financial Advisers Collect Client Expenditure Data (And Why It Breaks)",
+        "description": "The onboarding spreadsheet, the annual refresh, the guesstimates underneath — and how Open Banking changes expenditure data collection for UK planning firms.",
+        "datePublished": "2026-08-11",
+        "dateModified": "2026-08-11",
+        "author": { "@type": "Organization", "name": "earmarkIQ" },
+        "publisher": { "@type": "Organization", "name": "earmarkIQ", "url": "https://earmarkiq.app", "logo": { "@type": "ImageObject", "url": "https://earmarkiq.app/assets/logo.png" } },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://earmarkiq.app/advisers/client-expenditure-data" },
+        "inLanguage": "en-GB"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://earmarkiq.app/" },
+          { "@type": "ListItem", "position": 2, "name": "For Advisers", "item": "https://earmarkiq.app/advisers" },
+          { "@type": "ListItem", "position": 3, "name": "How Advisers Collect Client Expenditure Data" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Why is self-reported client expenditure unreliable?",
+            "acceptedAnswer": { "@type": "Answer", "text": "People systematically underestimate their own discretionary spending when recalling it from memory — small frequent purchases are forgotten, irregular costs like car repairs and holidays are smoothed away, and round-number guesses replace actual figures. Because a cashflow model compounds its base-year assumptions over decades, even modest under-reporting produces materially over-optimistic projections." }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the alternatives to expenditure questionnaires?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The main alternatives are bank statement analysis (accurate but slow, and a repeated chore at every review) and Open Banking data collection, where the client connects accounts once via read-only access and categorised expenditure accumulates continuously. Open Banking removes both the recall problem and the repeated collection burden." }
+          },
+          {
+            "@type": "Question",
+            "name": "How does earmarkIQ help advisers with expenditure data?",
+            "acceptedAnswer": { "@type": "Answer", "text": "earmarkIQ's live consumer app connects to 50+ UK banks via read-only Open Banking and categorises spending automatically. The adviser layer — client-controlled consent grants and category-level exports shaped for cashflow modelling tools such as Voyant, CashCalc, FinCalc and Phoebe — is in development, with pilot access coming for UK planning firms." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg:#080b12; --surface:#0f1420; --border:#1e2536; --text:#e2e8f0; --text-dim:#94a3b8; --text-muted:#475569; --mint:#6ee7b7; --mint-dim:rgba(110,231,183,0.12); --blue:#60a5fa; --amber:#fbbf24; --red:#f87171; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(8,11,18,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-weight: 700; font-size: 18px; text-decoration: none; color: var(--text); letter-spacing: -0.02em; }
+    .nav-logo span { color: var(--mint); }
+    .nav-cta { background: var(--mint); color: #080b12; font-weight: 600; font-size: 13px; padding: 8px 18px; border-radius: 8px; text-decoration: none; transition: opacity 0.2s; }
+    .nav-cta:hover { opacity: 0.85; }
+    .page-wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 280px; gap: 64px; align-items: start; }
+    @media (max-width: 860px) { .page-wrap { grid-template-columns: 1fr; } .sidebar { display: none; } }
+    .hero { padding: 64px 24px 48px; max-width: 1100px; margin: 0 auto; }
+    .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--mint); }
+    .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--mint-dim); border: 1px solid rgba(110,231,183,0.2); color: var(--mint); font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 20px; }
+    h1 { font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(30px, 4.5vw, 46px); line-height: 1.12; letter-spacing: -0.02em; color: var(--text); margin-bottom: 20px; }
+    h1 em { font-style: italic; color: var(--mint); }
+    .hero-meta { display: flex; align-items: center; gap: 20px; font-size: 13px; color: var(--text-muted); margin-bottom: 32px; flex-wrap: wrap; }
+    .hero-meta-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--text-muted); }
+    .hero-intro { font-size: 19px; color: var(--text-dim); line-height: 1.7; max-width: 680px; border-left: 3px solid var(--mint); padding-left: 20px; }
+    article { padding-top: 8px; padding-bottom: 80px; }
+    h2 { font-family: 'Instrument Serif', Georgia, serif; font-size: 28px; line-height: 1.2; color: var(--text); margin: 52px 0 16px; letter-spacing: -0.01em; }
+    h3 { font-size: 18px; font-weight: 600; color: var(--text); margin: 28px 0 10px; }
+    p { margin-bottom: 20px; color: var(--text-dim); }
+    strong { color: var(--text); font-weight: 600; }
+    a { color: var(--mint); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr.section-divider { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+    .quick-answer { background: rgba(110,231,183,0.06); border: 1px solid rgba(110,231,183,0.2); border-radius: 12px; padding: 20px 24px; margin: 8px 0 32px; }
+    .quick-answer-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mint); margin-bottom: 8px; }
+    .quick-answer p { font-size: 15px; line-height: 1.7; color: var(--text-dim); margin: 0; }
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 28px 0; border: 1px solid; }
+    .callout-mint { background: rgba(110,231,183,0.06); border-color: rgba(110,231,183,0.2); }
+    .callout-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; color: var(--mint); }
+    .callout p { margin-bottom: 0; }
+    .feature-list { margin: 20px 0; }
+    .feature-item { display: flex; gap: 14px; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid rgba(30,37,54,0.5); }
+    .feature-item:last-child { border-bottom: none; }
+    .feature-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+    .feature-item p { margin-bottom: 0; font-size: 15px; }
+    .faq { margin: 16px 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+    .faq-q { padding: 16px 20px; font-weight: 600; font-size: 16px; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .faq-q:hover { background: rgba(255,255,255,0.02); }
+    .faq-chevron { color: var(--mint); flex-shrink: 0; transition: transform 0.2s; font-size: 18px; }
+    .faq-a { padding: 0 20px 16px; color: var(--text-dim); font-size: 15px; line-height: 1.7; display: none; }
+    .faq-item.open .faq-a { display: block; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .cta-block { background: linear-gradient(135deg, rgba(110,231,183,0.08), rgba(96,165,250,0.05)); border: 1px solid rgba(110,231,183,0.2); border-radius: 16px; padding: 36px; text-align: center; margin: 52px 0; }
+    .cta-block h2 { margin-top: 0; font-size: 26px; }
+    .cta-block p { max-width: 480px; margin: 0 auto 24px; }
+    .cta-btn { display: inline-block; background: var(--mint); color: #080b12; font-weight: 700; font-size: 15px; padding: 14px 32px; border-radius: 10px; text-decoration: none; transition: opacity 0.2s; }
+    .cta-btn:hover { opacity: 0.85; text-decoration: none; }
+    .cta-sub { font-size: 13px; color: var(--text-muted); margin-top: 12px; margin-bottom: 0; }
+    .sidebar { position: sticky; top: 76px; padding-top: 8px; }
+    .sidebar-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+    .sidebar-card h4 { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 14px; }
+    .toc-link { display: block; font-size: 14px; color: var(--text-dim); text-decoration: none; padding: 6px 0; border-bottom: 1px solid rgba(30,37,54,0.5); transition: color 0.15s; }
+    .toc-link:last-child { border-bottom: none; }
+    .toc-link:hover { color: var(--mint); text-decoration: none; }
+    .sidebar-cta-btn { display: block; width: 100%; background: var(--mint); color: #080b12; font-weight: 700; font-size: 14px; padding: 12px; border-radius: 8px; text-decoration: none; text-align: center; transition: opacity 0.2s; margin-top: 4px; }
+    .sidebar-cta-btn:hover { opacity: 0.85; text-decoration: none; }
+    footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 13px; color: var(--text-muted); }
+    footer a { color: var(--text-muted); }
+    footer a:hover { color: var(--mint); }
+  </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-62JW90868T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-62JW90868T');
+</script>
+<script>
+window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">earmark<span>IQ</span></a>
+  <a href="/advisers#pilot" class="nav-cta">Register pilot interest →</a>
+</nav>
+
+<div class="hero">
+  <div class="breadcrumb">
+    <a href="/">Home</a> <span>›</span>
+    <a href="/advisers">For Advisers</a> <span>›</span>
+    <span>How Advisers Collect Client Expenditure Data</span>
+  </div>
+  <div class="hero-tag">For Financial Planning Firms</div>
+  <h1>How advisers collect client<br>expenditure data — <em>and why<br>it breaks.</em></h1>
+  <div class="hero-meta">
+    <span>By earmarkIQ</span>
+    <span class="hero-meta-dot"></span>
+    <span>August 2026</span>
+    <span class="hero-meta-dot"></span>
+    <span>8 min read</span>
+  </div>
+  <p class="hero-intro">
+    Every cashflow-led planning firm runs on expenditure data, and almost every firm collects it the same way: a questionnaire the client fills in from memory. This article looks honestly at why the ritual persists, where it fails, and what the Open Banking alternative actually involves.
+  </p>
+</div>
+
+<div class="page-wrap">
+  <article>
+
+    <div class="quick-answer">
+      <div class="quick-answer-label">Quick Answer</div>
+      <p>Most firms collect client expenditure through onboarding questionnaires and annual-review refreshes — figures recalled from memory, rounded, and consistently under-reported for discretionary spending. Because cashflow models compound those errors over decades, the projections inherit the bias. Open Banking replaces recall with a read-only feed of real, categorised spending. earmarkIQ's live consumer app does the collection today; the adviser access layer is in development — <a href="/advisers">details and pilot registration here</a>.</p>
+    </div>
+
+    <h2 id="the-ritual">The spreadsheet ritual</h2>
+
+    <p>The pattern is remarkably consistent across firms. At onboarding, the client receives an expenditure form — a spreadsheet, a fillable PDF, sometimes a page inside the fact-find portal — with anywhere from twenty to sixty categories. Mortgage or rent. Utilities. Groceries. Motoring. Holidays. "Other leisure." The client sits down one evening, weeks after the meeting where it was requested, and fills it in from memory.</p>
+
+    <p>Some entries are accurate: the mortgage payment, the council tax, the fixed direct debits a client can read from one bank statement. Then come the variable categories, and the numbers turn round. £400 groceries. £150 eating out. £100 "miscellaneous". Nobody knows their real figure for these, because nobody experiences their spending as categories — they experience it as hundreds of individual card taps that leave no aggregate impression.</p>
+
+    <p>The adviser receives the form, sense-checks the obvious gaps ("nothing for clothing?"), plugs the figures into the cashflow model, and the plan is built. A year later, at review, the client is asked what changed. They update three numbers and confirm the rest — which means the original guesses now carry a year of unearned credibility. By year five, the expenditure section of the plan is an artefact with only a loose relationship to the household it describes.</p>
+
+    <h2 id="why-it-breaks">Why guesstimates break the model</h2>
+
+    <p><strong>Recall bias runs one direction.</strong> When people estimate spending from memory, the errors aren't random — they skew low, and they skew lowest exactly where spending is most discretionary. Small frequent purchases (coffee, lunches, subscriptions, taxis) are individually forgettable and collectively large. Irregular lumpy costs — car repairs, vet bills, the boiler, the wedding gift season — get smoothed out of a "typical month" that never actually occurs.</p>
+
+    <p><strong>Cashflow models amplify the error.</strong> An expenditure line understated by a few hundred pounds a month looks trivial on the form. Compounded across a thirty-year projection, it changes the shape of the plan: the sustainable withdrawal rate, the retirement date, the surplus available for gifting or investment. The model's precision is real; the input's precision is theatre.</p>
+
+    <p><strong>The professional risk sits with the firm.</strong> Suitability rests partly on an accurate picture of the client's circumstances. A file that documents expenditure as "client-confirmed" is defensible in form, but every adviser knows the difference between a client confirming a number and a client knowing it. When plans go wrong, "the client told us £400" is a thinner shield than a categorised, evidenced record.</p>
+
+    <p><strong>It costs the relationship, too.</strong> The questionnaire is homework, and clients experience it as such. Chasing an unreturned expenditure form is nobody's favourite email to send. And the review meeting time spent re-collecting data is time not spent on the conversation the client values — what the numbers mean and what to do about them.</p>
+
+    <h2 id="statement-analysis">The halfway house: bank statement analysis</h2>
+
+    <p>Some firms respond by requesting three months of bank statements and categorising them in-house — paraplanner time, a spreadsheet, sometimes a statement-scanning tool. This genuinely improves accuracy, and for one-off cases it works. As a firm-wide process it has two problems: it's slow (hours per client, multiplied by every review), and it samples a quarter of the year, so seasonal spending — holidays, Christmas, insurance renewals — lands in or out of the window by luck.</p>
+
+    <h2 id="open-banking">The Open Banking alternative</h2>
+
+    <p>Open Banking changes the collection mechanics entirely. The client connects their accounts once, through their own bank's authentication, granting read-only access under the UK's Account Information Services framework. From that point, categorised expenditure accumulates continuously — twelve full months of it by the first annual review, with no forms, no statements, and no memory involved.</p>
+
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="feature-icon">🎯</div>
+        <div>
+          <strong>Accuracy without recall.</strong>
+          <p>Categories are built from actual transactions. The eating-out figure is whatever the client actually spent eating out, including the parts no one remembers.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">📅</div>
+        <div>
+          <strong>Full-year coverage.</strong>
+          <p>Lumpy and seasonal costs appear in their true proportions rather than being smoothed away by a "typical month" estimate or missed by a three-month statement sample.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🔁</div>
+        <div>
+          <strong>Reviews without re-collection.</strong>
+          <p>The data is already there at review time. The meeting starts at "here's what changed and what it means" instead of "please fill this in again".</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🔐</div>
+        <div>
+          <strong>Consent the client controls.</strong>
+          <p>Access is read-only, authorised by the client with their bank, and revocable. No credentials are shared, and no one can move money. Our <a href="/advisers/open-banking-for-financial-planners">practical guide to Open Banking for planners</a> covers the mechanics.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="what-good-looks-like">What good looks like in practice</h2>
+
+    <p>The destination isn't "the adviser watches every transaction" — that serves nobody and clients wouldn't consent to it. The workable model is category-level: the client uses a consumer app that categorises their spending automatically, and grants their adviser access to the summary layer — housing, bills, groceries, transport, discretionary — with drill-down available when a figure needs interrogating together in a meeting. The adviser gets a defensible expenditure base; the client keeps ownership of the detail.</p>
+
+    <p>This is the shape earmarkIQ is building. The consumer app is live on iOS today — Open Banking connections to 50+ UK banks, automatic categorisation, subscription and price-rise detection. The adviser layer on top — client consent grants, category-level exports shaped for Voyant, CashCalc, FinCalc and Phoebe, and an adviser dashboard — is in development, with pilot access coming for a small group of UK planning firms.</p>
+
+    <div class="callout callout-mint">
+      <div class="callout-label">✦ Worth noting</div>
+      <p>Expenditure history only exists from the date a client connects. Firms that get clients connected early have a full base year waiting when the adviser features ship — firms that wait start from zero. That's the argument for moving before the tooling is fully live.</p>
+    </div>
+
+    <hr class="section-divider" />
+
+    <h2 id="faq">FAQ</h2>
+
+    <div class="faq">
+      <div class="faq-item">
+        <div class="faq-q">Why is self-reported client expenditure unreliable? <span class="faq-chevron">›</span></div>
+        <div class="faq-a">People systematically underestimate their own discretionary spending when recalling it from memory — small frequent purchases are forgotten, irregular costs like car repairs and holidays are smoothed away, and round-number guesses replace actual figures. Because a cashflow model compounds its base-year assumptions over decades, even modest under-reporting produces materially over-optimistic projections.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What are the alternatives to expenditure questionnaires? <span class="faq-chevron">›</span></div>
+        <div class="faq-a">The main alternatives are bank statement analysis (accurate but slow, and a repeated chore at every review) and Open Banking data collection, where the client connects accounts once via read-only access and categorised expenditure accumulates continuously. Open Banking removes both the recall problem and the repeated collection burden.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How does earmarkIQ help advisers with expenditure data? <span class="faq-chevron">›</span></div>
+        <div class="faq-a">earmarkIQ's live consumer app connects to 50+ UK banks via read-only Open Banking and categorises spending automatically. The adviser layer — client-controlled consent grants and category-level exports shaped for cashflow modelling tools such as Voyant, CashCalc, FinCalc and Phoebe — is in development, with pilot access coming for UK planning firms.</div>
+      </div>
+    </div>
+
+    <div class="cta-block">
+      <h2>Retire the expenditure questionnaire</h2>
+      <p>Register pilot interest and we'll contact your firm as the adviser layer opens — consented client data, categorised for the tools you already model in.</p>
+      <a href="/advisers#pilot" class="cta-btn">Register pilot interest →</a>
+      <p class="cta-sub">Pilot places offered in registration order · Pricing available on request</p>
+    </div>
+
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <h4>Pilot access</h4>
+      <a href="/advisers#pilot" class="sidebar-cta-btn">Register pilot interest →</a>
+    </div>
+    <div class="sidebar-card">
+      <h4>In this article</h4>
+      <a href="#the-ritual" class="toc-link">The spreadsheet ritual</a>
+      <a href="#why-it-breaks" class="toc-link">Why guesstimates break the model</a>
+      <a href="#statement-analysis" class="toc-link">Bank statement analysis</a>
+      <a href="#open-banking" class="toc-link">The Open Banking alternative</a>
+      <a href="#what-good-looks-like" class="toc-link">What good looks like</a>
+      <a href="#faq" class="toc-link">FAQ</a>
+    </div>
+    <div class="sidebar-card">
+      <h4>Adviser guides</h4>
+      <a href="/advisers" class="toc-link">earmarkIQ for advisers →</a>
+      <a href="/advisers/open-banking-for-financial-planners" class="toc-link">Open Banking for financial planners →</a>
+      <a href="/advisers/replacing-moneyhub-voyant-integration" class="toc-link">Replacing the Moneyhub Voyant integration →</a>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <p>© 2026 earmarkIQ Ltd · <a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms</a> · <a href="mailto:hello@earmarkiq.app">Contact</a></p>
+  <p style="margin-top:8px">earmarkIQ is an FCA Appointed Representative of Finexer Ltd (FRN 925695). <a href="https://register.fca.org.uk/s/firm?id=001Sk000010irOJIAY" rel="nofollow" target="_blank">Verify on the FCA register</a>. Content on this site is for guidance only and does not constitute financial advice.</p>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>

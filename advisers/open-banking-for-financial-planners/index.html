@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Open Banking for Financial Planners: A Practical Guide</title>
+  <meta name="description" content="AIS, consent, security and the regulatory chain — Open Banking explained in plain terms for UK financial planners, with what it means for client expenditure data." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://earmarkiq.app/advisers/open-banking-for-financial-planners">
+  <meta name="theme-color" content="#080b12" />
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://earmarkiq.app/advisers/open-banking-for-financial-planners" />
+  <meta property="og:title" content="Open Banking for Financial Planners: A Practical Guide" />
+  <meta property="og:description" content="AIS, consent, security and the regulatory chain — Open Banking explained in plain terms for UK planning firms." />
+  <meta property="og:image" content="https://earmarkiq.app/api/og?title=Open%20Banking%20for%20financial%20planners&subtitle=A%20practical%20guide" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="earmarkIQ" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="article:published_time" content="2026-08-11T00:00:00+00:00" />
+  <meta property="article:section" content="For Advisers" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@earmarkiq" />
+  <meta name="twitter:title" content="Open Banking for Financial Planners: A Practical Guide" />
+  <meta name="twitter:description" content="AIS, consent, security and the regulatory chain — explained for non-technical advisers." />
+  <meta name="twitter:image" content="https://earmarkiq.app/assets/og-image.webp" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Open Banking for Financial Planners: A Practical Guide",
+        "description": "AIS, consent, security and the regulatory chain — Open Banking explained in plain terms for UK financial planners, with what it means for client expenditure data.",
+        "datePublished": "2026-08-11",
+        "dateModified": "2026-08-11",
+        "author": { "@type": "Organization", "name": "earmarkIQ" },
+        "publisher": { "@type": "Organization", "name": "earmarkIQ", "url": "https://earmarkiq.app", "logo": { "@type": "ImageObject", "url": "https://earmarkiq.app/assets/logo.png" } },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://earmarkiq.app/advisers/open-banking-for-financial-planners" },
+        "inLanguage": "en-GB"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://earmarkiq.app/" },
+          { "@type": "ListItem", "position": 2, "name": "For Advisers", "item": "https://earmarkiq.app/advisers" },
+          { "@type": "ListItem", "position": 3, "name": "Open Banking for Financial Planners" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the difference between AIS and PIS in Open Banking?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Account Information Services (AIS) provide read-only access: an authorised app can view balances and transactions but cannot touch the money. Payment Initiation Services (PIS) are a separate permission allowing an authorised app to initiate a payment with the customer's explicit approval each time. Expenditure data collection for planning uses AIS only — earmarkIQ, for example, is read-only and cannot move client money." }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Open Banking consent work for clients?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The client authorises access directly with their own bank, using the bank's app and its usual security (biometrics or passcode). No banking credentials are ever shared with the connecting app. Consent is granted per bank connection, typically lasts up to 90 days before it must be reconfirmed, and the client can revoke it at any time through their bank or the app." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Open Banking data collection safe enough for advice firms?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Open Banking runs on the same regulated rails UK banks use, overseen by the FCA under the Payment Services Regulations 2017. Only authorised firms — or their Appointed Representatives — can access the APIs, data is encrypted in transit and at rest, and access is read-only under AIS. For most firms this is a stronger security posture than clients emailing bank statements as PDF attachments." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can a financial adviser get direct access to a client's Open Banking data?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Not directly — Open Banking consent is between the client, their bank and the authorised app. The workable adviser model is a consented sharing layer inside the app: the client connects their own accounts, then explicitly grants their adviser access to categorised summaries. earmarkIQ is building exactly this consent-first adviser layer, currently in development with pilot access coming." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg:#080b12; --surface:#0f1420; --border:#1e2536; --text:#e2e8f0; --text-dim:#94a3b8; --text-muted:#475569; --mint:#6ee7b7; --mint-dim:rgba(110,231,183,0.12); --blue:#60a5fa; --amber:#fbbf24; --red:#f87171; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(8,11,18,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-weight: 700; font-size: 18px; text-decoration: none; color: var(--text); letter-spacing: -0.02em; }
+    .nav-logo span { color: var(--mint); }
+    .nav-cta { background: var(--mint); color: #080b12; font-weight: 600; font-size: 13px; padding: 8px 18px; border-radius: 8px; text-decoration: none; transition: opacity 0.2s; }
+    .nav-cta:hover { opacity: 0.85; }
+    .page-wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 280px; gap: 64px; align-items: start; }
+    @media (max-width: 860px) { .page-wrap { grid-template-columns: 1fr; } .sidebar { display: none; } }
+    .hero { padding: 64px 24px 48px; max-width: 1100px; margin: 0 auto; }
+    .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--mint); }
+    .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--mint-dim); border: 1px solid rgba(110,231,183,0.2); color: var(--mint); font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 20px; }
+    h1 { font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(30px, 4.5vw, 46px); line-height: 1.12; letter-spacing: -0.02em; color: var(--text); margin-bottom: 20px; }
+    h1 em { font-style: italic; color: var(--mint); }
+    .hero-meta { display: flex; align-items: center; gap: 20px; font-size: 13px; color: var(--text-muted); margin-bottom: 32px; flex-wrap: wrap; }
+    .hero-meta-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--text-muted); }
+    .hero-intro { font-size: 19px; color: var(--text-dim); line-height: 1.7; max-width: 680px; border-left: 3px solid var(--mint); padding-left: 20px; }
+    article { padding-top: 8px; padding-bottom: 80px; }
+    h2 { font-family: 'Instrument Serif', Georgia, serif; font-size: 28px; line-height: 1.2; color: var(--text); margin: 52px 0 16px; letter-spacing: -0.01em; }
+    h3 { font-size: 18px; font-weight: 600; color: var(--text); margin: 28px 0 10px; }
+    p { margin-bottom: 20px; color: var(--text-dim); }
+    strong { color: var(--text); font-weight: 600; }
+    a { color: var(--mint); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr.section-divider { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+    .quick-answer { background: rgba(110,231,183,0.06); border: 1px solid rgba(110,231,183,0.2); border-radius: 12px; padding: 20px 24px; margin: 8px 0 32px; }
+    .quick-answer-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mint); margin-bottom: 8px; }
+    .quick-answer p { font-size: 15px; line-height: 1.7; color: var(--text-dim); margin: 0; }
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 28px 0; border: 1px solid; }
+    .callout-mint { background: rgba(110,231,183,0.06); border-color: rgba(110,231,183,0.2); }
+    .callout-blue { background: rgba(96,165,250,0.06); border-color: rgba(96,165,250,0.2); }
+    .callout-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+    .callout-mint .callout-label { color: var(--mint); }
+    .callout-blue .callout-label { color: var(--blue); }
+    .callout p { margin-bottom: 0; }
+    .steps { margin: 24px 0; }
+    .step { display: flex; gap: 20px; padding: 18px 0; border-bottom: 1px solid rgba(30,37,54,0.5); }
+    .step:last-child { border-bottom: none; }
+    .step-num { flex-shrink: 0; width: 34px; height: 34px; background: var(--mint-dim); border: 1px solid rgba(110,231,183,0.25); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; color: var(--mint); margin-top: 2px; }
+    .step-content h3 { margin-top: 0; }
+    .step-content p { margin-bottom: 0; }
+    .faq { margin: 16px 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+    .faq-q { padding: 16px 20px; font-weight: 600; font-size: 16px; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .faq-q:hover { background: rgba(255,255,255,0.02); }
+    .faq-chevron { color: var(--mint); flex-shrink: 0; transition: transform 0.2s; font-size: 18px; }
+    .faq-a { padding: 0 20px 16px; color: var(--text-dim); font-size: 15px; line-height: 1.7; display: none; }
+    .faq-item.open .faq-a { display: block; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .cta-block { background: linear-gradient(135deg, rgba(110,231,183,0.08), rgba(96,165,250,0.05)); border: 1px solid rgba(110,231,183,0.2); border-radius: 16px; padding: 36px; text-align: center; margin: 52px 0; }
+    .cta-block h2 { margin-top: 0; font-size: 26px; }
+    .cta-block p { max-width: 480px; margin: 0 auto 24px; }
+    .cta-btn { display: inline-block; background: var(--mint); color: #080b12; font-weight: 700; font-size: 15px; padding: 14px 32px; border-radius: 10px; text-decoration: none; transition: opacity 0.2s; }
+    .cta-btn:hover { opacity: 0.85; text-decoration: none; }
+    .cta-sub { font-size: 13px; color: var(--text-muted); margin-top: 12px; margin-bottom: 0; }
+    .sidebar { position: sticky; top: 76px; padding-top: 8px; }
+    .sidebar-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+    .sidebar-card h4 { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 14px; }
+    .toc-link { display: block; font-size: 14px; color: var(--text-dim); text-decoration: none; padding: 6px 0; border-bottom: 1px solid rgba(30,37,54,0.5); transition: color 0.15s; }
+    .toc-link:last-child { border-bottom: none; }
+    .toc-link:hover { color: var(--mint); text-decoration: none; }
+    .sidebar-cta-btn { display: block; width: 100%; background: var(--mint); color: #080b12; font-weight: 700; font-size: 14px; padding: 12px; border-radius: 8px; text-decoration: none; text-align: center; transition: opacity 0.2s; margin-top: 4px; }
+    .sidebar-cta-btn:hover { opacity: 0.85; text-decoration: none; }
+    footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 13px; color: var(--text-muted); }
+    footer a { color: var(--text-muted); }
+    footer a:hover { color: var(--mint); }
+  </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-62JW90868T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-62JW90868T');
+</script>
+<script>
+window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">earmark<span>IQ</span></a>
+  <a href="/advisers#pilot" class="nav-cta">Register pilot interest →</a>
+</nav>
+
+<div class="hero">
+  <div class="breadcrumb">
+    <a href="/">Home</a> <span>›</span>
+    <a href="/advisers">For Advisers</a> <span>›</span>
+    <span>Open Banking for Financial Planners</span>
+  </div>
+  <div class="hero-tag">Practical Guide</div>
+  <h1>Open Banking for financial<br>planners: a <em>practical guide.</em></h1>
+  <div class="hero-meta">
+    <span>By earmarkIQ</span>
+    <span class="hero-meta-dot"></span>
+    <span>August 2026</span>
+    <span class="hero-meta-dot"></span>
+    <span>8 min read</span>
+  </div>
+  <p class="hero-intro">
+    Open Banking underpins every serious attempt to replace guesstimated client expenditure with real data — but the terminology (AIS, PIS, SCA, TPPs) puts advisers off before the useful part starts. This guide explains the machinery in plain terms: what it is, how consent works, what the security chain looks like, and what it means for a planning firm.
+  </p>
+</div>
+
+<div class="page-wrap">
+  <article>
+
+    <div class="quick-answer">
+      <div class="quick-answer-label">Quick Answer</div>
+      <p>Open Banking is the UK's regulated framework for letting authorised apps read bank account data with the customer's consent. Expenditure collection uses Account Information Services (AIS) — read-only, no ability to touch money. The client authorises access with their own bank, no credentials are shared, and consent is revocable at any time. For planning firms, it replaces the expenditure questionnaire with continuously accumulating, categorised reality. earmarkIQ uses AIS via Finexer, an FCA-authorised provider — the <a href="/advisers">adviser access layer is in development</a>.</p>
+    </div>
+
+    <h2 id="what-it-is">What Open Banking actually is</h2>
+
+    <p>Open Banking came out of a 2016 Competition and Markets Authority ruling requiring the UK's largest banks to let customers share their account data with authorised third parties. It's now a mature piece of national infrastructure: standardised, secure APIs that every major UK bank operates, overseen by the FCA under the Payment Services Regulations 2017, with millions of active UK users.</p>
+
+    <p>The key word is <strong>authorised</strong>. Not any company can call these APIs. Access is restricted to firms the FCA has authorised for the purpose — or firms operating as Appointed Representatives of an authorised principal. When a client connects a bank account to an app, there is a regulated entity accountable for that connection, which is precisely what makes the framework different from the screen-scraping era it replaced, when tools asked users to hand over their actual banking passwords.</p>
+
+    <h2 id="ais-pis">AIS and PIS: the two permissions that matter</h2>
+
+    <p>Open Banking splits into two entirely separate services, and the distinction matters for how you explain it to clients.</p>
+
+    <p><strong>Account Information Services (AIS)</strong> — read-only access. An AIS connection can see balances, transactions, direct debits and standing orders. It cannot move money, cannot make payments, cannot change anything on the account. This is the permission expenditure data collection uses, and the only permission earmarkIQ uses: the app reads and categorises, and that is the full extent of its access.</p>
+
+    <p><strong>Payment Initiation Services (PIS)</strong> — a separate permission that allows an authorised app to initiate a payment, with the customer explicitly approving each transaction. PIS powers things like account-to-account payments at checkout. It requires its own authorisation and its own consent, and an AIS-only app has no route to it. When a client asks "can this app take my money?", the accurate answer for an AIS-only tool is no — structurally, not just contractually.</p>
+
+    <div class="callout callout-blue">
+      <div class="callout-label">ℹ️ The client-friendly version</div>
+      <p>"The app can look, through a regulated connection you approve with your own bank. It cannot touch. And you can switch off its access whenever you like."</p>
+    </div>
+
+    <h2 id="consent">How consent actually works</h2>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h3>The client picks their bank in the app</h3>
+          <p>The app hands over to the bank — usually by opening the bank's own app on the client's phone.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h3>The bank authenticates the client directly</h3>
+          <p>Face ID, fingerprint or passcode — the bank's own Strong Customer Authentication (SCA). At no point does the client type banking credentials into the connecting app, and the app never sees them.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h3>The bank shows exactly what will be shared</h3>
+          <p>Accounts, balances, transactions — itemised on the bank's own consent screen. The client approves, and read-only access begins.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h3>Consent expires and is revocable</h3>
+          <p>AIS consent typically lasts up to 90 days before the client must reconfirm it — a deliberate regulatory feature, not an app limitation. The client can also revoke access at any time, either in the app or from their bank's own connected-services settings.</p>
+        </div>
+      </div>
+    </div>
+
+    <p>The 90-day reconfirmation is worth knowing about operationally: a client who ignores the renewal prompt goes dark until they reconfirm. Any adviser process built on Open Banking data should treat connection upkeep as part of the annual service rhythm — a ten-second task for the client when prompted.</p>
+
+    <h2 id="what-data">What data comes through — and what doesn't</h2>
+
+    <p>Through AIS, an app receives balances and transaction history — amounts, dates, merchant references — from the point of connection, plus a window of back-history that varies by bank (commonly 90 days to 12 months). It does not receive the client's credentials, card PINs, or the ability to see or alter anything beyond the accounts consented. Raw transaction feeds are messy — "CRV*COSTA 0384" rather than "coffee" — which is where categorisation technology earns its keep: earmarkIQ classifies transactions automatically with AI classification, turning the raw feed into the category-level expenditure picture a planner actually wants. Why that matters for the advice process is the subject of <a href="/advisers/client-expenditure-data">our article on how firms collect expenditure data</a>.</p>
+
+    <h2 id="security-chain">The security and regulatory chain, end to end</h2>
+
+    <p>For a firm's data-governance file, the chain looks like this: the client's bank (FCA-regulated) exposes data through Open Banking APIs → an FCA-authorised AIS provider operates the connection — in earmarkIQ's case, Finexer Ltd (FRN 925695) → earmarkIQ operates as an FCA Appointed Representative of Finexer, with data encrypted in transit and at rest to 256-bit standard and ICO registration (CSN2001882) for UK GDPR. Every link is regulated, auditable, and — unlike a PDF bank statement forwarded over email — access can be terminated by the client instantly.</p>
+
+    <h2 id="for-firms">What this means for a planning firm</h2>
+
+    <p>Open Banking consent is between the client, their bank and the authorised app — an adviser can't sit inside that triangle directly. The workable model is a consented sharing layer: the client connects their own accounts to the app, then separately and explicitly grants their adviser access to the categorised output. The adviser sees expenditure summaries with drill-down where needed; the client keeps control and can revoke; the firm gets an evidence-based expenditure line for the cashflow model.</p>
+
+    <p>That sharing layer is what earmarkIQ is building for UK planning firms — client consent grants, category-level exports shaped for Voyant, CashCalc, FinCalc and Phoebe, and an adviser dashboard, all currently in development with pilot access coming. Firms displaced by the Moneyhub shutdown have the most immediate reason to look: our guide to <a href="/advisers/replacing-moneyhub-voyant-integration">replacing the Moneyhub Voyant integration</a> covers that migration specifically.</p>
+
+    <hr class="section-divider" />
+
+    <h2 id="faq">FAQ</h2>
+
+    <div class="faq">
+      <div class="faq-item">
+        <div class="faq-q">What is the difference between AIS and PIS? <span class="faq-chevron">›</span></div>
+        <div class="faq-a">Account Information Services (AIS) provide read-only access: an authorised app can view balances and transactions but cannot touch the money. Payment Initiation Services (PIS) are a separate permission allowing an authorised app to initiate a payment with the customer's explicit approval each time. Expenditure data collection for planning uses AIS only — earmarkIQ, for example, is read-only and cannot move client money.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How does Open Banking consent work for clients? <span class="faq-chevron">›</span></div>
+        <div class="faq-a">The client authorises access directly with their own bank, using the bank's app and its usual security (biometrics or passcode). No banking credentials are ever shared with the connecting app. Consent is granted per bank connection, typically lasts up to 90 days before it must be reconfirmed, and the client can revoke it at any time through their bank or the app.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is Open Banking data collection safe enough for advice firms? <span class="faq-chevron">›</span></div>
+        <div class="faq-a">Open Banking runs on the same regulated rails UK banks use, overseen by the FCA under the Payment Services Regulations 2017. Only authorised firms — or their Appointed Representatives — can access the APIs, data is encrypted in transit and at rest, and access is read-only under AIS. For most firms this is a stronger security posture than clients emailing bank statements as PDF attachments.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can an adviser get direct access to a client's Open Banking data? <span class="faq-chevron">›</span></div>
+        <div class="faq-a">Not directly — Open Banking consent is between the client, their bank and the authorised app. The workable adviser model is a consented sharing layer inside the app: the client connects their own accounts, then explicitly grants their adviser access to categorised summaries. earmarkIQ is building exactly this consent-first adviser layer, currently in development with pilot access coming.</div>
+      </div>
+    </div>
+
+    <div class="cta-block">
+      <h2>Put the rails to work</h2>
+      <p>Register pilot interest and we'll contact your firm as the consented adviser layer opens — real expenditure data on regulated Open Banking rails.</p>
+      <a href="/advisers#pilot" class="cta-btn">Register pilot interest →</a>
+      <p class="cta-sub">Pilot places offered in registration order · Pricing available on request</p>
+    </div>
+
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <h4>Pilot access</h4>
+      <a href="/advisers#pilot" class="sidebar-cta-btn">Register pilot interest →</a>
+    </div>
+    <div class="sidebar-card">
+      <h4>In this guide</h4>
+      <a href="#what-it-is" class="toc-link">What Open Banking is</a>
+      <a href="#ais-pis" class="toc-link">AIS vs PIS</a>
+      <a href="#consent" class="toc-link">How consent works</a>
+      <a href="#what-data" class="toc-link">What data comes through</a>
+      <a href="#security-chain" class="toc-link">The security chain</a>
+      <a href="#for-firms" class="toc-link">What it means for firms</a>
+      <a href="#faq" class="toc-link">FAQ</a>
+    </div>
+    <div class="sidebar-card">
+      <h4>Adviser guides</h4>
+      <a href="/advisers" class="toc-link">earmarkIQ for advisers →</a>
+      <a href="/advisers/replacing-moneyhub-voyant-integration" class="toc-link">Replacing the Moneyhub Voyant integration →</a>
+      <a href="/advisers/pocketsmith-alternative-uk-advisers" class="toc-link">PocketSmith for advisers →</a>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <p>© 2026 earmarkIQ Ltd · <a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms</a> · <a href="mailto:hello@earmarkiq.app">Contact</a></p>
+  <p style="margin-top:8px">earmarkIQ is an FCA Appointed Representative of Finexer Ltd (FRN 925695). <a href="https://register.fca.org.uk/s/firm?id=001Sk000010irOJIAY" rel="nofollow" target="_blank">Verify on the FCA register</a>. Content on this site is for guidance only and does not constitute financial advice.</p>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>

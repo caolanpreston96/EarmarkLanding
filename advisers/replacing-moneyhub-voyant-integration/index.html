@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Replacing the Moneyhub Voyant Integration: 2026 Adviser Guide</title>
+  <meta name="description" content="Moneyhub's consumer app closes 14 August 2026. What planning firms lose, how to migrate client expenditure data, and the replacement options for Voyant workflows." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://earmarkiq.app/advisers/replacing-moneyhub-voyant-integration">
+  <meta name="theme-color" content="#080b12" />
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://earmarkiq.app/advisers/replacing-moneyhub-voyant-integration" />
+  <meta property="og:title" content="Replacing the Moneyhub Voyant Integration: 2026 Adviser Guide" />
+  <meta property="og:description" content="Moneyhub's consumer app closes 14 August 2026. What planning firms lose, the migration path, and replacement options for expenditure data in Voyant." />
+  <meta property="og:image" content="https://earmarkiq.app/api/og?title=Replacing%20the%20Moneyhub%20Voyant%20integration&subtitle=2026%20guide%20for%20planning%20firms" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="earmarkIQ" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="article:published_time" content="2026-08-11T00:00:00+00:00" />
+  <meta property="article:section" content="For Advisers" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@earmarkiq" />
+  <meta name="twitter:title" content="Replacing the Moneyhub Voyant Integration: 2026 Adviser Guide" />
+  <meta name="twitter:description" content="Moneyhub's consumer app closes 14 August 2026. The migration path for planning firms using client expenditure data in Voyant." />
+  <meta name="twitter:image" content="https://earmarkiq.app/assets/og-image.webp" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Replacing the Moneyhub Voyant Integration: 2026 Adviser Guide",
+        "description": "Moneyhub's consumer app closes on 14 August 2026. What planning firms lose, how to migrate client expenditure data, and the replacement options for Voyant workflows.",
+        "datePublished": "2026-08-11",
+        "dateModified": "2026-08-11",
+        "author": { "@type": "Organization", "name": "earmarkIQ" },
+        "publisher": { "@type": "Organization", "name": "earmarkIQ", "url": "https://earmarkiq.app", "logo": { "@type": "ImageObject", "url": "https://earmarkiq.app/assets/logo.png" } },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://earmarkiq.app/advisers/replacing-moneyhub-voyant-integration" },
+        "inLanguage": "en-GB"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://earmarkiq.app/" },
+          { "@type": "ListItem", "position": 2, "name": "For Advisers", "item": "https://earmarkiq.app/advisers" },
+          { "@type": "ListItem", "position": 3, "name": "Replacing the Moneyhub Voyant Integration" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "When does the Moneyhub consumer app close?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Moneyhub's consumer app closes on 14 August 2026, and user data is deleted at closure. Any adviser workflow that depended on clients maintaining Moneyhub connections stops working from that date. Check Moneyhub's official guidance for anything specific to your firm's arrangement." }
+          },
+          {
+            "@type": "Question",
+            "name": "What should firms do before the shutdown?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Three things: ask affected clients to export their Moneyhub transaction history as CSV (Transactions, cloud icon, CSV) so the historical record survives; capture current expenditure summaries for any client with a review in the next six months; and choose the replacement data source so new connections are live before the old ones disappear." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does earmarkIQ have a live Voyant integration?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Not yet, and we won't pretend otherwise. earmarkIQ's consumer app is live on iOS with Open Banking connections to 50+ UK banks. The adviser layer — client consent grants and category-level exports shaped for Voyant, CashCalc, FinCalc and Phoebe — is in development, and a direct Voyant feed is planned. Pilot access is coming for a small group of UK planning firms." }
+          },
+          {
+            "@type": "Question",
+            "name": "What can firms use in the meantime?",
+            "acceptedAnswer": { "@type": "Answer", "text": "In the interim, firms typically fall back on bank statement analysis or client questionnaires, or ask clients to use a consumer Open Banking app and share summaries manually. Clients can use earmarkIQ today for automatic categorisation and share what they see with their adviser; the consented adviser access and shaped exports arrive with the pilot." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg:#080b12; --surface:#0f1420; --border:#1e2536; --text:#e2e8f0; --text-dim:#94a3b8; --text-muted:#475569; --mint:#6ee7b7; --mint-dim:rgba(110,231,183,0.12); --blue:#60a5fa; --amber:#fbbf24; --red:#f87171; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(8,11,18,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-weight: 700; font-size: 18px; text-decoration: none; color: var(--text); letter-spacing: -0.02em; }
+    .nav-logo span { color: var(--mint); }
+    .nav-cta { background: var(--mint); color: #080b12; font-weight: 600; font-size: 13px; padding: 8px 18px; border-radius: 8px; text-decoration: none; transition: opacity 0.2s; }
+    .nav-cta:hover { opacity: 0.85; }
+    .page-wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 280px; gap: 64px; align-items: start; }
+    @media (max-width: 860px) { .page-wrap { grid-template-columns: 1fr; } .sidebar { display: none; } }
+    .hero { padding: 64px 24px 48px; max-width: 1100px; margin: 0 auto; }
+    .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--mint); }
+    .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.25); color: var(--amber); font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 20px; }
+    h1 { font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(30px, 4.5vw, 46px); line-height: 1.12; letter-spacing: -0.02em; color: var(--text); margin-bottom: 20px; }
+    h1 em { font-style: italic; color: var(--mint); }
+    .hero-meta { display: flex; align-items: center; gap: 20px; font-size: 13px; color: var(--text-muted); margin-bottom: 32px; flex-wrap: wrap; }
+    .hero-meta-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--text-muted); }
+    .hero-intro { font-size: 19px; color: var(--text-dim); line-height: 1.7; max-width: 680px; border-left: 3px solid var(--amber); padding-left: 20px; }
+    article { padding-top: 8px; padding-bottom: 80px; }
+    h2 { font-family: 'Instrument Serif', Georgia, serif; font-size: 28px; line-height: 1.2; color: var(--text); margin: 52px 0 16px; letter-spacing: -0.01em; }
+    h3 { font-size: 18px; font-weight: 600; color: var(--text); margin: 28px 0 10px; }
+    p { margin-bottom: 20px; color: var(--text-dim); }
+    strong { color: var(--text); font-weight: 600; }
+    a { color: var(--mint); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr.section-divider { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+    .quick-answer { background: rgba(110,231,183,0.06); border: 1px solid rgba(110,231,183,0.2); border-radius: 12px; padding: 20px 24px; margin: 8px 0 32px; }
+    .quick-answer-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mint); margin-bottom: 8px; }
+    .quick-answer p { font-size: 15px; line-height: 1.7; color: var(--text-dim); margin: 0; }
+    .deadline-banner { background: rgba(251,191,36,0.07); border: 1px solid rgba(251,191,36,0.25); border-radius: 10px; padding: 14px 20px; margin-bottom: 32px; display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--amber); }
+    .deadline-banner strong { color: var(--amber); }
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 28px 0; border: 1px solid; }
+    .callout-mint { background: rgba(110,231,183,0.06); border-color: rgba(110,231,183,0.2); }
+    .callout-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; color: var(--mint); }
+    .callout p { margin-bottom: 0; }
+    .steps { margin: 24px 0; }
+    .step { display: flex; gap: 20px; padding: 18px 0; border-bottom: 1px solid rgba(30,37,54,0.5); }
+    .step:last-child { border-bottom: none; }
+    .step-num { flex-shrink: 0; width: 34px; height: 34px; background: var(--mint-dim); border: 1px solid rgba(110,231,183,0.25); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; color: var(--mint); margin-top: 2px; }
+    .step-content h3 { margin-top: 0; }
+    .step-content p { margin-bottom: 0; }
+    .faq { margin: 16px 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+    .faq-q { padding: 16px 20px; font-weight: 600; font-size: 16px; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .faq-q:hover { background: rgba(255,255,255,0.02); }
+    .faq-chevron { color: var(--mint); flex-shrink: 0; transition: transform 0.2s; font-size: 18px; }
+    .faq-a { padding: 0 20px 16px; color: var(--text-dim); font-size: 15px; line-height: 1.7; display: none; }
+    .faq-item.open .faq-a { display: block; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .cta-block { background: linear-gradient(135deg, rgba(110,231,183,0.08), rgba(96,165,250,0.05)); border: 1px solid rgba(110,231,183,0.2); border-radius: 16px; padding: 36px; text-align: center; margin: 52px 0; }
+    .cta-block h2 { margin-top: 0; font-size: 26px; }
+    .cta-block p { max-width: 480px; margin: 0 auto 24px; }
+    .cta-btn { display: inline-block; background: var(--mint); color: #080b12; font-weight: 700; font-size: 15px; padding: 14px 32px; border-radius: 10px; text-decoration: none; transition: opacity 0.2s; }
+    .cta-btn:hover { opacity: 0.85; text-decoration: none; }
+    .cta-sub { font-size: 13px; color: var(--text-muted); margin-top: 12px; margin-bottom: 0; }
+    .sidebar { position: sticky; top: 76px; padding-top: 8px; }
+    .sidebar-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+    .sidebar-card h4 { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 14px; }
+    .toc-link { display: block; font-size: 14px; color: var(--text-dim); text-decoration: none; padding: 6px 0; border-bottom: 1px solid rgba(30,37,54,0.5); transition: color 0.15s; }
+    .toc-link:last-child { border-bottom: none; }
+    .toc-link:hover { color: var(--mint); text-decoration: none; }
+    .sidebar-cta-btn { display: block; width: 100%; background: var(--mint); color: #080b12; font-weight: 700; font-size: 14px; padding: 12px; border-radius: 8px; text-decoration: none; text-align: center; transition: opacity 0.2s; margin-top: 4px; }
+    .sidebar-cta-btn:hover { opacity: 0.85; text-decoration: none; }
+    .deadline-sidebar { background: rgba(251,191,36,0.07); border: 1px solid rgba(251,191,36,0.2); border-radius: 10px; padding: 14px 16px; margin-bottom: 16px; font-size: 13px; color: var(--amber); text-align: center; }
+    .deadline-sidebar strong { display: block; font-size: 15px; margin-bottom: 2px; }
+    footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 13px; color: var(--text-muted); }
+    footer a { color: var(--text-muted); }
+    footer a:hover { color: var(--mint); }
+  </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-62JW90868T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-62JW90868T');
+</script>
+<script>
+window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">earmark<span>IQ</span></a>
+  <a href="/advisers#pilot" class="nav-cta">Register pilot interest →</a>
+</nav>
+
+<div class="hero">
+  <div class="breadcrumb">
+    <a href="/">Home</a> <span>›</span>
+    <a href="/advisers">For Advisers</a> <span>›</span>
+    <span>Replacing the Moneyhub Voyant Integration</span>
+  </div>
+  <div class="hero-tag">⏳ Moneyhub Closes 14 August 2026</div>
+  <h1>Replacing the Moneyhub<br>Voyant integration: a guide<br>for <em>planning firms.</em></h1>
+  <div class="hero-meta">
+    <span>By earmarkIQ</span>
+    <span class="hero-meta-dot"></span>
+    <span>August 2026</span>
+    <span class="hero-meta-dot"></span>
+    <span>7 min read</span>
+  </div>
+  <p class="hero-intro">
+    Moneyhub's consumer app closes on 14 August 2026 — days away. For planning firms whose clients fed real expenditure data into Voyant models via Moneyhub, the pipeline is about to stop. Here's what disappears, what to do this week, and where replacement options stand.
+  </p>
+</div>
+
+<div class="page-wrap">
+  <article>
+
+    <div class="quick-answer">
+      <div class="quick-answer-label">Quick Answer</div>
+      <p>Moneyhub's consumer app shuts on 14 August 2026 and user data is deleted at closure. Before then: get affected clients to export their transaction CSVs, capture current expenditure summaries for anyone with a near-term review, and pick a replacement data source. earmarkIQ's consumer app is live today; its adviser layer — consented access and exports shaped for Voyant — is in development with pilot access coming. <a href="/advisers">Register pilot interest here</a>.</p>
+    </div>
+
+    <div class="deadline-banner">
+      ⏳ <span><strong>The deadline is 14 August 2026.</strong> After that, client Moneyhub data is unrecoverable. Act on the export steps below first — everything else can follow.</span>
+    </div>
+
+    <h2 id="whats-happening">What's happening, in brief</h2>
+
+    <p>Moneyhub has confirmed its consumer app closes on 14 August 2026 as the company concentrates on its enterprise business. For consumers the story is a migration to another aggregation app. For planning firms the story is different: Moneyhub was one of very few consumer tools whose data could underpin adviser workflows, and firms built processes around clients maintaining live bank connections there — whether data reached Voyant through a direct connection, through exports, or through clients reading figures across at review meetings.</p>
+
+    <p>Whatever the shape of your firm's arrangement, the common dependency is the same: clients holding active Moneyhub connections. From 14 August, those connections and the accumulated history behind them are gone. The specifics of any firm-level integration vary by agreement, so check Moneyhub's official guidance for your situation — but no firm should assume any client-side data survives the shutdown.</p>
+
+    <h2 id="what-firms-lose">What planning firms actually lose</h2>
+
+    <p><strong>The expenditure baseline.</strong> The quietly valuable thing Moneyhub gave advice firms wasn't the app itself — it was months or years of categorised, real expenditure per client. That history is what let a Voyant base year rest on evidence rather than a client's guess. Once deleted, it cannot be rebuilt; a replacement app starts accumulating from the day the client connects.</p>
+
+    <p><strong>The review-time shortcut.</strong> Firms using client Moneyhub data at annual review could skip the expenditure questionnaire entirely. Without a replacement, the alternative is the spreadsheet ritual — with all the guesstimation problems that <a href="/advisers/client-expenditure-data">we've written about separately</a>.</p>
+
+    <p><strong>Client habit.</strong> The hardest thing about client-side data collection is getting clients to adopt a tool at all. Your Moneyhub-using clients had already crossed that hurdle. The migration ask — "please connect your accounts to a new app" — is far easier while the habit is warm than after months of nothing.</p>
+
+    <h2 id="migration-path">The migration path: what to do this week</h2>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h3>Get clients to export their history now</h3>
+          <p>In the Moneyhub app: Transactions → cloud icon → CSV. This is the only permanent copy of multi-year expenditure history once the app closes. A two-line email to affected clients today protects years of data.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h3>Capture expenditure summaries for near-term reviews</h3>
+          <p>For any client with a review in the next six months, record their current category-level expenditure figures while the app still displays them. That preserves a usable base year for the next Voyant update even before a replacement is live.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h3>Choose the replacement data source</h3>
+          <p>The realistic options are: revert to questionnaires and bank statements (works, but reintroduces the guesswork), adopt another consumer aggregation app and have clients share summaries manually, or line up a purpose-built adviser data layer as it becomes available. Most firms will run a hybrid for a while.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h3>Re-establish client connections before the habit fades</h3>
+          <p>Whichever route you choose, aim to have clients connected to the replacement within weeks, not months. Every month without live connections is a gap in the expenditure record you'll be modelling from for years.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="earmarkiq-plan">Where earmarkIQ fits — stated honestly</h2>
+
+    <p>earmarkIQ's consumer app is live on iOS now. Clients can connect accounts at 50+ UK banks through read-only Open Banking (via Finexer, an FCA-authorised provider) and get automatic categorisation from day one — which means the expenditure record starts rebuilding immediately, even before any adviser features ship.</p>
+
+    <p>The adviser layer is <strong>in development</strong>: client-controlled consent grants, category-level expenditure exports shaped for Voyant, CashCalc, FinCalc and Phoebe, and an adviser dashboard. A <strong>direct Voyant feed is planned</strong>, alongside Intelliflo. None of this is live today, and we'd rather say so plainly than have a firm discover it mid-migration. Pilot access is coming for a small group of UK planning firms, and pilot firms will shape how the exports map onto Voyant's expenditure screens.</p>
+
+    <div class="callout callout-mint">
+      <div class="callout-label">✦ The practical sequence</div>
+      <p>Clients connect to earmarkIQ now, so categorised expenditure starts accumulating immediately. When the consent and export layer ships to pilot firms, the history is already there — no cold start. <a href="/advisers">Register pilot interest</a> to be contacted as places open.</p>
+    </div>
+
+    <hr class="section-divider" />
+
+    <h2 id="faq">FAQ</h2>
+
+    <div class="faq">
+      <div class="faq-item">
+        <div class="faq-q">When does the Moneyhub consumer app close? <span class="faq-chevron">›</span></div>
+        <div class="faq-a">Moneyhub's consumer app closes on 14 August 2026, and user data is deleted at closure. Any adviser workflow that depended on clients maintaining Moneyhub connections stops working from that date. Check Moneyhub's official guidance for anything specific to your firm's arrangement.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What should firms do before the shutdown? <span class="faq-chevron">›</span></div>
+        <div class="faq-a">Three things: ask affected clients to export their Moneyhub transaction history as CSV (Transactions → cloud icon → CSV) so the historical record survives; capture current expenditure summaries for any client with a review in the next six months; and choose the replacement data source so new connections are live before the old ones disappear.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does earmarkIQ have a live Voyant integration? <span class="faq-chevron">›</span></div>
+        <div class="faq-a">Not yet, and we won't pretend otherwise. earmarkIQ's consumer app is live on iOS with Open Banking connections to 50+ UK banks. The adviser layer — client consent grants and category-level exports shaped for Voyant, CashCalc, FinCalc and Phoebe — is in development, and a direct Voyant feed is planned. Pilot access is coming for a small group of UK planning firms.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What can firms use in the meantime? <span class="faq-chevron">›</span></div>
+        <div class="faq-a">In the interim, firms typically fall back on bank statement analysis or client questionnaires, or ask clients to use a consumer Open Banking app and share summaries manually. Clients can use earmarkIQ today for automatic categorisation and share what they see with their adviser; the consented adviser access and shaped exports arrive with the pilot.</div>
+      </div>
+    </div>
+
+    <div class="cta-block">
+      <h2>Rebuild the expenditure pipeline</h2>
+      <p>Register pilot interest and we'll contact your firm as adviser access opens — client consent grants, shaped exports, and a planned Voyant feed.</p>
+      <a href="/advisers#pilot" class="cta-btn">Register pilot interest →</a>
+      <p class="cta-sub">Pilot places offered in registration order · Pricing available on request</p>
+    </div>
+
+    <p style="font-size:13px;color:var(--text-muted)">Consumer switching instead? See our <a href="/blog/moneyhub-alternative-uk">full Moneyhub alternative guide</a> for the client-facing migration steps.</p>
+
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="deadline-sidebar">
+        <strong>⏳ 14 August 2026</strong>
+        Moneyhub closes. Client data is deleted.
+      </div>
+      <a href="/advisers#pilot" class="sidebar-cta-btn">Register pilot interest →</a>
+    </div>
+    <div class="sidebar-card">
+      <h4>In this guide</h4>
+      <a href="#whats-happening" class="toc-link">What's happening</a>
+      <a href="#what-firms-lose" class="toc-link">What firms lose</a>
+      <a href="#migration-path" class="toc-link">The migration path</a>
+      <a href="#earmarkiq-plan" class="toc-link">Where earmarkIQ fits</a>
+      <a href="#faq" class="toc-link">FAQ</a>
+    </div>
+    <div class="sidebar-card">
+      <h4>Adviser guides</h4>
+      <a href="/advisers" class="toc-link">earmarkIQ for advisers →</a>
+      <a href="/advisers/client-expenditure-data" class="toc-link">How advisers collect expenditure data →</a>
+      <a href="/advisers/open-banking-for-financial-planners" class="toc-link">Open Banking for financial planners →</a>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <p>© 2026 earmarkIQ Ltd · <a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms</a> · <a href="mailto:hello@earmarkiq.app">Contact</a></p>
+  <p style="margin-top:8px">earmarkIQ is an FCA Appointed Representative of Finexer Ltd (FRN 925695). <a href="https://register.fca.org.uk/s/firm?id=001Sk000010irOJIAY" rel="nofollow" target="_blank">Verify on the FCA register</a>. Content on this site is for guidance only and does not constitute financial advice.</p>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>
