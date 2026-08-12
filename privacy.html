@@ -122,15 +122,16 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 
         <h1>Privacy Policy</h1>
         <p style="font-size:1.1rem; color:#FFFFFF;">earmark<span class="brand">IQ</span></p>
-        <p class="last-updated">Last updated: 22 February 2026</p>
+        <p class="last-updated">Last updated: 12 August 2026</p>
 
         <div class="highlight-box">
-            <strong style="color:#FFFFFF;">Summary:</strong> We use Open Banking (read-only) to analyse your spending and help you manage your money. We never move your money, sell your data, or share your transactions with third parties. You can delete your data at any time.
+            <strong style="color:#FFFFFF;">Summary:</strong> We use Open Banking (read-only, via Finexer) to analyse your spending and help you manage your money. We never move your money and never sell your data. Transaction data is shared only with the service providers named in this policy — including Anthropic, which powers the app's AI features — and only as described below. You can delete your account and data at any time in the app.
         </div>
 
         <h2>1. Who We Are</h2>
-        <p>earmarkIQ ("we", "us", "our") is a personal finance application operated by Caolan Preston, trading as earmarkIQ, registered in England. Our registered address is available on request.</p>
-        <p>For the purposes of the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018, we are the data controller.</p>
+        <p>earmarkIQ ("we", "us", "our") is a personal finance application operated by earmarkIQ Ltd, a company registered in England and Wales (company number 17056081). Registered office: Flat 3, Ash Lodge, Northbourne Road, London, SW4 7DS, United Kingdom.</p>
+        <p>For the purposes of the UK General Data Protection Regulation (UK GDPR) and the Data Protection Act 2018, we are the data controller. We are registered with the Information Commissioner's Office (registration number CSN2001882).</p>
+        <p>earmarkIQ Ltd is an FCA Appointed Representative of Finexer Ltd (FCA firm reference 925695), which is authorised and regulated by the Financial Conduct Authority.</p>
         <p><strong>Contact:</strong> <a href="mailto:privacy@earmarkiq.app">privacy@earmarkiq.app</a></p>
 
         <h2>2. What Data We Collect</h2>
@@ -145,15 +146,15 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
         </ul>
 
         <h3>2.2 Bank Transaction Data (via Open Banking)</h3>
-        <p>When you connect your bank account, we access your transaction data through FCA-regulated Open Banking providers. This includes:</p>
+        <p>When you connect your bank account, we access your transaction data through Open Banking provided by Finexer Ltd (FCA firm reference 925695), an FCA-authorised Account Information Service Provider. earmarkIQ Ltd operates as an FCA Appointed Representative of Finexer. The data we retrieve includes:</p>
         <ul>
-            <li>Transaction amounts, dates, and merchant names</li>
+            <li>Transaction amounts, dates, and merchant names/descriptions</li>
             <li>Account balances</li>
             <li>Transaction categories assigned by your bank</li>
         </ul>
 
         <div class="highlight-box">
-            <strong style="color:#4AEDC4;">Important:</strong> We use Account Information Service Provider (AISP) access only. This is <strong>read-only</strong> — we can never initiate payments, move money, or modify your accounts. You authenticate directly with your bank; we never see your banking credentials.
+            <strong style="color:#4AEDC4;">Important:</strong> We use Account Information Services (AIS) only. This is <strong>read-only</strong> — we can never initiate payments, move money, or modify your accounts. There is no payment initiation of any kind. You authenticate directly with your bank; neither we nor Finexer ever see your banking credentials.
         </div>
 
         <h3>2.3 Data You Provide</h3>
@@ -189,7 +190,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
                 <td>Contract performance (Art. 6(1)(b))</td>
             </tr>
             <tr>
-                <td>AI-powered financial advice and chat</td>
+                <td>AI processing: transaction classification, Ask IQ chat, weekly briefings, annual recaps (see section 4)</td>
                 <td>Contract performance (Art. 6(1)(b))</td>
             </tr>
             <tr>
@@ -219,13 +220,29 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
         </table>
 
         <h2>4. AI Processing</h2>
-        <p>We use AI (powered by Anthropic's Claude) to analyse your transaction data and provide personalised financial insights. When you use the AI chat feature:</p>
+        <p>The app's core features are powered by AI. Our AI provider is <strong>Anthropic PBC</strong>, whose Claude models process your data for the following purposes:</p>
         <ul>
-            <li>Your transaction data is sent to Anthropic's API for analysis</li>
-            <li>Anthropic does not retain your data for training purposes</li>
-            <li>AI responses are generated in real-time and not stored by Anthropic</li>
-            <li>We store your chat history so you can reference past conversations</li>
+            <li><strong>Transaction classification:</strong> sorting your transactions into spending categories automatically</li>
+            <li><strong>Ask IQ:</strong> generating responses in the in-app chat</li>
+            <li><strong>Weekly briefings:</strong> producing your weekly spending summary and insights</li>
+            <li><strong>Annual recaps:</strong> producing your end-of-year summary</li>
         </ul>
+
+        <h3>4.1 What is sent to Anthropic</h3>
+        <p>To perform the processing above, we send Anthropic:</p>
+        <ul>
+            <li>Transaction descriptions (merchant names/references)</li>
+            <li>Transaction amounts and dates</li>
+            <li>Category context (the spending categories used to classify transactions)</li>
+            <li>Your Ask IQ chat messages, when you use the chat</li>
+        </ul>
+        <p><strong>We never send Anthropic:</strong> your bank credentials, your account numbers, or full account identifiers.</p>
+
+        <h3>4.2 How Anthropic handles this data</h3>
+        <p>Under Anthropic's commercial terms, Anthropic does not use your data to train its models. We store your chat history on our own servers so you can reference past conversations.</p>
+
+        <h3>4.3 Legal basis</h3>
+        <p>Our lawful basis for this processing is <strong>performance of a contract</strong> (UK GDPR Art. 6(1)(b)): AI classification and analysis are how the service works, so this processing is necessary to deliver the app you signed up for. It is not based on consent. If you do not want your data processed this way, the way to stop it is to delete your account, which you can do in the app at any time (Settings → Delete Account).</p>
         <p>No automated decisions with legal or similarly significant effects are made about you without human involvement.</p>
 
         <h2>5. Who We Share Data With</h2>
@@ -245,22 +262,22 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
                 <th>Data Shared</th>
             </tr>
             <tr>
-                <td>Open Banking provider (Yapily/TrueLayer/Finexer)</td>
-                <td>Retrieve your bank transactions</td>
+                <td>Finexer Ltd (Open Banking provider, FCA firm reference 925695)</td>
+                <td>Retrieve your bank transactions via Account Information Services (read-only)</td>
                 <td>Bank connection tokens (not your credentials)</td>
             </tr>
             <tr>
-                <td>Anthropic (AI provider)</td>
-                <td>Generate financial insights and chat responses</td>
-                <td>Anonymised transaction summaries, chat messages</td>
+                <td>Anthropic PBC (AI provider)</td>
+                <td>Transaction classification, Ask IQ chat responses, weekly briefings, annual recaps</td>
+                <td>Transaction descriptions, amounts, dates and category context; your chat messages. Never bank credentials, account numbers or full account identifiers</td>
             </tr>
             <tr>
-                <td>Railway (hosting provider)</td>
+                <td>Railway (hosting provider, Netherlands — Amsterdam region)</td>
                 <td>Host our servers and database</td>
                 <td>All data (encrypted at rest and in transit)</td>
             </tr>
             <tr>
-                <td>Apple / Google (app stores)</td>
+                <td>Apple (App Store)</td>
                 <td>Process subscription payments</td>
                 <td>Purchase receipts (not financial data)</td>
             </tr>
@@ -270,6 +287,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
                 <td>Anonymous click data only — never transaction data</td>
             </tr>
         </table>
+        <p>Every third party listed above is contractually required to protect your data to at least the same standard described in this policy, and may only use it to provide their service to us — never for their own purposes.</p>
 
         <h2>6. Affiliate Disclosure</h2>
         <p>The app and this website may feature product recommendations from financial service providers. Some of these are affiliate links — if you click through and sign up, we may receive a commission from the provider. This does not cost you anything extra.</p>
@@ -287,9 +305,9 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 
         <h2>8. Data Retention</h2>
         <ul>
-            <li><strong>Transaction data:</strong> Retained while your account is active. Deleted within 30 days of account deletion.</li>
-            <li><strong>Account information:</strong> Retained while your account is active. Deleted within 30 days of account deletion.</li>
-            <li><strong>AI chat history:</strong> Retained while your account is active. Deleted with your account.</li>
+            <li><strong>Transaction data:</strong> Retained while your account is active. Deleted immediately when you delete your account.</li>
+            <li><strong>Account information:</strong> Retained while your account is active. Deleted immediately when you delete your account.</li>
+            <li><strong>AI chat history:</strong> Retained while your account is active. Deleted immediately with your account.</li>
             <li><strong>Analytics data:</strong> Aggregated and anonymised after 12 months.</li>
             <li><strong>Payment records:</strong> Retained for 7 years as required by UK tax law.</li>
         </ul>
@@ -306,7 +324,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
             <li><strong>Withdraw consent:</strong> Withdraw consent for notifications or marketing at any time</li>
         </ul>
         <p>To exercise any of these rights, email <a href="mailto:privacy@earmarkiq.app">privacy@earmarkiq.app</a>. We will respond within 30 days.</p>
-        <p>You can delete your account directly in the app: Settings → Delete Account. This removes all your data within 30 days.</p>
+        <p>You can delete your account directly in the app: Settings → Delete Account. This removes all your data immediately.</p>
 
         <h2>10. Open Banking Consent</h2>
         <p>When you connect your bank account:</p>
@@ -315,14 +333,16 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
             <li>You explicitly consent to sharing transaction data with earmarkIQ</li>
             <li>Consent is valid for 90 days (as per Open Banking standards) and must be re-authorised</li>
             <li>You can revoke access at any time through your bank's app or through earmarkIQ settings</li>
-            <li>Upon revocation, we stop receiving new data immediately. Existing data is deleted within 30 days unless you request immediate deletion.</li>
+            <li>Upon revocation, we stop receiving new data immediately. You can remove all stored data at any time by deleting your account in the app, which deletes it immediately.</li>
         </ul>
 
         <h2>11. Children's Privacy</h2>
         <p>earmarkIQ is not intended for anyone under the age of 18. We do not knowingly collect data from children. If we become aware that we have collected data from a child under 18, we will delete it promptly.</p>
 
-        <h2>12. International Transfers</h2>
-        <p>Your data is primarily stored on servers in the EU/UK. Where data is processed outside the UK (e.g., AI processing via Anthropic's US-based servers), we ensure appropriate safeguards are in place, including Standard Contractual Clauses approved by the ICO.</p>
+        <h2>12. Where Your Data Is Stored &amp; International Transfers</h2>
+        <p>Your data is stored on servers in the Netherlands (our hosting provider Railway's Amsterdam region), encrypted at rest and in transit.</p>
+        <p>Some of the third parties we use to provide the service process data outside the United Kingdom. Where that happens, we rely on appropriate safeguards permitted under UK data protection law, which may include the International Data Transfer Agreement, the UK Addendum to the European Commission's Standard Contractual Clauses, or a finding of adequacy for the country concerned.</p>
+        <p>Our AI processing is carried out by Anthropic PBC, which is based in the United States. Our backend and database are hosted by Railway in the Netherlands.</p>
 
         <h2>13. Cookies and Tracking</h2>
         <p>Our mobile app does not use cookies. Our website (earmarkiq.app) uses only essential cookies required for the website to function. We do not use advertising cookies or tracking pixels.</p>
