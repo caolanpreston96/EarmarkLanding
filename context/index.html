@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>earmarkIQ Context — Connect Your Financial Data to AI Assistants</title>
+  <meta name="description" content="earmarkIQ Context is an MCP server in development: ask Claude and other AI assistants about your spending, subscriptions and net worth. Read-only by design. Join the waitlist." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://earmarkiq.app/context">
+  <meta name="theme-color" content="#080b12" />
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://earmarkiq.app/context" />
+  <meta property="og:title" content="earmarkIQ Context — Connect Your Financial Data to AI Assistants" />
+  <meta property="og:description" content="An MCP server in development: ask Claude and other AI assistants about your spending, subscriptions and net worth. Read-only by design." />
+  <meta property="og:image" content="https://earmarkiq.app/api/og?title=earmarkIQ%20Context&subtitle=Your%20money%2C%20in%20your%20AI%20assistant" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="earmarkIQ" />
+  <meta property="og:locale" content="en_GB" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@earmarkiq" />
+  <meta name="twitter:title" content="earmarkIQ Context — Connect Your Financial Data to AI Assistants" />
+  <meta name="twitter:description" content="An MCP server in development: ask your AI assistant about your spending, subscriptions and net worth. Read-only by design." />
+  <meta name="twitter:image" content="https://earmarkiq.app/assets/og-image.webp" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "earmarkIQ Context",
+        "description": "earmarkIQ Context is an MCP server in development that connects your earmarkIQ financial data to Claude and other AI assistants. Read-only by design.",
+        "url": "https://earmarkiq.app/context",
+        "publisher": { "@type": "Organization", "name": "earmarkIQ", "url": "https://earmarkiq.app" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://earmarkiq.app/" },
+          { "@type": "ListItem", "position": 2, "name": "earmarkIQ Context" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is an MCP server?",
+            "acceptedAnswer": { "@type": "Answer", "text": "MCP (Model Context Protocol) is an open standard that lets AI assistants such as Claude connect securely to outside sources of information. An MCP server is the bridge: it gives your assistant permissioned access to specific data — in earmarkIQ Context's case, your own categorised financial picture — so answers are grounded in your real numbers rather than general knowledge." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can an AI assistant connected via earmarkIQ Context move my money?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. earmarkIQ Context is read-only by design, and earmarkIQ itself uses read-only Open Banking access (AIS) — there is no ability to move money, make payments or change anything on your accounts anywhere in the chain. An assistant can ask about your data; it cannot act on your accounts." }
+          },
+          {
+            "@type": "Question",
+            "name": "When will earmarkIQ Context be available?",
+            "acceptedAnswer": { "@type": "Answer", "text": "earmarkIQ Context is in development. Join the waitlist and we'll email you when it's ready to try — no commitment, and your earmarkIQ app works fully without it in the meantime." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg:#080b12; --surface:#0f1420; --border:#1e2536; --text:#e2e8f0; --text-dim:#94a3b8; --text-muted:#475569; --mint:#6ee7b7; --mint-dim:rgba(110,231,183,0.12); --blue:#60a5fa; --amber:#fbbf24; --red:#f87171; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(8,11,18,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-weight: 700; font-size: 18px; text-decoration: none; color: var(--text); letter-spacing: -0.02em; }
+    .nav-logo span { color: var(--mint); }
+    .nav-cta { background: var(--mint); color: #080b12; font-weight: 600; font-size: 13px; padding: 8px 18px; border-radius: 8px; text-decoration: none; transition: opacity 0.2s; }
+    .nav-cta:hover { opacity: 0.85; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; }
+    .hero { padding: 64px 0 12px; }
+    .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+    .breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--mint); }
+    .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: rgba(96,165,250,0.1); border: 1px solid rgba(96,165,250,0.25); color: var(--blue); font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 20px; }
+    h1 { font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(30px, 5vw, 46px); line-height: 1.12; letter-spacing: -0.02em; color: var(--text); margin-bottom: 20px; }
+    h1 em { font-style: italic; color: var(--mint); }
+    h2 { font-family: 'Instrument Serif', Georgia, serif; font-size: 26px; line-height: 1.2; color: var(--text); margin: 44px 0 14px; letter-spacing: -0.01em; }
+    p { margin-bottom: 18px; color: var(--text-dim); }
+    strong { color: var(--text); font-weight: 600; }
+    a { color: var(--mint); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .example-q { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--mint); border-radius: 0 8px 8px 0; padding: 12px 16px; margin: 10px 0; }
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border: 1px solid rgba(110,231,183,0.2); background: rgba(110,231,183,0.06); }
+    .callout-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; color: var(--mint); }
+    .callout p { margin-bottom: 0; }
+    .pilot-block { background: linear-gradient(135deg, rgba(110,231,183,0.08), rgba(96,165,250,0.05)); border: 1px solid rgba(110,231,183,0.2); border-radius: 16px; padding: 32px; text-align: center; margin: 44px 0; }
+    .pilot-block h2 { margin-top: 0; font-size: 24px; }
+    .pilot-block p { max-width: 440px; margin: 0 auto 22px; }
+    .pilot-form { display: flex; gap: 10px; max-width: 440px; margin: 0 auto; }
+    .pilot-in { flex: 1; min-width: 0; padding: 14px 20px; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 15px; outline: none; transition: border-color 0.2s; }
+    .pilot-in::placeholder { color: var(--text-muted); }
+    .pilot-in:focus { border-color: var(--mint); }
+    .pilot-btn { padding: 14px 24px; background: var(--mint); color: #080b12; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700; border: none; border-radius: 10px; cursor: pointer; transition: opacity 0.2s; white-space: nowrap; }
+    .pilot-btn:hover { opacity: 0.85; }
+    .pilot-btn:disabled { opacity: 0.6; cursor: default; }
+    .pilot-msg { font-size: 13px; margin-top: 10px; min-height: 20px; }
+    .pilot-msg.err { color: var(--red); }
+    .pilot-success { display: none; font-size: 17px; font-weight: 700; color: var(--mint); padding: 10px 0 0; }
+    .pilot-sub { font-size: 13px; color: var(--text-muted); margin-top: 12px; margin-bottom: 0; }
+    @media (max-width: 480px) { .pilot-form { flex-direction: column; } }
+    footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 13px; color: var(--text-muted); }
+    footer a { color: var(--text-muted); }
+    footer a:hover { color: var(--mint); }
+  </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-62JW90868T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-62JW90868T');
+</script>
+<script>
+window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">earmark<span>IQ</span></a>
+  <a href="#waitlist-context" class="nav-cta">Join the waitlist →</a>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="breadcrumb">
+      <a href="/">Home</a> <span>›</span>
+      <span>earmarkIQ Context</span>
+    </div>
+    <div class="hero-tag">In Development</div>
+    <h1>earmarkIQ Context:<br>your money, in your<br><em>AI assistant.</em></h1>
+    <p>earmarkIQ Context is an MCP server in development. Once it ships, you'll be able to connect your earmarkIQ data to Claude and other AI assistants that support the standard — and ask about your own finances, grounded in your real numbers.</p>
+  </div>
+
+  <h2>What's an MCP server, in plain terms?</h2>
+  <p>MCP — the Model Context Protocol — is an open standard that lets AI assistants connect to outside sources of information, with your permission. An MCP server is the bridge. earmarkIQ Context will be that bridge for your finances: your assistant gets permissioned, read-only access to your categorised earmarkIQ data, so instead of answering from general knowledge, it answers from your actual spending, subscriptions and net worth.</p>
+
+  <h2>What it will let you do</h2>
+  <div class="example-q">"What did I spend on eating out last month?"</div>
+  <div class="example-q">"Which of my subscriptions went up this year?"</div>
+  <div class="example-q">"How has my net worth moved since January?"</div>
+  <p>Wherever you already talk to your assistant — desktop, IDE, chat app — your financial picture comes with you.</p>
+
+  <div class="callout">
+    <div class="callout-label">🔒 Read-only, by design</div>
+    <p>earmarkIQ Context can answer questions about your data — nothing more. It has no ability to move money, make payments or change anything on your accounts, and earmarkIQ itself uses read-only Open Banking access (AIS) via Finexer, an FCA-authorised provider. Curious how the whole chain works? Read <a href="/blog/connecting-financial-data-to-ai-assistants">connecting your financial data to AI assistants</a>.</p>
+  </div>
+
+  <div class="pilot-block" id="waitlist-context">
+    <h2>Join the Context waitlist</h2>
+    <p>Leave your email and we'll let you know the moment earmarkIQ Context is ready to try.</p>
+    <form class="pilot-form" id="ctx-form" novalidate>
+      <input type="email" class="pilot-in" id="ctx-email" placeholder="Enter your email" autocomplete="email" inputmode="email">
+      <button type="submit" class="pilot-btn" id="ctx-submit">Join the waitlist</button>
+    </form>
+    <div class="pilot-msg" id="ctx-msg"></div>
+    <div class="pilot-success" id="ctx-success">Done — we'll email you when Context is ready.</div>
+    <p class="pilot-sub">One email when it ships. The earmarkIQ app works fully without Context in the meantime.</p>
+  </div>
+
+  <p style="font-size:14px;color:var(--text-muted)">Not using earmarkIQ yet? The iOS app is <a href="/download">free to download</a> — Context will build on the data it already organises for you.</p>
+</div>
+
+<footer>
+  <p>© 2026 earmarkIQ Ltd · <a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms</a> · <a href="mailto:hello@earmarkiq.app">Contact</a></p>
+  <p style="margin-top:8px">earmarkIQ is an FCA Appointed Representative of Finexer Ltd (FRN 925695). <a href="https://register.fca.org.uk/s/firm?id=001Sk000010irOJIAY" rel="nofollow" target="_blank">Verify on the FCA register</a>. Content on this site is for guidance only and does not constitute financial advice.</p>
+</footer>
+
+<script>
+(function () {
+  // Context waitlist — reuses the existing Google Sheets endpoint with a
+  // distinct source tag so these signups are distinguishable.
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbw_e7qnzBvo7o7SpR2T9Vzc3R4zJT35YlrqfNFjfobjho6BlIl9mCYAnrOmaA-djRnhrA/exec';
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  var form = document.getElementById('ctx-form');
+  var input = document.getElementById('ctx-email');
+  var btn = document.getElementById('ctx-submit');
+  var msg = document.getElementById('ctx-msg');
+  var success = document.getElementById('ctx-success');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var email = input.value.trim();
+    if (!EMAIL_RE.test(email)) {
+      msg.textContent = 'Please enter a valid email address.';
+      msg.className = 'pilot-msg err';
+      input.focus();
+      return;
+    }
+    msg.textContent = '';
+    msg.className = 'pilot-msg';
+    btn.disabled = true;
+    btn.textContent = 'Sending\u2026';
+    fetch(ENDPOINT, {
+      method: 'POST',
+      body: JSON.stringify({ email: email, source: 'mcp_waitlist' })
+    }).then(function () {
+      form.style.display = 'none';
+      msg.style.display = 'none';
+      success.style.display = 'block';
+    }).catch(function () {
+      msg.textContent = 'Something went wrong \u2014 please try again.';
+      msg.className = 'pilot-msg err';
+      btn.disabled = false;
+      btn.textContent = 'Join the waitlist';
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log in — earmarkIQ</title>
+<meta name="description" content="Log in to earmarkIQ — for app users and financial advisers.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#06080f">
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script src="/js/config.js"></script>
+
+<script>
+window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+
+<style>
+:root{--bg:#06080f;--sf:#141929;--bd:#1e2540;--bd2:#283050;--tx:#eaecf5;--tx2:#a0a5bc;--tx3:#686e88;--tx4:#464c64;--mint:#4ECDC4;--mintG:rgba(78,205,196,0.15);--blue:#5B8DEF;--grad:linear-gradient(135deg,#4ECDC4 0%,#5B8DEF 60%,#9B8FE8 100%);--f:'DM Sans',-apple-system,sans-serif;--m:'IBM Plex Mono',monospace}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}::selection{background:rgba(78,205,196,0.25);color:#fff}
+body{font-family:var(--f);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+a{text-decoration:none;color:inherit}
+
+.nav{padding:20px 24px;display:flex;justify-content:center}
+.nav-l{font-size:24px;font-weight:400;letter-spacing:-.02em}
+.nav-l b{font-weight:800;color:var(--mint)}
+.nav-l span{display:block;font-family:var(--m);font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--tx3);font-weight:500;text-align:center}
+
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:24px}
+.wrap{max-width:760px;width:100%;text-align:center}
+h1{font-size:clamp(26px,5vw,34px);font-weight:900;letter-spacing:-.03em;margin-bottom:10px}
+.sub{font-size:15px;color:var(--tx2);margin-bottom:36px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:20px;text-align:left}
+@media(max-width:640px){.cards{grid-template-columns:1fr}}
+.card{background:var(--sf);border:1px solid var(--bd);border-radius:20px;padding:32px 28px;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.card-consumer::before{background:var(--mint)}
+.card-adviser::before{background:var(--blue)}
+.card-ic{font-size:28px;margin-bottom:14px}
+.card h2{font-size:20px;font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
+.card p{font-size:14px;color:var(--tx2);line-height:1.7;margin-bottom:22px}
+.card-btn{display:block;text-align:center;padding:13px;border-radius:100px;font-size:14px;font-weight:700;transition:all .3s;margin-top:auto}
+.btn-mint{background:var(--mint);color:var(--bg)}
+.btn-mint:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(78,205,196,.3)}
+.btn-blue{background:transparent;border:2px solid var(--blue);color:var(--blue)}
+.btn-blue:hover{background:var(--blue);color:var(--bg)}
+.card-note{font-size:12px;color:var(--tx4);margin-top:10px;margin-bottom:0;text-align:center}
+.back{font-size:13px;color:var(--tx3);margin-top:28px;display:inline-block}
+.back:hover{color:var(--mint)}
+
+footer{padding:24px;text-align:center;font-size:11px;color:var(--tx4)}
+footer a{color:var(--tx3)}
+footer a:hover{color:var(--mint)}
+</style>
+</head>
+<body>
+
+<nav class="nav"><a href="/" class="nav-l">earmark<b>IQ</b><span>Smart Money</span></a></nav>
+
+<main>
+  <div class="wrap">
+    <h1>Log in to earmarkIQ</h1>
+    <p class="sub">Choose where you're headed.</p>
+
+    <div class="cards">
+      <div class="card card-consumer">
+        <div class="card-ic">📱</div>
+        <h2>I use earmarkIQ</h2>
+        <p id="consumer-copy">Web access is coming — it's in development. For now, everything lives in the iOS app.</p>
+        <a id="consumer-btn" class="card-btn btn-mint" href="/download">Open the iOS app →</a>
+        <p class="card-note" id="consumer-note">Free on the App Store</p>
+      </div>
+
+      <div class="card card-adviser">
+        <div class="card-ic">💼</div>
+        <h2>I'm a financial adviser</h2>
+        <p id="adviser-copy">The adviser web dashboard is in development and being built with pilot firms. Register interest and we'll be in touch as places open.</p>
+        <a id="adviser-btn" class="card-btn btn-blue" href="/advisers#pilot">Register pilot interest →</a>
+        <p class="card-note" id="adviser-note">Learn more at <a href="/advisers" style="color:var(--tx3);text-decoration:underline">earmarkiq.app/advisers</a></p>
+      </div>
+    </div>
+
+    <a href="/" class="back">← Back to earmarkiq.app</a>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 earmarkIQ Ltd &middot; <a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a></p>
+</footer>
+
+<script>
+(function () {
+  // Destinations come from /js/config.js so the web app URLs can change
+  // without editing this page. While a URL is unset, the static fallback
+  // (web access coming → iOS app / adviser pilot) remains as rendered above.
+  var c = window.CONSUMER_WEB_URL;
+  var a = window.ADVISER_WEB_URL;
+
+  if (c) {
+    document.getElementById('consumer-copy').textContent = 'Sign in to your earmarkIQ account on the web.';
+    var cb = document.getElementById('consumer-btn');
+    cb.href = c;
+    cb.textContent = 'Log in \u2192';
+    document.getElementById('consumer-note').textContent = 'Also available free on iOS';
+  }
+
+  if (a) {
+    document.getElementById('adviser-copy').textContent = 'Sign in to the earmarkIQ adviser dashboard.';
+    var ab = document.getElementById('adviser-btn');
+    ab.href = a;
+    ab.textContent = 'Log in \u2192';
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connecting Your Financial Data to AI Assistants: MCP Explained</title>
+  <meta name="description" content="What MCP is, why read-only access matters, and how connecting your money data to Claude and other AI assistants will actually work. A plain-English guide." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://earmarkiq.app/blog/connecting-financial-data-to-ai-assistants">
+  <meta name="theme-color" content="#080b12" />
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://earmarkiq.app/blog/connecting-financial-data-to-ai-assistants" />
+  <meta property="og:title" content="Connecting Your Financial Data to AI Assistants: MCP Explained" />
+  <meta property="og:description" content="What MCP is, why read-only access matters, and where personal finance meets AI assistants. A plain-English guide." />
+  <meta property="og:image" content="https://earmarkiq.app/api/og?title=Connecting%20financial%20data%20to%20AI%20assistants&subtitle=MCP%2C%20explained%20in%20plain%20English" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="earmarkIQ" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="article:published_time" content="2026-08-15T00:00:00+00:00" />
+  <meta property="article:section" content="AI" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@earmarkiq" />
+  <meta name="twitter:title" content="Connecting Your Financial Data to AI Assistants: MCP Explained" />
+  <meta name="twitter:description" content="What MCP is, why read-only matters, and where this is heading. Plain English, no hype." />
+  <meta name="twitter:image" content="https://earmarkiq.app/assets/og-image.webp" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Connecting Your Financial Data to AI Assistants: MCP Explained",
+        "description": "What MCP is, why read-only access matters, and how connecting your money data to Claude and other AI assistants will actually work.",
+        "datePublished": "2026-08-15",
+        "dateModified": "2026-08-15",
+        "author": { "@type": "Organization", "name": "earmarkIQ" },
+        "publisher": { "@type": "Organization", "name": "earmarkIQ", "url": "https://earmarkiq.app", "logo": { "@type": "ImageObject", "url": "https://earmarkiq.app/assets/logo.png" } },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://earmarkiq.app/blog/connecting-financial-data-to-ai-assistants" },
+        "inLanguage": "en-GB"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://earmarkiq.app/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://earmarkiq.app/blog" },
+          { "@type": "ListItem", "position": 3, "name": "Connecting Your Financial Data to AI Assistants" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is MCP (Model Context Protocol)?",
+            "acceptedAnswer": { "@type": "Answer", "text": "MCP is an open standard that lets AI assistants such as Claude connect to outside sources of information and tools, with the user's permission. An MCP server acts as the bridge between the assistant and a specific data source — so the assistant can answer questions using your real data instead of general knowledge." }
+          },
+          {
+            "@type": "Question",
+            "name": "Is it safe to connect financial data to an AI assistant?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The safety hinges on the design of the connection, not the assistant. The standard to look for: read-only access (the assistant can ask, never act), permissioned scope (you choose what's exposed), and a regulated data chain underneath. earmarkIQ Context is being built to that standard — read-only by design, on top of earmarkIQ's read-only Open Banking access via Finexer, an FCA-authorised provider." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can an AI assistant connected to my finances move my money?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Not through earmarkIQ. The entire chain is read-only: earmarkIQ accesses bank data under Account Information Services (AIS), which structurally cannot initiate payments, and earmarkIQ Context adds no write access of any kind. An assistant can query your data; it cannot touch your accounts." }
+          },
+          {
+            "@type": "Question",
+            "name": "When can I connect earmarkIQ to Claude?",
+            "acceptedAnswer": { "@type": "Answer", "text": "earmarkIQ Context — the MCP server that will connect your earmarkIQ data to Claude and other MCP-compatible assistants — is in development. Join the waitlist at earmarkiq.app/context to be emailed when it's ready to try." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg:#080b12; --surface:#0f1420; --border:#1e2536; --text:#e2e8f0; --text-dim:#94a3b8; --text-muted:#475569; --mint:#6ee7b7; --mint-dim:rgba(110,231,183,0.12); --blue:#60a5fa; --amber:#fbbf24; --red:#f87171; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(8,11,18,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-weight: 700; font-size: 18px; text-decoration: none; color: var(--text); letter-spacing: -0.02em; }
+    .nav-logo span { color: var(--mint); }
+    .nav-cta { background: var(--mint); color: #080b12; font-weight: 600; font-size: 13px; padding: 8px 18px; border-radius: 8px; text-decoration: none; transition: opacity 0.2s; }
+    .nav-cta:hover { opacity: 0.85; }
+    .page-wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 280px; gap: 64px; align-items: start; }
+    @media (max-width: 860px) { .page-wrap { grid-template-columns: 1fr; } .sidebar { display: none; } }
+    .hero { padding: 64px 24px 48px; max-width: 1100px; margin: 0 auto; }
+    .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--mint); }
+    .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: rgba(96,165,250,0.1); border: 1px solid rgba(96,165,250,0.25); color: var(--blue); font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 20px; }
+    h1 { font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(30px, 4.5vw, 46px); line-height: 1.12; letter-spacing: -0.02em; color: var(--text); margin-bottom: 20px; }
+    h1 em { font-style: italic; color: var(--mint); }
+    .hero-meta { display: flex; align-items: center; gap: 20px; font-size: 13px; color: var(--text-muted); margin-bottom: 32px; flex-wrap: wrap; }
+    .hero-meta-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--text-muted); }
+    .hero-intro { font-size: 19px; color: var(--text-dim); line-height: 1.7; max-width: 680px; border-left: 3px solid var(--mint); padding-left: 20px; }
+    article { padding-top: 8px; padding-bottom: 80px; }
+    h2 { font-family: 'Instrument Serif', Georgia, serif; font-size: 28px; line-height: 1.2; color: var(--text); margin: 52px 0 16px; letter-spacing: -0.01em; }
+    h3 { font-size: 18px; font-weight: 600; color: var(--text); margin: 28px 0 10px; }
+    p { margin-bottom: 20px; color: var(--text-dim); }
+    strong { color: var(--text); font-weight: 600; }
+    a { color: var(--mint); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr.section-divider { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+    .quick-answer { background: rgba(110,231,183,0.06); border: 1px solid rgba(110,231,183,0.2); border-radius: 12px; padding: 20px 24px; margin: 8px 0 32px; }
+    .quick-answer-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mint); margin-bottom: 8px; }
+    .quick-answer p { font-size: 15px; line-height: 1.7; color: var(--text-dim); margin: 0; }
+    .example-q { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--mint); border-radius: 0 8px 8px 0; padding: 12px 16px; margin: 10px 0; }
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 28px 0; border: 1px solid; }
+    .callout-mint { background: rgba(110,231,183,0.06); border-color: rgba(110,231,183,0.2); }
+    .callout-blue { background: rgba(96,165,250,0.06); border-color: rgba(96,165,250,0.2); }
+    .callout-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+    .callout-mint .callout-label { color: var(--mint); }
+    .callout-blue .callout-label { color: var(--blue); }
+    .callout p { margin-bottom: 0; }
+    .faq { margin: 16px 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+    .faq-q { padding: 16px 20px; font-weight: 600; font-size: 16px; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .faq-q:hover { background: rgba(255,255,255,0.02); }
+    .faq-chevron { color: var(--mint); flex-shrink: 0; transition: transform 0.2s; font-size: 18px; }
+    .faq-a { padding: 0 20px 16px; color: var(--text-dim); font-size: 15px; line-height: 1.7; display: none; }
+    .faq-item.open .faq-a { display: block; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .cta-block { background: linear-gradient(135deg, rgba(110,231,183,0.08), rgba(96,165,250,0.05)); border: 1px solid rgba(110,231,183,0.2); border-radius: 16px; padding: 36px; text-align: center; margin: 52px 0; }
+    .cta-block h2 { margin-top: 0; font-size: 26px; }
+    .cta-block p { max-width: 480px; margin: 0 auto 24px; }
+    .cta-btn { display: inline-block; background: var(--mint); color: #080b12; font-weight: 700; font-size: 15px; padding: 14px 32px; border-radius: 10px; text-decoration: none; transition: opacity 0.2s; }
+    .cta-btn:hover { opacity: 0.85; text-decoration: none; }
+    .cta-sub { font-size: 13px; color: var(--text-muted); margin-top: 12px; margin-bottom: 0; }
+    .sidebar { position: sticky; top: 76px; padding-top: 8px; }
+    .sidebar-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+    .sidebar-card h4 { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 14px; }
+    .toc-link { display: block; font-size: 14px; color: var(--text-dim); text-decoration: none; padding: 6px 0; border-bottom: 1px solid rgba(30,37,54,0.5); transition: color 0.15s; }
+    .toc-link:last-child { border-bottom: none; }
+    .toc-link:hover { color: var(--mint); text-decoration: none; }
+    .sidebar-cta-btn { display: block; width: 100%; background: var(--mint); color: #080b12; font-weight: 700; font-size: 14px; padding: 12px; border-radius: 8px; text-decoration: none; text-align: center; transition: opacity 0.2s; margin-top: 4px; }
+    .sidebar-cta-btn:hover { opacity: 0.85; text-decoration: none; }
+    footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 13px; color: var(--text-muted); }
+    footer a { color: var(--text-muted); }
+    footer a:hover { color: var(--mint); }
+  </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-62JW90868T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-62JW90868T');
+</script>
+<script>
+window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">earmark<span>IQ</span></a>
+  <a href="/context#waitlist-context" class="nav-cta">Join the Context waitlist →</a>
+</nav>
+
+<div class="hero">
+  <div class="breadcrumb">
+    <a href="/">Home</a> <span>›</span>
+    <a href="/blog">Blog</a> <span>›</span>
+    <span>Connecting Financial Data to AI Assistants</span>
+  </div>
+  <div class="hero-tag">MCP · Plain English</div>
+  <h1>Connecting your financial<br>data to <em>AI assistants.</em></h1>
+  <div class="hero-meta">
+    <span>By earmarkIQ</span>
+    <span class="hero-meta-dot"></span>
+    <span>August 2026</span>
+    <span class="hero-meta-dot"></span>
+    <span>7 min read</span>
+  </div>
+  <p class="hero-intro">
+    AI assistants are getting very good at answering questions — about everything except your own life, which they can't see. MCP is the standard changing that, and money is one of the places it matters most. Here's what it is, why read-only design is the whole ballgame, and where this is heading.
+  </p>
+</div>
+
+<div class="page-wrap">
+  <article>
+
+    <div class="quick-answer">
+      <div class="quick-answer-label">Quick Answer</div>
+      <p>MCP (Model Context Protocol) is an open standard that lets AI assistants like Claude connect to your data sources with your permission. An MCP server for your finances means asking your assistant "what did I spend on eating out last month?" and getting an answer from your real transactions. The critical safety property is read-only design: the assistant can ask, never act. <a href="/context">earmarkIQ Context</a> — our MCP server — is in development and built exactly that way.</p>
+    </div>
+
+    <h2 id="the-gap">The gap: assistants that know everything except your life</h2>
+
+    <p>Ask a frontier AI assistant to explain compound interest and you'll get a beautiful answer. Ask it whether <em>you</em> can afford to move flats this autumn, and it has nothing — because it can't see your rent, your income, your subscriptions or the £180 a month quietly leaking into food delivery. The knowledge is general; your finances are specific. Every personal finance question you ask a general assistant comes back with the same caveat: "it depends on your circumstances."</p>
+
+    <p>Until recently, the only fix was copy-and-paste: exporting statements, pasting spreadsheet fragments into a chat window, redacting account numbers by hand. Clumsy, error-prone, and stale the moment you did it.</p>
+
+    <h2 id="what-mcp-is">What MCP actually is</h2>
+
+    <p>The Model Context Protocol is an open standard — originally developed by Anthropic and now supported across a growing set of AI tools — that gives assistants a common way to connect to outside data sources and tools. Think of it like USB for AI: one standard plug, many devices. The assistant is on one side; on the other are <strong>MCP servers</strong>, each acting as a bridge to a specific source — your files, your calendar, a database… or your finances.</p>
+
+    <p>Three properties matter for a non-technical reader:</p>
+
+    <p><strong>Permissioned.</strong> An MCP server only exposes what it is built to expose, and only after you connect it. The assistant doesn't roam your accounts; it asks the server, and the server answers with what you've allowed.</p>
+
+    <p><strong>Scoped.</strong> The server defines exactly which questions can be answered — "monthly spending by category", "list of subscriptions", "net worth trend" — rather than opening a raw firehose.</p>
+
+    <p><strong>Standard.</strong> Because MCP is an open protocol, one server works with any assistant that speaks it — Claude today, others as they adopt it. You're not wiring your data to one company's chatbot.</p>
+
+    <h2 id="money-case">What this looks like for your money</h2>
+
+    <p>Connect a financial MCP server and the "it depends on your circumstances" caveat disappears, because the assistant can check your circumstances:</p>
+
+    <div class="example-q">"What did I spend on eating out last month, and how does it compare to my average?"</div>
+    <div class="example-q">"Which of my subscriptions put their prices up this year?"</div>
+    <div class="example-q">"How has my net worth moved since January — and what drove it?"</div>
+    <div class="example-q">"If I put £250 a month towards a deposit, what does my discretionary spending need to look like?"</div>
+
+    <p>The interesting shift isn't the individual answers — a good finance app gives you those. It's that the answers become available <em>wherever you already think</em>: drafting a budget in a document, planning a move in a chat thread, doing your monthly review in whichever tool you live in. The data follows the conversation instead of the conversation moving to the data.</p>
+
+    <h2 id="read-only">Why read-only is the whole ballgame</h2>
+
+    <p>Here's the question that should decide whether you ever connect financial data to an assistant: <strong>what can it do, at worst?</strong></p>
+
+    <p>Language models are probabilistic. They misread, they occasionally hallucinate, and agentic systems can be manipulated by cleverly crafted inputs. None of that is acceptable anywhere near the ability to move money. Which is why the design answer isn't "make the AI more careful" — it's <strong>make the worst case structurally boring</strong>. A read-only connection means the worst realistic failure is a wrong answer, which you can check. Not a wrong payment, which you cannot un-send.</p>
+
+    <p>earmarkIQ's chain is read-only at every link. Bank data enters via Open Banking <strong>Account Information Services (AIS)</strong> — a regulated access category that structurally cannot initiate payments (that would be PIS, a separate permission earmarkIQ doesn't use). <a href="/context">earmarkIQ Context</a>, the MCP server we're building, adds no write access of any kind on top. An assistant connected through it can query your categorised data; it cannot touch your accounts, change a setting, or spend a penny. The regulated plumbing underneath — consent, revocation, the FCA-authorised provider chain — is the same machinery we've explained for professional audiences in our <a href="/advisers/open-banking-for-financial-planners">Open Banking guide for financial planners</a>.</p>
+
+    <div class="callout callout-blue">
+      <div class="callout-label">ℹ️ A useful rule of thumb</div>
+      <p>Before connecting any financial tool to any AI system, find the sentence in its documentation that says what happens in the worst case. If the honest answer is anything other than "you get a wrong answer", keep your hands in your pockets.</p>
+    </div>
+
+    <h2 id="where-heading">Where this is heading</h2>
+
+    <p>The near-term version is question-answering: your assistant, grounded in your real numbers. The more interesting medium-term version is <em>context that follows you</em> — an assistant that knows, while you're weighing any decision with a price tag, what that price tag means for you specifically. Not because it guessed, but because your categorised financial picture is one permissioned query away.</p>
+
+    <p>The boring-but-important groundwork is data quality. An assistant is only as useful as the data behind the bridge: transactions have to be categorised, subscriptions detected, net worth assembled — before any protocol makes them queryable. That's the part earmarkIQ already does, live, today, for its iOS users. Context is the bridge being built on top.</p>
+
+    <p><strong>Status, plainly:</strong> earmarkIQ Context is in development — not shipped. If you want it, the useful thing to do now is <a href="/context#waitlist-context">join the waitlist</a> and start using earmarkIQ, so the data Context will expose is already organised when the bridge arrives.</p>
+
+    <hr class="section-divider" />
+
+    <h2 id="faq">FAQ</h2>
+
+    <div class="faq">
+      <div class="faq-item">
+        <div class="faq-q">What is MCP (Model Context Protocol)? <span class="faq-chevron">›</span></div>
+        <div class="faq-a">MCP is an open standard that lets AI assistants such as Claude connect to outside sources of information and tools, with the user's permission. An MCP server acts as the bridge between the assistant and a specific data source — so the assistant can answer questions using your real data instead of general knowledge.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is it safe to connect financial data to an AI assistant? <span class="faq-chevron">›</span></div>
+        <div class="faq-a">The safety hinges on the design of the connection, not the assistant. The standard to look for: read-only access (the assistant can ask, never act), permissioned scope (you choose what's exposed), and a regulated data chain underneath. earmarkIQ Context is being built to that standard — read-only by design, on top of earmarkIQ's read-only Open Banking access via Finexer, an FCA-authorised provider.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can an AI assistant connected to my finances move my money? <span class="faq-chevron">›</span></div>
+        <div class="faq-a">Not through earmarkIQ. The entire chain is read-only: earmarkIQ accesses bank data under Account Information Services (AIS), which structurally cannot initiate payments, and earmarkIQ Context adds no write access of any kind. An assistant can query your data; it cannot touch your accounts.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">When can I connect earmarkIQ to Claude? <span class="faq-chevron">›</span></div>
+        <div class="faq-a">earmarkIQ Context — the MCP server that will connect your earmarkIQ data to Claude and other MCP-compatible assistants — is in development. Join the waitlist at <a href="/context">earmarkiq.app/context</a> to be emailed when it's ready to try.</div>
+      </div>
+    </div>
+
+    <div class="cta-block">
+      <h2>Be first through the bridge</h2>
+      <p>earmarkIQ Context is in development. Join the waitlist and we'll email you the moment it's ready to try.</p>
+      <a href="/context#waitlist-context" class="cta-btn">Join the Context waitlist →</a>
+      <p class="cta-sub">Read-only by design · Built on FCA-regulated Open Banking rails</p>
+    </div>
+
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <h4>earmarkIQ Context</h4>
+      <p style="font-size:13px;color:var(--text-dim);margin-bottom:14px">Your earmarkIQ data, in Claude and other AI assistants. In development.</p>
+      <a href="/context#waitlist-context" class="sidebar-cta-btn">Join the waitlist →</a>
+    </div>
+    <div class="sidebar-card">
+      <h4>In this article</h4>
+      <a href="#the-gap" class="toc-link">The gap</a>
+      <a href="#what-mcp-is" class="toc-link">What MCP actually is</a>
+      <a href="#money-case" class="toc-link">What it looks like for money</a>
+      <a href="#read-only" class="toc-link">Why read-only matters</a>
+      <a href="#where-heading" class="toc-link">Where this is heading</a>
+      <a href="#faq" class="toc-link">FAQ</a>
+    </div>
+    <div class="sidebar-card">
+      <h4>Also read</h4>
+      <a href="/context" class="toc-link">earmarkIQ Context →</a>
+      <a href="/advisers/open-banking-for-financial-planners" class="toc-link">Open Banking: a practical guide →</a>
+      <a href="/blog/best-budgeting-apps-uk" class="toc-link">Best budgeting apps UK →</a>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <p>© 2026 earmarkIQ Ltd · <a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms</a> · <a href="mailto:hello@earmarkiq.app">Contact</a></p>
+  <p style="margin-top:8px">earmarkIQ is an FCA Appointed Representative of Finexer Ltd (FRN 925695). <a href="https://register.fca.org.uk/s/firm?id=001Sk000010irOJIAY" rel="nofollow" target="_blank">Verify on the FCA register</a>. Content on this site is for guidance only and does not constitute financial advice.</p>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>

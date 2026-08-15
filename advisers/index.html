@@ -82,17 +82,22 @@
       {
         "@type": "Question",
         "name": "Which cashflow modelling tools will earmarkIQ support?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Category-level expenditure exports shaped for Voyant, CashCalc, FinCalc and Phoebe are in development. Direct feeds into modelling tools, starting with Voyant and Intelliflo, are planned. During the pilot, exports are designed to map cleanly onto the expenditure screens of these tools so figures can be entered or imported without reworking categories." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Expenditure exports are live and modeller-agnostic — they work with any cashflow modelling tool today, and are built to map onto the expenditure screens of Voyant, Plan With Phoebe, CashCalc, FinCalc, Intelliflo and Truth (Prestwood). Direct feeds into modelling tools, starting with Voyant and Intelliflo, are in development." }
       },
       {
         "@type": "Question",
         "name": "What does the client see and use?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Clients use the standard earmarkIQ iOS app — live today on the App Store. They connect their UK bank accounts via Open Banking, and the app categorises spending automatically with AI transaction classification, tracks subscriptions, and builds a payday allocation plan. The adviser layer sits on top: clients grant their adviser access to category-level data through an explicit consent step that is in development." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Clients use the standard earmarkIQ iOS app — live today on the App Store. They connect their UK bank accounts via Open Banking, and the app categorises spending automatically with AI transaction classification, tracks subscriptions, and builds a payday allocation plan. The adviser layer sits on top: clients grant their adviser access through an explicit in-app consent step — live today — choosing category-level summaries or full transaction detail. Property valuation sits inside the client's net worth view, so the consented picture covers assets as well as spending." }
       },
       {
         "@type": "Question",
         "name": "How does client consent for adviser access work?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Adviser access is being built consent-first. The client grants access to their adviser at category level from within the app, can see what is shared, and can revoke access at any time. Advisers see categorised expenditure summaries rather than raw transaction feeds by default. This consent flow is in development and will be refined with pilot firms." }
+        "acceptedAnswer": { "@type": "Answer", "text": "Adviser access is consent-first and live today. The client grants access from within the app, choosing category-level summaries or transaction-level detail, can see exactly what is shared, and can revoke access at any time. Advisers can recategorise transactions so exports match how the firm models." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens when a client revokes adviser access?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Access ends straight away: the adviser can no longer view the client's data or generate new exports. Revocation is available to the client in the app at any time, requires no involvement from the firm, and does not affect the client's own use of earmarkIQ." }
       },
       {
         "@type": "Question",
@@ -102,7 +107,7 @@
       {
         "@type": "Question",
         "name": "When will adviser features be available?",
-        "acceptedAnswer": { "@type": "Answer", "text": "The consumer app is live now on iOS. The adviser layer — client consent grants, category-level exports for cashflow modelling tools, and the adviser dashboard — is in development, with pilot access coming for a small group of UK planning firms. Direct integrations with modelling tools are planned to follow. Firms that register interest will be contacted in order as pilot places open." }
+        "acceptedAnswer": { "@type": "Answer", "text": "The consumer iOS app and the adviser platform backend — consent grants, adviser recategorisation, and modelling exports — are live now. The adviser web dashboard and consumer web access are in development and being built with pilot firms, and direct modeller feeds are in development. Firms that register interest will be contacted in order as pilot places open." }
       },
       {
         "@type": "Question",
@@ -254,7 +259,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
   <div class="hero-tag">For Financial Planning Firms</div>
   <h1>Client expenditure data<br>your cashflow models can<br><em>actually trust.</em></h1>
   <p class="hero-intro">
-    Most expenditure figures in cashflow plans start life as a client's best guess in a spreadsheet. earmarkIQ replaces the guesswork with client-consented Open Banking data, categorised automatically and shaped for the modelling tools UK planning firms already use. Adviser features are in development — pilot access is coming.
+    Most expenditure figures in cashflow plans start life as a client's best guess in a spreadsheet. earmarkIQ replaces the guesswork with client-consented Open Banking data, categorised automatically and exportable today into the modelling tools UK planning firms already use. The adviser platform backend — consent grants, recategorisation, exports — is live; the web dashboard is in development. Pilot places are limited.
   </p>
   <a href="#pilot" class="hero-cta-btn">Register pilot interest →</a>
 </div>
@@ -264,7 +269,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 
     <div class="quick-answer">
       <div class="quick-answer-label">In one paragraph</div>
-      <p>earmarkIQ is a live UK consumer Open Banking app that categorises real spending automatically. For advisers, we're building a consent-first layer on top: clients grant their adviser access to category-level expenditure, and the data exports in shapes designed for Voyant, CashCalc, FinCalc and Phoebe. An adviser dashboard and direct modelling-tool feeds are planned. Pilot access for a small group of UK planning firms is coming — <a href="#pilot">register interest below</a>.</p>
+      <p>earmarkIQ is a live UK Open Banking app that categorises real client spending automatically — including property valuation inside net worth. The adviser platform backend is live: clients grant their adviser access at category or transaction level, advisers can recategorise, and expenditure exports work with any cashflow modelling tool today — <a href="/advisers/cashflow-modelling">Voyant, Plan With Phoebe, CashCalc, FinCalc, Intelliflo, Truth and more</a>. The adviser web dashboard and direct modeller feeds are in development. Pilot places for UK planning firms are limited — <a href="#pilot">register interest below</a>.</p>
     </div>
 
     <h2 id="the-problem">The expenditure problem every planning firm knows</h2>
@@ -299,18 +304,29 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
       <div class="feature-item">
         <div class="feature-icon">🔐</div>
         <div>
-          <strong>Client-controlled consent for adviser access.</strong>
-          <p>In development: clients grant their adviser access at category level from inside the app, see exactly what's shared, and can revoke at any time. Advisers see categorised summaries, not raw transaction feeds, by default.</p>
+          <strong>Client-controlled consent for adviser access — live.</strong>
+          <p>Clients grant their adviser access from inside the app at the level they choose — category summaries or full transaction detail — see exactly what's shared, and can revoke at any time.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">✏️</div>
+        <div>
+          <strong>Adviser recategorisation — live.</strong>
+          <p>Where the automatic classification doesn't match how your firm models — a client's "eating out" that you treat as discretionary lifestyle, say — advisers can recategorise, and the exports reflect your categories.</p>
         </div>
       </div>
       <div class="feature-item">
         <div class="feature-icon">📤</div>
         <div>
-          <strong>Exports shaped for cashflow modelling.</strong>
-          <p>In development: category-level expenditure exports designed to map onto the expenditure screens of Voyant, CashCalc, FinCalc and Phoebe — so the numbers drop into your existing process rather than forcing a new one.</p>
+          <strong>Exports for cashflow modelling — live, and modeller-agnostic.</strong>
+          <p>Category and transaction-level expenditure exports work with any modelling tool today — built to map onto the expenditure screens of Voyant, Plan With Phoebe, CashCalc, FinCalc, Intelliflo and Truth. Direct feeds are in development. See <a href="/advisers/cashflow-modelling">how the export fits each tool</a>.</p>
         </div>
       </div>
     </div>
+
+    <h2 id="property-net-worth">Property and net worth in the same picture</h2>
+
+    <p>Expenditure is half of the fact-find; assets are the other half. earmarkIQ includes property valuation inside the client's net worth view — live today — alongside their connected accounts. For the client, that means one app rather than a budgeting tool here and a net worth spreadsheet there. For the adviser, it means the consented picture you receive isn't just outgoings: it's the household balance sheet the client actually looks at, kept current between reviews rather than reconstructed at each one.</p>
 
     <p>The practical effect at review time: instead of asking a client to guess what changed, you open twelve months of categorised reality and talk about what it means. The conversation moves from data collection to advice — which is the part clients are paying for.</p>
 
@@ -329,31 +345,38 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
         </div>
       </div>
       <div class="roadmap-item">
-        <span class="roadmap-status rs-dev">In development</span>
+        <span class="roadmap-status rs-live">Live</span>
         <div>
-          <h3>Client consent grants</h3>
-          <p>The in-app flow for clients to share category-level expenditure with their adviser, with visibility and revocation controls.</p>
+          <h3>Property valuation in net worth</h3>
+          <p>Property sits inside the client's net worth view alongside connected accounts — one household balance sheet, not a separate tool.</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <span class="roadmap-status rs-live">Live</span>
+        <div>
+          <h3>Adviser platform backend</h3>
+          <p>Client-controlled consent grants at category or transaction level, adviser recategorisation, and expenditure exports that work with any cashflow modelling tool.</p>
         </div>
       </div>
       <div class="roadmap-item">
         <span class="roadmap-status rs-dev">In development</span>
         <div>
-          <h3>Modelling-tool exports</h3>
-          <p>Category-level exports shaped for Voyant, CashCalc, FinCalc and Phoebe expenditure screens.</p>
+          <h3>Adviser web dashboard</h3>
+          <p>A firm-level web view of consented clients and their categorised expenditure, being built with pilot firms.</p>
         </div>
       </div>
       <div class="roadmap-item">
         <span class="roadmap-status rs-dev">In development</span>
         <div>
-          <h3>Adviser dashboard</h3>
-          <p>A firm-level view of consented clients and their categorised expenditure, built with pilot firms.</p>
+          <h3>Consumer web access</h3>
+          <p>Web access for clients alongside the iOS app.</p>
         </div>
       </div>
       <div class="roadmap-item">
-        <span class="roadmap-status rs-planned">Planned</span>
+        <span class="roadmap-status rs-dev">In development</span>
         <div>
           <h3>Direct modelling-tool feeds</h3>
-          <p>Direct integrations starting with Voyant and Intelliflo, so consented data flows into the tools without an export step.</p>
+          <p>Direct feeds into cashflow tools, starting with Voyant and Intelliflo, so consented data flows in without an export step. Exports work with any tool today — <a href="/advisers/cashflow-modelling">see the modelling connections page</a>.</p>
         </div>
       </div>
     </div>
@@ -365,7 +388,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 
     <div class="pilot-block" id="pilot">
       <h2>Register pilot interest</h2>
-      <p>We're opening pilot access to a small group of UK planning firms as the adviser layer ships. Leave your work email and we'll be in touch with details — no commitment.</p>
+      <p>The adviser platform backend is live and we are onboarding a small group of UK planning firms as the web dashboard ships. Leave your work email and we'll be in touch with details — no commitment.</p>
       <form class="pilot-form" id="pilot-form" novalidate>
         <input type="email" class="pilot-in" id="pilot-email" placeholder="you@yourfirm.co.uk" autocomplete="email" inputmode="email">
         <button type="submit" class="pilot-btn" id="pilot-submit">Register interest</button>
@@ -386,15 +409,19 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
       </div>
       <div class="faq-item">
         <div class="faq-q">Which cashflow modelling tools will earmarkIQ support? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">Category-level expenditure exports shaped for Voyant, CashCalc, FinCalc and Phoebe are in development. Direct feeds into modelling tools, starting with Voyant and Intelliflo, are planned. During the pilot, exports are designed to map cleanly onto the expenditure screens of these tools so figures can be entered or imported without reworking categories.</div>
+        <div class="faq-a">Expenditure exports are live and modeller-agnostic — they work with any cashflow modelling tool today, and are built to map onto the expenditure screens of Voyant, Plan With Phoebe, CashCalc, FinCalc, Intelliflo and Truth (Prestwood). Direct feeds into modelling tools, starting with Voyant and Intelliflo, are in development.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">What does the client see and use? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">Clients use the standard earmarkIQ iOS app — live today on the App Store. They connect their UK bank accounts via Open Banking, and the app categorises spending automatically, tracks subscriptions, and builds a payday allocation plan. The adviser layer sits on top: clients grant their adviser access to category-level data through an explicit consent step that is in development.</div>
+        <div class="faq-a">Clients use the standard earmarkIQ iOS app — live today on the App Store. They connect their UK bank accounts via Open Banking, and the app categorises spending automatically, tracks subscriptions, and builds a payday allocation plan. The adviser layer sits on top: clients grant their adviser access through an explicit in-app consent step — live today — choosing category-level summaries or full transaction detail. Property valuation sits inside the client's net worth view, so the consented picture covers assets as well as spending.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">How does client consent for adviser access work? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">Adviser access is being built consent-first. The client grants access to their adviser at category level from within the app, can see what is shared, and can revoke access at any time. Advisers see categorised expenditure summaries rather than raw transaction feeds by default. This consent flow is in development and will be refined with pilot firms.</div>
+        <div class="faq-a">Adviser access is consent-first and live today. The client grants access from within the app, choosing category-level summaries or transaction-level detail, can see exactly what is shared, and can revoke access at any time. Advisers can recategorise transactions so exports match how the firm models.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What happens when a client revokes adviser access? <span class="faq-chevron">›</span></div>
+        <div class="faq-a">Access ends straight away: the adviser can no longer view the client's data or generate new exports. Revocation is available to the client in the app at any time, requires no involvement from the firm, and does not affect the client's own use of earmarkIQ.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">What does earmarkIQ for advisers cost? <span class="faq-chevron">›</span></div>
@@ -402,7 +429,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
       </div>
       <div class="faq-item">
         <div class="faq-q">When will adviser features be available? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">The consumer app is live now on iOS. The adviser layer — client consent grants, category-level exports for cashflow modelling tools, and the adviser dashboard — is in development, with pilot access coming for a small group of UK planning firms. Direct integrations with modelling tools are planned to follow. Firms that register interest will be contacted in order as pilot places open.</div>
+        <div class="faq-a">The consumer iOS app and the adviser platform backend — consent grants, adviser recategorisation, and modelling exports — are live now. The adviser web dashboard and consumer web access are in development and being built with pilot firms, and direct modeller feeds are in development. Firms that register interest will be contacted in order as pilot places open.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Do clients need to change bank or move money into earmarkIQ? <span class="faq-chevron">›</span></div>
@@ -416,20 +443,22 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
     <div class="sidebar-card">
       <h4>Pilot access</h4>
       <div class="sidebar-feature"><span class="sf-icon">✦</span><span>Client-consented expenditure data</span></div>
-      <div class="sidebar-feature"><span class="sf-icon">✦</span><span>Exports for Voyant, CashCalc, FinCalc, Phoebe — in development</span></div>
-      <div class="sidebar-feature" style="margin-bottom:16px"><span class="sf-icon">✦</span><span>Direct tool feeds — planned</span></div>
+      <div class="sidebar-feature"><span class="sf-icon">✦</span><span>Consent grants and modelling exports — live</span></div>
+      <div class="sidebar-feature" style="margin-bottom:16px"><span class="sf-icon">✦</span><span>Adviser dashboard and direct feeds — in development</span></div>
       <a href="#pilot" class="sidebar-cta-btn">Register pilot interest →</a>
     </div>
     <div class="sidebar-card">
       <h4>On this page</h4>
       <a href="#the-problem" class="toc-link">The expenditure problem</a>
       <a href="#how-it-works" class="toc-link">How earmarkIQ solves it</a>
+      <a href="#property-net-worth" class="toc-link">Property and net worth</a>
       <a href="#whats-coming" class="toc-link">What's coming</a>
       <a href="#pilot" class="toc-link">Register pilot interest</a>
       <a href="#faq" class="toc-link">Adviser FAQ</a>
     </div>
     <div class="sidebar-card">
       <h4>Adviser guides</h4>
+      <a href="/advisers/cashflow-modelling" class="toc-link">Cashflow modelling connections →</a>
       <a href="/advisers/replacing-moneyhub-voyant-integration" class="toc-link">Replacing the Moneyhub Voyant integration →</a>
       <a href="/advisers/client-expenditure-data" class="toc-link">How advisers collect expenditure data →</a>
       <a href="/advisers/pocketsmith-alternative-uk-advisers" class="toc-link">PocketSmith for advisers: UK alternative →</a>
