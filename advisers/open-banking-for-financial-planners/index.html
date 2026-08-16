@@ -61,7 +61,7 @@
           {
             "@type": "Question",
             "name": "What is the difference between AIS and PIS in Open Banking?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Account Information Services (AIS) provide read-only access: an authorised app can view balances and transactions but cannot touch the money. Payment Initiation Services (PIS) are a separate permission allowing an authorised app to initiate a payment with the customer's explicit approval each time. Expenditure data collection for planning uses AIS only — earmarkIQ, for example, is read-only and cannot move client money." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Account Information Services (AIS) provide read-only access: an authorised app can view balances and transactions but cannot touch the money. Payment Initiation Services (PIS) are a separate permission allowing an authorised app to initiate a payment with the customer's explicit approval each time. Expenditure data collection for planning uses AIS only — earmarkIQ operates read-only and cannot move client money. It holds Payment Initiation permissions for planned features, but these are currently disabled." }
           },
           {
             "@type": "Question",
@@ -76,7 +76,7 @@
           {
             "@type": "Question",
             "name": "Can a financial adviser get direct access to a client's Open Banking data?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Not directly — Open Banking consent is between the client, their bank and the authorised app. The workable adviser model is a consented sharing layer inside the app: the client connects their own accounts, then explicitly grants their adviser access to categorised summaries. earmarkIQ has built exactly this consent-first adviser layer — consent grants and expenditure exports are live, with the adviser web dashboard in development." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Not directly — Open Banking consent is between the client, their bank and the authorised app. The workable adviser model is a consented sharing layer inside the app: the client connects their own accounts, then explicitly grants their adviser access to categorised summaries. earmarkIQ has built exactly this consent-first adviser layer — consent grants, expenditure exports and the adviser web dashboard are all live." }
           }
         ]
       }
@@ -205,7 +205,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 
     <div class="quick-answer">
       <div class="quick-answer-label">Quick Answer</div>
-      <p>Open Banking is the UK's regulated framework for letting authorised apps read bank account data with the customer's consent. Expenditure collection uses Account Information Services (AIS) — read-only, no ability to touch money. The client authorises access with their own bank, no credentials are shared, and consent is revocable at any time. For planning firms, it replaces the expenditure questionnaire with continuously accumulating, categorised reality. earmarkIQ uses AIS via Finexer, an FCA-authorised provider — the <a href="/advisers">adviser access layer is in development</a>.</p>
+      <p>Open Banking is the UK's regulated framework for letting authorised apps read bank account data with the customer's consent. Expenditure collection uses Account Information Services (AIS) — read-only, no ability to touch money. The client authorises access with their own bank, no credentials are shared, and consent is revocable at any time. For planning firms, it replaces the expenditure questionnaire with continuously accumulating, categorised reality. earmarkIQ uses AIS via Finexer, an FCA-authorised provider — the <a href="/advisers">adviser platform, including the web dashboard, is live</a>.</p>
     </div>
 
     <h2 id="what-it-is">What Open Banking actually is</h2>
@@ -218,7 +218,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 
     <p>Open Banking splits into two entirely separate services, and the distinction matters for how you explain it to clients.</p>
 
-    <p><strong>Account Information Services (AIS)</strong> — read-only access. An AIS connection can see balances, transactions, direct debits and standing orders. It cannot move money, cannot make payments, cannot change anything on the account. This is the permission expenditure data collection uses, and the only permission earmarkIQ uses: the app reads and categorises, and that is the full extent of its access.</p>
+    <p><strong>Account Information Services (AIS)</strong> — read-only access. An AIS connection can see balances, transactions, direct debits and standing orders. It cannot move money, cannot make payments, cannot change anything on the account. This is the permission all of earmarkIQ's data access runs on today: the app reads and categorises, and that is the full extent of what it does with your clients' accounts. (earmarkIQ also holds Payment Initiation permissions for planned allocation features, but these are switched off and unavailable to users.)</p>
 
     <p><strong>Payment Initiation Services (PIS)</strong> — a separate permission that allows an authorised app to initiate a payment, with the customer explicitly approving each transaction. PIS powers things like account-to-account payments at checkout. It requires its own authorisation and its own consent, and an AIS-only app has no route to it. When a client asks "can this app take my money?", the accurate answer for an AIS-only tool is no — structurally, not just contractually.</p>
 
@@ -274,7 +274,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 
     <p>Open Banking consent is between the client, their bank and the authorised app — an adviser can't sit inside that triangle directly. The workable model is a consented sharing layer: the client connects their own accounts to the app, then separately and explicitly grants their adviser access to the categorised output. The adviser sees expenditure summaries with drill-down where needed; the client keeps control and can revoke; the firm gets an evidence-based expenditure line for the cashflow model.</p>
 
-    <p>That sharing layer is live in earmarkIQ for UK planning firms — client consent grants at category or transaction level, adviser recategorisation, and <a href="/advisers/cashflow-modelling">expenditure exports that work with any cashflow modelling tool</a>. The adviser web dashboard is in development, with pilot places limited. Firms displaced by the Moneyhub shutdown have the most immediate reason to look: our guide to <a href="/advisers/replacing-moneyhub-voyant-integration">replacing the Moneyhub Voyant integration</a> covers that migration specifically.</p>
+    <p>That sharing layer is live in earmarkIQ for UK planning firms — client consent grants at category or transaction level, adviser recategorisation, and <a href="/advisers/cashflow-modelling">expenditure exports that work with any cashflow modelling tool</a>. The adviser web dashboard is live, with pilot places limited. Firms displaced by the Moneyhub shutdown have the most immediate reason to look: our guide to <a href="/advisers/replacing-moneyhub-voyant-integration">replacing the Moneyhub Voyant integration</a> covers that migration specifically.</p>
 
     <hr class="section-divider" />
 
@@ -283,7 +283,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
     <div class="faq">
       <div class="faq-item">
         <div class="faq-q">What is the difference between AIS and PIS? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">Account Information Services (AIS) provide read-only access: an authorised app can view balances and transactions but cannot touch the money. Payment Initiation Services (PIS) are a separate permission allowing an authorised app to initiate a payment with the customer's explicit approval each time. Expenditure data collection for planning uses AIS only — earmarkIQ, for example, is read-only and cannot move client money.</div>
+        <div class="faq-a">Account Information Services (AIS) provide read-only access: an authorised app can view balances and transactions but cannot touch the money. Payment Initiation Services (PIS) are a separate permission allowing an authorised app to initiate a payment with the customer's explicit approval each time. Expenditure data collection for planning uses AIS only — earmarkIQ operates read-only and cannot move client money. It holds Payment Initiation permissions for planned features, but these are currently disabled.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">How does Open Banking consent work for clients? <span class="faq-chevron">›</span></div>
@@ -295,7 +295,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
       </div>
       <div class="faq-item">
         <div class="faq-q">Can an adviser get direct access to a client's Open Banking data? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">Not directly — Open Banking consent is between the client, their bank and the authorised app. The workable adviser model is a consented sharing layer inside the app: the client connects their own accounts, then explicitly grants their adviser access to categorised summaries. earmarkIQ has built exactly this consent-first adviser layer — consent grants and expenditure exports are live, with the adviser web dashboard in development.</div>
+        <div class="faq-a">Not directly — Open Banking consent is between the client, their bank and the authorised app. The workable adviser model is a consented sharing layer inside the app: the client connects their own accounts, then explicitly grants their adviser access to categorised summaries. earmarkIQ has built exactly this consent-first adviser layer — consent grants, expenditure exports and the adviser web dashboard are all live.</div>
       </div>
     </div>
 

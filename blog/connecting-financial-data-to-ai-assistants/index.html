@@ -76,7 +76,7 @@
           {
             "@type": "Question",
             "name": "When can I connect earmarkIQ to Claude?",
-            "acceptedAnswer": { "@type": "Answer", "text": "earmarkIQ Context — the MCP server that will connect your earmarkIQ data to Claude and other MCP-compatible assistants — is in development. Join the waitlist at earmarkiq.app/context to be emailed when it's ready to try." }
+            "acceptedAnswer": { "@type": "Answer", "text": "earmarkIQ Context is live now: get your Context address from your earmarkIQ account, add it as a custom connector in Claude (verified) or any MCP-capable assistant, and approve read-only access. Setup steps are at earmarkiq.app/context." }
           }
         ]
       }
@@ -172,7 +172,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 
 <nav>
   <a href="/" class="nav-logo">earmark<span>IQ</span></a>
-  <a href="/context#waitlist-context" class="nav-cta">Join the Context waitlist →</a>
+  <a href="/context#connect" class="nav-cta">Connect your assistant →</a>
 </nav>
 
 <div class="hero">
@@ -200,7 +200,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 
     <div class="quick-answer">
       <div class="quick-answer-label">Quick Answer</div>
-      <p>MCP (Model Context Protocol) is an open standard that lets AI assistants like Claude connect to your data sources with your permission. An MCP server for your finances means asking your assistant "what did I spend on eating out last month?" and getting an answer from your real transactions. The critical safety property is read-only design: the assistant can ask, never act. <a href="/context">earmarkIQ Context</a> — our MCP server — is in development and built exactly that way.</p>
+      <p>MCP (Model Context Protocol) is an open standard that lets AI assistants like Claude connect to your data sources with your permission. An MCP server for your finances means asking your assistant "what did I spend on eating out last month?" and getting an answer from your real transactions. The critical safety property is read-only design: the assistant can ask, never act. <a href="/context">earmarkIQ Context</a> — our MCP server — is live, and built exactly that way.</p>
     </div>
 
     <h2 id="the-gap">The gap: assistants that know everything except your life</h2>
@@ -238,7 +238,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 
     <p>Language models are probabilistic. They misread, they occasionally hallucinate, and agentic systems can be manipulated by cleverly crafted inputs. None of that is acceptable anywhere near the ability to move money. Which is why the design answer isn't "make the AI more careful" — it's <strong>make the worst case structurally boring</strong>. A read-only connection means the worst realistic failure is a wrong answer, which you can check. Not a wrong payment, which you cannot un-send.</p>
 
-    <p>earmarkIQ's chain is read-only at every link. Bank data enters via Open Banking <strong>Account Information Services (AIS)</strong> — a regulated access category that structurally cannot initiate payments (that would be PIS, a separate permission earmarkIQ doesn't use). <a href="/context">earmarkIQ Context</a>, the MCP server we're building, adds no write access of any kind on top. An assistant connected through it can query your categorised data; it cannot touch your accounts, change a setting, or spend a penny. The regulated plumbing underneath — consent, revocation, the FCA-authorised provider chain — is the same machinery we've explained for professional audiences in our <a href="/advisers/open-banking-for-financial-planners">Open Banking guide for financial planners</a>.</p>
+    <p>earmarkIQ's chain is read-only at every link. Bank data enters via Open Banking <strong>Account Information Services (AIS)</strong> — a regulated access category that structurally cannot initiate payments (that would be PIS, a separate permission earmarkIQ holds for planned features but keeps disabled). <a href="/context">earmarkIQ Context</a>, the MCP server we're building, adds no write access of any kind on top. An assistant connected through it can query your categorised data; it cannot touch your accounts, change a setting, or spend a penny. The regulated plumbing underneath — consent, revocation, the FCA-authorised provider chain — is the same machinery we've explained for professional audiences in our <a href="/advisers/open-banking-for-financial-planners">Open Banking guide for financial planners</a>.</p>
 
     <div class="callout callout-blue">
       <div class="callout-label">ℹ️ A useful rule of thumb</div>
@@ -251,7 +251,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 
     <p>The boring-but-important groundwork is data quality. An assistant is only as useful as the data behind the bridge: transactions have to be categorised, subscriptions detected, net worth assembled — before any protocol makes them queryable. That's the part earmarkIQ already does, live, today, for its iOS users. Context is the bridge being built on top.</p>
 
-    <p><strong>Status, plainly:</strong> earmarkIQ Context is in development — not shipped. If you want it, the useful thing to do now is <a href="/context#waitlist-context">join the waitlist</a> and start using earmarkIQ, so the data Context will expose is already organised when the bridge arrives.</p>
+    <p><strong>Status, plainly:</strong> earmarkIQ Context is live. Get your Context address from your earmarkIQ account, add it as a custom connector in your assistant, and approve read-only access — <a href="/context#connect">setup steps here</a>. The more of your data earmarkIQ already organises, the more the bridge is worth crossing.</p>
 
     <hr class="section-divider" />
 
@@ -272,14 +272,14 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
       </div>
       <div class="faq-item">
         <div class="faq-q">When can I connect earmarkIQ to Claude? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">earmarkIQ Context — the MCP server that will connect your earmarkIQ data to Claude and other MCP-compatible assistants — is in development. Join the waitlist at <a href="/context">earmarkiq.app/context</a> to be emailed when it's ready to try.</div>
+        <div class="faq-a">earmarkIQ Context is live now: get your Context address from your earmarkIQ account, add it as a custom connector in Claude (verified) or any MCP-capable assistant, and approve read-only access. Setup steps are at <a href="/context">earmarkiq.app/context</a>.</div>
       </div>
     </div>
 
     <div class="cta-block">
       <h2>Be first through the bridge</h2>
-      <p>earmarkIQ Context is in development. Join the waitlist and we'll email you the moment it's ready to try.</p>
-      <a href="/context#waitlist-context" class="cta-btn">Join the Context waitlist →</a>
+      <p>earmarkIQ Context is live — connect Claude or any MCP-capable assistant to your own financial picture in a few minutes.</p>
+      <a href="/context#connect" class="cta-btn">Connect your assistant →</a>
       <p class="cta-sub">Read-only by design · Built on FCA-regulated Open Banking rails</p>
     </div>
 
@@ -288,8 +288,8 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
   <aside class="sidebar">
     <div class="sidebar-card">
       <h4>earmarkIQ Context</h4>
-      <p style="font-size:13px;color:var(--text-dim);margin-bottom:14px">Your earmarkIQ data, in Claude and other AI assistants. In development.</p>
-      <a href="/context#waitlist-context" class="sidebar-cta-btn">Join the waitlist →</a>
+      <p style="font-size:13px;color:var(--text-dim);margin-bottom:14px">Your earmarkIQ data, in Claude and other MCP-capable assistants. Live now.</p>
+      <a href="/context#connect" class="sidebar-cta-btn">Get connected →</a>
     </div>
     <div class="sidebar-card">
       <h4>In this article</h4>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>earmarkIQ Context — Connect Your Financial Data to AI Assistants</title>
-  <meta name="description" content="earmarkIQ Context is an MCP server in development: ask Claude and other AI assistants about your spending, subscriptions and net worth. Read-only by design. Join the waitlist." />
+  <title>earmarkIQ Context — Connect Your Bank Data to AI Assistants | UK Open Banking MCP</title>
+  <meta name="description" content="earmarkIQ Context is a live, read-only MCP server: ask Claude or any MCP-capable assistant about your own spending, subscriptions, net worth and property — grounded in your UK Open Banking data." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://earmarkiq.app/context">
   <meta name="theme-color" content="#080b12" />
@@ -16,9 +16,9 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://earmarkiq.app/context" />
-  <meta property="og:title" content="earmarkIQ Context — Connect Your Financial Data to AI Assistants" />
-  <meta property="og:description" content="An MCP server in development: ask Claude and other AI assistants about your spending, subscriptions and net worth. Read-only by design." />
-  <meta property="og:image" content="https://earmarkiq.app/api/og?title=earmarkIQ%20Context&subtitle=Your%20money%2C%20in%20your%20AI%20assistant" />
+  <meta property="og:title" content="earmarkIQ Context — Connect Your Bank Data to AI Assistants" />
+  <meta property="og:description" content="A live, read-only MCP server: ask Claude or any MCP-capable assistant about your own spending, subscriptions, net worth and property." />
+  <meta property="og:image" content="https://earmarkiq.app/api/og?title=earmarkIQ%20Context&subtitle=Your%20money%2C%20in%20your%20AI%20assistant%20%E2%80%94%20live" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="earmarkIQ" />
@@ -26,8 +26,8 @@
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@earmarkiq" />
-  <meta name="twitter:title" content="earmarkIQ Context — Connect Your Financial Data to AI Assistants" />
-  <meta name="twitter:description" content="An MCP server in development: ask your AI assistant about your spending, subscriptions and net worth. Read-only by design." />
+  <meta name="twitter:title" content="earmarkIQ Context — Connect Your Bank Data to AI Assistants" />
+  <meta name="twitter:description" content="A live, read-only MCP server for your finances. Claude verified; works with any MCP-capable assistant." />
   <meta name="twitter:image" content="https://earmarkiq.app/assets/og-image.webp" />
 
   <script type="application/ld+json">
@@ -37,8 +37,9 @@
       {
         "@type": "WebPage",
         "name": "earmarkIQ Context",
-        "description": "earmarkIQ Context is an MCP server in development that connects your earmarkIQ financial data to Claude and other AI assistants. Read-only by design.",
+        "description": "earmarkIQ Context is a live, read-only MCP server that connects your earmarkIQ financial data to Claude and any MCP-capable AI assistant.",
         "url": "https://earmarkiq.app/context",
+        "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2"] },
         "publisher": { "@type": "Organization", "name": "earmarkIQ", "url": "https://earmarkiq.app" }
       },
       {
@@ -54,17 +55,27 @@
           {
             "@type": "Question",
             "name": "What is an MCP server?",
-            "acceptedAnswer": { "@type": "Answer", "text": "MCP (Model Context Protocol) is an open standard that lets AI assistants such as Claude connect securely to outside sources of information. An MCP server is the bridge: it gives your assistant permissioned access to specific data — in earmarkIQ Context's case, your own categorised financial picture — so answers are grounded in your real numbers rather than general knowledge." }
+            "acceptedAnswer": { "@type": "Answer", "text": "MCP (Model Context Protocol) is an open standard that lets AI assistants such as Claude connect securely to outside sources of information, with your permission. An MCP server is the bridge: it gives your assistant permissioned access to specific data — in earmarkIQ Context's case, your own categorised financial picture — so answers are grounded in your real numbers rather than general knowledge." }
           },
           {
             "@type": "Question",
             "name": "Can an AI assistant connected via earmarkIQ Context move my money?",
-            "acceptedAnswer": { "@type": "Answer", "text": "No. earmarkIQ Context is read-only by design, and earmarkIQ itself uses read-only Open Banking access (AIS) — there is no ability to move money, make payments or change anything on your accounts anywhere in the chain. An assistant can ask about your data; it cannot act on your accounts." }
+            "acceptedAnswer": { "@type": "Answer", "text": "No. earmarkIQ Context is read-only: an assistant can read your data, and that is all. It cannot move money, make payments, change settings, or alter anything on your accounts, and you can revoke its access at any time." }
           },
           {
             "@type": "Question",
-            "name": "When will earmarkIQ Context be available?",
-            "acceptedAnswer": { "@type": "Answer", "text": "earmarkIQ Context is in development. Join the waitlist and we'll email you when it's ready to try — no commitment, and your earmarkIQ app works fully without it in the meantime." }
+            "name": "Which AI assistants work with earmarkIQ Context?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Any assistant that supports the Model Context Protocol and custom connectors. Claude is verified; because MCP is an open standard, other MCP-capable assistants can connect the same way, though we haven't verified each one individually." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I connect my bank data to an AI assistant with earmarkIQ Context?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Three steps: get your personal Context address from your earmarkIQ account; add it as a custom connector in your MCP-capable assistant (Claude verified); then approve read-only access when the assistant asks. Your bank data itself stays with earmarkIQ — the assistant reads the categorised picture, never your bank connection, and never your credentials." }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I disconnect an assistant from my data?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Revoke Context access from your earmarkIQ account at any time, or remove the connector from your assistant. Access ends there and then — nothing about your earmarkIQ app or bank connections is affected." }
           }
         ]
       }
@@ -91,7 +102,9 @@
     .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
     .breadcrumb a { color: var(--text-muted); text-decoration: none; }
     .breadcrumb a:hover { color: var(--mint); }
-    .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: rgba(96,165,250,0.1); border: 1px solid rgba(96,165,250,0.25); color: var(--blue); font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 20px; }
+    .hero-tag { display: inline-flex; align-items: center; gap: 8px; background: var(--mint-dim); border: 1px solid rgba(110,231,183,0.25); color: var(--mint); font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 20px; }
+    .live-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--mint); animation: pd 2s ease infinite; }
+    @keyframes pd { 0%,100% { box-shadow: 0 0 0 0 rgba(110,231,183,.4); } 50% { box-shadow: 0 0 0 7px rgba(110,231,183,0); } }
     h1 { font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(30px, 5vw, 46px); line-height: 1.12; letter-spacing: -0.02em; color: var(--text); margin-bottom: 20px; }
     h1 em { font-style: italic; color: var(--mint); }
     h2 { font-family: 'Instrument Serif', Georgia, serif; font-size: 26px; line-height: 1.2; color: var(--text); margin: 44px 0 14px; letter-spacing: -0.01em; }
@@ -99,10 +112,27 @@
     strong { color: var(--text); font-weight: 600; }
     a { color: var(--mint); text-decoration: none; }
     a:hover { text-decoration: underline; }
+    ul.reads { list-style: none; margin: 0 0 18px; }
+    ul.reads li { display: flex; gap: 10px; align-items: flex-start; padding: 8px 0; border-bottom: 1px solid rgba(30,37,54,0.5); font-size: 15px; color: var(--text-dim); }
+    ul.reads li:last-child { border-bottom: none; }
+    ul.reads .tick { color: var(--mint); flex-shrink: 0; font-weight: 700; }
     .example-q { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--mint); border-radius: 0 8px 8px 0; padding: 12px 16px; margin: 10px 0; }
     .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border: 1px solid rgba(110,231,183,0.2); background: rgba(110,231,183,0.06); }
     .callout-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; color: var(--mint); }
     .callout p { margin-bottom: 0; }
+    .steps { counter-reset: step; margin: 20px 0 8px; }
+    .step { display: flex; gap: 16px; margin-bottom: 18px; align-items: flex-start; }
+    .step::before { counter-increment: step; content: counter(step); flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: var(--mint-dim); border: 1px solid rgba(110,231,183,0.25); color: var(--mint); font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; }
+    .step h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+    .step p { font-size: 14px; margin-bottom: 0; }
+    .faq { margin: 16px 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+    .faq-q { padding: 15px 18px; font-weight: 600; font-size: 15px; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .faq-q:hover { background: rgba(255,255,255,0.02); }
+    .faq-chevron { color: var(--mint); flex-shrink: 0; transition: transform 0.2s; font-size: 18px; }
+    .faq-a { padding: 0 18px 15px; color: var(--text-dim); font-size: 14px; line-height: 1.7; display: none; }
+    .faq-item.open .faq-a { display: block; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
     .pilot-block { background: linear-gradient(135deg, rgba(110,231,183,0.08), rgba(96,165,250,0.05)); border: 1px solid rgba(110,231,183,0.2); border-radius: 16px; padding: 32px; text-align: center; margin: 44px 0; }
     .pilot-block h2 { margin-top: 0; font-size: 24px; }
     .pilot-block p { max-width: 440px; margin: 0 auto 22px; }
@@ -139,7 +169,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 
 <nav>
   <a href="/" class="nav-logo">earmark<span>IQ</span></a>
-  <a href="#waitlist-context" class="nav-cta">Join the waitlist →</a>
+  <a href="#connect" class="nav-cta">Connect your assistant →</a>
 </nav>
 
 <div class="wrap">
@@ -148,38 +178,73 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
       <a href="/">Home</a> <span>›</span>
       <span>earmarkIQ Context</span>
     </div>
-    <div class="hero-tag">In Development</div>
+    <div class="hero-tag"><span class="live-dot"></span>Live</div>
     <h1>earmarkIQ Context:<br>your money, in your<br><em>AI assistant.</em></h1>
-    <p>earmarkIQ Context is an MCP server in development. Once it ships, you'll be able to connect your earmarkIQ data to Claude and other AI assistants that support the standard — and ask about your own finances, grounded in your real numbers.</p>
+    <p>earmarkIQ Context is a live, read-only MCP server. Connect your earmarkIQ data to Claude — verified — or any MCP-capable assistant, and ask about your own finances with answers grounded in your real numbers, not general knowledge.</p>
   </div>
 
-  <h2>What's an MCP server, in plain terms?</h2>
-  <p>MCP — the Model Context Protocol — is an open standard that lets AI assistants connect to outside sources of information, with your permission. An MCP server is the bridge. earmarkIQ Context will be that bridge for your finances: your assistant gets permissioned, read-only access to your categorised earmarkIQ data, so instead of answering from general knowledge, it answers from your actual spending, subscriptions and net worth.</p>
+  <h2 id="what-is-mcp">What's an MCP server, in plain terms?</h2>
+  <p>MCP — the Model Context Protocol — is an open standard that lets AI assistants connect to outside sources of information, with your permission. An MCP server is the bridge. earmarkIQ Context is that bridge for your finances: your assistant gets permissioned, read-only access to your categorised earmarkIQ data — collected through UK Open Banking and organised for you — so instead of answering from general knowledge, it answers from your actual position.</p>
 
-  <h2>What it will let you do</h2>
+  <h2 id="what-it-reads">What your assistant can read</h2>
+  <ul class="reads">
+    <li><span class="tick">✓</span><span><strong>Accounts and balances</strong> — every connected account in one picture</span></li>
+    <li><span class="tick">✓</span><span><strong>Spending by category</strong> — categorised automatically by earmarkIQ</span></li>
+    <li><span class="tick">✓</span><span><strong>Net worth and property equity</strong> — including your indexed property valuation and mortgage</span></li>
+    <li><span class="tick">✓</span><span><strong>Subscriptions</strong> — recurring payments and price changes</span></li>
+    <li><span class="tick">✓</span><span><strong>Your payday plan</strong> — the allocation earmarkIQ builds each payday</span></li>
+  </ul>
+
   <div class="example-q">"What did I spend on eating out last month?"</div>
   <div class="example-q">"Which of my subscriptions went up this year?"</div>
-  <div class="example-q">"How has my net worth moved since January?"</div>
-  <p>Wherever you already talk to your assistant — desktop, IDE, chat app — your financial picture comes with you.</p>
+  <div class="example-q">"How much equity do I have in the flat, and how has my net worth moved since January?"</div>
 
   <div class="callout">
-    <div class="callout-label">🔒 Read-only, by design</div>
-    <p>earmarkIQ Context can answer questions about your data — nothing more. It has no ability to move money, make payments or change anything on your accounts, and earmarkIQ itself uses read-only Open Banking access (AIS) via Finexer, an FCA-authorised provider. Curious how the whole chain works? Read <a href="/blog/connecting-financial-data-to-ai-assistants">connecting your financial data to AI assistants</a>.</p>
+    <div class="callout-label">🔒 Read-only, guaranteed</div>
+    <p>An assistant connected through Context can read your data — and that is all. It cannot move money, make payments, change settings, or alter anything, anywhere. You can revoke its access at any time, and revoking changes nothing else about your earmarkIQ account. The wider story of why read-only design matters is in <a href="/blog/connecting-financial-data-to-ai-assistants">connecting your financial data to AI assistants</a>.</p>
   </div>
 
-  <div class="pilot-block" id="waitlist-context">
-    <h2>Join the Context waitlist</h2>
-    <p>Leave your email and we'll let you know the moment earmarkIQ Context is ready to try.</p>
+  <h2 id="connect">How to connect</h2>
+  <div class="steps">
+    <div class="step"><div><h3>Get your Context address</h3><p>Your personal earmarkIQ Context address comes from your earmarkIQ account.</p></div></div>
+    <div class="step"><div><h3>Add it as a custom connector</h3><p>In any MCP-capable assistant, add earmarkIQ Context as a custom connector using that address. Claude is verified; other MCP-capable assistants connect the same way.</p></div></div>
+    <div class="step"><div><h3>Approve read-only access</h3><p>Your assistant will ask to connect — approve it, and it can start answering from your data. Your bank connection and credentials stay with earmarkIQ; the assistant never sees them.</p></div></div>
+  </div>
+  <p style="font-size:14px;color:var(--text-muted)">To disconnect: revoke access from your earmarkIQ account, or remove the connector in your assistant. Either ends access immediately.</p>
+
+  <h2 id="faq">Questions</h2>
+  <div class="faq">
+    <div class="faq-item">
+      <div class="faq-q">What is an MCP server? <span class="faq-chevron">›</span></div>
+      <div class="faq-a">MCP (Model Context Protocol) is an open standard that lets AI assistants such as Claude connect securely to outside sources of information, with your permission. An MCP server is the bridge: it gives your assistant permissioned access to specific data — in earmarkIQ Context's case, your own categorised financial picture — so answers are grounded in your real numbers rather than general knowledge.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can an assistant connected via Context move my money? <span class="faq-chevron">›</span></div>
+      <div class="faq-a">No. earmarkIQ Context is read-only: an assistant can read your data, and that is all. It cannot move money, make payments, change settings, or alter anything on your accounts, and you can revoke its access at any time.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Which assistants work with it? <span class="faq-chevron">›</span></div>
+      <div class="faq-a">Any assistant that supports the Model Context Protocol and custom connectors. Claude is verified; because MCP is an open standard, other MCP-capable assistants can connect the same way, though we haven't verified each one individually.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How do I disconnect? <span class="faq-chevron">›</span></div>
+      <div class="faq-a">Revoke Context access from your earmarkIQ account at any time, or remove the connector from your assistant. Access ends there and then — nothing about your earmarkIQ app or bank connections is affected.</div>
+    </div>
+  </div>
+
+  <div class="pilot-block" id="updates">
+    <h2>Get Context updates</h2>
+    <p>New verified assistants and Context features, straight to your inbox — nothing else.</p>
     <form class="pilot-form" id="ctx-form" novalidate>
       <input type="email" class="pilot-in" id="ctx-email" placeholder="Enter your email" autocomplete="email" inputmode="email">
-      <button type="submit" class="pilot-btn" id="ctx-submit">Join the waitlist</button>
+      <button type="submit" class="pilot-btn" id="ctx-submit">Keep me posted</button>
     </form>
     <div class="pilot-msg" id="ctx-msg"></div>
-    <div class="pilot-success" id="ctx-success">Done — we'll email you when Context is ready.</div>
-    <p class="pilot-sub">One email when it ships. The earmarkIQ app works fully without Context in the meantime.</p>
+    <div class="pilot-success" id="ctx-success">Done — we'll keep you posted.</div>
+    <p class="pilot-sub">Occasional emails about earmarkIQ Context only.</p>
   </div>
 
-  <p style="font-size:14px;color:var(--text-muted)">Not using earmarkIQ yet? The iOS app is <a href="/download">free to download</a> — Context will build on the data it already organises for you.</p>
+  <p style="font-size:14px;color:var(--text-muted)">Not using earmarkIQ yet? The iOS app is <a href="/download">free to download</a> — Context reads the data it organises for you. You can also <a href="/login">view your account on the web</a>.</p>
 </div>
 
 <footer>
@@ -188,9 +253,18 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 </footer>
 
 <script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
 (function () {
-  // Context waitlist — reuses the existing Google Sheets endpoint with a
-  // distinct source tag so these signups are distinguishable.
+  // Context updates capture — reuses the existing Google Sheets endpoint with
+  // the established mcp_waitlist source tag (mechanics unchanged).
   var ENDPOINT = 'https://script.google.com/macros/s/AKfycbw_e7qnzBvo7o7SpR2T9Vzc3R4zJT35YlrqfNFjfobjho6BlIl9mCYAnrOmaA-djRnhrA/exec';
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -224,7 +298,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
       msg.textContent = 'Something went wrong \u2014 please try again.';
       msg.className = 'pilot-msg err';
       btn.disabled = false;
-      btn.textContent = 'Join the waitlist';
+      btn.textContent = 'Keep me posted';
     });
   });
 })();

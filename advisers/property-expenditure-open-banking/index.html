@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Property, Expenditure and Open Banking in One Client View | earmarkIQ</title>
+  <meta name="description" content="Why planning firms should stop stitching together a property tool, a spending tool and a spreadsheet — the case for one consented client view, with live property valuation and real expenditure." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://earmarkiq.app/advisers/property-expenditure-open-banking">
+  <meta name="theme-color" content="#080b12" />
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://earmarkiq.app/advisers/property-expenditure-open-banking" />
+  <meta property="og:title" content="Property, Expenditure and Open Banking in One Client View" />
+  <meta property="og:description" content="The case for one consented client view rather than a property tool, a spending tool and a spreadsheet — for UK planning firms." />
+  <meta property="og:image" content="https://earmarkiq.app/api/og?title=Property%2C%20expenditure%20and%20Open%20Banking&subtitle=One%20client%20view%20for%20planning%20firms" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="earmarkIQ" />
+  <meta property="og:locale" content="en_GB" />
+  <meta property="article:published_time" content="2026-08-16T00:00:00+00:00" />
+  <meta property="article:section" content="For Advisers" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@earmarkiq" />
+  <meta name="twitter:title" content="Property, Expenditure and Open Banking in One Client View" />
+  <meta name="twitter:description" content="One consented client view instead of a property tool, a spending tool and a spreadsheet — for UK planning firms." />
+  <meta name="twitter:image" content="https://earmarkiq.app/assets/og-image.webp" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Property, Expenditure and Open Banking in One Client View",
+        "description": "Why planning firms should stop stitching together a property tool, a spending tool and a spreadsheet — the case for one consented client view.",
+        "datePublished": "2026-08-16",
+        "dateModified": "2026-08-16",
+        "author": { "@type": "Organization", "name": "earmarkIQ" },
+        "publisher": { "@type": "Organization", "name": "earmarkIQ", "url": "https://earmarkiq.app", "logo": { "@type": "ImageObject", "url": "https://earmarkiq.app/assets/logo.png" } },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://earmarkiq.app/advisers/property-expenditure-open-banking" },
+        "inLanguage": "en-GB"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://earmarkiq.app/" },
+          { "@type": "ListItem", "position": 2, "name": "For Advisers", "item": "https://earmarkiq.app/advisers" },
+          { "@type": "ListItem", "position": 3, "name": "Property, Expenditure and Open Banking in One Client View" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does earmarkIQ value a client's property?",
+            "acceptedAnswer": { "@type": "Answer", "text": "The client searches for their address and earmarkIQ produces an estimate indexed from Land Registry house price data, which is kept current automatically. The client enters their mortgage against the property for a live equity figure, and can override the estimate with their own number — a recent valuation or an agreed sale price — at any time." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does earmarkIQ aggregate pensions and ISAs too?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Not yet. earmarkIQ covers connected bank accounts via Open Banking, categorised expenditure, subscriptions, and property with mortgage and equity. Pension and investment platform aggregation is not currently offered, and we would rather say so plainly than imply a whole-of-wealth feed that doesn't exist." }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the adviser see the combined picture?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Through the live adviser web dashboard, under the client's consent: client list, categorised expenditure with transaction access at the scope the client granted, adviser recategorisation, CSV export for cashflow modelling tools, and a full audit log. Property and net worth sit in the same client picture as spending." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg:#080b12; --surface:#0f1420; --border:#1e2536; --text:#e2e8f0; --text-dim:#94a3b8; --text-muted:#475569; --mint:#6ee7b7; --mint-dim:rgba(110,231,183,0.12); --blue:#60a5fa; --amber:#fbbf24; --red:#f87171; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(8,11,18,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-weight: 700; font-size: 18px; text-decoration: none; color: var(--text); letter-spacing: -0.02em; }
+    .nav-logo span { color: var(--mint); }
+    .nav-cta { background: var(--mint); color: #080b12; font-weight: 600; font-size: 13px; padding: 8px 18px; border-radius: 8px; text-decoration: none; transition: opacity 0.2s; }
+    .nav-cta:hover { opacity: 0.85; }
+    .page-wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 280px; gap: 64px; align-items: start; }
+    @media (max-width: 860px) { .page-wrap { grid-template-columns: 1fr; } .sidebar { display: none; } }
+    .hero { padding: 64px 24px 48px; max-width: 1100px; margin: 0 auto; }
+    .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--mint); }
+    .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--mint-dim); border: 1px solid rgba(110,231,183,0.2); color: var(--mint); font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 20px; }
+    h1 { font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(30px, 4.5vw, 46px); line-height: 1.12; letter-spacing: -0.02em; color: var(--text); margin-bottom: 20px; }
+    h1 em { font-style: italic; color: var(--mint); }
+    .hero-meta { display: flex; align-items: center; gap: 20px; font-size: 13px; color: var(--text-muted); margin-bottom: 32px; flex-wrap: wrap; }
+    .hero-meta-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--text-muted); }
+    .hero-intro { font-size: 19px; color: var(--text-dim); line-height: 1.7; max-width: 680px; border-left: 3px solid var(--mint); padding-left: 20px; }
+    article { padding-top: 8px; padding-bottom: 80px; }
+    h2 { font-family: 'Instrument Serif', Georgia, serif; font-size: 28px; line-height: 1.2; color: var(--text); margin: 52px 0 16px; letter-spacing: -0.01em; }
+    h3 { font-size: 18px; font-weight: 600; color: var(--text); margin: 28px 0 10px; }
+    p { margin-bottom: 20px; color: var(--text-dim); }
+    strong { color: var(--text); font-weight: 600; }
+    a { color: var(--mint); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    hr.section-divider { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+    .quick-answer { background: rgba(110,231,183,0.06); border: 1px solid rgba(110,231,183,0.2); border-radius: 12px; padding: 20px 24px; margin: 8px 0 32px; }
+    .quick-answer-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mint); margin-bottom: 8px; }
+    .quick-answer p { font-size: 15px; line-height: 1.7; color: var(--text-dim); margin: 0; }
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 28px 0; border: 1px solid; }
+    .callout-mint { background: rgba(110,231,183,0.06); border-color: rgba(110,231,183,0.2); }
+    .callout-blue { background: rgba(96,165,250,0.06); border-color: rgba(96,165,250,0.2); }
+    .callout-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+    .callout-mint .callout-label { color: var(--mint); }
+    .callout-blue .callout-label { color: var(--blue); }
+    .callout p { margin-bottom: 0; }
+    .feature-list { margin: 20px 0; }
+    .feature-item { display: flex; gap: 14px; align-items: flex-start; padding: 14px 0; border-bottom: 1px solid rgba(30,37,54,0.5); }
+    .feature-item:last-child { border-bottom: none; }
+    .feature-icon { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+    .feature-item p { margin-bottom: 0; font-size: 15px; }
+    .faq { margin: 16px 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+    .faq-q { padding: 16px 20px; font-weight: 600; font-size: 16px; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .faq-q:hover { background: rgba(255,255,255,0.02); }
+    .faq-chevron { color: var(--mint); flex-shrink: 0; transition: transform 0.2s; font-size: 18px; }
+    .faq-a { padding: 0 20px 16px; color: var(--text-dim); font-size: 15px; line-height: 1.7; display: none; }
+    .faq-item.open .faq-a { display: block; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .cta-block { background: linear-gradient(135deg, rgba(110,231,183,0.08), rgba(96,165,250,0.05)); border: 1px solid rgba(110,231,183,0.2); border-radius: 16px; padding: 36px; text-align: center; margin: 52px 0; }
+    .cta-block h2 { margin-top: 0; font-size: 26px; }
+    .cta-block p { max-width: 480px; margin: 0 auto 24px; }
+    .cta-btn { display: inline-block; background: var(--mint); color: #080b12; font-weight: 700; font-size: 15px; padding: 14px 32px; border-radius: 10px; text-decoration: none; transition: opacity 0.2s; }
+    .cta-btn:hover { opacity: 0.85; text-decoration: none; }
+    .cta-sub { font-size: 13px; color: var(--text-muted); margin-top: 12px; margin-bottom: 0; }
+    .sidebar { position: sticky; top: 76px; padding-top: 8px; }
+    .sidebar-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+    .sidebar-card h4 { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 14px; }
+    .toc-link { display: block; font-size: 14px; color: var(--text-dim); text-decoration: none; padding: 6px 0; border-bottom: 1px solid rgba(30,37,54,0.5); transition: color 0.15s; }
+    .toc-link:last-child { border-bottom: none; }
+    .toc-link:hover { color: var(--mint); text-decoration: none; }
+    .sidebar-cta-btn { display: block; width: 100%; background: var(--mint); color: #080b12; font-weight: 700; font-size: 14px; padding: 12px; border-radius: 8px; text-decoration: none; text-align: center; transition: opacity 0.2s; margin-top: 4px; }
+    .sidebar-cta-btn:hover { opacity: 0.85; text-decoration: none; }
+    footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 13px; color: var(--text-muted); }
+    footer a { color: var(--text-muted); }
+    footer a:hover { color: var(--mint); }
+  </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-62JW90868T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-62JW90868T');
+</script>
+<script>
+window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">earmark<span>IQ</span></a>
+  <a href="/advisers#pilot" class="nav-cta">Register pilot interest →</a>
+</nav>
+
+<div class="hero">
+  <div class="breadcrumb">
+    <a href="/">Home</a> <span>›</span>
+    <a href="/advisers">For Advisers</a> <span>›</span>
+    <span>Property, Expenditure and Open Banking in One Client View</span>
+  </div>
+  <div class="hero-tag">For Financial Planning Firms</div>
+  <h1>Property, expenditure and<br>Open Banking in <em>one<br>client view.</em></h1>
+  <div class="hero-meta">
+    <span>By earmarkIQ</span>
+    <span class="hero-meta-dot"></span>
+    <span>August 2026</span>
+    <span class="hero-meta-dot"></span>
+    <span>7 min read</span>
+  </div>
+  <p class="hero-intro">
+    The average client's finances live in one place — their life. The average firm's picture of those finances lives in three: a spending analysis somewhere, a property estimate somewhere else, and a net worth spreadsheet holding it together. This is the case for collapsing the stack into one consented view.
+  </p>
+</div>
+
+<div class="page-wrap">
+  <article>
+
+    <div class="quick-answer">
+      <div class="quick-answer-label">Quick Answer</div>
+      <p>Fragmented tooling produces a fragmented client picture: spending in one tool, property in another, reconciled by hand at review time. earmarkIQ puts categorised Open Banking expenditure, subscriptions, and Land Registry-indexed property valuation with mortgage and equity in a single client-facing app — and gives the adviser one consented view of the lot through the live <a href="/advisers">adviser dashboard</a>, with exports for whichever cashflow tool the firm models in.</p>
+    </div>
+
+    <h2 id="the-stack-problem">The three-tool problem</h2>
+
+    <p>Most planning firms have assembled a data stack nobody would design from scratch. Expenditure comes from a questionnaire or, in better firms, some form of bank data analysis. Property value comes from a portal estimate the paraplanner looks up, or whatever the client last said at review. Mortgage balance comes from a statement the client forwards annually. Net worth is a spreadsheet that stitches the three together — accurate on the day it's built, decaying from the moment it's saved.</p>
+
+    <p>Each tool in the stack is defensible on its own. The problem is the joins. Every join is manual, every manual join happens only at review time, and so the client's "current position" in the file is really a photograph of whenever someone last did the stitching. Between reviews, the firm is advising on a picture that no longer exists.</p>
+
+    <p>There's a quieter cost too: the client sees none of it. The spreadsheet lives in the firm's drive. The portal estimate lives in a browser tab. The client — whose engagement every firm says it wants — has no living view of the position their plan is built on, which makes the annual review a reveal rather than a conversation.</p>
+
+    <h2 id="why-property-matters">Why property belongs next to spending</h2>
+
+    <p>For most UK planning clients, the home is the largest asset on the balance sheet and the mortgage the largest liability — and the two interact with expenditure constantly. Overpayment decisions depend on monthly surplus. Remortgage timing shapes the biggest line in the budget. Downsizing modelling needs a defensible current value, not a number from two reviews ago. Treating property as a separate world from spending means the two halves of every one of those decisions live in different tools.</p>
+
+    <p>Dedicated property-tracking tools do the property half well. But a property figure with no expenditure context answers only half of any question a planner actually asks: <em>can this household afford the overpayment; what does the surplus look like after the fix ends; what does equity release change about drawdown?</em> The value is in the join — and the join is exactly what the fragmented stack does badly.</p>
+
+    <h2 id="one-view">What one view looks like in practice</h2>
+
+    <div class="feature-list">
+      <div class="feature-item">
+        <div class="feature-icon">🏦</div>
+        <div>
+          <strong>Expenditure from Open Banking, categorised automatically.</strong>
+          <p>The client connects their banks once (read-only, via Finexer, an FCA-authorised provider) and categorised spending accumulates continuously — the full case is in <a href="/advisers/client-expenditure-data">how advisers collect expenditure data</a>.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🏠</div>
+        <div>
+          <strong>Property valued in the same app — live.</strong>
+          <p>The client finds their address, earmarkIQ produces an estimate indexed from Land Registry house price data and keeps it current, the mortgage sits against it for a live equity figure, and the client can override the estimate with their own number at any time.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">📊</div>
+        <div>
+          <strong>Net worth that maintains itself.</strong>
+          <p>Accounts, spending, property and equity in one client-facing picture — on the client's phone and on the web — rather than a firm-side spreadsheet rebuilt at each review.</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">💼</div>
+        <div>
+          <strong>One consented adviser view — live.</strong>
+          <p>Through the adviser dashboard: client list, categorised expenditure with transaction access at the scope each client granted, recategorisation to match how the firm models, CSV export for cashflow tools, and a full audit log.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout callout-blue">
+      <div class="callout-label">ℹ️ What one view doesn't include — yet</div>
+      <p>earmarkIQ does not currently aggregate pensions or investment platform accounts, and direct feeds into modelling tools are planned rather than live (exports work with any tool today). We'd rather you build the stack knowing exactly where the edges are.</p>
+    </div>
+
+    <h2 id="review-time">What changes at review time</h2>
+
+    <p>With the stack collapsed, the annual review stops being an exercise in reassembling the client's position and starts from a position that already exists. Expenditure is twelve months of categorised reality, exportable into the firm's modeller that morning. Property value is this month's indexed estimate — or the client's own override — with equity calculated against the actual mortgage. Net worth is whatever the app says today, because today is when you're looking.</p>
+
+    <p>The conversation changes shape accordingly. Instead of "let's confirm your figures" — twenty minutes of data archaeology the client experiences as an audit — the meeting opens on what moved and why: the equity built since last year, the category that crept, the surplus that could be working harder. Data collection becomes advice, which is the trade every planning firm is trying to make.</p>
+
+    <p>And because the client lives with the same picture between reviews, nothing in the meeting is a surprise to them. A client who has watched their equity figure update all year arrives at the downsizing conversation already halfway through it.</p>
+
+    <h2 id="getting-there">Getting there without a migration project</h2>
+
+    <p>Collapsing the stack doesn't require a firm-wide systems change. The sequence that works: clients download earmarkIQ and connect their banks — minutes each; they add their property and mortgage — the address search does the rest; they grant the firm consented access at whatever scope they're comfortable with. From that point the adviser dashboard carries the combined view, and the firm's existing modeller keeps its place in the workflow via export. The spreadsheet retires quietly, unmourned.</p>
+
+    <hr class="section-divider" />
+
+    <h2 id="faq">FAQ</h2>
+
+    <div class="faq">
+      <div class="faq-item">
+        <div class="faq-q">How does earmarkIQ value a client's property? <span class="faq-chevron">›</span></div>
+        <div class="faq-a">The client searches for their address and earmarkIQ produces an estimate indexed from Land Registry house price data, which is kept current automatically. The client enters their mortgage against the property for a live equity figure, and can override the estimate with their own number — a recent valuation or an agreed sale price — at any time.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does earmarkIQ aggregate pensions and ISAs too? <span class="faq-chevron">›</span></div>
+        <div class="faq-a">Not yet. earmarkIQ covers connected bank accounts via Open Banking, categorised expenditure, subscriptions, and property with mortgage and equity. Pension and investment platform aggregation is not currently offered, and we would rather say so plainly than imply a whole-of-wealth feed that doesn't exist.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How does the adviser see the combined picture? <span class="faq-chevron">›</span></div>
+        <div class="faq-a">Through the live adviser web dashboard, under the client's consent: client list, categorised expenditure with transaction access at the scope the client granted, adviser recategorisation, CSV export for cashflow modelling tools, and a full audit log. Property and net worth sit in the same client picture as spending.</div>
+      </div>
+    </div>
+
+    <div class="cta-block">
+      <h2>One client view, live today</h2>
+      <p>Expenditure, property and net worth in one consented picture — with the adviser dashboard live and pilot places limited.</p>
+      <a href="/advisers#pilot" class="cta-btn">Register pilot interest →</a>
+      <p class="cta-sub">Pilot places offered in registration order · Pricing available on request</p>
+    </div>
+
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <h4>Pilot access</h4>
+      <a href="/advisers#pilot" class="sidebar-cta-btn">Register pilot interest →</a>
+    </div>
+    <div class="sidebar-card">
+      <h4>In this article</h4>
+      <a href="#the-stack-problem" class="toc-link">The three-tool problem</a>
+      <a href="#why-property-matters" class="toc-link">Why property belongs next to spending</a>
+      <a href="#one-view" class="toc-link">What one view looks like</a>
+      <a href="#review-time" class="toc-link">What changes at review time</a>
+      <a href="#getting-there" class="toc-link">Getting there</a>
+      <a href="#faq" class="toc-link">FAQ</a>
+    </div>
+    <div class="sidebar-card">
+      <h4>Adviser guides</h4>
+      <a href="/advisers" class="toc-link">earmarkIQ for advisers →</a>
+      <a href="/advisers/client-expenditure-data" class="toc-link">How advisers collect expenditure data →</a>
+      <a href="/advisers/cashflow-modelling" class="toc-link">Cashflow modelling connections →</a>
+      <a href="/advisers/open-banking-for-financial-planners" class="toc-link">Open Banking for financial planners →</a>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <p>© 2026 earmarkIQ Ltd · <a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms</a> · <a href="mailto:hello@earmarkiq.app">Contact</a></p>
+  <p style="margin-top:8px">earmarkIQ is an FCA Appointed Representative of Finexer Ltd (FRN 925695). <a href="https://register.fca.org.uk/s/firm?id=001Sk000010irOJIAY" rel="nofollow" target="_blank">Verify on the FCA register</a>. Content on this site is for guidance only and does not constitute financial advice.</p>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+</body>
+</html>
