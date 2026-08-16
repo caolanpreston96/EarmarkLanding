@@ -74,17 +74,17 @@ footer a:hover{color:var(--mint)}
       <div class="card card-consumer">
         <div class="card-ic">📱</div>
         <h2>I use earmarkIQ</h2>
-        <p id="consumer-copy">Web access is coming — it's in development. For now, everything lives in the iOS app.</p>
-        <a id="consumer-btn" class="card-btn btn-mint" href="/download">Open the iOS app →</a>
-        <p class="card-note" id="consumer-note">Free on the App Store</p>
+        <p id="consumer-copy">For personal earmarkIQ accounts. View your spending, subscriptions and net worth on the web — connecting banks and Ask IQ chat stay in the iOS app for now.</p>
+        <a id="consumer-btn" class="card-btn btn-mint" href="/download">Log in →</a>
+        <p class="card-note" id="consumer-note">New here? <a href="/signup" style="color:var(--tx3);text-decoration:underline">Create an account</a> · Same account works on iOS</p>
       </div>
 
       <div class="card card-adviser">
         <div class="card-ic">💼</div>
         <h2>I'm a financial adviser</h2>
-        <p id="adviser-copy">The adviser web dashboard is in development and being built with pilot firms. Register interest and we'll be in touch as places open.</p>
-        <a id="adviser-btn" class="card-btn btn-blue" href="/advisers#pilot">Register pilot interest →</a>
-        <p class="card-note" id="adviser-note">Learn more at <a href="/advisers" style="color:var(--tx3);text-decoration:underline">earmarkiq.app/advisers</a></p>
+        <p id="adviser-copy">For planning firms on the earmarkIQ adviser platform — consented client data, audits and exports.</p>
+        <a id="adviser-btn" class="card-btn btn-blue" href="/advisers#pilot">Adviser log in →</a>
+        <p class="card-note" id="adviser-note">Not on the platform yet? <a href="/advisers" style="color:var(--tx3);text-decoration:underline">Learn more and register interest</a></p>
       </div>
     </div>
 
@@ -98,26 +98,13 @@ footer a:hover{color:var(--mint)}
 
 <script>
 (function () {
-  // Destinations come from /js/config.js so the web app URLs can change
-  // without editing this page. While a URL is unset, the static fallback
-  // (web access coming → iOS app / adviser pilot) remains as rendered above.
+  // Destinations come from /js/config.js — the single source for web app
+  // URLs. Static hrefs above are safe no-JS fallbacks (/download and the
+  // adviser page); JS points them at the live web app.
   var c = window.CONSUMER_WEB_URL;
   var a = window.ADVISER_WEB_URL;
-
-  if (c) {
-    document.getElementById('consumer-copy').textContent = 'Sign in to your earmarkIQ account on the web.';
-    var cb = document.getElementById('consumer-btn');
-    cb.href = c;
-    cb.textContent = 'Log in \u2192';
-    document.getElementById('consumer-note').textContent = 'Also available free on iOS';
-  }
-
-  if (a) {
-    document.getElementById('adviser-copy').textContent = 'Sign in to the earmarkIQ adviser dashboard.';
-    var ab = document.getElementById('adviser-btn');
-    ab.href = a;
-    ab.textContent = 'Log in \u2192';
-  }
+  if (c) { document.getElementById('consumer-btn').href = c; }
+  if (a) { document.getElementById('adviser-btn').href = a; }
 })();
 </script>
 </body>
