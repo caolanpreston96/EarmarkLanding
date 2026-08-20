@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Property Valuation &amp; Equity Tracking | earmarkIQ</title>
+  <meta name="description" content="Add your address, get an estimated property value that updates monthly with the official UK House Price Index, enter your mortgage, and watch equity build in your net worth." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://earmarkiq.app/property" />
+  <meta name="theme-color" content="#080b12" />
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://earmarkiq.app/property" />
+  <meta property="og:title" content="Property Valuation &amp; Equity Tracking | earmarkIQ" />
+  <meta property="og:description" content="An estimated property value that moves each month with the official UK House Price Index, your mortgage balance alongside it, and equity flowing into your net worth." />
+  <meta property="og:image" content="https://earmarkiq.app/api/og?title=Property%20%26%20Equity&subtitle=House%20Price%20Index%20estimates%20in%20your%20net%20worth" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="earmarkIQ" />
+  <meta property="og:locale" content="en_GB" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@earmarkiq" />
+  <meta name="twitter:title" content="Property Valuation &amp; Equity Tracking | earmarkIQ" />
+  <meta name="twitter:description" content="An estimated property value that moves each month with the official UK House Price Index, your mortgage balance alongside it, and equity flowing into your net worth." />
+  <meta name="twitter:image" content="https://earmarkiq.app/api/og?title=Property%20%26%20Equity&subtitle=House%20Price%20Index%20estimates%20in%20your%20net%20worth" />
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://earmarkiq.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Property", "item": "https://earmarkiq.app/property" }
+    ]
+  }
+  </script>
+
+  <!-- WebPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Property Valuation & Equity Tracking",
+    "url": "https://earmarkiq.app/property",
+    "description": "How earmarkIQ estimates the value of your property using the official UK House Price Index, how to override the estimate, how mortgage balances produce equity, and what the Pro tier adds.",
+    "inLanguage": "en-GB",
+    "isPartOf": { "@type": "WebSite", "name": "earmarkIQ", "url": "https://earmarkiq.app" },
+    "publisher": { "@type": "Organization", "name": "earmarkIQ Ltd", "url": "https://earmarkiq.app" },
+    "license": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "speakable": { "@type": "SpeakableSpecification", "cssSelector": [".quick-answer", ".faq-a"] }
+  }
+  </script>
+
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does earmarkIQ estimate the value of my property?",
+        "acceptedAnswer": { "@type": "Answer", "text": "earmarkIQ uses indexation. You add your address and tell the app what you paid for the property and when. earmarkIQ then takes the movement in the UK House Price Index for your local authority between the month you bought and the most recently published month, and applies that percentage movement to your purchase price. The result is an estimate of what your property would be worth today if it had moved in line with the average property in your area. Contains HM Land Registry data © Crown copyright and database right 2026. Licensed under the Open Government Licence v3.0." }
+      },
+      {
+        "@type": "Question",
+        "name": "How accurate is the earmarkIQ property estimate?",
+        "acceptedAnswer": { "@type": "Answer", "text": "It is an estimate of index movement, not a valuation of your home. The figure is calculated from the average change in prices across a whole local authority, so it does not know about your extensions, your condition, your street, your view, or the specific type of property you own. Treat it as a reasonable directional figure for net worth tracking, and not as a number to rely on for a sale, a remortgage, probate, or any legal purpose. If your property has changed materially since you bought it, the estimate will drift from reality and you should override it." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I override the estimated property value in earmarkIQ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can enter your own figure at any time and earmarkIQ will use it instead of the index estimate. Override when you have a number you trust more: a surveyor's valuation, a mortgage lender's valuation, an estate agent's appraisal, a recent sale price for an identical neighbouring property, or the completion price if you have just bought. You can revert to the index estimate later if you want to." }
+      },
+      {
+        "@type": "Question",
+        "name": "How often does my property value update in earmarkIQ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Monthly. The UK House Price Index is published each month by HM Land Registry and its partner bodies, and earmarkIQ refreshes your estimate when new index data becomes available. The index is published with a lag of roughly two months and earlier months are revised as more sale completions are registered, so recent figures can move slightly after first publication. If you have overridden the estimate with your own figure, that figure stays put until you change it." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I add my mortgage and see my property equity?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Enter the outstanding balance on your mortgage against the property. earmarkIQ subtracts the balance from the property value to give your equity, and divides the balance by the value to give your loan-to-value. Your equity, not the gross property value, is what flows into your net worth figure alongside your current accounts, savings, investments and other debts. Keep the balance current after overpayments or an annual statement so the equity figure stays honest." }
+      },
+      {
+        "@type": "Question",
+        "name": "What does the Pro tier add to property valuation?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Every earmarkIQ tier gets the local-authority House Price Index estimate. Pro adds an address-level market valuation, which is calculated for your specific property rather than for the average property across the whole local authority it sits in. It remains an estimate produced from data rather than an inspection, and it can still be overridden with your own figure." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does earmarkIQ use Zoopla, Rightmove or an estate agent to value my property?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. earmarkIQ has no integration with Zoopla, Rightmove or any estate agency, and no agent is involved in producing your figure. The standard estimate is calculated from the official UK House Price Index published by HM Land Registry and its partner bodies. Nobody visits or inspects your property, and earmarkIQ does not list, market or introduce your property to anyone." }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #080b12;
+      --surface: #0f1420;
+      --border: #1e2536;
+      --text: #e2e8f0;
+      --text-dim: #94a3b8;
+      --text-muted: #475569;
+      --mint: #6ee7b7;
+      --mint-dim: rgba(110,231,183,0.12);
+      --blue: #60a5fa;
+      --amber: #fbbf24;
+      --red: #f87171;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(8,11,18,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-weight: 700; font-size: 18px; text-decoration: none; color: var(--text); letter-spacing: -0.02em; }
+    .nav-logo span { color: var(--mint); }
+    .nav-cta { background: var(--mint); color: #080b12; font-weight: 600; font-size: 13px; padding: 8px 18px; border-radius: 8px; text-decoration: none; transition: opacity 0.2s; }
+    .nav-cta:hover { opacity: 0.85; }
+
+    .page-wrap { max-width: 820px; margin: 0 auto; padding: 0 24px; }
+
+    .hero { padding: 64px 24px 40px; max-width: 820px; margin: 0 auto; }
+    .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+    .breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--mint); }
+    .breadcrumb-sep { color: var(--text-muted); }
+    .hero-tag { display: inline-flex; align-items: center; gap: 6px; background: var(--mint-dim); border: 1px solid rgba(110,231,183,0.2); color: var(--mint); font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 20px; }
+
+    h1 { font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(32px, 5vw, 52px); line-height: 1.12; letter-spacing: -0.02em; color: var(--text); margin-bottom: 20px; }
+    h1 em { font-style: italic; color: var(--mint); }
+    .hero-intro { font-size: 19px; color: var(--text-dim); line-height: 1.7; max-width: 680px; border-left: 3px solid var(--mint); padding-left: 20px; }
+
+    article { padding-top: 8px; padding-bottom: 80px; }
+    h2 { font-family: 'Instrument Serif', Georgia, serif; font-size: 28px; line-height: 1.2; color: var(--text); margin: 52px 0 16px; letter-spacing: -0.01em; }
+    h3 { font-size: 18px; font-weight: 600; color: var(--text); margin: 32px 0 12px; }
+    p { margin-bottom: 20px; color: var(--text-dim); }
+    p:last-child { margin-bottom: 0; }
+    strong { color: var(--text); font-weight: 600; }
+    em { font-style: italic; }
+    a { color: var(--mint); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul.plain { margin: 0 0 20px 20px; color: var(--text-dim); }
+    ul.plain li { margin-bottom: 10px; }
+    hr.section-divider { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+    .quick-answer { background: rgba(110,231,183,0.06); border: 1px solid rgba(110,231,183,0.2); border-radius: 12px; padding: 20px 24px; margin: 8px 0 8px; }
+    .quick-answer-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mint); margin-bottom: 8px; }
+    .quick-answer p { font-size: 15px; line-height: 1.7; color: var(--text-dim); margin: 0; }
+
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 28px 0; border: 1px solid; }
+    .callout-mint { background: rgba(110,231,183,0.06); border-color: rgba(110,231,183,0.2); }
+    .callout-blue { background: rgba(96,165,250,0.06); border-color: rgba(96,165,250,0.2); }
+    .callout-amber { background: rgba(251,191,36,0.06); border-color: rgba(251,191,36,0.2); }
+    .callout-red { background: rgba(248,113,113,0.06); border-color: rgba(248,113,113,0.2); }
+    .callout-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+    .callout-mint .callout-label { color: var(--mint); }
+    .callout-blue .callout-label { color: var(--blue); }
+    .callout-amber .callout-label { color: var(--amber); }
+    .callout-red .callout-label { color: var(--red); }
+    .callout p { margin-bottom: 0; }
+    .callout p + p { margin-top: 12px; }
+
+    .steps { margin: 28px 0; }
+    .step { display: flex; gap: 20px; padding: 20px 0; border-bottom: 1px solid rgba(30,37,54,0.7); }
+    .step:last-child { border-bottom: none; }
+    .step-num { flex-shrink: 0; width: 36px; height: 36px; background: var(--mint-dim); border: 1px solid rgba(110,231,183,0.25); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; color: var(--mint); margin-top: 2px; }
+    .step-content h3 { margin-top: 0; margin-bottom: 8px; }
+    .step-content p { margin-bottom: 0; font-size: 15px; }
+
+    .worked { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 24px 26px; margin: 28px 0; }
+    .worked-h { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 16px; }
+    .worked-row { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 11px 0; border-bottom: 1px solid rgba(30,37,54,0.7); font-size: 15px; color: var(--text-dim); }
+    .worked-row:last-of-type { border-bottom: none; }
+    .worked-row b { font-family: 'JetBrains Mono', monospace; color: var(--text); font-weight: 500; white-space: nowrap; }
+    .worked-row.total { border-top: 1px solid var(--border); border-bottom: none; margin-top: 6px; padding-top: 16px; }
+    .worked-row.total b { color: var(--mint); font-size: 18px; }
+    .worked-note { font-size: 13px; color: var(--text-muted); line-height: 1.7; margin-top: 16px; margin-bottom: 0; }
+
+    .table-wrap { overflow-x: auto; margin: 28px 0; border-radius: 12px; border: 1px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; }
+    thead { background: var(--surface); }
+    th { padding: 12px 18px; text-align: left; font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 1px solid var(--border); }
+    td { padding: 13px 18px; color: var(--text-dim); border-bottom: 1px solid rgba(30,37,54,0.6); vertical-align: top; }
+    tr:last-child td { border-bottom: none; }
+    .td-name { font-weight: 600; color: var(--text); white-space: nowrap; }
+
+    .faq { margin: 16px 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+    .faq-q { padding: 16px 20px; font-weight: 600; font-size: 16px; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .faq-q:hover { background: rgba(255,255,255,0.02); }
+    .faq-chevron { color: var(--mint); flex-shrink: 0; transition: transform 0.2s; font-size: 18px; }
+    .faq-a { padding: 0 20px 16px; color: var(--text-dim); font-size: 15px; line-height: 1.7; display: none; }
+    .faq-item.open .faq-a { display: block; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+    .cta-block { background: linear-gradient(135deg, rgba(110,231,183,0.08), rgba(96,165,250,0.05)); border: 1px solid rgba(110,231,183,0.2); border-radius: 16px; padding: 36px; text-align: center; margin: 52px 0; }
+    .cta-block h2 { margin-top: 0; font-size: 26px; }
+    .cta-block p { max-width: 500px; margin: 0 auto 24px; }
+    .cta-btn { display: inline-block; background: var(--mint); color: #080b12; font-weight: 700; font-size: 15px; padding: 14px 32px; border-radius: 10px; text-decoration: none; transition: opacity 0.2s; }
+    .cta-btn:hover { opacity: 0.85; text-decoration: none; }
+    .cta-sub { font-size: 13px; color: var(--text-muted); margin-top: 12px; margin-bottom: 0; }
+
+    .attribution { border: 1px solid var(--border); border-left: 3px solid var(--blue); background: rgba(96,165,250,0.04); border-radius: 12px; padding: 18px 22px; margin: 32px 0; }
+    .attribution p { font-size: 13.5px; line-height: 1.7; color: var(--text-dim); margin: 0; }
+    .attribution p + p { margin-top: 10px; }
+
+    .related { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 28px 0 0; }
+    @media (max-width: 620px) { .related { grid-template-columns: 1fr; } }
+    .related a { display: block; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; text-decoration: none; transition: border-color 0.2s; }
+    .related a:hover { border-color: rgba(110,231,183,0.35); text-decoration: none; }
+    .related-t { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+    .related-d { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 13px; color: var(--text-muted); }
+    footer a { color: var(--text-muted); }
+    footer a:hover { color: var(--mint); }
+    .footer-attr { max-width: 720px; margin: 12px auto 0; font-size: 12px; line-height: 1.7; }
+  </style>
+<script>
+window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<nav><a href="/" class="nav-logo">earmark<span>IQ</span></a><a href="/download" class="nav-cta">Download Free &rarr;</a></nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">/</span>
+    <span>Property</span>
+  </div>
+  <div class="hero-tag">Property &amp; Equity</div>
+  <h1>Your Property, Your Mortgage, and the Equity <em>In Between</em></h1>
+  <p class="hero-intro">
+    For most UK households the house is the largest thing on the balance sheet and the least frequently updated. earmarkIQ keeps an estimated value for your property that moves each month with the official UK House Price Index, holds your mortgage balance beside it, and pushes the resulting equity into your net worth. This page explains exactly how that estimate is produced, what it can and cannot tell you, and when you should replace it with a figure of your own.
+  </p>
+</header>
+
+<!-- MAIN CONTENT -->
+<div class="page-wrap">
+  <article>
+
+    <div class="quick-answer">
+      <div class="quick-answer-label">In short</div>
+      <p>earmarkIQ estimates your property value by indexation: it applies the movement in the UK House Price Index for your local authority, from the month you bought to the latest published month, to the price you actually paid. The estimate refreshes monthly as new index data is published. It is not a survey, a lender valuation or an estate agent appraisal, and you can override it with your own figure at any time. Enter your mortgage balance and earmarkIQ derives your equity and loan-to-value, and carries the equity into your net worth. Contains HM Land Registry data &copy; Crown copyright and database right 2026. Licensed under the Open Government Licence v3.0.</p>
+    </div>
+
+    <h2 id="what-it-does">What earmarkIQ does with your property</h2>
+
+    <p>Property is handled as an asset on your balance sheet, not as a separate app that lives on its own. You add the property once, and from then on it behaves like every other line in earmarkIQ: it updates itself, it shows its history, and it contributes to the one number that actually matters, which is what you are worth after everything you owe.</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <h3>Search for and confirm your address</h3>
+          <p>Type your address and pick your property from the results. earmarkIQ uses this to identify which local authority your property sits in, because that is the geography the House Price Index is published against. You then tell earmarkIQ what you paid and the month you completed.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <h3>Get an estimated value that updates monthly</h3>
+          <p>earmarkIQ calculates how much the index for your area has moved since your completion month and applies that movement to your purchase price. Each time a new monthly index is published, your estimate is recalculated. You do nothing.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <h3>Add your mortgage balance</h3>
+          <p>Enter what is still outstanding. earmarkIQ subtracts it from the property value to give your equity, and expresses the balance as a percentage of the value to give your loan-to-value. Update the balance when your annual statement arrives or after an overpayment.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-content">
+          <h3>Watch equity build inside your net worth</h3>
+          <p>Equity grows from two directions at once: the balance falls as you repay, and the estimated value moves with the index. Both are reflected in your net worth alongside your current accounts, savings, investments, and other debts.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="how-the-estimate-works">How the estimate is worked out</h2>
+
+    <p>The method is indexation, and it is deliberately transparent. The UK House Price Index is an official statistic published monthly by HM Land Registry together with its partner bodies in Scotland, Wales and Northern Ireland. It is built from actual registered sale completions rather than asking prices, and it is published for each local authority as well as nationally. earmarkIQ reads the index value for your local authority in the month you bought, reads the latest published index value for the same area, and applies the ratio between them to your purchase price.</p>
+
+    <div class="worked">
+      <div class="worked-h">Worked example</div>
+      <div class="worked-row"><span>Purchase price, March 2019</span><b>&pound;265,000</b></div>
+      <div class="worked-row"><span>Local authority index, March 2019</span><b>118.4</b></div>
+      <div class="worked-row"><span>Local authority index, latest published month</span><b>139.6</b></div>
+      <div class="worked-row"><span>Index movement (139.6 &divide; 118.4)</span><b>&times; 1.179</b></div>
+      <div class="worked-row total"><span>Estimated value today</span><b>&pound;312,400</b></div>
+      <p class="worked-note">Illustrative figures. The calculation is the price you paid multiplied by the ratio of the current index to the index in your completion month. Nothing about the individual property enters the sum. Contains HM Land Registry data &copy; Crown copyright and database right 2026. Licensed under the Open Government Licence v3.0.</p>
+    </div>
+
+    <p>That is the whole method. There is no model second-guessing the number, no scraped listings, and no agent in the loop. The strength of indexation is that it is honest about its own inputs: you can see the purchase price, you can look up the published index for your area, and you can reproduce the result yourself on a calculator. The weakness is the same fact from the other side, which is that the index describes the average property in your local authority and yours is not the average property.</p>
+
+    <h2 id="accuracy">What accuracy to expect</h2>
+
+    <p>The estimate answers one question well: <strong>how has the market in my area moved since I bought?</strong> It does not answer the question <strong>what would my house sell for on Tuesday?</strong> Those are different questions, and it is worth being precise about the gap between them.</p>
+
+    <p>A local authority is a large area. It can contain terraces, new-build flats, and detached houses, in streets that behave very differently from one another. A single average movement is applied to all of them. If your street has gentrified faster than the district as a whole, the estimate will be low. If your area contains a large new-build development that has skewed the local average, the estimate may be high for an older property.</p>
+
+    <p>The index also knows nothing about your property specifically. It has no record of the extension you added, the loft conversion, the new roof, the kitchen, the condition of the windows, or the fact that the property backs onto a railway line. Anything that has changed the fundamentals of your home since the day you bought it is invisible to an indexed figure, because the only property-specific input is a purchase price from years ago.</p>
+
+    <p>There is a timing point too. The index is compiled from registered completions, so it is published with a lag of roughly two months, and recent months are revised as more transactions are registered. A figure you see today for a recent month may shift slightly when the next release lands. That is a property of the official statistic, not a defect in earmarkIQ.</p>
+
+    <div class="callout callout-amber">
+      <div class="callout-label">Where the estimate should not be used</div>
+      <p>This figure is for tracking your own net worth. Do not use it as a valuation for a sale, a mortgage application or remortgage, probate or inheritance tax, a divorce settlement, a shared-ownership staircasing calculation, or any other legal or tax purpose. Those all require a valuation from an appropriately qualified professional, typically a RICS surveyor or a valuation instructed by the lender. earmarkIQ does not provide financial advice, and nothing on this page is a recommendation to buy, sell, borrow against or retain a property.</p>
+    </div>
+
+    <h2 id="override">Overriding the estimate with your own figure</h2>
+
+    <p>Because the method has known limits, earmarkIQ lets you replace the estimate outright. Enter your own value and the app uses that instead. It is the one number in the property section that you are always in charge of.</p>
+
+    <p>Override when you hold something better than an index calculation:</p>
+
+    <ul class="plain">
+      <li>A <strong>RICS survey or homebuyer report</strong> with a valuation figure in it.</li>
+      <li>A <strong>lender's valuation</strong> from a recent mortgage application or remortgage.</li>
+      <li>An <strong>estate agent's market appraisal</strong>, particularly if you have had two or three and can take a sensible midpoint.</li>
+      <li>A <strong>recent completed sale of a near-identical neighbouring property</strong> — a completed sale, not an asking price.</li>
+      <li>Your <strong>completion price</strong>, if you have only just bought. Immediately after purchase the price you paid is the best evidence available.</li>
+      <li>After <strong>material work on the property</strong> — an extension, a conversion, a full renovation — where an indexed purchase price no longer describes the same house.</li>
+    </ul>
+
+    <p>Keep two habits and the number stays useful. First, note where an overridden figure came from and when, because a lender valuation from four years ago is no longer better evidence than the index. Second, revisit it rather than leaving it frozen forever; if you have no fresher evidence, reverting to the index estimate is often the more honest choice, because at least it keeps moving with the market.</p>
+
+    <h2 id="mortgage-and-equity">Mortgage balance, equity and loan-to-value</h2>
+
+    <p>A property value on its own is not much use for financial planning. What you are worth is the value less the debt secured against it, and that is what earmarkIQ tracks.</p>
+
+    <div class="worked">
+      <div class="worked-h">How equity is derived</div>
+      <div class="worked-row"><span>Estimated property value</span><b>&pound;312,400</b></div>
+      <div class="worked-row"><span>Outstanding mortgage balance</span><b>&minus; &pound;186,200</b></div>
+      <div class="worked-row total"><span>Property equity, into net worth</span><b>&pound;126,200</b></div>
+      <div class="worked-row" style="border-top:1px solid var(--border);margin-top:6px;padding-top:16px"><span>Loan-to-value (186,200 &divide; 312,400)</span><b>60%</b></div>
+      <p class="worked-note">Illustrative figures. Only the equity enters your net worth. The gross value and the mortgage balance are both shown so you can see the two halves moving independently.</p>
+    </div>
+
+    <p>You enter the mortgage balance yourself. Most UK mortgage accounts are not exposed through Open Banking in the way current accounts are, so this is a manual figure rather than a live feed. It is worth updating at least annually when your mortgage statement arrives, and after any overpayment or product transfer. If the balance goes stale, your equity will read low, which is the safer direction to be wrong in, but it is still wrong.</p>
+
+    <p>Loan-to-value is the number lenders care about, and it is useful to watch for a practical reason: crossing below a threshold such as 80%, 75% or 60% can open up better rates when you come to remortgage. Because your estimated value moves with the index and your balance falls with each repayment, earmarkIQ shows you approaching those thresholds well before the deal expires. Treat it as a prompt to go and get a proper valuation, not as proof that you qualify.</p>
+
+    <h2 id="net-worth">How property fits into net worth</h2>
+
+    <p>earmarkIQ's net worth figure is the sum of what you own less what you owe: current accounts and savings from your connected banks, investments, any assets you have added by hand, minus credit cards, loans and other debts. Property equity joins that as one more line, and for most homeowners it immediately becomes the largest one.</p>
+
+    <p>Including it changes what the number is for. Without property, net worth is a snapshot of liquid life: what is in the accounts this month. With property equity included, you can see the effect of a decade of mortgage repayment, which is otherwise almost entirely invisible month to month. It also puts the rest of your finances in proportion, because a £2,000 movement in savings reads very differently next to £126,000 of equity than it does on its own.</p>
+
+    <p>It is worth holding the two apart in your head, though. Equity is not spendable. You cannot draw on it without selling, remortgaging or borrowing against the property, all of which have costs and consequences. A net worth figure that rises purely because the local index moved has not made you any more able to pay a bill this month. earmarkIQ shows the components separately for exactly this reason.</p>
+
+    <h2 id="pro">What Pro adds</h2>
+
+    <p>Property tracking is available on every tier. The difference between tiers is the source of the valuation figure, not whether you can track the property at all.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Capability</th><th>Other tiers</th><th>Pro</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="td-name">Address search</td><td>Yes</td><td>Yes</td></tr>
+          <tr><td class="td-name">Valuation basis</td><td>Local-authority House Price Index applied to your purchase price</td><td>Address-level market valuation, calculated for your specific property</td></tr>
+          <tr><td class="td-name">Update frequency</td><td>Monthly, on index publication</td><td>Monthly</td></tr>
+          <tr><td class="td-name">Manual override</td><td>Yes, any time</td><td>Yes, any time</td></tr>
+          <tr><td class="td-name">Mortgage balance and equity</td><td>Yes</td><td>Yes</td></tr>
+          <tr><td class="td-name">Loan-to-value</td><td>Yes</td><td>Yes</td></tr>
+          <tr><td class="td-name">Equity in net worth</td><td>Yes</td><td>Yes</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>The Pro address-level market valuation narrows the geography from the whole local authority down to your specific property. That removes the largest source of error in an indexed figure, which is the assumption that your home behaves like the district average. What it does not do is turn the figure into a valuation in the professional sense. It is still produced from data rather than from someone standing in your hallway, it still cannot see the state of your kitchen, and it can still be overridden by your own number whenever you have better evidence.</p>
+
+    <div class="callout callout-blue">
+      <div class="callout-label">Stated plainly</div>
+      <p>Pro sharpens the geography. It does not change the nature of the output. Every tier, Pro included, gives you an estimate that you remain free to replace.</p>
+    </div>
+
+    <h2 id="what-we-dont-do">What earmarkIQ does not do</h2>
+
+    <p>It is as useful to be clear about the absences as the features.</p>
+
+    <ul class="plain">
+      <li><strong>No estate agent or portal integration.</strong> earmarkIQ has no connection to Zoopla, Rightmove, or any estate agency. Your property is not listed, marketed, or passed to anyone, and no agent contacts you as a result of adding it.</li>
+      <li><strong>No inspection.</strong> Nobody visits. No photographs, condition reports or floor plans are involved in producing your figure.</li>
+      <li><strong>No mortgage brokering.</strong> earmarkIQ shows your loan-to-value; it does not arrange, recommend or apply for mortgages on your behalf.</li>
+      <li><strong>No advice.</strong> Nothing in the property section is a personal recommendation. earmarkIQ is an information tool, and decisions about borrowing against or selling a home should involve a qualified professional.</li>
+      <li><strong>No automatic mortgage balance.</strong> The outstanding balance is a figure you enter and maintain.</li>
+    </ul>
+
+    <div class="attribution">
+      <p><strong>Data attribution.</strong> Contains HM Land Registry data &copy; Crown copyright and database right 2026. Licensed under the Open Government Licence v3.0.</p>
+      <p>The UK House Price Index is produced by HM Land Registry in partnership with Registers of Scotland, Land and Property Services Northern Ireland, and the Office for National Statistics. earmarkIQ is not affiliated with, endorsed by, or acting on behalf of any of these bodies, and any estimate produced from their published data is earmarkIQ's own calculation.</p>
+    </div>
+
+    <div class="cta-block">
+      <h2>Put your house on your balance sheet</h2>
+      <p>Add your address, enter your mortgage balance, and let the equity update itself every month alongside the rest of your money.</p>
+      <a href="/download" class="cta-btn">Download on the App Store &rarr;</a>
+      <p class="cta-sub">Free to download &middot; UK only &middot; Read-only Open Banking &middot; FCA regulated</p>
+    </div>
+
+    <hr class="section-divider" />
+
+    <h2 id="faq">Frequently asked questions</h2>
+
+    <div class="faq">
+      <div class="faq-item">
+        <div class="faq-q">How does earmarkIQ estimate the value of my property?<span class="faq-chevron">&#9662;</span></div>
+        <div class="faq-a">earmarkIQ uses indexation. You add your address and tell the app what you paid for the property and when. earmarkIQ then takes the movement in the UK House Price Index for your local authority between the month you bought and the most recently published month, and applies that percentage movement to your purchase price. The result is an estimate of what your property would be worth today if it had moved in line with the average property in your area. Contains HM Land Registry data &copy; Crown copyright and database right 2026. Licensed under the Open Government Licence v3.0.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How accurate is the earmarkIQ property estimate?<span class="faq-chevron">&#9662;</span></div>
+        <div class="faq-a">It is an estimate of index movement, not a valuation of your home. The figure is calculated from the average change in prices across a whole local authority, so it does not know about your extensions, your condition, your street, your view, or the specific type of property you own. Treat it as a reasonable directional figure for net worth tracking, and not as a number to rely on for a sale, a remortgage, probate, or any legal purpose. If your property has changed materially since you bought it, the estimate will drift from reality and you should override it.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I override the estimated property value in earmarkIQ?<span class="faq-chevron">&#9662;</span></div>
+        <div class="faq-a">Yes. You can enter your own figure at any time and earmarkIQ will use it instead of the index estimate. Override when you have a number you trust more: a surveyor's valuation, a mortgage lender's valuation, an estate agent's appraisal, a recent sale price for an identical neighbouring property, or the completion price if you have just bought. You can revert to the index estimate later if you want to.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How often does my property value update in earmarkIQ?<span class="faq-chevron">&#9662;</span></div>
+        <div class="faq-a">Monthly. The UK House Price Index is published each month by HM Land Registry and its partner bodies, and earmarkIQ refreshes your estimate when new index data becomes available. The index is published with a lag of roughly two months and earlier months are revised as more sale completions are registered, so recent figures can move slightly after first publication. If you have overridden the estimate with your own figure, that figure stays put until you change it.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How do I add my mortgage and see my property equity?<span class="faq-chevron">&#9662;</span></div>
+        <div class="faq-a">Enter the outstanding balance on your mortgage against the property. earmarkIQ subtracts the balance from the property value to give your equity, and divides the balance by the value to give your loan-to-value. Your equity, not the gross property value, is what flows into your net worth figure alongside your current accounts, savings, investments and other debts. Keep the balance current after overpayments or an annual statement so the equity figure stays honest.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What does the Pro tier add to property valuation?<span class="faq-chevron">&#9662;</span></div>
+        <div class="faq-a">Every earmarkIQ tier gets the local-authority House Price Index estimate. Pro adds an address-level market valuation, which is calculated for your specific property rather than for the average property across the whole local authority it sits in. It remains an estimate produced from data rather than an inspection, and it can still be overridden with your own figure.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does earmarkIQ use Zoopla, Rightmove or an estate agent to value my property?<span class="faq-chevron">&#9662;</span></div>
+        <div class="faq-a">No. earmarkIQ has no integration with Zoopla, Rightmove or any estate agency, and no agent is involved in producing your figure. The standard estimate is calculated from the official UK House Price Index published by HM Land Registry and its partner bodies. Nobody visits or inspects your property, and earmarkIQ does not list, market or introduce your property to anyone.</div>
+      </div>
+    </div>
+
+    <h2 id="read-next">Read next</h2>
+    <div class="related">
+      <a href="/blog/how-earmarkiq-values-your-property">
+        <div class="related-t">How earmarkIQ values your property</div>
+        <div class="related-d">The indexation method in full: why it is an estimate, when to override it, and how it differs from an automated valuation model.</div>
+      </a>
+      <a href="/tools/mortgage-affordability">
+        <div class="related-t">Mortgage affordability calculator</div>
+        <div class="related-d">Work out what you could borrow against your income, before you go anywhere near a lender.</div>
+      </a>
+      <a href="/#property">
+        <div class="related-t">Property inside earmarkIQ</div>
+        <div class="related-d">Where property equity sits alongside spending, bills, goals and investments on the home screen.</div>
+      </a>
+      <a href="/fca-regulated">
+        <div class="related-t">How earmarkIQ is regulated</div>
+        <div class="related-d">Appointed Representative status, Consumer Duty, and what read-only Open Banking access actually means.</div>
+      </a>
+    </div>
+
+  </article>
+</div>
+
+<footer>
+  <p>&copy; 2026 earmarkIQ Ltd &middot; <a href="/">Home</a> &middot; <a href="/blog">Blog</a> &middot; <a href="/privacy">Privacy Policy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="mailto:hello@earmarkiq.app">Contact</a></p>
+  <p style="margin-top:8px">earmarkIQ is an FCA Appointed Representative of Finexer Ltd (FRN 925695). <a href="https://register.fca.org.uk/s/firm?id=001Sk000010irOJIAY" rel="nofollow" target="_blank">Verify on the FCA register</a>. Content on this site is for guidance only and does not constitute financial advice.</p>
+  <p class="footer-attr">Contains HM Land Registry data &copy; Crown copyright and database right 2026. Licensed under the Open Government Licence v3.0.</p>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+
+</body>
+</html>

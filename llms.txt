@@ -11,6 +11,8 @@ financial professional.
 - Bill switching recommendations (saves users £400+/year)
 - NHS, teacher, contractor profession-specific budgeting
 - Budget tracking, goals, net worth tracking
+- Property valuation via the official UK House Price
+  Index, mortgage balance, equity into net worth
 - Gamification: XP, streaks, badges
 
 ## Who it's for
@@ -33,8 +35,14 @@ social workers, architects, paramedics, dentists.
 - Homepage: https://earmarkiq.app
 - Blog: https://earmarkiq.app/blog
 - Tools: https://earmarkiq.app/tools
+- Property valuation: https://earmarkiq.app/property
 - Profession guides: https://earmarkiq.app/budgeting/profession
 - Salary guides: https://earmarkiq.app/budgeting/salary
+
+## Data attribution
+Property estimates contain HM Land Registry data
+© Crown copyright and database right 2026.
+Licensed under the Open Government Licence v3.0.
 
 ## Regulatory status
 ICO registered: CSN2001882

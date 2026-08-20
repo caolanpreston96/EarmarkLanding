@@ -151,6 +151,43 @@
 /* Tools Section */
 .tools-cards{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}.tcrd{display:block;background:var(--sf);border:1px solid var(--bd);border-radius:20px;padding:36px 28px;position:relative;overflow:hidden;transition:all .4s;text-decoration:none;color:inherit}.tcrd:hover{border-color:var(--mint);transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.25),0 0 30px var(--mintG)}.tcrd::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);opacity:0;transition:opacity .3s}.tcrd:hover::before{opacity:1}.tcrd-ic{font-size:32px;margin-bottom:16px}.tcrd-t{font-size:22px;font-weight:800;letter-spacing:-.02em;margin-bottom:8px}.tcrd-d{font-size:15px;color:var(--tx2);line-height:1.7;margin-bottom:16px}.tcrd-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}.tcrd-tag{font-size:11px;font-weight:600;font-family:var(--m);padding:4px 10px;border-radius:6px;background:rgba(78,205,196,.08);color:var(--mint);letter-spacing:.02em}.tcrd-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:var(--mint);color:var(--bg);font-size:14px;font-weight:700;border-radius:100px;transition:all .3s}.tcrd:hover .tcrd-btn{box-shadow:0 8px 24px rgba(78,205,196,.3)}
 
+/* Property Section */
+.prop-s{position:relative;z-index:1;padding:110px 32px;background:linear-gradient(180deg,rgba(74,222,128,.045) 0%,rgba(91,141,239,.03) 55%,transparent 100%);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)}
+.prop-i{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:start}
+.prop-l{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:var(--green);text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px;font-family:var(--m)}
+.prop-l::before{content:'';width:20px;height:1.5px;background:var(--green);border-radius:1px}
+.prop-h{font-size:clamp(28px,3.5vw,46px);font-weight:800;line-height:1.1;letter-spacing:-.035em;margin-bottom:16px}
+.prop-d{font-size:17px;color:var(--tx2);line-height:1.75;margin-bottom:30px}
+.prop-steps{margin-bottom:26px}
+.prop-step{display:flex;gap:16px;padding:15px 0;border-bottom:1px solid var(--bd)}
+.prop-step:last-child{border-bottom:none;padding-bottom:0}
+.prop-n{flex-shrink:0;width:30px;height:30px;border-radius:9px;background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.25);color:var(--green);font-family:var(--m);font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.prop-st{font-size:15px;font-weight:700;letter-spacing:-.01em;margin-bottom:3px}
+.prop-sd{font-size:14px;color:var(--tx2);line-height:1.7}
+.prop-note{border:1px solid var(--bd);border-left:3px solid var(--amber);background:rgba(245,166,35,.04);border-radius:12px;padding:18px 22px;margin-bottom:16px}
+.prop-note-b{border-left-color:var(--blue);background:rgba(91,141,239,.04)}
+.prop-note-l{font-family:var(--m);font-size:11px;font-weight:600;color:var(--amber);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
+.prop-note-b .prop-note-l{color:var(--blue)}
+.prop-note p{font-size:14px;color:var(--tx2);line-height:1.7;margin:0}
+.prop-attr{font-size:11px;color:var(--tx4);line-height:1.7;margin-top:20px;max-width:520px}
+.prop-cta{display:inline-flex;align-items:center;gap:8px;margin-top:24px;padding:12px 26px;border:2px solid var(--green);color:var(--green);font-size:14px;font-weight:700;border-radius:100px;transition:all .3s}
+.prop-cta:hover{background:var(--green);color:var(--bg)}
+.prop-card{background:var(--sf);border:1px solid var(--bd);border-radius:20px;padding:28px 26px}
+.pv-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.pv-lab{font-family:var(--m);font-size:11px;color:var(--tx3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px}
+.pv-val{font-size:34px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.pv-chip{flex-shrink:0;font-family:var(--m);font-size:10px;font-weight:600;color:var(--green);background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.22);border-radius:100px;padding:5px 11px;text-transform:uppercase;letter-spacing:.08em}
+.pv-move{font-size:13px;color:var(--green);font-weight:600;margin-top:10px}
+.pv-bar{height:14px;border-radius:8px;overflow:hidden;display:flex;background:var(--bg3);margin:22px 0 12px}
+.pv-bar i{display:block;height:100%}
+.pv-key{display:flex;flex-wrap:wrap;gap:18px;font-size:12.5px;color:var(--tx2);margin-bottom:22px}
+.pv-key span{display:inline-flex;align-items:center;gap:7px}
+.pv-key em{width:9px;height:9px;border-radius:3px;display:inline-block}
+.pv-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:11px 0;border-top:1px solid var(--bd);font-size:13.5px;color:var(--tx2)}
+.pv-row b{color:var(--tx);font-weight:600;text-align:right}
+.pv-foot{font-size:11.5px;color:var(--tx4);line-height:1.7;margin-top:18px;border-top:1px solid var(--bd);padding-top:16px}
+@media(max-width:960px){.prop-s{padding:80px 20px}.prop-i{grid-template-columns:1fr;gap:36px}}
+
 /* Responsive */
 @media(max-width:960px){.hero-i{grid-template-columns:1fr;text-align:center}.hero-p{margin-left:auto;margin-right:auto}.hero-btns{justify-content:center}.hero-trust{justify-content:center}.hero-vis{margin-top:32px}.iph-hero{width:260px}.fc{display:none}.fr,.fr.rev{grid-template-columns:1fr;direction:ltr;gap:32px}.fr.rev>*{direction:ltr}.ft{max-width:100%}.iph-feat{transform:none;opacity:0}.iph-feat.in-view,.fr.rev .iph-feat.in-view{transform:none;opacity:1;box-shadow:0 25px 60px rgba(0,0,0,.5),0 8px 40px var(--glow,transparent)}.feat-glow{margin-top:16px}.partner-ill{margin:0 auto}.xp-ill{margin:0 auto}.steps{grid-template-columns:1fr}.stats-g{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2)::after{display:none}.tg{grid-template-columns:1fr}.footer-top{grid-template-columns:1fr 1fr;gap:28px}.nav-links{display:none}.mob-tog{display:block}.footer-mid{flex-direction:column;text-align:center}.tools-cards{grid-template-columns:1fr}}
 @media(max-width:600px){.hero{padding:120px 20px 48px}.sec{padding:80px 20px}.iph-hero{width:250px}.iph-step{width:180px}.iph-step::before{width:50px;height:14px;top:6px}.iph-feat{width:230px}.stats-g{grid-template-columns:1fr 1fr}.tool-grid{grid-template-columns:1fr}.footer-top{grid-template-columns:1fr}}
@@ -208,6 +245,7 @@
         "AI money coach (Ask IQ)",
         "Goal tracking",
         "Net worth tracking",
+        "Property valuation and equity tracking",
         "Partner finance mode",
         "Tax optimisation tips",
         "Weekly spending insights",
@@ -260,7 +298,9 @@
         "AI Financial Advice",
         "UK Tax System",
         "Budgeting",
-        "Net Worth Tracking"
+        "Net Worth Tracking",
+        "UK House Price Index",
+        "Property Equity Tracking"
       ],
       "sameAs": [
         "https://twitter.com/earmarkiq",
@@ -459,7 +499,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
     <div class="ft rl">
       <div class="ft-tag" style="background:rgba(91,141,239,.15);color:var(--bg);border:none">Plan</div>
       <h3 class="ft-h">10 financial tools,<br>zero spreadsheets.</h3>
-      <p class="ft-d">Everything you need to plan your financial future — from modelling a salary raise to mapping your fastest route out of debt. All powered by your real spending data.</p>
+      <p class="ft-d">Everything you need to plan your financial future — from modelling a salary raise to mapping your fastest route out of debt. All powered by your real spending data. Net worth pulls in your accounts, investments, debts and <a href="/property" style="color:var(--mint);text-decoration:underline;text-underline-offset:3px">property equity</a>.</p>
       <div class="tool-grid">
         <div class="tool-card"><div class="tool-card-ic">🔮</div><div class="tool-card-n">What-If Simulator</div><div class="tool-card-d">Model salary changes, new expenses, investment returns — monthly, annual, and 5-year projections</div></div>
         <div class="tool-card"><div class="tool-card-ic">💳</div><div class="tool-card-n">Debt Payoff Planner</div><div class="tool-card-d">Avalanche vs Snowball with debt-free date</div></div>
@@ -545,6 +585,60 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
     <p class="mid-cta-p">earmarkIQ is free on the App Store — download it and connect your bank in under two minutes.</p>
     <a href="/download" class="btn-m">Download on the App Store <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     <div style="margin-top:14px"><a href="/signup" style="font-size:13px;color:var(--tx3);text-decoration:underline;text-underline-offset:3px">Use earmarkIQ on the web →</a></div>
+  </div>
+
+</div></section>
+
+<!-- PROPERTY -->
+<section class="prop-s" id="property"><div class="prop-i">
+
+  <div>
+    <div class="r"><div class="prop-l">Property &amp; Equity</div></div>
+    <h2 class="prop-h r d1">Your home is most of<br>your net worth. Track it<br>like it counts.</h2>
+    <p class="prop-d r d2">Add your address and earmarkIQ keeps a running estimate of what your property is worth, moved each month by the official UK House Price Index. Put your mortgage balance in alongside it and your equity — value minus what you still owe — feeds straight into your net worth, without you touching a spreadsheet again.</p>
+
+    <div class="prop-steps r d2">
+      <div class="prop-step"><div class="prop-n">01</div><div><div class="prop-st">Add your address</div><div class="prop-sd">Search for your property and confirm it, then tell earmarkIQ what you paid and when. That purchase price is the starting point for everything that follows.</div></div></div>
+      <div class="prop-step"><div class="prop-n">02</div><div><div class="prop-st">The estimate updates monthly</div><div class="prop-sd">earmarkIQ takes the House Price Index movement for your local authority since the month you bought, and applies it to your purchase price. When HM Land Registry publishes the next monthly index, your figure moves with it.</div></div></div>
+      <div class="prop-step"><div class="prop-n">03</div><div><div class="prop-st">Enter your mortgage balance</div><div class="prop-sd">Add what is still outstanding on the mortgage and earmarkIQ works out your equity and your loan-to-value, so you can see the debt shrinking against the asset.</div></div></div>
+      <div class="prop-step"><div class="prop-n">04</div><div><div class="prop-st">Equity flows into net worth</div><div class="prop-sd">Property equity sits beside your current accounts, savings, investments and debts in a single net worth figure that keeps itself current. No monthly re-entry, no guessing.</div></div></div>
+    </div>
+
+    <div class="prop-note r d3">
+      <div class="prop-note-l">This is an estimate, not a valuation</div>
+      <p>earmarkIQ applies published index movement to the price you paid. Nobody visits your property, and the figure is not a surveyor's valuation, a lender's valuation or an estate agent's appraisal. Extensions, condition and the particulars of your street are not in it. If you have a number you trust more, you can override the estimate with your own figure at any time and earmarkIQ will use that instead.</p>
+    </div>
+
+    <div class="prop-note prop-note-b r d3">
+      <div class="prop-note-l">What Pro adds</div>
+      <p>Every tier gets the local-authority House Price Index estimate described above. Pro adds an address-level market valuation — a figure calculated for your specific property rather than for the whole local authority it sits in.</p>
+    </div>
+
+    <a href="/property" class="prop-cta r d3">See how property valuation works <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+
+    <p class="prop-attr r d3">Contains HM Land Registry data &copy; Crown copyright and database right 2026. Licensed under the Open Government Licence v3.0.</p>
+  </div>
+
+  <div class="prop-card r d2">
+    <div class="pv-top">
+      <div>
+        <div class="pv-lab">Estimated value</div>
+        <div class="pv-val">&pound;312,400</div>
+      </div>
+      <div class="pv-chip">Index estimate</div>
+    </div>
+    <div class="pv-move">+&pound;8,100 since you added it</div>
+    <div class="pv-bar"><i style="width:40.4%;background:var(--green)"></i><i style="width:59.6%;background:var(--bd2)"></i></div>
+    <div class="pv-key">
+      <span><em style="background:var(--green)"></em>Equity &pound;126,200</span>
+      <span><em style="background:var(--bd2)"></em>Mortgage &pound;186,200</span>
+    </div>
+    <div class="pv-row"><span>Loan to value</span><b>60%</b></div>
+    <div class="pv-row"><span>Basis</span><b>Purchase price &times; local HPI</b></div>
+    <div class="pv-row"><span>Refreshed</span><b>Monthly, on index release</b></div>
+    <div class="pv-row"><span>Feeds into</span><b>Net worth</b></div>
+    <div class="pv-row"><span>Override</span><b>Any time, your figure wins</b></div>
+    <div class="pv-foot">Example figures shown for illustration. Your own estimate tracks the House Price Index for your local authority and can be replaced with a valuation you hold.</div>
   </div>
 
 </div></section>
@@ -679,7 +773,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 <footer class="footer"><div class="footer-i">
   <div class="footer-top">
     <div><a href="#" class="nav-l" style="font-size:22px">earmark<b>IQ</b><span style="display:block;font-family:var(--m);font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--tx3);font-weight:500;margin-top:2px">Smart Money</span></a><p class="footer-bt">AI-powered salary allocation for UK professionals.</p></div>
-    <div><h5 class="footer-hd">Product</h5><ul class="footer-ul"><li><a href="#how">How it works</a></li><li><a href="#features">Features</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#security">Security</a></li></ul></div>
+    <div><h5 class="footer-hd">Product</h5><ul class="footer-ul"><li><a href="#how">How it works</a></li><li><a href="#features">Features</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#security">Security</a></li><li><a href="/property">Property valuation</a></li></ul></div>
     <div><h5 class="footer-hd">Resources</h5><ul class="footer-ul"><li><a href="/blog">Blog</a></li><li><a href="/tools/salary-sacrifice">Salary Sacrifice Calculator</a></li><li><a href="/tools/nhs-pay-calculator">NHS Pay Calculator</a></li><li><a href="/tools">All Tools &rarr;</a></li><li><a href="/budgeting/salary">Salary Guides</a></li><li><a href="/budgeting/profession">Profession Guides</a></li></ul></div>
     <div><h5 class="footer-hd">Legal</h5><ul class="footer-ul"><li><a href="/privacy">Privacy Policy</a></li><li><a href="/terms">Terms of Service</a></li><li><a href="mailto:hello@earmarkiq.app">Support</a></li></ul></div>
   </div>
