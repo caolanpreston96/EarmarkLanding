@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>earmarkIQ Context — Connect Your Bank Data to AI Assistants | UK Open Banking MCP</title>
-  <meta name="description" content="earmarkIQ Context is a live, read-only MCP server: ask Claude or any MCP-capable assistant about your own spending, subscriptions, net worth and property — grounded in your UK Open Banking data." />
+  <title>earmarkIQ Context — Read-Only Bank Data for AI Assistants | UK Open Banking MCP</title>
+  <meta name="description" content="earmarkIQ Context is a live, read-only MCP server: ask Claude or any MCP-capable assistant about your own spending, subscriptions, net worth and property. Read-only by construction — no mutating capability exists." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://earmarkiq.app/context">
   <meta name="theme-color" content="#080b12" />
@@ -16,9 +16,9 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://earmarkiq.app/context" />
-  <meta property="og:title" content="earmarkIQ Context — Connect Your Bank Data to AI Assistants" />
-  <meta property="og:description" content="A live, read-only MCP server: ask Claude or any MCP-capable assistant about your own spending, subscriptions, net worth and property." />
-  <meta property="og:image" content="https://earmarkiq.app/api/og?title=earmarkIQ%20Context&subtitle=Your%20money%2C%20in%20your%20AI%20assistant%20%E2%80%94%20live" />
+  <meta property="og:title" content="earmarkIQ Context — Read-Only Bank Data for AI Assistants" />
+  <meta property="og:description" content="A live, read-only MCP server for your finances. Read-only by construction: no mutating capability exists, every access is audited, and you can revoke it yourself." />
+  <meta property="og:image" content="https://earmarkiq.app/api/og?title=earmarkIQ%20Context&subtitle=Your%20money%2C%20in%20your%20AI%20assistant%20%E2%80%94%20read-only" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:site_name" content="earmarkIQ" />
@@ -26,7 +26,7 @@
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@earmarkiq" />
-  <meta name="twitter:title" content="earmarkIQ Context — Connect Your Bank Data to AI Assistants" />
+  <meta name="twitter:title" content="earmarkIQ Context — Read-Only Bank Data for AI Assistants" />
   <meta name="twitter:description" content="A live, read-only MCP server for your finances. Claude verified; works with any MCP-capable assistant." />
   <meta name="twitter:image" content="https://earmarkiq.app/assets/og-image.webp" />
 
@@ -37,16 +37,35 @@
       {
         "@type": "WebPage",
         "name": "earmarkIQ Context",
-        "description": "earmarkIQ Context is a live, read-only MCP server that connects your earmarkIQ financial data to Claude and any MCP-capable AI assistant.",
+        "description": "earmarkIQ Context is a live, read-only MCP server that connects your earmarkIQ financial data to Claude and any MCP-capable AI assistant. Read-only by construction, audited, and revocable.",
         "url": "https://earmarkiq.app/context",
-        "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2"] },
-        "publisher": { "@type": "Organization", "name": "earmarkIQ", "url": "https://earmarkiq.app" }
+        "inLanguage": "en-GB",
+        "speakable": { "@type": "SpeakableSpecification", "cssSelector": ["h1", "h2", ".faq-a"] },
+        "publisher": { "@type": "Organization", "name": "earmarkIQ Ltd", "url": "https://earmarkiq.app" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "earmarkIQ Context",
+        "applicationCategory": "FinanceApplication",
+        "applicationSubCategory": "MCP server",
+        "operatingSystem": "Any MCP-capable AI assistant",
+        "url": "https://earmarkiq.app/context",
+        "inLanguage": "en-GB",
+        "description": "A read-only Model Context Protocol server that gives an MCP-capable AI assistant permissioned access to a user's own categorised earmarkIQ financial data: accounts and balances, spending by category, subscriptions, net worth and property equity, and the payday allocation plan. No mutating capability exists.",
+        "featureList": [
+          "Read accounts and balances",
+          "Read spending by category",
+          "Read subscriptions and price changes",
+          "Read net worth and property equity",
+          "Read the payday allocation plan"
+        ],
+        "publisher": { "@type": "Organization", "name": "earmarkIQ Ltd", "url": "https://earmarkiq.app" }
       },
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://earmarkiq.app/" },
-          { "@type": "ListItem", "position": 2, "name": "earmarkIQ Context" }
+          { "@type": "ListItem", "position": 2, "name": "earmarkIQ Context", "item": "https://earmarkiq.app/context" }
         ]
       },
       {
@@ -55,27 +74,42 @@
           {
             "@type": "Question",
             "name": "What is an MCP server?",
-            "acceptedAnswer": { "@type": "Answer", "text": "MCP (Model Context Protocol) is an open standard that lets AI assistants such as Claude connect securely to outside sources of information, with your permission. An MCP server is the bridge: it gives your assistant permissioned access to specific data — in earmarkIQ Context's case, your own categorised financial picture — so answers are grounded in your real numbers rather than general knowledge." }
+            "acceptedAnswer": { "@type": "Answer", "text": "MCP (Model Context Protocol) is an open standard that lets AI assistants such as Claude connect securely to outside sources of information, with your permission. An MCP server is the bridge: it publishes a specific list of things an assistant may ask for, and nothing outside that list exists to be discovered. earmarkIQ Context is that bridge for your finances, so answers are grounded in your real numbers rather than general knowledge." }
           },
           {
             "@type": "Question",
             "name": "Can an AI assistant connected via earmarkIQ Context move my money?",
-            "acceptedAnswer": { "@type": "Answer", "text": "No. earmarkIQ Context is read-only: an assistant can read your data, and that is all. It cannot move money, make payments, change settings, or alter anything on your accounts, and you can revoke its access at any time." }
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Context is read-only by construction: it publishes read operations only, and no capability to move money, make a payment, cancel a subscription or change a setting exists within it. This is enforced structurally rather than by policy — a test in the earmarkIQ build fails if any mutating capability is ever added. earmarkIQ itself also operates under Account Information Services, a read permission, so there is no payment capability upstream either." }
+          },
+          {
+            "@type": "Question",
+            "name": "How is the read-only guarantee actually enforced?",
+            "acceptedAnswer": { "@type": "Answer", "text": "In three layers. First, the permission layer: earmarkIQ's bank connection runs under Account Information Services via Finexer Ltd (FRN 925695), which is a reading permission with no ability to construct a payment instruction. Second, the surface layer: Context publishes only read operations, so there is no mutating capability for an assistant to invoke. Third, the build layer: an automated test fails the build if any mutating capability is added to Context, so the guarantee cannot be eroded quietly over time. Every access is also recorded in an audit trail visible to you." }
           },
           {
             "@type": "Question",
             "name": "Which AI assistants work with earmarkIQ Context?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Any assistant that supports the Model Context Protocol and custom connectors. Claude is verified; because MCP is an open standard, other MCP-capable assistants can connect the same way, though we haven't verified each one individually." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Claude is verified. Because MCP is an open standard and Context is a standard MCP server, other MCP-capable assistants that support custom connectors can connect the same way, but we have not verified each one individually and do not claim compatibility we have not tested." }
           },
           {
             "@type": "Question",
             "name": "How do I connect my bank data to an AI assistant with earmarkIQ Context?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Three steps: get your personal Context address from your earmarkIQ account; add it as a custom connector in your MCP-capable assistant (Claude verified); then approve read-only access when the assistant asks. Your bank data itself stays with earmarkIQ — the assistant reads the categorised picture, never your bank connection, and never your credentials." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Three steps: get your personal Context address from your earmarkIQ account; add it as a custom connector in your MCP-capable assistant (Claude verified); then approve read-only access when the assistant asks. Your bank data itself stays with earmarkIQ — the assistant reads the categorised picture, never your bank connection, and never your credentials. earmarkIQ never sees your banking credentials either, because Open Banking authenticates you at your own bank." }
           },
           {
             "@type": "Question",
             "name": "How do I disconnect an assistant from my data?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Revoke Context access from your earmarkIQ account at any time, or remove the connector from your assistant. Access ends there and then — nothing about your earmarkIQ app or bank connections is affected." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Revoke Context access from your earmarkIQ account at any time, or remove the connector from your assistant. Access ends there and then — nothing about your earmarkIQ app or your bank connections is affected. You do not need to contact support and there is no notice period." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does earmarkIQ Context make my conversation private?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No, and it is important to be clear about it. Context controls what an assistant can read from earmarkIQ. It has no control over the assistant itself: once an answer about your finances appears in a conversation, that conversation sits with whoever provides the assistant, under their retention and privacy terms. Read-only prevents your money being moved. It does not make the conversation private from the assistant's provider, and no server design can." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does earmarkIQ initiate payments?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. earmarkIQ does not initiate payments today. Payment initiation sits within the permissions earmarkIQ operates under as an Appointed Representative of Finexer Ltd and is on the roadmap, but the capability is not enabled. If it is ever switched on, it would be a payment you start, with an amount and payee you see and confirm, authenticated by you at your own bank, one payment at a time. earmarkIQ Context would remain read-only, and no assistant would be able to trigger a payment." }
           }
         ]
       }
@@ -85,11 +119,11 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --bg:#080b12; --surface:#0f1420; --border:#1e2536; --text:#e2e8f0; --text-dim:#94a3b8; --text-muted:#475569; --mint:#6ee7b7; --mint-dim:rgba(110,231,183,0.12); --blue:#60a5fa; --amber:#fbbf24; --red:#f87171; }
+    :root { --bg:#080b12; --surface:#0f1420; --border:#1e2536; --text:#e2e8f0; --text-dim:#94a3b8; --text-muted:#475569; --mint:#6ee7b7; --mint-dim:rgba(110,231,183,0.12); --blue:#60a5fa; --amber:#fbbf24; --red:#f87171; --purple:#a78bfa; }
     html { scroll-behavior: smooth; }
     body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
     nav { position: sticky; top: 0; z-index: 100; background: rgba(8,11,18,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
@@ -97,7 +131,7 @@
     .nav-logo span { color: var(--mint); }
     .nav-cta { background: var(--mint); color: #080b12; font-weight: 600; font-size: 13px; padding: 8px 18px; border-radius: 8px; text-decoration: none; transition: opacity 0.2s; }
     .nav-cta:hover { opacity: 0.85; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px 80px; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px 80px; }
     .hero { padding: 64px 0 12px; }
     .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
     .breadcrumb a { color: var(--text-muted); text-decoration: none; }
@@ -107,24 +141,59 @@
     @keyframes pd { 0%,100% { box-shadow: 0 0 0 0 rgba(110,231,183,.4); } 50% { box-shadow: 0 0 0 7px rgba(110,231,183,0); } }
     h1 { font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(30px, 5vw, 46px); line-height: 1.12; letter-spacing: -0.02em; color: var(--text); margin-bottom: 20px; }
     h1 em { font-style: italic; color: var(--mint); }
-    h2 { font-family: 'Instrument Serif', Georgia, serif; font-size: 26px; line-height: 1.2; color: var(--text); margin: 44px 0 14px; letter-spacing: -0.01em; }
+    h2 { font-family: 'Instrument Serif', Georgia, serif; font-size: 27px; line-height: 1.2; color: var(--text); margin: 48px 0 14px; letter-spacing: -0.01em; }
+    h3 { font-size: 17px; font-weight: 600; color: var(--text); margin: 26px 0 10px; }
     p { margin-bottom: 18px; color: var(--text-dim); }
     strong { color: var(--text); font-weight: 600; }
     a { color: var(--mint); text-decoration: none; }
     a:hover { text-decoration: underline; }
+    ul.plain { margin: 0 0 18px 22px; color: var(--text-dim); }
+    ul.plain li { margin-bottom: 9px; }
+    hr.divider { border: none; border-top: 1px solid var(--border); margin: 44px 0; }
+
     ul.reads { list-style: none; margin: 0 0 18px; }
-    ul.reads li { display: flex; gap: 10px; align-items: flex-start; padding: 8px 0; border-bottom: 1px solid rgba(30,37,54,0.5); font-size: 15px; color: var(--text-dim); }
+    ul.reads li { display: flex; gap: 12px; align-items: flex-start; padding: 11px 0; border-bottom: 1px solid rgba(30,37,54,0.5); font-size: 15px; color: var(--text-dim); }
     ul.reads li:last-child { border-bottom: none; }
     ul.reads .tick { color: var(--mint); flex-shrink: 0; font-weight: 700; }
+    ul.reads .cross { color: var(--red); flex-shrink: 0; font-weight: 700; }
+
     .example-q { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--mint); border-radius: 0 8px 8px 0; padding: 12px 16px; margin: 10px 0; }
-    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border: 1px solid rgba(110,231,183,0.2); background: rgba(110,231,183,0.06); }
-    .callout-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; color: var(--mint); }
+
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border: 1px solid; }
+    .callout-mint { border-color: rgba(110,231,183,0.2); background: rgba(110,231,183,0.06); }
+    .callout-amber { border-color: rgba(251,191,36,0.2); background: rgba(251,191,36,0.06); }
+    .callout-blue { border-color: rgba(96,165,250,0.2); background: rgba(96,165,250,0.06); }
+    .callout-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+    .callout-mint .callout-label { color: var(--mint); }
+    .callout-amber .callout-label { color: var(--amber); }
+    .callout-blue .callout-label { color: var(--blue); }
     .callout p { margin-bottom: 0; }
+    .callout p + p { margin-top: 12px; }
+
+    .layers { margin: 24px 0; }
+    .layer { display: flex; gap: 18px; padding: 20px 0; border-bottom: 1px solid rgba(30,37,54,0.7); }
+    .layer:last-child { border-bottom: none; }
+    .layer-n { flex-shrink: 0; width: 38px; height: 38px; border-radius: 10px; background: var(--mint-dim); border: 1px solid rgba(110,231,183,0.25); color: var(--mint); font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; margin-top: 3px; }
+    .layer h3 { margin: 0 0 6px; font-size: 16px; }
+    .layer p { margin: 0; font-size: 14.5px; }
+
+    .table-wrap { overflow-x: auto; margin: 24px 0; border-radius: 12px; border: 1px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+    thead { background: var(--surface); }
+    th { padding: 12px 16px; text-align: left; font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 1px solid var(--border); }
+    td { padding: 12px 16px; color: var(--text-dim); border-bottom: 1px solid rgba(30,37,54,0.6); vertical-align: top; }
+    tr:last-child td { border-bottom: none; }
+    .td-name { font-weight: 600; color: var(--text); white-space: nowrap; }
+    .st-live { color: var(--mint); font-weight: 600; white-space: nowrap; }
+    .st-planned { color: var(--amber); font-weight: 600; white-space: nowrap; }
+    .st-no { color: var(--red); font-weight: 600; white-space: nowrap; }
+
     .steps { counter-reset: step; margin: 20px 0 8px; }
     .step { display: flex; gap: 16px; margin-bottom: 18px; align-items: flex-start; }
     .step::before { counter-increment: step; content: counter(step); flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: var(--mint-dim); border: 1px solid rgba(110,231,183,0.25); color: var(--mint); font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; }
-    .step h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+    .step h3 { font-size: 16px; font-weight: 600; color: var(--text); margin: 0 0 2px; }
     .step p { font-size: 14px; margin-bottom: 0; }
+
     .faq { margin: 16px 0; }
     .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
     .faq-q { padding: 15px 18px; font-weight: 600; font-size: 15px; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
@@ -133,6 +202,14 @@
     .faq-a { padding: 0 18px 15px; color: var(--text-dim); font-size: 14px; line-height: 1.7; display: none; }
     .faq-item.open .faq-a { display: block; }
     .faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+    .related { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 22px 0 0; }
+    @media (max-width: 620px) { .related { grid-template-columns: 1fr; } }
+    .related a { display: block; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; text-decoration: none; transition: border-color 0.2s, transform 0.25s; }
+    .related a:hover { border-color: rgba(110,231,183,0.4); text-decoration: none; transform: translateY(-2px); }
+    .related-t { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+    .related-d { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+
     .pilot-block { background: linear-gradient(135deg, rgba(110,231,183,0.08), rgba(96,165,250,0.05)); border: 1px solid rgba(110,231,183,0.2); border-radius: 16px; padding: 32px; text-align: center; margin: 44px 0; }
     .pilot-block h2 { margin-top: 0; font-size: 24px; }
     .pilot-block p { max-width: 440px; margin: 0 auto 22px; }
@@ -148,9 +225,11 @@
     .pilot-success { display: none; font-size: 17px; font-weight: 700; color: var(--mint); padding: 10px 0 0; }
     .pilot-sub { font-size: 13px; color: var(--text-muted); margin-top: 12px; margin-bottom: 0; }
     @media (max-width: 480px) { .pilot-form { flex-direction: column; } }
+
     footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 13px; color: var(--text-muted); }
     footer a { color: var(--text-muted); }
     footer a:hover { color: var(--mint); }
+    .footer-note { max-width: 760px; margin: 10px auto 0; font-size: 12px; line-height: 1.7; }
   </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-62JW90868T"></script>
@@ -180,55 +259,168 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
     </div>
     <div class="hero-tag"><span class="live-dot"></span>Live</div>
     <h1>earmarkIQ Context:<br>your money, in your<br><em>AI assistant.</em></h1>
-    <p>earmarkIQ Context is a live, read-only MCP server. Connect your earmarkIQ data to Claude — verified — or any MCP-capable assistant, and ask about your own finances with answers grounded in your real numbers, not general knowledge.</p>
+    <p>earmarkIQ Context is a live, read-only MCP server. Connect your earmarkIQ data to Claude — verified — or any MCP-capable assistant, and ask about your own finances with answers grounded in your real numbers rather than general knowledge.</p>
+    <p>It can read. It cannot act. Not because we have promised not to, but because no capability to act exists inside it — and a test in our build fails if anyone ever adds one.</p>
   </div>
 
-  <h2 id="what-is-mcp">What's an MCP server, in plain terms?</h2>
-  <p>MCP — the Model Context Protocol — is an open standard that lets AI assistants connect to outside sources of information, with your permission. An MCP server is the bridge. earmarkIQ Context is that bridge for your finances: your assistant gets permissioned, read-only access to your categorised earmarkIQ data — collected through UK Open Banking and organised for you — so instead of answering from general knowledge, it answers from your actual position.</p>
+  <h2 id="what-it-is">What it is, without the jargon</h2>
+  <p>You almost certainly already use an assistant that can answer general questions about money. It can explain what a Lifetime ISA is. It cannot tell you whether you paid into one this year, because it has never seen your accounts.</p>
+  <p>earmarkIQ Context closes that gap in the narrowest way available. earmarkIQ already connects to your UK bank accounts through read-only Open Banking and organises what it finds — categorising your spending, tracking your subscriptions, working out your net worth. Context makes that organised picture readable by an assistant you already use, and nothing more than readable.</p>
+  <p>The technical name for the plug is MCP, the Model Context Protocol: an open standard for connecting assistants to outside sources of information with your permission. If you want the fuller explanation, we have written <a href="/blog/what-is-mcp-personal-finance">what MCP is and why it matters for your money</a>. For the purposes of this page, the only thing that matters is what the connection permits — and that is a short list.</p>
 
   <h2 id="what-it-reads">What your assistant can read</h2>
+  <p>This is the complete surface. An assistant connected through Context can ask for these things and nothing else, because nothing else is published for it to find.</p>
   <ul class="reads">
-    <li><span class="tick">✓</span><span><strong>Accounts and balances</strong> — every connected account in one picture</span></li>
-    <li><span class="tick">✓</span><span><strong>Spending by category</strong> — categorised automatically by earmarkIQ</span></li>
-    <li><span class="tick">✓</span><span><strong>Net worth and property equity</strong> — including your indexed property valuation and mortgage</span></li>
-    <li><span class="tick">✓</span><span><strong>Subscriptions</strong> — recurring payments and price changes</span></li>
-    <li><span class="tick">✓</span><span><strong>Your payday plan</strong> — the allocation earmarkIQ builds each payday</span></li>
+    <li><span class="tick">✓</span><span><strong>Accounts and balances</strong> — every account you have connected to earmarkIQ, in one picture</span></li>
+    <li><span class="tick">✓</span><span><strong>Spending by category</strong> — your transactions as earmarkIQ has categorised them</span></li>
+    <li><span class="tick">✓</span><span><strong>Subscriptions and recurring payments</strong> — including price changes earmarkIQ has detected</span></li>
+    <li><span class="tick">✓</span><span><strong>Net worth and property equity</strong> — including your indexed property valuation and mortgage balance</span></li>
+    <li><span class="tick">✓</span><span><strong>Your payday allocation plan</strong> — the split earmarkIQ builds for you each payday</span></li>
   </ul>
 
+  <p>Which makes questions like these answerable from your actual position rather than a general one:</p>
   <div class="example-q">"What did I spend on eating out last month?"</div>
-  <div class="example-q">"Which of my subscriptions went up this year?"</div>
+  <div class="example-q">"Which of my subscriptions went up this year, and by how much?"</div>
   <div class="example-q">"How much equity do I have in the flat, and how has my net worth moved since January?"</div>
+  <div class="example-q">"Given what I usually spend, is a £900 holiday in March realistic?"</div>
 
-  <div class="callout">
-    <div class="callout-label">🔒 Read-only, guaranteed</div>
-    <p>An assistant connected through Context can read your data — and that is all. It cannot move money, make payments, change settings, or alter anything, anywhere. You can revoke its access at any time, and revoking changes nothing else about your earmarkIQ account. The wider story of why read-only design matters is in <a href="/blog/connecting-financial-data-to-ai-assistants">connecting your financial data to AI assistants</a>.</p>
+  <h2 id="what-it-cannot">What it cannot do</h2>
+  <p>The absences are the point, so here they are explicitly:</p>
+  <ul class="reads">
+    <li><span class="cross">✕</span><span><strong>It cannot move money</strong> — between your accounts or anywhere else</span></li>
+    <li><span class="cross">✕</span><span><strong>It cannot make or authorise a payment</strong></span></li>
+    <li><span class="cross">✕</span><span><strong>It cannot cancel a subscription or a direct debit</strong> — it can find one and tell you what it costs</span></li>
+    <li><span class="cross">✕</span><span><strong>It cannot change any setting</strong> — in earmarkIQ or at your bank</span></li>
+    <li><span class="cross">✕</span><span><strong>It cannot reach your bank</strong> — it reads earmarkIQ's picture, never your bank connection</span></li>
+    <li><span class="cross">✕</span><span><strong>It cannot see your banking credentials</strong> — nobody can, including us; Open Banking authenticates you at your own bank</span></li>
+  </ul>
+
+  <hr class="divider" />
+
+  <h2 id="how-enforced">How the read-only guarantee is enforced</h2>
+  <p>"Read-only" is claimed constantly and means different things. Sometimes it means a capability exists and is switched off. Sometimes it means a model has been instructed not to use it. Neither is worth much: switches get flipped and instructions get talked around.</p>
+  <p>What we mean is that <strong>the capability does not exist</strong>, and there are three independent layers holding that in place.</p>
+
+  <div class="layers">
+    <div class="layer">
+      <div class="layer-n">01</div>
+      <div>
+        <h3>The permission layer</h3>
+        <p>earmarkIQ's bank connection runs under Account Information Services — a reading permission — through Finexer Ltd (FRN 925695), an FCA-authorised provider. AIS has no ability to construct a payment instruction. So even before Context enters the picture, there is no payment capability upstream for anything to reach. <a href="/blog/open-banking-uk-what-apps-can-do">How AIS and PIS differ →</a></p>
+      </div>
+    </div>
+    <div class="layer">
+      <div class="layer-n">02</div>
+      <div>
+        <h3>The surface layer</h3>
+        <p>An MCP server publishes a list of operations, and an assistant can invoke what is on that list and nothing else. Context's list contains read operations only. There is no mutating operation for an assistant to call, badly-worded prompt to trigger, or instruction to be argued into — because there is nothing there.</p>
+      </div>
+    </div>
+    <div class="layer">
+      <div class="layer-n">03</div>
+      <div>
+        <h3>The build layer</h3>
+        <p>The reason a guarantee erodes is rarely a decision. It is a change that seemed reasonable at the time. So the constraint is enforced in the build itself: an automated test fails if any mutating capability is ever added to Context. Adding one is not a thing that can be done quietly — it breaks the build, visibly, and someone has to consciously remove the test to proceed.</p>
+      </div>
+    </div>
+  </div>
+
+  <p>On top of those three, two things give you visibility rather than assurances:</p>
+  <ul class="plain">
+    <li><strong>Every access is audited.</strong> Requests made through Context are recorded, so "we would never" can be replaced with a record of what actually happened.</li>
+    <li><strong>Revocation is yours.</strong> You can end the connection yourself, immediately, without contacting anyone. See <a href="#revoke">how to revoke</a>.</li>
+  </ul>
+
+  <div class="callout callout-mint">
+    <div class="callout-label">🔒 The guarantee, stated exactly</div>
+    <p>An assistant connected through earmarkIQ Context can read the five categories listed above. It cannot move money, make a payment, cancel anything, or change any setting, because no such capability exists in Context to be invoked. This is enforced by the permission earmarkIQ operates under, by the operations Context publishes, and by a test that fails the build if a mutating capability is added.</p>
+  </div>
+
+  <h2 id="who-sees-what">Who sees what</h2>
+  <p>A connection like this involves three parties. Being clear about the boundaries is more useful than a reassuring adjective.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Party</th><th>Holds</th><th>Never sees</th></tr></thead>
+      <tbody>
+        <tr><td class="td-name">Your bank</td><td>Your accounts; authenticates you directly</td><td>Nothing changes — it releases a limited, revocable feed</td></tr>
+        <tr><td class="td-name">earmarkIQ</td><td>Your categorised financial picture</td><td>Your banking credentials — Open Banking never shares them</td></tr>
+        <tr><td class="td-name">Your assistant</td><td>Whatever it reads from the published list</td><td>Your bank connection, your credentials, anything off the list</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout callout-amber">
+    <div class="callout-label">The limit worth knowing about</div>
+    <p>Context controls what an assistant can read from earmarkIQ. It has no control over the assistant itself. Once an answer about your finances appears in a conversation, that conversation sits with whoever provides the assistant, under their retention and privacy terms.</p>
+    <p>Read-only stops your money being moved. It does not make the conversation private from the assistant's provider, and no server design can. If your financial position appearing in a chat log is a problem for you, that is a genuine reason not to connect — and it is a question about the assistant, not about Context.</p>
   </div>
 
   <h2 id="connect">How to connect</h2>
   <div class="steps">
-    <div class="step"><div><h3>Get your Context address</h3><p>Your personal earmarkIQ Context address comes from your earmarkIQ account.</p></div></div>
-    <div class="step"><div><h3>Add it as a custom connector</h3><p>In any MCP-capable assistant, add earmarkIQ Context as a custom connector using that address. Claude is verified; other MCP-capable assistants connect the same way.</p></div></div>
-    <div class="step"><div><h3>Approve read-only access</h3><p>Your assistant will ask to connect — approve it, and it can start answering from your data. Your bank connection and credentials stay with earmarkIQ; the assistant never sees them.</p></div></div>
+    <div class="step"><div><h3>Get your Context address</h3><p>Your personal earmarkIQ Context address comes from your earmarkIQ account. It is yours alone and reads only your data.</p></div></div>
+    <div class="step"><div><h3>Add it as a custom connector</h3><p>In your MCP-capable assistant, add earmarkIQ Context as a custom connector using that address. Claude is verified. Other MCP-capable assistants connect the same way, though we have not verified each one individually.</p></div></div>
+    <div class="step"><div><h3>Approve read-only access</h3><p>Your assistant will ask to connect. Approve it, and it can start answering from your data. Your bank connection and credentials stay with earmarkIQ, and the assistant never sees either.</p></div></div>
   </div>
-  <p style="font-size:14px;color:var(--text-muted)">To disconnect: revoke access from your earmarkIQ account, or remove the connector in your assistant. Either ends access immediately.</p>
+
+  <h2 id="revoke">How to revoke</h2>
+  <p>Two independent routes, both immediate, neither requiring you to contact us:</p>
+  <ul class="plain">
+    <li><strong>From earmarkIQ.</strong> Revoke Context access in your earmarkIQ account. The connection ends at that moment.</li>
+    <li><strong>From your assistant.</strong> Remove the connector. It can no longer reach anything.</li>
+  </ul>
+  <p>Revoking Context changes nothing else. Your earmarkIQ account, your categorised data and your bank connections all carry on exactly as before — you have removed one reader, not unpicked anything. You can reconnect later if you want to.</p>
+
+  <hr class="divider" />
+
+  <h2 id="capabilities">Live and planned, stated plainly</h2>
+  <p>So that nothing here has to be inferred:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Capability</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td class="td-name">Read-only MCP server (Context)</td><td class="st-live">Live</td></tr>
+        <tr><td class="td-name">Read-only Open Banking (AIS) via Finexer</td><td class="st-live">Live</td></tr>
+        <tr><td class="td-name">Claude as a verified assistant</td><td class="st-live">Live, verified</td></tr>
+        <tr><td class="td-name">Other MCP-capable assistants</td><td class="st-planned">Should work; not individually verified</td></tr>
+        <tr><td class="td-name">Audit trail of Context access</td><td class="st-live">Live</td></tr>
+        <tr><td class="td-name">Self-service revocation</td><td class="st-live">Live</td></tr>
+        <tr><td class="td-name">Any assistant moving money</td><td class="st-no">Does not exist, and is not planned</td></tr>
+        <tr><td class="td-name">Payment initiation (PIS) by earmarkIQ</td><td class="st-planned">In permissions, on the roadmap, currently disabled</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>On that last row, the accurate position: <strong>earmarkIQ does not initiate payments.</strong> Payment initiation sits within the permissions earmarkIQ operates under as an Appointed Representative of Finexer Ltd, and it is on the roadmap, but the capability is switched off. If it is ever enabled, it would be a payment <em>you</em> start, with an amount and payee <em>you</em> see and confirm, authenticated by <em>you</em> at your own bank, one payment at a time — never a standing power, and never something an assistant decides to do. Context would remain read-only, and the two would not be joined up. The longer argument is in <a href="/blog/apps-that-show-vs-move-your-money">the difference between an app that shows you your money and one that moves it</a>.</p>
 
   <h2 id="faq">Questions</h2>
   <div class="faq">
     <div class="faq-item">
       <div class="faq-q">What is an MCP server? <span class="faq-chevron">›</span></div>
-      <div class="faq-a">MCP (Model Context Protocol) is an open standard that lets AI assistants such as Claude connect securely to outside sources of information, with your permission. An MCP server is the bridge: it gives your assistant permissioned access to specific data — in earmarkIQ Context's case, your own categorised financial picture — so answers are grounded in your real numbers rather than general knowledge.</div>
+      <div class="faq-a">MCP (Model Context Protocol) is an open standard that lets AI assistants such as Claude connect securely to outside sources of information, with your permission. An MCP server is the bridge: it publishes a specific list of things an assistant may ask for, and nothing outside that list exists to be discovered. earmarkIQ Context is that bridge for your finances, so answers are grounded in your real numbers rather than general knowledge.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Can an assistant connected via Context move my money? <span class="faq-chevron">›</span></div>
-      <div class="faq-a">No. earmarkIQ Context is read-only: an assistant can read your data, and that is all. It cannot move money, make payments, change settings, or alter anything on your accounts, and you can revoke its access at any time.</div>
+      <div class="faq-a">No. Context is read-only by construction: it publishes read operations only, and no capability to move money, make a payment, cancel a subscription or change a setting exists within it. This is enforced structurally rather than by policy — a test in the earmarkIQ build fails if any mutating capability is ever added. earmarkIQ itself also operates under Account Information Services, a read permission, so there is no payment capability upstream either.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How is the read-only guarantee actually enforced? <span class="faq-chevron">›</span></div>
+      <div class="faq-a">In three layers. First, the permission layer: earmarkIQ's bank connection runs under Account Information Services via Finexer Ltd (FRN 925695), which is a reading permission with no ability to construct a payment instruction. Second, the surface layer: Context publishes only read operations, so there is no mutating capability for an assistant to invoke. Third, the build layer: an automated test fails the build if any mutating capability is added to Context, so the guarantee cannot be eroded quietly over time. Every access is also recorded in an audit trail visible to you.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Which assistants work with it? <span class="faq-chevron">›</span></div>
-      <div class="faq-a">Any assistant that supports the Model Context Protocol and custom connectors. Claude is verified; because MCP is an open standard, other MCP-capable assistants can connect the same way, though we haven't verified each one individually.</div>
+      <div class="faq-a">Claude is verified. Because MCP is an open standard and Context is a standard MCP server, other MCP-capable assistants that support custom connectors can connect the same way, but we have not verified each one individually and do not claim compatibility we have not tested.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Does this make my conversation private? <span class="faq-chevron">›</span></div>
+      <div class="faq-a">No, and it is important to be clear about it. Context controls what an assistant can read from earmarkIQ. It has no control over the assistant itself: once an answer about your finances appears in a conversation, that conversation sits with whoever provides the assistant, under their retention and privacy terms. Read-only prevents your money being moved. It does not make the conversation private from the assistant's provider, and no server design can.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">How do I disconnect? <span class="faq-chevron">›</span></div>
-      <div class="faq-a">Revoke Context access from your earmarkIQ account at any time, or remove the connector from your assistant. Access ends there and then — nothing about your earmarkIQ app or bank connections is affected.</div>
+      <div class="faq-a">Revoke Context access from your earmarkIQ account at any time, or remove the connector from your assistant. Access ends there and then — nothing about your earmarkIQ app or your bank connections is affected. You do not need to contact support and there is no notice period.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Does earmarkIQ initiate payments? <span class="faq-chevron">›</span></div>
+      <div class="faq-a">No. earmarkIQ does not initiate payments today. Payment initiation sits within the permissions earmarkIQ operates under as an Appointed Representative of Finexer Ltd and is on the roadmap, but the capability is not enabled. If it is ever switched on, it would be a payment you start, with an amount and payee you see and confirm, authenticated by you at your own bank, one payment at a time. earmarkIQ Context would remain read-only, and no assistant would be able to trigger a payment.</div>
     </div>
   </div>
 
@@ -244,12 +436,21 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
     <p class="pilot-sub">Occasional emails about earmarkIQ Context only.</p>
   </div>
 
-  <p style="font-size:14px;color:var(--text-muted)">Not using earmarkIQ yet? The iOS app is <a href="/download">free to download</a> — Context reads the data it organises for you. You can also <a href="/login">view your account on the web</a>.</p>
+  <h2 id="read-next">Read next</h2>
+  <div class="related">
+    <a href="/blog/connect-bank-account-to-ai-assistant"><div class="related-t">Should you connect your bank to an AI assistant?</div><div class="related-d">The honest answer, and the four questions to ask any provider — including us.</div></a>
+    <a href="/blog/what-is-mcp-personal-finance"><div class="related-t">What is MCP, and why does it matter?</div><div class="related-d">The protocol explained for a personal finance audience, without jargon.</div></a>
+    <a href="/blog/open-banking-uk-what-apps-can-do"><div class="related-t">Open Banking: what apps can and cannot do</div><div class="related-d">AIS versus PIS, consent, revocation, and what FCA regulation gets you.</div></a>
+    <a href="/blog/apps-that-show-vs-move-your-money"><div class="related-t">Showing your money versus moving it</div><div class="related-d">The guidance and action distinction, and exactly where earmarkIQ sits.</div></a>
+  </div>
+
+  <p style="font-size:14px;color:var(--text-muted);margin-top:32px">Not using earmarkIQ yet? The iOS app is <a href="/download">free to download</a> — Context reads the picture it builds for you. You can also <a href="/login">view your account on the web</a>, or try the <a href="/tools/payday-allocation-calculator">payday allocation calculator</a> without an account.</p>
 </div>
 
 <footer>
-  <p>© 2026 earmarkIQ Ltd · <a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms</a> · <a href="mailto:hello@earmarkiq.app">Contact</a></p>
+  <p>© 2026 earmarkIQ Ltd · <a href="/">Home</a> · <a href="/blog">Blog</a> · <a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms</a> · <a href="mailto:hello@earmarkiq.app">Contact</a></p>
   <p style="margin-top:8px">earmarkIQ is an FCA Appointed Representative of Finexer Ltd (FRN 925695). <a href="https://register.fca.org.uk/s/firm?id=001Sk000010irOJIAY" rel="nofollow" target="_blank">Verify on the FCA register</a>. Content on this site is for guidance only and does not constitute financial advice.</p>
+  <p class="footer-note">Capability statements on this page describe earmarkIQ as at August 2026. earmarkIQ Context is live and read-only. Claude is verified; other MCP-capable assistants are expected to work but have not been individually verified. earmarkIQ does not initiate payments; payment initiation is within earmarkIQ's permissions and on the roadmap but is not enabled.</p>
 </footer>
 
 <script>
@@ -286,7 +487,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
     msg.textContent = '';
     msg.className = 'pilot-msg';
     btn.disabled = true;
-    btn.textContent = 'Sending\u2026';
+    btn.textContent = 'Sending…';
     fetch(ENDPOINT, {
       method: 'POST',
       body: JSON.stringify({ email: email, source: 'mcp_waitlist' })
@@ -295,7 +496,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
       msg.style.display = 'none';
       success.style.display = 'block';
     }).catch(function () {
-      msg.textContent = 'Something went wrong \u2014 please try again.';
+      msg.textContent = 'Something went wrong — please try again.';
       msg.className = 'pilot-msg err';
       btn.disabled = false;
       btn.textContent = 'Keep me posted';

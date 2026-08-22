@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>What Is MCP, and Why Does It Matter for Your Money? | earmarkIQ</title>
+<meta name="description" content="The Model Context Protocol explained for a personal finance audience: what an MCP server actually exposes, how it differs from screen scraping, and why read-only is a design decision rather than a property of the protocol." />
+<link rel="canonical" href="https://earmarkiq.app/blog/what-is-mcp-personal-finance">
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://earmarkiq.app/blog/what-is-mcp-personal-finance" />
+<meta property="og:title" content="What Is MCP, and Why Does It Matter for Your Money? | earmarkIQ" />
+<meta property="og:description" content="The Model Context Protocol explained for a personal finance audience: what an MCP server actually exposes, how it differs from screen scraping, and why read-only is a design decision rather than a property of the protocol." />
+<meta property="og:image" content="https://earmarkiq.app/api/og?title=What%20is%20MCP%2C%20and%20why%20does%20it%20matter%20for%20your%20money%3F&subtitle=The%20protocol%20behind%20assistant%20connections%2C%20explained" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content="earmarkIQ" />
+<meta property="og:locale" content="en_GB" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@earmarkiq" />
+<meta name="twitter:title" content="What Is MCP, and Why Does It Matter for Your Money? | earmarkIQ" />
+<meta name="twitter:description" content="The Model Context Protocol explained for a personal finance audience: what an MCP server actually exposes, how it differs from screen scraping, and why read-only is a design decision rather than a property of the protocol." />
+<meta name="twitter:image" content="https://earmarkiq.app/api/og?title=What%20is%20MCP%2C%20and%20why%20does%20it%20matter%20for%20your%20money%3F&subtitle=The%20protocol%20behind%20assistant%20connections%2C%20explained" />
+<meta name="theme-color" content="#080b12">
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "What Is MCP, and Why Does It Matter for Your Money?",
+      "name": "What Is MCP, and Why Does It Matter for Your Money?",
+      "description": "A plain-English explanation of the Model Context Protocol for a personal finance audience: what an MCP server publishes, how it compares to pasting statements, screen scraping and API keys, the three-party trust model, and what to ask about any server.",
+      "datePublished": "2026-08-22",
+      "dateModified": "2026-08-22",
+      "inLanguage": "en-GB",
+      "author": {
+        "@type": "Person",
+        "name": "Caolan Preston",
+        "jobTitle": "Founder & CEO",
+        "url": "https://earmarkiq.app/#founder"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "earmarkIQ",
+        "url": "https://earmarkiq.app",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://earmarkiq.app/assets/logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://earmarkiq.app/blog/what-is-mcp-personal-finance"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".quick-answer",
+          ".faq-a"
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is MCP in plain English?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MCP, the Model Context Protocol, is an open standard that lets an AI assistant connect to an outside source of information with your permission. The assistant is the client and the thing holding the data runs a server. Because both sides implement the same standard, any MCP-capable assistant can talk to any MCP server without either having been built specifically for the other. It is plumbing rather than a product — closer to a plug socket than to an appliance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is MCP safe for financial data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The protocol itself is neither safe nor unsafe, in the same way that HTTPS is not safe or unsafe on its own. What determines safety is the specific server: what it publishes as available, whether any of it changes state, and how that is enforced. A server that exposes only read operations means an assistant can answer questions about your finances and cannot touch them. A server that exposes payment operations is a completely different proposition. Ask what is on the list rather than asking about MCP."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is an MCP server different from giving an app my bank login?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Entirely. Handing over online banking credentials, sometimes called screen scraping, gives software the ability to do anything you can do in your account. A read-only MCP server built on top of UK Open Banking exposes a named, limited list of things it can report on, and your banking credentials are never involved — Open Banking authenticates you at your own bank and releases a limited, revocable data feed. Never type your online banking password into a third-party interface."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can an AI assistant connected by MCP move my money?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Only if the server it is connected to offers a way to. There is no general power that comes with being connected; there is only the list of operations the server publishes. earmarkIQ Context publishes read operations exclusively — no mutating capability exists within it, and a test in the build fails if one is ever added — so an assistant connected through it cannot move money, make a payment, or change a setting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which assistants work with earmarkIQ Context?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Claude is verified. Because MCP is an open standard and Context is a standard MCP server, other MCP-capable assistants that support custom connectors can connect the same way, but we have not verified each one individually and do not claim compatibility we have not tested. Connecting takes three steps: get your Context address from your earmarkIQ account, add it as a custom connector, and approve read-only access."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does connecting mean my finances end up in a chat log?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, to the extent that answers about your money appear in a conversation held by whoever provides the assistant, under their retention and privacy terms. A read-only server prevents your money being moved; it does not make the conversation private from the assistant's provider. That is a genuine consideration and worth weighing separately from the security of the connection itself, because it is a question about the assistant rather than about the server."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://earmarkiq.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://earmarkiq.app/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "What is MCP?",
+          "item": "https://earmarkiq.app/blog/what-is-mcp-personal-finance"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #080b12; --surface: #0f1420; --border: #1e2536;
+      --text: #e2e8f0; --text-dim: #94a3b8; --text-muted: #475569;
+      --mint: #6ee7b7; --mint-dim: rgba(110,231,183,0.12);
+      --blue: #60a5fa; --amber: #fbbf24; --red: #f87171; --purple: #a78bfa;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(8,11,18,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-weight: 700; font-size: 18px; text-decoration: none; color: var(--text); letter-spacing: -0.02em; }
+    .nav-logo span { color: var(--mint); }
+    .nav-cta { background: var(--mint); color: #080b12; font-weight: 600; font-size: 13px; padding: 8px 18px; border-radius: 8px; text-decoration: none; transition: opacity 0.2s; }
+    .nav-cta:hover { opacity: 0.85; }
+
+    .page-wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 280px; gap: 64px; align-items: start; }
+    @media (max-width: 900px) { .page-wrap { grid-template-columns: 1fr; gap: 0; } .sidebar { display: none; } }
+
+    .hero { padding: 60px 24px 44px; max-width: 1100px; margin: 0 auto; }
+    .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--mint); }
+    .hero-tag { display: inline-flex; align-items: center; gap: 7px; background: var(--mint-dim); border: 1px solid rgba(110,231,183,0.2); color: var(--mint); font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 20px; }
+    h1 { font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(32px, 5vw, 50px); line-height: 1.12; letter-spacing: -0.02em; color: var(--text); margin-bottom: 20px; }
+    h1 em { font-style: italic; color: var(--mint); }
+    .hero-meta { display: flex; align-items: center; gap: 18px; font-size: 13px; color: var(--text-muted); margin-bottom: 30px; flex-wrap: wrap; }
+    .hero-meta-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--text-muted); }
+    .hero-intro { font-size: 19px; color: var(--text-dim); line-height: 1.7; max-width: 700px; border-left: 3px solid var(--mint); padding-left: 20px; }
+
+    article { padding-top: 8px; padding-bottom: 72px; }
+    h2 { font-family: 'Instrument Serif', Georgia, serif; font-size: 28px; line-height: 1.2; color: var(--text); margin: 50px 0 16px; letter-spacing: -0.01em; }
+    h3 { font-size: 18px; font-weight: 600; color: var(--text); margin: 30px 0 12px; }
+    p { margin-bottom: 20px; color: var(--text-dim); }
+    strong { color: var(--text); font-weight: 600; }
+    a { color: var(--mint); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul.plain, ol.plain { margin: 0 0 20px 22px; color: var(--text-dim); }
+    ul.plain li, ol.plain li { margin-bottom: 10px; }
+    hr.divider { border: none; border-top: 1px solid var(--border); margin: 46px 0; }
+
+    .quick-answer { background: rgba(110,231,183,0.06); border: 1px solid rgba(110,231,183,0.2); border-radius: 12px; padding: 20px 24px; margin: 8px 0 30px; }
+    .quick-answer-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--mint); margin-bottom: 8px; }
+    .quick-answer p { font-size: 15px; line-height: 1.7; color: var(--text-dim); margin: 0; }
+
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 26px 0; border: 1px solid; }
+    .callout-mint { background: rgba(110,231,183,0.06); border-color: rgba(110,231,183,0.2); }
+    .callout-amber { background: rgba(251,191,36,0.06); border-color: rgba(251,191,36,0.2); }
+    .callout-blue { background: rgba(96,165,250,0.06); border-color: rgba(96,165,250,0.2); }
+    .callout-red { background: rgba(248,113,113,0.06); border-color: rgba(248,113,113,0.2); }
+    .callout-purple { background: rgba(167,139,250,0.06); border-color: rgba(167,139,250,0.2); }
+    .callout-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+    .callout-mint .callout-label { color: var(--mint); }
+    .callout-amber .callout-label { color: var(--amber); }
+    .callout-blue .callout-label { color: var(--blue); }
+    .callout-red .callout-label { color: var(--red); }
+    .callout-purple .callout-label { color: var(--purple); }
+    .callout p { margin-bottom: 0; }
+    .callout p + p { margin-top: 12px; }
+    .callout ul { margin: 10px 0 0 20px; }
+    .callout li { margin-bottom: 7px; font-size: 15px; }
+
+    .table-wrap { overflow-x: auto; margin: 26px 0; border-radius: 12px; border: 1px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; }
+    thead { background: var(--surface); }
+    th { padding: 12px 18px; text-align: left; font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 1px solid var(--border); }
+    td { padding: 13px 18px; color: var(--text-dim); border-bottom: 1px solid rgba(30,37,54,0.6); vertical-align: top; }
+    tr:last-child td { border-bottom: none; }
+    .td-name { font-weight: 600; color: var(--text); }
+    .td-n { font-family: 'JetBrains Mono', monospace; white-space: nowrap; color: var(--text); }
+    .yes { color: var(--mint); font-weight: 600; }
+    .no { color: var(--red); font-weight: 600; }
+
+    .steps { margin: 26px 0; }
+    .step { display: flex; gap: 20px; padding: 18px 0; border-bottom: 1px solid rgba(30,37,54,0.7); }
+    .step:last-child { border-bottom: none; }
+    .step-num { flex-shrink: 0; width: 34px; height: 34px; background: var(--mint-dim); border: 1px solid rgba(110,231,183,0.25); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; color: var(--mint); margin-top: 2px; }
+    .step-content h3 { margin-top: 0; margin-bottom: 7px; }
+    .step-content p { margin-bottom: 0; font-size: 15px; }
+
+    .worked { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 22px 24px; margin: 26px 0; }
+    .worked-h { font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 14px; }
+    .worked-row { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 9px 0; border-bottom: 1px solid rgba(30,37,54,0.6); font-size: 15px; color: var(--text-dim); }
+    .worked-row:last-of-type { border-bottom: none; }
+    .worked-row b { font-family: 'JetBrains Mono', monospace; color: var(--text); font-weight: 500; white-space: nowrap; }
+    .worked-row.total { border-top: 1px solid var(--border); border-bottom: none; margin-top: 5px; padding-top: 14px; }
+    .worked-row.total b { color: var(--mint); font-size: 17px; }
+    .worked-note { font-size: 13px; color: var(--text-muted); line-height: 1.7; margin: 14px 0 0; }
+
+    .faq { margin: 16px 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+    .faq-q { padding: 16px 20px; font-weight: 600; font-size: 16px; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .faq-q:hover { background: rgba(255,255,255,0.02); }
+    .faq-chevron { color: var(--mint); flex-shrink: 0; transition: transform 0.2s; font-size: 18px; }
+    .faq-a { padding: 0 20px 16px; color: var(--text-dim); font-size: 15px; line-height: 1.7; display: none; }
+    .faq-item.open .faq-a { display: block; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+    .next-step { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--mint); border-radius: 12px; padding: 26px 28px; margin: 44px 0 0; }
+    .next-step h2 { margin-top: 0; font-size: 21px; font-family: 'DM Sans', sans-serif; font-weight: 700; letter-spacing: -0.01em; }
+    .next-step p { font-size: 15px; margin-bottom: 14px; }
+    .next-links { display: flex; gap: 20px; flex-wrap: wrap; font-size: 14.5px; }
+    .next-links a { font-weight: 600; }
+
+    .related { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 24px 0 0; }
+    @media (max-width: 620px) { .related { grid-template-columns: 1fr; } }
+    .related a { display: block; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; text-decoration: none; transition: border-color 0.2s, transform 0.25s; }
+    .related a:hover { border-color: rgba(110,231,183,0.4); text-decoration: none; transform: translateY(-2px); }
+    .related-t { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+    .related-d { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+
+    .about-box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 40px 0 0; }
+    .about-box h3 { font-size: 13px; font-weight: 700; color: var(--text-muted); margin: 0 0 8px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .about-box p { font-size: 13px; line-height: 1.8; color: var(--text-dim); margin: 0; }
+
+    .sidebar { position: sticky; top: 76px; padding-top: 8px; }
+    .sidebar-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+    .sidebar-card h4 { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 14px; }
+    .toc-link { display: block; font-size: 14px; color: var(--text-dim); text-decoration: none; padding: 6px 0; border-bottom: 1px solid rgba(30,37,54,0.5); transition: color 0.15s; }
+    .toc-link:last-child { border-bottom: none; }
+    .toc-link:hover { color: var(--mint); text-decoration: none; }
+    .sidebar-cta-btn { display: block; width: 100%; background: var(--mint); color: #080b12; font-weight: 700; font-size: 14px; padding: 12px; border-radius: 8px; text-decoration: none; text-align: center; transition: opacity 0.2s; margin-top: 4px; }
+    .sidebar-cta-btn:hover { opacity: 0.85; text-decoration: none; }
+    .sidebar-feature { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px; font-size: 13px; color: var(--text-dim); }
+    .sidebar-feature:last-child { margin-bottom: 0; }
+    .sf-icon { color: var(--mint); flex-shrink: 0; }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 13px; color: var(--text-muted); }
+    footer a { color: var(--text-muted); }
+    footer a:hover { color: var(--mint); }
+    .footer-note { max-width: 760px; margin: 10px auto 0; font-size: 12px; line-height: 1.7; }
+</style>
+<script>
+window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">earmark<span>IQ</span></a>
+  <a href="/download" class="nav-cta">Download Free</a>
+</nav>
+
+<div class="hero">
+  <div class="breadcrumb">
+    <a href="/">Home</a> <span>&rsaquo;</span>
+    <a href="/blog">Blog</a> <span>&rsaquo;</span>
+    <span>What is MCP?</span>
+  </div>
+  <div class="hero-tag">&#128268; Protocol</div>
+  <h1>What Is MCP, and Why Does It <em>Matter for Your Money?</em></h1>
+  <div class="hero-meta">
+    <span>By Caolan Preston</span>
+    <span class="hero-meta-dot"></span>
+    <span>August 2026</span>
+    <span class="hero-meta-dot"></span>
+    <span>8 min read</span>
+  </div>
+  <p class="hero-intro">MCP is being written about as though it were a product with a safety rating. It is closer to a plug socket: neither safe nor unsafe on its own, entirely dependent on what has been wired into it. For anyone deciding whether to let an assistant near their finances, that distinction is the one that does the work.</p>
+</div>
+
+<div class="page-wrap">
+  <article>
+
+    <div class="quick-answer">
+      <div class="quick-answer-label">In one paragraph</div>
+      <p>MCP &mdash; the Model Context Protocol &mdash; is an open standard for connecting an AI assistant to a specific source of information, with your permission. It is a plug socket, not a product. What matters for your money is what the thing on the other end of the plug is allowed to do: an MCP server can be built so it can only ever read, which means an assistant using it can answer questions about your finances and cannot touch them. That is a design decision, not a property of the protocol, so it is worth checking rather than assuming.</p>
+    </div>
+
+    <h2 id="problem">The problem MCP solves</h2>
+
+    <p>An assistant knows an enormous amount about money in general and nothing at all about yours. It can explain what a Lifetime ISA is. It cannot tell you whether you paid into one this year. That gap is not a knowledge problem, it is a plumbing problem &mdash; the information exists, it is just not connected to anything.</p>
+
+    <p>Until recently there were two workarounds, both poor. You could paste in a statement, which works once, ages immediately, and dumps far more than you intended into a conversation. Or a provider could build a bespoke integration with one specific assistant, which meant every combination of app and assistant needed its own bridge built by hand. The result was that almost nothing was connected to anything.</p>
+
+    <p>MCP replaces both with a standard. One side is the <strong>client</strong>: the assistant. The other is the <strong>server</strong>: whatever holds the information, in this case an app that already has your categorised financial data. Because both sides implement the same open protocol, any client can talk to any server without either having been built for the other. That is the entire idea, and its ordinariness is the point &mdash; it is the same reason a plug fits a socket without the appliance manufacturer having phoned the electricity company.</p>
+
+    <h2 id="what-it-is">What an MCP server actually is</h2>
+
+    <p>An MCP server is a small program that publishes a list of things it can do, and then does those things when asked. The list is explicit. An assistant connected to a server can see exactly what is on offer and nothing else exists to be discovered.</p>
+
+    <p>The items on that list are the crux of the whole safety question. A server exposing <em>get spending by category</em> and <em>get account balances</em> can be asked for spending and balances. A server exposing <em>make a payment</em> can be asked to make a payment. There is no general power that comes with being connected; there is only the list.</p>
+
+    <p>This is why &ldquo;is it connected to an assistant?&rdquo; is close to a meaningless question and &ldquo;what is on the list?&rdquo; is the right one. Two products can both be MCP servers for your finances and differ completely in what they permit.</p>
+
+    <div class="callout callout-blue">
+      <div class="callout-label">The distinction worth holding on to</div>
+      <p>MCP is a <strong>protocol</strong>, like HTTPS or email. It is neither safe nor unsafe on its own. Asking whether MCP is secure is like asking whether a plug socket is dangerous: it depends entirely on what has been wired into it, and by whom. The useful questions are always about the specific server, not the standard.</p>
+    </div>
+
+    <h2 id="how-it-differs">How this differs from the alternatives</h2>
+
+    <p>It is easier to see what MCP is by putting it next to the things it replaces.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Approach</th><th>How current</th><th>What you expose</th><th>Can it act?</th></tr></thead>
+        <tbody>
+          <tr><td class="td-name">Pasting a statement</td><td>Stale from the moment you paste</td><td>Everything in the file, including rows you did not think about</td><td class="no">No</td></tr>
+          <tr><td class="td-name">Screen scraping</td><td>Live</td><td>Your banking credentials &mdash; the whole account</td><td class="no">Depends; often yes</td></tr>
+          <tr><td class="td-name">Handing over an API key</td><td>Live</td><td>Whatever that key permits, usually everything</td><td class="no">Usually yes</td></tr>
+          <tr><td class="td-name">A read-only MCP server</td><td>Live</td><td>Only the named items on the list</td><td class="yes">No &mdash; if built that way</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Screen scraping deserves particular attention because it is still around. It works by having software log into your online banking as you, using credentials you have handed over. Everything that account can do, that software can do. UK Open Banking exists in large part to make this unnecessary, and you should decline any product that asks for your banking password. There is more on that in our guide to <a href="/blog/open-banking-uk-what-apps-can-do">what UK apps can and cannot do with your data</a>.</p>
+
+    <h2 id="why-money">Why it matters for money specifically</h2>
+
+    <p>Three things change when an assistant can read your actual position rather than reason about a hypothetical one.</p>
+
+    <h3>Answers stop being generic</h3>
+    <p>&ldquo;Can I afford a &pound;900 holiday in March?&rdquo; is unanswerable in the abstract and entirely answerable if the thing answering can see your committed costs, your typical discretionary spending and what is already earmarked. The improvement is not that the assistant became cleverer. It is that the question became well-posed.</p>
+
+    <h3>The data stays current</h3>
+    <p>A pasted statement describes a moment that has passed. A live connection means the answer on the 3rd and the answer on the 28th are different, which for anything to do with cash flow is the difference between useful and misleading.</p>
+
+    <h3>Scope becomes something you can inspect</h3>
+    <p>With a pasted file, you exposed whatever happened to be in it. With a defined server, there is a published list, and the list is the boundary. That is a better position to consent from, because you can read what you are agreeing to before you agree to it.</p>
+
+    <h2 id="trust-model">The trust model, honestly</h2>
+
+    <p>A connection through MCP involves at least three parties, and it is worth being clear about who sees what.</p>
+
+    <ul class="plain">
+      <li><strong>Your bank</strong> holds your accounts and authenticates you. Under Open Banking it never gives your credentials to anybody; it releases a limited, revocable data feed to a regulated provider.</li>
+      <li><strong>The app running the MCP server</strong> holds your categorised data and decides what the server exposes. This is where the read-only guarantee lives or fails.</li>
+      <li><strong>The assistant</strong> receives whatever it asks for from that list, and the resulting conversation sits with the assistant's provider under their terms.</li>
+    </ul>
+
+    <p>That last point is the one people underrate. A read-only server means your money cannot be moved. It does not mean the conversation is private from the company that runs the assistant. If your financial position appearing in a chat log is a problem for you, that is a real consideration and no server design solves it &mdash; it is a question about the assistant, not the connection.</p>
+
+    <p>Equally, a live connection does not make an assistant correct. It can still misread a transfer as income or summarise a period it has partial data for. Grounding improves the raw material; it does not remove the need to sanity-check anything you are about to act on.</p>
+
+    <h2 id="earmarkiq-context">Where earmarkIQ Context fits</h2>
+
+    <p><a href="/context">earmarkIQ Context</a> is an MCP server for your own earmarkIQ data. The list it publishes covers accounts and balances, spending by category, subscriptions and their price changes, net worth and property equity, and your payday allocation plan. That list is the whole surface area.</p>
+
+    <p>It is read-only by construction. No capability to move money, make a payment, change a setting or amend anything exists within it &mdash; and because &ldquo;we promise not to&rdquo; is worth very little, this is enforced structurally: a test in our build fails if any mutating capability is ever added. Every access is recorded, and you can revoke the connection yourself from your earmarkIQ account at any time, which takes effect immediately and leaves your bank connections and the app untouched.</p>
+
+    <p>Claude is verified as working with it. Because MCP is an open standard, other MCP-capable assistants can connect the same way, though we have not verified each one individually and will not claim otherwise.</p>
+
+    <div class="callout callout-mint">
+      <div class="callout-label">What it cannot do</div>
+      <p>An assistant connected through Context cannot move money, because nothing in Context can. earmarkIQ does not initiate payments at all today. Payment initiation sits within the permissions earmarkIQ operates under as an Appointed Representative of Finexer Ltd (FRN 925695), and is on the roadmap, but the capability is not enabled. If it is ever switched on, it will be a payment you start and confirm yourself, authenticated at your own bank &mdash; not something an assistant can trigger.</p>
+    </div>
+
+    <h2 id="what-to-ask">What to ask about any MCP server</h2>
+
+    <p>The protocol is not the thing to interrogate. The server is. Four questions cover most of it:</p>
+
+    <ol class="plain">
+      <li><strong>What is on the list?</strong> It should be published, specific, and shorter than &ldquo;your financial data&rdquo;.</li>
+      <li><strong>Does anything on it change state?</strong> If yes, that is a different product with a different risk profile, whatever else it also does.</li>
+      <li><strong>How is read-only enforced?</strong> A policy can be changed; an absent capability cannot be invoked. Ask which one you are relying on.</li>
+      <li><strong>Can you revoke it yourself, and see what was accessed?</strong> Both should be true, and neither should require contacting anyone.</li>
+    </ol>
+
+    <p>If you want the longer version of that reasoning, including how to weigh it up before connecting anything, we have written it up in <a href="/blog/connect-bank-account-to-ai-assistant">should you connect your bank account to an AI assistant?</a>.</p>
+
+
+    <hr class="divider" />
+
+    <h2 id="faq">Frequently asked questions</h2>
+    <div class="faq">
+      <div class="faq-item"><div class="faq-q">What is MCP in plain English?<span class="faq-chevron">&#9662;</span></div><div class="faq-a">MCP, the Model Context Protocol, is an open standard that lets an AI assistant connect to an outside source of information with your permission. The assistant is the client and the thing holding the data runs a server. Because both sides implement the same standard, any MCP-capable assistant can talk to any MCP server without either having been built specifically for the other. It is plumbing rather than a product &mdash; closer to a plug socket than to an appliance.</div></div>
+      <div class="faq-item"><div class="faq-q">Is MCP safe for financial data?<span class="faq-chevron">&#9662;</span></div><div class="faq-a">The protocol itself is neither safe nor unsafe, in the same way that HTTPS is not safe or unsafe on its own. What determines safety is the specific server: what it publishes as available, whether any of it changes state, and how that is enforced. A server that exposes only read operations means an assistant can answer questions about your finances and cannot touch them. A server that exposes payment operations is a completely different proposition. Ask what is on the list rather than asking about MCP.</div></div>
+      <div class="faq-item"><div class="faq-q">How is an MCP server different from giving an app my bank login?<span class="faq-chevron">&#9662;</span></div><div class="faq-a">Entirely. Handing over online banking credentials, sometimes called screen scraping, gives software the ability to do anything you can do in your account. A read-only MCP server built on top of UK Open Banking exposes a named, limited list of things it can report on, and your banking credentials are never involved &mdash; Open Banking authenticates you at your own bank and releases a limited, revocable data feed. Never type your online banking password into a third-party interface.</div></div>
+      <div class="faq-item"><div class="faq-q">Can an AI assistant connected by MCP move my money?<span class="faq-chevron">&#9662;</span></div><div class="faq-a">Only if the server it is connected to offers a way to. There is no general power that comes with being connected; there is only the list of operations the server publishes. earmarkIQ Context publishes read operations exclusively &mdash; no mutating capability exists within it, and a test in the build fails if one is ever added &mdash; so an assistant connected through it cannot move money, make a payment, or change a setting.</div></div>
+      <div class="faq-item"><div class="faq-q">Which assistants work with earmarkIQ Context?<span class="faq-chevron">&#9662;</span></div><div class="faq-a">Claude is verified. Because MCP is an open standard and Context is a standard MCP server, other MCP-capable assistants that support custom connectors can connect the same way, but we have not verified each one individually and do not claim compatibility we have not tested. Connecting takes three steps: get your Context address from your earmarkIQ account, add it as a custom connector, and approve read-only access.</div></div>
+      <div class="faq-item"><div class="faq-q">Does connecting mean my finances end up in a chat log?<span class="faq-chevron">&#9662;</span></div><div class="faq-a">Yes, to the extent that answers about your money appear in a conversation held by whoever provides the assistant, under their retention and privacy terms. A read-only server prevents your money being moved; it does not make the conversation private from the assistant's provider. That is a genuine consideration and worth weighing separately from the security of the connection itself, because it is a question about the assistant rather than about the server.</div></div>
+    </div>
+
+    <div class="about-box">
+      <h3>About earmarkIQ</h3>
+      <p>earmarkIQ is a UK personal finance app for iOS and the web. It is an FCA Appointed Representative of Finexer Ltd (FRN 925695) and ICO registered (CSN2001882). It connects to UK bank accounts through read-only Open Banking, categorises spending automatically, builds a payday allocation plan, and tracks subscriptions, property equity and net worth. Website: earmarkiq.app</p>
+    </div>
+
+    <div class="next-step">
+      <h2>The data has to be worth reading first</h2>
+      <p>An assistant is only as useful as the picture underneath it. earmarkIQ does the unglamorous part &mdash; connecting your accounts through read-only Open Banking, categorising every transaction, and building a payday allocation &mdash; and Context makes that picture readable by an assistant you already use, without adding anything else.</p>
+      <div class="next-links">
+        <a href="/context">See earmarkIQ Context &rarr;</a>
+        <a href="/tools/payday-allocation-calculator">Try the payday allocation calculator &rarr;</a>
+        <a href="/download">Get the app &rarr;</a>
+      </div>
+    </div>
+
+    <h2 id="read-next">Read next</h2>
+    <div class="related">
+      <a href="/context"><div class="related-t">earmarkIQ Context</div><div class="related-d">The MCP server itself: what it exposes, how read-only is enforced, and how to connect or revoke.</div></a>
+      <a href="/blog/connect-bank-account-to-ai-assistant"><div class="related-t">Should you connect?</div><div class="related-d">The four questions to ask before granting any assistant access to your finances.</div></a>
+      <a href="/blog/open-banking-uk-what-apps-can-do"><div class="related-t">Open Banking, explained</div><div class="related-d">Where the underlying data comes from, and what regulation actually gets you.</div></a>
+      <a href="/blog/apps-that-show-vs-move-your-money"><div class="related-t">Showing versus moving</div><div class="related-d">Why the guidance and action line is the one that matters.</div></a>
+    </div>
+
+  </article>
+
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <h4>In this guide</h4>
+      <a href="#problem" class="toc-link">The problem MCP solves</a>
+      <a href="#what-it-is" class="toc-link">What an MCP server is</a>
+      <a href="#how-it-differs" class="toc-link">How it differs from the alternatives</a>
+      <a href="#why-money" class="toc-link">Why it matters for money</a>
+      <a href="#trust-model" class="toc-link">The trust model, honestly</a>
+      <a href="#earmarkiq-context" class="toc-link">Where earmarkIQ Context fits</a>
+      <a href="#what-to-ask" class="toc-link">What to ask about any server</a>
+      <a href="#faq" class="toc-link">FAQ</a>
+    </div>
+    <div class="sidebar-card">
+      <h4>earmarkIQ Context</h4>
+      <div class="sidebar-feature"><span class="sf-icon">&#10022;</span><span>A read-only MCP server for your money</span></div>
+      <div class="sidebar-feature"><span class="sf-icon">&#10022;</span><span>Published, limited list of reads</span></div>
+      <div class="sidebar-feature"><span class="sf-icon">&#10022;</span><span>Claude verified</span></div>
+      <div class="sidebar-feature" style="margin-bottom:16px"><span class="sf-icon">&#10022;</span><span>Revoke it yourself, instantly</span></div>
+      <a href="/context" class="sidebar-cta-btn">How Context works</a>
+    </div>
+    <div class="sidebar-card">
+      <h4>Also read</h4>
+      <a href="/blog/connect-bank-account-to-ai-assistant" class="toc-link">Should you connect your bank to an AI assistant?</a>
+      <a href="/blog/open-banking-uk-what-apps-can-do" class="toc-link">Open Banking: what apps can and cannot do</a>
+      <a href="/blog/apps-that-show-vs-move-your-money" class="toc-link">Showing your money vs moving it</a>
+      <a href="/blog/connecting-financial-data-to-ai-assistants" class="toc-link">Connecting financial data to assistants</a>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <p>&copy; 2026 earmarkIQ Ltd &middot; <a href="/">Home</a> &middot; <a href="/blog">Blog</a> &middot; <a href="/privacy">Privacy Policy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="mailto:hello@earmarkiq.app">Contact</a></p>
+  <p style="margin-top:8px">earmarkIQ is an FCA Appointed Representative of Finexer Ltd (FRN 925695). <a href="https://register.fca.org.uk/s/firm?id=001Sk000010irOJIAY" rel="nofollow" target="_blank">Verify on the FCA register</a>. Content on this site is for guidance only and does not constitute financial advice.</p>
+  <p class="footer-note">earmarkIQ Context is live and read-only. Claude is verified; other MCP-capable assistants can connect but have not been individually verified. earmarkIQ does not initiate payments; payment initiation is within earmarkIQ's permissions and on the roadmap but is not enabled.</p>
+</footer>
+
+<script>
+
+  document.querySelectorAll('.faq-q').forEach(function (q) {
+    q.addEventListener('click', function () {
+      var item = q.parentNode;
+      var open = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function (i) { i.classList.remove('open'); });
+      if (!open) item.classList.add('open');
+    });
+  });
+
+</script>
+</body>
+</html>
