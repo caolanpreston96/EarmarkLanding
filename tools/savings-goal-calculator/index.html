@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Savings Goal Calculator UK | Monthly Amount to Hit a Target | earmarkIQ</title>
+<meta name="description" content="Work out what you need to save each month to hit a target by a deadline, with interest compounded properly from an AER. Free, no sign-up, runs in your browser.">
+<link rel="canonical" href="https://earmarkiq.app/tools/savings-goal-calculator">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://earmarkiq.app/tools/savings-goal-calculator">
+<meta property="og:title" content="Savings Goal Calculator UK | Monthly Amount to Hit a Target | earmarkIQ">
+<meta property="og:description" content="Work out what you need to save each month to hit a target by a deadline, with interest compounded properly from an AER. Free, no sign-up, runs in your browser.">
+<meta property="og:image" content="https://earmarkiq.app/api/og?title=Savings%20Goal%20Calculator&subtitle=What%20you%20need%20each%20month%20to%20hit%20a%20target">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="earmarkIQ">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@earmarkiq">
+<meta name="twitter:title" content="Savings Goal Calculator UK | Monthly Amount to Hit a Target | earmarkIQ">
+<meta name="twitter:description" content="Work out what you need to save each month to hit a target by a deadline, with interest compounded properly from an AER. Free, no sign-up, runs in your browser.">
+<meta name="twitter:image" content="https://earmarkiq.app/api/og?title=Savings%20Goal%20Calculator&subtitle=What%20you%20need%20each%20month%20to%20hit%20a%20target">
+<meta name="theme-color" content="#06080f">
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Savings Goal Calculator UK",
+      "applicationCategory": "FinanceApplication",
+      "applicationSubCategory": "Calculator",
+      "operatingSystem": "Web browser",
+      "browserRequirements": "Requires JavaScript",
+      "url": "https://earmarkiq.app/tools/savings-goal-calculator",
+      "description": "Free UK savings goal calculator. Works out the monthly contribution needed to reach a target amount by a deadline from a starting balance, with interest compounded monthly from an AER, and compares it against what you can realistically afford.",
+      "inLanguage": "en-GB",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "GBP"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "earmarkIQ Ltd",
+        "url": "https://earmarkiq.app"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I work out how much to save each month for a goal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Take the target, subtract what your existing balance will grow to by the deadline, and divide the remainder by the future-value factor for the number of months involved. In practice: for £15,000 in 24 months from a £2,000 start at 4.00% AER, the existing balance grows to £2,163.20, leaving £12,836.80 to be funded by contributions, which works out at £515.00 a month. Ignoring interest entirely and dividing £13,000 by 24 gives £541.67, which is a reasonable rough answer if you want to be conservative."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is AER converted to a monthly rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "By taking the twelfth root of one plus the AER and subtracting one, not by dividing the AER by twelve. For 4.00% AER the correct monthly rate is 0.3274%, whereas dividing by twelve gives 0.3333%. AER already expresses the effect of compounding across a year, so dividing it by twelve double-counts. The difference is small over two years and meaningful over twenty."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I save or invest for my goal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The conventional dividing line is about five years. Money needed sooner than that generally belongs in cash, because investments can fall sharply and you would have no time to recover before you need the money. Beyond five years the argument shifts, because inflation erodes cash while a diversified investment has time to ride out a downturn. This calculator assumes a savings account throughout. Whether investing suits your circumstances is a question for a qualified adviser."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where should I keep money for a savings goal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For a goal one to five years out, an instant-access or fixed-term cash savings account, ideally within an ISA so the interest is tax-free. A fixed-term bond usually pays more but locks the money up, which suits a goal with a firm date and no chance of needing the money early. If the goal is a first home, a Lifetime ISA adds a 25% government bonus on up to £4,000 a year, though it carries withdrawal penalties and property price limits that are worth reading carefully before committing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I cannot afford the monthly amount?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Enter what you can genuinely manage in the optional field and the calculator will show you two things: the balance you would actually have on the deadline, and the date you would really hit the target. From there the levers are the deadline, the target itself, the amount going in, and the interest rate — in roughly that order of usefulness. Moving a deadline out by a third cuts the monthly requirement by about a third; improving the rate barely moves it on a short horizon."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this account for inflation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Every figure is in today's pounds, and the target you enter is treated as a fixed cash amount. For a goal a year or two away that is a fair approximation. For something a decade out it is not, because the thing you are saving for will probably cost more by then. If you are planning a long-horizon goal, it is worth revisiting the target periodically rather than setting it once."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://earmarkiq.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tools",
+          "item": "https://earmarkiq.app/tools"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Savings Goal Calculator",
+          "item": "https://earmarkiq.app/tools/savings-goal-calculator"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+:root{--bg:#06080f;--bg2:#0a0d17;--sf:#141929;--sf2:#191f33;--bd:#1e2540;--bd2:#283050;--tx:#eaecf5;--tx2:#a0a5bc;--tx3:#686e88;--tx4:#464c64;--mint:#4ECDC4;--mintG:rgba(78,205,196,0.15);--green:#4ADE80;--amber:#F5A623;--blue:#5B8DEF;--purple:#9B8FE8;--coral:#FF6B6B;--f:'DM Sans',-apple-system,sans-serif;--m:'IBM Plex Mono',monospace;--ease:cubic-bezier(0.16,1,0.3,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}::selection{background:rgba(78,205,196,0.25);color:#fff}html{scroll-behavior:smooth}body{font-family:var(--f);background:var(--bg);color:var(--tx);overflow-x:hidden;-webkit-font-smoothing:antialiased;line-height:1.6}a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:var(--f)}
+
+/* Nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rgba(6,8,15,.92);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid var(--bd)}.nav-i{max-width:1200px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:20px}.nav-l{font-size:22px;font-weight:400;letter-spacing:-.02em;color:var(--tx);flex-shrink:0}.nav-l b{font-weight:800;color:var(--mint)}.nav-l span{display:block;font-family:var(--m);font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--tx3);font-weight:500}.nav-links{display:flex;align-items:center;gap:28px}.nav-a{color:var(--tx2);font-size:14px;font-weight:500;transition:color .2s}.nav-a:hover,.nav-a.active{color:var(--tx)}.nav-cta{padding:9px 22px;background:var(--mint);color:var(--bg);font-size:13px;font-weight:700;border-radius:100px;border:none;transition:all .3s;white-space:nowrap}.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(78,205,196,.3)}
+@media(max-width:860px){.nav-links{display:none}}
+
+/* Ambient */
+.amb{position:fixed;inset:0;pointer-events:none;z-index:0}.amb-o{position:absolute;border-radius:50%;filter:blur(120px);opacity:.3}.amb-o1{width:600px;height:600px;top:-200px;right:-100px;background:radial-gradient(circle,rgba(78,205,196,0.08),transparent 70%)}.amb-o2{width:400px;height:400px;bottom:30%;left:-150px;background:radial-gradient(circle,rgba(91,141,239,0.06),transparent 70%)}
+main{position:relative;z-index:1}
+
+/* Page hero */
+.page-hero{padding:120px 32px 40px;max-width:1200px;margin:0 auto}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--tx3);margin-bottom:20px;flex-wrap:wrap}.breadcrumb a{color:var(--tx3);transition:color .2s}.breadcrumb a:hover{color:var(--mint)}.breadcrumb svg{width:14px;height:14px;opacity:.5}
+.page-hero h1{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-.03em;line-height:1.15;margin-bottom:12px}.page-hero h1 em{font-style:normal;color:var(--mint)}
+.page-hero .subtitle{font-size:17px;color:var(--tx2);max-width:680px;line-height:1.7}
+.page-hero .badges{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.page-hero .badge{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;background:rgba(78,205,196,.06);border:1px solid rgba(78,205,196,.15);border-radius:100px;font-size:12px;font-weight:600;color:var(--mint);font-family:var(--m)}
+
+/* Calculator layout */
+.calc-section{padding:0 32px 60px;max-width:1200px;margin:0 auto}
+.calc-wrap{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.calc-inputs{display:flex;flex-direction:column;gap:20px}
+.calc-results{position:sticky;top:100px;display:flex;flex-direction:column;gap:16px}
+
+/* Input cards */
+.input-card{background:var(--sf);border:1px solid var(--bd);border-radius:16px;padding:26px 24px}
+.input-card-h{font-size:15px;font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:10px}.input-card-h svg{color:var(--mint);flex-shrink:0}
+.field{margin-bottom:18px}.field:last-child{margin-bottom:0}
+.field label{display:block;font-size:13px;font-weight:600;color:var(--tx2);margin-bottom:6px}
+.field-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.input-wrap{position:relative}
+.input-wrap .prefix{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:14px;color:var(--tx3);font-family:var(--m);font-weight:600;pointer-events:none}
+.input-wrap .suffix{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:13px;color:var(--tx3);font-family:var(--m);pointer-events:none}
+input[type="number"],input[type="text"],input[type="month"],select{width:100%;padding:12px 14px;background:var(--bg);border:1px solid var(--bd2);border-radius:10px;color:var(--tx);font-family:var(--f);font-size:14px;outline:none;transition:border-color .2s,box-shadow .2s;-moz-appearance:textfield}
+input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+input:focus,select:focus{border-color:var(--mint);box-shadow:0 0 0 3px var(--mintG)}
+select{cursor:pointer;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23686e88' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+select option{background:var(--sf);color:var(--tx)}
+.has-prefix input{padding-left:32px}.has-suffix input{padding-right:52px}
+.field-hint{font-size:11px;color:var(--tx4);margin-top:5px;line-height:1.55}
+input[type="range"]{width:100%;height:5px;-webkit-appearance:none;appearance:none;background:var(--bd2);border-radius:4px;outline:none;padding:0;margin:10px 0 4px}
+input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--mint);cursor:pointer;border:3px solid var(--bg);box-shadow:0 2px 8px rgba(0,0,0,.4)}
+input[type="range"]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--mint);cursor:pointer;border:3px solid var(--bg)}
+
+/* Segmented control */
+.seg{display:flex;background:var(--bg);border-radius:10px;padding:4px;gap:4px}
+.seg button{flex:1;padding:9px 10px;border:none;background:transparent;color:var(--tx3);font-size:13px;font-weight:600;border-radius:7px;transition:all .2s;font-family:var(--f)}
+.seg button.active{background:var(--sf2);color:var(--mint);box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.seg button:hover:not(.active){color:var(--tx2)}
+
+/* Results */
+.results-card{background:var(--sf);border:1px solid var(--bd);border-radius:20px;padding:28px 24px}
+.res-hero{text-align:center;padding-bottom:22px;margin-bottom:22px;border-bottom:1px solid var(--bd)}
+.res-label{font-size:13px;color:var(--tx2);margin-bottom:6px}
+.res-big{font-family:var(--m);font-size:clamp(32px,4.6vw,46px);font-weight:800;color:var(--mint);letter-spacing:-.03em;line-height:1}
+.res-big.green{color:var(--green)}.res-big.amber{color:var(--amber)}.res-big.coral{color:var(--coral)}
+.res-sub{font-size:13px;color:var(--tx3);margin-top:8px;font-family:var(--m)}
+.res-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:10px 0;border-bottom:1px solid rgba(30,37,64,.5);font-size:14px}
+.res-row:last-child{border-bottom:none}
+.res-row .rl{color:var(--tx2)}
+.res-row .rv{font-family:var(--m);font-weight:600;white-space:nowrap}
+.res-row.total{border-top:2px solid var(--bd);border-bottom:none;margin-top:6px;padding-top:14px;font-weight:700}
+.res-row.total .rv{color:var(--green);font-size:16px}
+.res-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.stat-box{background:var(--bg);border-radius:10px;padding:14px}
+.stat-box .sb-l{font-size:11px;color:var(--tx3);margin-bottom:3px}
+.stat-box .sb-v{font-family:var(--m);font-size:18px;font-weight:700;color:var(--tx)}
+.stat-box.wide{grid-column:1/-1;text-align:center;background:rgba(78,205,196,.06);border:1px solid rgba(78,205,196,.15)}
+.stat-box.wide .sb-v{font-size:22px;color:var(--mint)}
+
+/* Stacked allocation bar */
+.alloc-bar{height:26px;border-radius:8px;overflow:hidden;display:flex;background:var(--bg);margin:4px 0 12px}
+.alloc-bar i{display:block;height:100%;transition:width .45s var(--ease)}
+.alloc-key{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--tx2);margin-bottom:18px}
+.alloc-key span{display:inline-flex;align-items:center;gap:6px}
+.alloc-key em{width:9px;height:9px;border-radius:3px;display:inline-block;font-style:normal}
+
+/* Repeatable rows (subscriptions) */
+.rowlist{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
+.rowitem{display:grid;grid-template-columns:1fr 110px 116px 36px;gap:8px;align-items:center}
+.rowitem input,.rowitem select{padding:10px 12px;font-size:13px}
+.rowitem .has-prefix input{padding-left:28px}
+.rowitem .prefix{left:11px;font-size:13px}
+.btn-del{width:36px;height:38px;border-radius:9px;background:var(--bg);border:1px solid var(--bd2);color:var(--tx4);font-size:16px;line-height:1;transition:all .2s;display:flex;align-items:center;justify-content:center}
+.btn-del:hover{color:var(--coral);border-color:var(--coral)}
+.btn-add{width:100%;padding:11px;border-radius:10px;background:transparent;border:1px dashed var(--bd2);color:var(--tx3);font-size:13px;font-weight:600;transition:all .2s}
+.btn-add:hover{border-color:var(--mint);color:var(--mint)}
+@media(max-width:520px){.rowitem{grid-template-columns:1fr 1fr 36px}.rowitem select{grid-column:1/3}}
+
+/* Notes / warnings */
+.note{border-radius:12px;padding:16px 18px;border:1px solid var(--bd);border-left:3px solid var(--mint);background:rgba(78,205,196,.04);font-size:13.5px;color:var(--tx2);line-height:1.7}
+.note.amber{border-left-color:var(--amber);background:rgba(245,166,35,.04)}
+.note.blue{border-left-color:var(--blue);background:rgba(91,141,239,.04)}
+.note.coral{border-left-color:var(--coral);background:rgba(255,107,107,.04)}
+.note b{color:var(--tx)}
+.note-l{font-family:var(--m);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--mint);margin-bottom:7px}
+.note.amber .note-l{color:var(--amber)}.note.blue .note-l{color:var(--blue)}.note.coral .note-l{color:var(--coral)}
+
+/* Assumptions */
+.assump{max-width:1200px;margin:0 auto;padding:0 32px 20px}
+.assump-box{background:var(--bg2);border:1px solid var(--bd);border-radius:16px;padding:26px 28px}
+.assump-box h2{font-size:15px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:9px}
+.assump-box h2 svg{color:var(--amber)}
+.assump-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
+@media(max-width:760px){.assump-list{grid-template-columns:1fr}}
+.assump-list li{font-size:13px;color:var(--tx2);line-height:1.65;padding-left:18px;position:relative}
+.assump-list li::before{content:'';position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:2px;background:var(--bd2)}
+.assump-src{font-size:12px;color:var(--tx4);margin-top:16px;padding-top:14px;border-top:1px solid var(--bd);line-height:1.7}
+.assump-src a{color:var(--tx3);text-decoration:underline;text-underline-offset:2px}.assump-src a:hover{color:var(--mint)}
+
+/* Content */
+.content-section{max-width:1200px;margin:0 auto;padding:56px 32px}
+.content-section.tight{padding-top:0}
+.content-section h2{font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:-.02em;margin-bottom:16px;line-height:1.2}
+.content-section h3{font-size:17px;font-weight:700;margin:24px 0 10px;color:var(--tx)}
+.content-section p{font-size:15px;color:var(--tx2);line-height:1.8;margin-bottom:14px;max-width:760px}
+.content-section a{color:var(--mint);font-weight:500}.content-section a:hover{text-decoration:underline}
+.content-section ul{margin:0 0 16px 20px;color:var(--tx2);font-size:15px;line-height:1.8;max-width:760px}
+.content-section li{margin-bottom:8px}
+.content-divider{max-width:1200px;margin:0 auto;padding:0 32px}.content-divider hr{border:none;border-top:1px solid var(--bd)}
+
+/* Worked example */
+.worked{background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:24px 26px;margin:22px 0;max-width:760px}
+.worked-h{font-family:var(--m);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--tx3);margin-bottom:14px}
+.worked-row{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:9px 0;border-bottom:1px solid rgba(30,37,64,.6);font-size:14px;color:var(--tx2)}
+.worked-row:last-of-type{border-bottom:none}
+.worked-row b{font-family:var(--m);color:var(--tx);font-weight:600;white-space:nowrap}
+.worked-row.total{border-top:1px solid var(--bd);border-bottom:none;margin-top:5px;padding-top:13px}
+.worked-row.total b{color:var(--mint);font-size:17px}
+
+/* Data table */
+.table-wrap{overflow-x:auto;margin:20px 0;border:1px solid var(--bd);border-radius:12px;max-width:760px}
+table.dt{width:100%;border-collapse:collapse;font-size:14px}
+table.dt thead{background:var(--sf)}
+table.dt th{text-align:left;padding:11px 16px;font-size:11px;font-weight:700;color:var(--tx3);text-transform:uppercase;letter-spacing:.07em;border-bottom:1px solid var(--bd);white-space:nowrap}
+table.dt td{padding:11px 16px;color:var(--tx2);border-bottom:1px solid rgba(30,37,64,.6)}
+table.dt tr:last-child td{border-bottom:none}
+table.dt td.n{font-family:var(--m);text-align:right;white-space:nowrap;color:var(--tx)}
+table.dt td.nm{font-weight:600;color:var(--tx)}
+
+/* FAQ */
+.faq-list{max-width:760px;margin-top:20px}
+.faq-i{border:1px solid var(--bd);border-radius:12px;margin-bottom:10px;overflow:hidden;background:var(--sf)}
+.faq-q{padding:16px 20px;font-weight:600;font-size:15.5px;color:var(--tx);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq-q:hover{background:var(--sf2)}
+.faq-ch{color:var(--mint);flex-shrink:0;font-size:17px;transition:transform .2s}
+.faq-a{padding:0 20px 16px;color:var(--tx2);font-size:14.5px;line-height:1.75;display:none}
+.faq-i.open .faq-a{display:block}
+.faq-i.open .faq-ch{transform:rotate(180deg)}
+.faq-a a{color:var(--mint)}
+
+/* Related tools */
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+@media(max-width:860px){.rel-grid{grid-template-columns:1fr}}
+.rel-card{display:block;background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:20px;transition:all .3s}
+.rel-card:hover{border-color:var(--mint);transform:translateY(-3px)}
+.rel-ic{font-size:22px;margin-bottom:10px}
+.rel-t{font-size:15px;font-weight:700;margin-bottom:5px;color:var(--tx)}
+.rel-d{font-size:13px;color:var(--tx2);line-height:1.6}
+
+/* Soft route into app */
+.soft{max-width:1200px;margin:0 auto;padding:20px 32px 80px}
+.soft-box{background:var(--bg2);border:1px solid var(--bd);border-left:3px solid var(--mint);border-radius:16px;padding:28px 30px;max-width:760px}
+.soft-box h2{font-size:19px;font-weight:700;letter-spacing:-.01em;margin-bottom:9px}
+.soft-box p{font-size:14.5px;color:var(--tx2);line-height:1.75;margin-bottom:14px}
+.soft-links{display:flex;gap:22px;flex-wrap:wrap;font-size:14px}
+.soft-links a{color:var(--mint);font-weight:600}
+.soft-links a:hover{text-decoration:underline}
+
+/* Footer */
+.footer{position:relative;z-index:1;border-top:1px solid var(--bd);padding:48px 32px 32px;background:var(--bg)}.footer-i{max-width:1200px;margin:0 auto}.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:36px}.footer-bt{font-size:13px;color:var(--tx2);line-height:1.7;margin-top:12px;max-width:280px}.footer-hd{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--tx4);margin-bottom:14px}.footer-ul{list-style:none;display:flex;flex-direction:column;gap:8px}.footer-ul a{color:var(--tx2);font-size:13px;transition:color .2s}.footer-ul a:hover{color:var(--mint)}.footer-mid{padding-top:24px;border-top:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:16px}.footer-cp{font-size:11px;color:var(--tx4)}.footer-fca{font-size:11px;color:var(--tx4);text-align:center}.footer-fca a{color:var(--tx3);text-decoration:underline}.footer-disc{font-size:10.5px;color:var(--tx4);line-height:1.8;padding-top:16px;border-top:1px solid var(--bd)}
+
+@media(max-width:960px){
+  .calc-wrap{grid-template-columns:1fr}
+  .calc-results{position:static}
+  .footer-top{grid-template-columns:1fr 1fr;gap:24px}
+  .footer-mid{flex-direction:column;text-align:center}
+}
+@media(max-width:600px){
+  .page-hero{padding:100px 20px 32px}
+  .calc-section{padding:0 20px 48px}
+  .assump{padding:0 20px 20px}
+  .content-section{padding:44px 20px}
+  .content-divider{padding:0 20px}
+  .soft{padding:16px 20px 60px}
+  .res-grid{grid-template-columns:1fr}
+  .field-2{grid-template-columns:1fr}
+  .footer{padding:40px 20px 28px}
+  .footer-top{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+<script>
+window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<div class="amb"><div class="amb-o amb-o1"></div><div class="amb-o amb-o2"></div></div>
+
+<nav class="nav"><div class="nav-i">
+  <a href="/" class="nav-l">earmark<b>IQ</b><span>Smart Money</span></a>
+  <div class="nav-links">
+    <a href="/#features" class="nav-a">Features</a>
+    <a href="/property" class="nav-a">Property</a>
+    <a href="/#pricing" class="nav-a">Pricing</a>
+    <a href="/blog" class="nav-a">Blog</a>
+    <a href="/tools" class="nav-a active">Tools</a>
+  </div>
+  <a href="/download" class="nav-cta">Download Free &rarr;</a>
+</div></nav>
+
+<main>
+<section class="page-hero">
+  <div class="breadcrumb">
+    <a href="/">Home</a>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+    <a href="/tools">Tools</a>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+    <span>Savings Goal Calculator</span>
+  </div>
+  <h1>Savings Goal <em>Calculator</em></h1>
+  <p class="subtitle">Give it the amount, the deadline and what you have already, and it works back to the monthly figure &mdash; then tells you honestly whether the amount you can actually manage gets you there.</p>
+  <div class="badges"><span class="badge">Free to use</span><span class="badge">No sign-up</span><span class="badge">Runs in your browser</span><span class="badge">UK</span></div>
+</section>
+
+<section class="calc-section">
+
+<div class="calc-wrap">
+  <div class="calc-inputs">
+
+    <div class="input-card">
+      <div class="input-card-h"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>The goal</div>
+      <div class="field">
+        <label for="target">Amount you need</label>
+        <div class="input-wrap has-prefix"><span class="prefix">&pound;</span><input type="number" id="target" value="15000" min="0" step="100"></div>
+        <div class="field-hint">A house deposit, a wedding, a car, a career break, a year of school fees &mdash; whatever the number actually is.</div>
+      </div>
+      <div class="field">
+        <label for="current">Already saved towards it</label>
+        <div class="input-wrap has-prefix"><span class="prefix">&pound;</span><input type="number" id="current" value="2000" min="0" step="100"></div>
+      </div>
+      <div class="field">
+        <label for="months">Months until you need it</label>
+        <div class="input-wrap has-suffix"><span class="suffix">months</span><input type="number" id="months" value="24" min="1" max="600" step="1"></div>
+        <div class="field-hint" id="dateHint"></div>
+      </div>
+    </div>
+
+    <div class="input-card">
+      <div class="input-card-h"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>Rate and reality check</div>
+      <div class="field">
+        <label for="aer">Savings interest <span style="color:var(--tx4);font-weight:400">&mdash; AER</span></label>
+        <div class="input-wrap has-suffix"><span class="suffix">% AER</span><input type="number" id="aer" value="4.00" min="0" max="20" step="0.05"></div>
+        <div class="field-hint">Set it to 0 to ignore interest and see the plain arithmetic.</div>
+      </div>
+      <div class="field">
+        <label for="afford">What you can actually manage each month <span style="color:var(--tx4);font-weight:400">&mdash; optional</span></label>
+        <div class="input-wrap has-prefix"><span class="prefix">&pound;</span><input type="number" id="afford" value="" min="0" step="10" placeholder="Leave blank to skip"></div>
+        <div class="field-hint">Add this and the calculator will tell you whether the deadline holds, and if not, when you would actually get there.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="calc-results">
+    <div class="results-card">
+      <div class="res-hero">
+        <div class="res-label">You need to save</div>
+        <div class="res-big" id="perMonth">&pound;0</div>
+        <div class="res-sub" id="perMonthSub"></div>
+      </div>
+
+      <div style="font-size:12px;color:var(--tx3);font-family:var(--m);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">How the target is reached</div>
+      <div class="alloc-bar">
+        <i id="barStart" style="background:var(--blue)"></i>
+        <i id="barContrib" style="background:var(--mint)"></i>
+        <i id="barInt" style="background:var(--purple)"></i>
+      </div>
+      <div class="alloc-key">
+        <span><em style="background:var(--blue)"></em>Already saved</span>
+        <span><em style="background:var(--mint)"></em>Your contributions</span>
+        <span><em style="background:var(--purple)"></em>Interest</span>
+      </div>
+
+      <div class="res-row"><span class="rl">Target</span><span class="rv" id="vTarget"></span></div>
+      <div class="res-row"><span class="rl">Already saved</span><span class="rv" id="vStart" style="color:var(--blue)"></span></div>
+      <div class="res-row"><span class="rl">You will pay in</span><span class="rv" id="vContrib" style="color:var(--mint)"></span></div>
+      <div class="res-row"><span class="rl">Interest earned</span><span class="rv" id="vInt" style="color:var(--purple)"></span></div>
+      <div class="res-row total"><span class="rl">Deadline</span><span class="rv" id="vDate"></span></div>
+
+      <div class="res-grid">
+        <div class="stat-box"><div class="sb-l">Per week</div><div class="sb-v" id="sWeek"></div></div>
+        <div class="stat-box"><div class="sb-l">Per day</div><div class="sb-v" id="sDay"></div></div>
+        <div class="stat-box"><div class="sb-l">Interest does</div><div class="sb-v" id="sIntShare"></div></div>
+        <div class="stat-box"><div class="sb-l">Monthly rate used</div><div class="sb-v" id="sRate"></div></div>
+      </div>
+
+      <div id="affordBox" style="display:none">
+        <div style="font-size:12px;color:var(--tx3);font-family:var(--m);text-transform:uppercase;letter-spacing:.1em;margin:22px 0 10px">On what you can manage</div>
+        <div class="res-row"><span class="rl">You would have by the deadline</span><span class="rv" id="aHave"></span></div>
+        <div class="res-row"><span class="rl">Against the target</span><span class="rv" id="aGap"></span></div>
+        <div class="res-row"><span class="rl">You would actually reach it</span><span class="rv" id="aWhen"></span></div>
+      </div>
+    </div>
+
+    <div class="note" id="verdict"></div>
+  </div>
+</div>
+
+</section>
+
+<div class="assump">
+  <div class="assump-box">
+    <h2><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>What this calculator assumes</h2>
+    <ul class="assump-list"><li>Interest is compounded monthly at the rate implied by the AER you enter &mdash; the twelfth root of one plus the AER, not the AER divided by twelve.</li><li>Contributions are assumed to arrive at the end of each month, which is the conservative treatment. Paying in at the start of the month earns slightly more.</li><li>The rate is held constant for the whole period. Easy-access rates move, so a long horizon makes the interest figure more of an illustration than a projection.</li><li>Interest is treated as tax-free, which holds inside an ISA and for most people under the personal savings allowance.</li><li>Inflation is not modelled. A target set today buys less in three years, which matters most for goals that are a long way out.</li><li>Money set aside for a goal within about five years belongs in cash rather than investments &mdash; this calculator assumes a savings account, not a stocks and shares return.</li><li>Nothing you type leaves your browser. There is no account, no sign-up and no data stored.</li></ul>
+    <p class="assump-src">The monthly contribution is the standard future-value-of-an-annuity calculation, rearranged to solve for the payment. The full formula is shown below so you can check it.</p>
+  </div>
+</div>
+
+
+<div class="content-divider"><hr></div>
+<section class="content-section">
+  <h2>A worked example</h2>
+  <p>Suppose you need &pound;15,000 in two years, you have &pound;2,000 already, and the money sits in an account paying 4.00% AER.</p>
+  <div class="worked">
+    <div class="worked-h">&pound;15,000 in 24 months from a &pound;2,000 start</div>
+    <div class="worked-row"><span>Target</span><b>&pound;15,000.00</b></div>
+    <div class="worked-row"><span>Already saved</span><b>&pound;2,000.00</b></div>
+    <div class="worked-row"><span>What the &pound;2,000 grows to</span><b>&pound;2,163.20</b></div>
+    <div class="worked-row"><span>Still needed from contributions</span><b>&pound;12,836.80</b></div>
+    <div class="worked-row"><span>You pay in over 24 months</span><b>&pound;12,360.10</b></div>
+    <div class="worked-row"><span>Interest on those contributions</span><b>&pound;476.70</b></div>
+    <div class="worked-row total"><span>Required each month</span><b>&pound;515.00</b></div>
+  </div>
+  <p>Interest does &pound;639.90 of the work in total &mdash; the &pound;163.20 earned on the opening balance plus &pound;476.70 on the contributions as they accumulate. That is about 4.9% of the &pound;13,000 gap you were trying to close, which is worth having but is not the thing that gets you there. Over two years, the contribution does almost all of it.</p>
+  <p>That balance shifts with the horizon. Stretch the same &pound;2,000 start to a &pound;50,000 goal over ten years and interest at the same rate contributes &pound;9,520 &mdash; 19% of the total, rather than 4%. That is where the argument for investing rather than saving starts to bite. On a one-year goal it barely registers, and the only lever that matters is how much goes in.</p>
+</section>
+
+<div class="content-divider"><hr></div>
+<section class="content-section">
+  <h2>The maths, so you can check it</h2>
+  <p>The monthly amount is the future value of an annuity, rearranged to solve for the payment:</p>
+  <div class="worked">
+    <div class="worked-h">Required monthly contribution</div>
+    <p style="font-family:var(--m);font-size:14px;color:var(--tx);line-height:2;margin:0">
+      i&nbsp;=&nbsp;(1&nbsp;+&nbsp;AER)<sup>1/12</sup>&nbsp;&minus;&nbsp;1<br>
+      M&nbsp;=&nbsp;(FV&nbsp;&minus;&nbsp;P&nbsp;&times;&nbsp;(1&nbsp;+&nbsp;i)<sup>n</sup>)&nbsp;&times;&nbsp;i&nbsp;&divide;&nbsp;((1&nbsp;+&nbsp;i)<sup>n</sup>&nbsp;&minus;&nbsp;1)
+    </p>
+    <p class="worked-note">FV is the target, P is what you have already, n is the number of months and i is the monthly rate. Where the AER is zero, this collapses to (FV &minus; P) &divide; n.</p>
+  </div>
+  <p>The detail worth knowing is the first line. An AER of 4.00% is not 0.3333% a month, because monthly interest compounds. The correct monthly rate is the twelfth root of 1.04 minus 1, which is 0.3274%. Dividing by twelve overstates the return &mdash; not by much over two years, but enough to matter on a long horizon, and it is the most common error in homemade savings spreadsheets.</p>
+</section>
+
+<div class="content-divider"><hr></div>
+<section class="content-section">
+  <h2>When the number comes back too high</h2>
+  <p>Most people run this once and find the required amount is more than they can manage. There are only four levers, and it is worth being deliberate about which one you pull.</p>
+  <ul>
+    <li><strong style="color:var(--tx)">Move the deadline.</strong> The most powerful lever and usually the least painful. Stretching a goal from 24 to 36 months cuts the monthly requirement by roughly a third.</li>
+    <li><strong style="color:var(--tx)">Cut the target.</strong> Worth interrogating honestly. A &pound;15,000 deposit target may have been rounded up from a real figure of &pound;12,500.</li>
+    <li><strong style="color:var(--tx)">Increase what goes in.</strong> Usually means finding it in committed costs rather than earning more &mdash; the <a href="/tools/subscription-cost-calculator">subscription cost calculator</a> is a good place to look.</li>
+    <li><strong style="color:var(--tx)">Improve the rate.</strong> The weakest lever over short horizons. Moving from 2% to 4.5% on this example saves about &pound;13 a month, which is real but will not rescue an unaffordable plan.</li>
+  </ul>
+  <p>Enter what you can genuinely manage in the optional field and the calculator will tell you where that lands: how much you would have by the deadline, and when you would actually reach the target instead. A plan that admits it needs 31 months is more useful than one that pretends 24 will work.</p>
+  <p>One sequencing point. If you do not yet have an emergency fund, a goal with a deadline generally comes second &mdash; without a buffer, the first unexpected expense comes out of the goal. The <a href="/tools/emergency-fund-calculator">emergency fund calculator</a> sizes that, and the <a href="/tools/payday-allocation-calculator">payday allocation calculator</a> shows how both fit alongside your committed costs.</p>
+</section>
+
+
+<div class="content-divider"><hr></div>
+<section class="content-section">
+  <h2>Frequently asked questions</h2>
+  <div class="faq-list">
+  <div class="faq-i"><div class="faq-q">How do I work out how much to save each month for a goal?<span class="faq-ch">&#9662;</span></div><div class="faq-a">Take the target, subtract what your existing balance will grow to by the deadline, and divide the remainder by the future-value factor for the number of months involved. In practice: for &pound;15,000 in 24 months from a &pound;2,000 start at 4.00% AER, the existing balance grows to &pound;2,163.20, leaving &pound;12,836.80 to be funded by contributions, which works out at &pound;515.00 a month. Ignoring interest entirely and dividing &pound;13,000 by 24 gives &pound;541.67, which is a reasonable rough answer if you want to be conservative.</div></div>
+  <div class="faq-i"><div class="faq-q">How is AER converted to a monthly rate?<span class="faq-ch">&#9662;</span></div><div class="faq-a">By taking the twelfth root of one plus the AER and subtracting one, not by dividing the AER by twelve. For 4.00% AER the correct monthly rate is 0.3274%, whereas dividing by twelve gives 0.3333%. AER already expresses the effect of compounding across a year, so dividing it by twelve double-counts. The difference is small over two years and meaningful over twenty.</div></div>
+  <div class="faq-i"><div class="faq-q">Should I save or invest for my goal?<span class="faq-ch">&#9662;</span></div><div class="faq-a">The conventional dividing line is about five years. Money needed sooner than that generally belongs in cash, because investments can fall sharply and you would have no time to recover before you need the money. Beyond five years the argument shifts, because inflation erodes cash while a diversified investment has time to ride out a downturn. This calculator assumes a savings account throughout. Whether investing suits your circumstances is a question for a qualified adviser.</div></div>
+  <div class="faq-i"><div class="faq-q">Where should I keep money for a savings goal?<span class="faq-ch">&#9662;</span></div><div class="faq-a">For a goal one to five years out, an instant-access or fixed-term cash savings account, ideally within an ISA so the interest is tax-free. A fixed-term bond usually pays more but locks the money up, which suits a goal with a firm date and no chance of needing the money early. If the goal is a first home, a Lifetime ISA adds a 25% government bonus on up to &pound;4,000 a year, though it carries withdrawal penalties and property price limits that are worth reading carefully before committing.</div></div>
+  <div class="faq-i"><div class="faq-q">What if I cannot afford the monthly amount?<span class="faq-ch">&#9662;</span></div><div class="faq-a">Enter what you can genuinely manage in the optional field and the calculator will show you two things: the balance you would actually have on the deadline, and the date you would really hit the target. From there the levers are the deadline, the target itself, the amount going in, and the interest rate &mdash; in roughly that order of usefulness. Moving a deadline out by a third cuts the monthly requirement by about a third; improving the rate barely moves it on a short horizon.</div></div>
+  <div class="faq-i"><div class="faq-q">Does this account for inflation?<span class="faq-ch">&#9662;</span></div><div class="faq-a">No. Every figure is in today's pounds, and the target you enter is treated as a fixed cash amount. For a goal a year or two away that is a fair approximation. For something a decade out it is not, because the thing you are saving for will probably cost more by then. If you are planning a long-horizon goal, it is worth revisiting the target periodically rather than setting it once.</div></div>
+</div>
+</section>
+
+<div class="content-divider"><hr></div>
+<section class="content-section">
+  <h2>Other calculators</h2>
+  
+<div class="rel-grid">
+  <a href="/tools/emergency-fund-calculator" class="rel-card"><div class="rel-ic">&#128737;</div><div class="rel-t">Emergency Fund Calculator</div><div class="rel-d">The buffer that usually comes before a goal with a deadline.</div></a>
+  <a href="/tools/payday-allocation-calculator" class="rel-card"><div class="rel-ic">&#128181;</div><div class="rel-t">Payday Allocation Calculator</div><div class="rel-d">How much is genuinely spare each month once committed costs are out.</div></a>
+  <a href="/tools/mortgage-affordability" class="rel-card"><div class="rel-ic">&#127968;</div><div class="rel-t">Mortgage Affordability Calculator</div><div class="rel-d">Saving a deposit? See what that deposit would let you borrow.</div></a>
+</div>
+
+</section>
+
+<div class="soft">
+
+<div class="soft-box">
+  <h2>Goals are easy to set and easy to quietly abandon</h2>
+  <p>The month a goal stops getting funded is rarely a decision &mdash; it is usually an expensive month that nobody noticed. earmarkIQ tracks goals against your actual balances, shows whether you are ahead or behind the line you set, and folds the contribution into your payday allocation so it comes out before the spending rather than after.</p>
+  <div class="soft-links">
+    <a href="/#features">See goal tracking &rarr;</a>
+    <a href="/blog/payday-allocation">How payday allocation works &rarr;</a>
+    <a href="/download">Get the app &rarr;</a>
+  </div>
+</div>
+
+</div>
+</main>
+
+<footer class="footer"><div class="footer-i">
+  <div class="footer-top">
+    <div><a href="/" class="nav-l" style="font-size:20px">earmark<b>IQ</b><span>Smart Money</span></a><p class="footer-bt">Payday salary allocation and money tracking for UK professionals.</p></div>
+    <div><h5 class="footer-hd">Product</h5><ul class="footer-ul"><li><a href="/#how">How it works</a></li><li><a href="/#features">Features</a></li><li><a href="/property">Property valuation</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/#security">Security</a></li></ul></div>
+    <div><h5 class="footer-hd">Resources</h5><ul class="footer-ul"><li><a href="/tools">All calculators</a></li><li><a href="/blog">Blog</a></li><li><a href="/budgeting/salary">Salary Guides</a></li><li><a href="/budgeting/profession">Profession Guides</a></li></ul></div>
+    <div><h5 class="footer-hd">Legal</h5><ul class="footer-ul"><li><a href="/privacy">Privacy Policy</a></li><li><a href="/terms">Terms of Service</a></li><li><a href="mailto:hello@earmarkiq.app">Support</a></li></ul></div>
+  </div>
+  <div class="footer-mid">
+    <div class="footer-cp">&copy; 2026 earmarkIQ Ltd. All rights reserved.</div>
+    <div class="footer-fca">earmarkIQ is an FCA Appointed Representative of Finexer Ltd (FRN 925695). <a href="https://register.fca.org.uk/s/firm?id=001Sk000010irOJIAY" rel="nofollow" target="_blank">Verify on the FCA register</a>. Content on this site is for guidance only and does not constitute financial advice.</div>
+  </div>
+  <div class="footer-disc">earmarkIQ provides financial information and tools, not regulated financial advice. Savings projections are estimates based on the figures you enter and assume contributions and the interest rate stay constant for the whole period. Savings rates change and inflation is not modelled. Deposits with UK authorised institutions are protected up to &pound;85,000 per person per institution by the FSCS. Consider speaking to a qualified financial adviser about your own circumstances.</div>
+</div></footer>
+
+<script>
+(function(){
+
+var MONTH_NAMES=['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+function num(id){var e=document.getElementById(id);var v=parseFloat(e.value);return isNaN(v)||v<0?0:v;}
+function gbp0(n){var r=Math.round(n);if(Object.is(r,-0))r=0;return '£'+r.toLocaleString('en-GB');}
+function gbp(n){return '£'+n.toLocaleString('en-GB',{minimumFractionDigits:2,maximumFractionDigits:2});}
+function set(id,t){document.getElementById(id).textContent=t;}
+
+function monthlyRate(aerPct){ return aerPct<=0?0:Math.pow(1+aerPct/100,1/12)-1; }
+function fv(P,M,i,n){ return i<=0 ? P+M*n : P*Math.pow(1+i,n)+M*((Math.pow(1+i,n)-1)/i); }
+function required(FV,P,i,n){
+  if(n<=0) return Math.max(0,FV-P);
+  var grown = i<=0 ? P : P*Math.pow(1+i,n);
+  if(grown>=FV) return 0;
+  if(i<=0) return (FV-P)/n;
+  return (FV-grown)*i/(Math.pow(1+i,n)-1);
+}
+function monthsTo(P,T,M,i){
+  if(P>=T) return 0;
+  if(i<=0) return M>0?(T-P)/M:Infinity;
+  var a=T*i+M, b=P*i+M;
+  if(b<=0||a<=0||a<=b) return Infinity;
+  var n=Math.log(a/b)/Math.log(1+i);
+  return isFinite(n)&&n>=0?n:Infinity;
+}
+function dateIn(n){ var d=new Date(); d.setDate(1); d.setMonth(d.getMonth()+n); return MONTH_NAMES[d.getMonth()]+' '+d.getFullYear(); }
+function fmtMonths(n){
+  if(!isFinite(n)) return 'Not on this amount';
+  var m=Math.max(0,Math.ceil(n-1e-9));
+  if(m===0) return 'Already there';
+  if(m===1) return '1 month';
+  if(m<24) return m+' months';
+  var y=Math.floor(m/12), r=m%12;
+  return y+' yr'+(y>1?'s':'')+(r?' '+r+' mo':'');
+}
+
+function calc(){
+  var T=num('target'), P=num('current');
+  var n=Math.max(1,Math.round(num('months')||1));
+  var i=monthlyRate(num('aer'));
+
+  document.getElementById('dateHint').innerHTML='That puts your deadline at <b style="color:var(--tx)">'+dateIn(n)+'</b>.';
+
+  var M=required(T,P,i,n);
+  var contrib=M*n;
+  var end=fv(P,M,i,n);
+  var interest=Math.max(0,end-P-contrib);
+
+  set('perMonth', gbp(M));
+  set('perMonthSub', M>0 ? 'every month for '+n+' month'+(n===1?'':'s') : 'You are already there');
+
+  var tot = T>0?T:1;
+  function w(v){return Math.max(0,Math.min(100,v/tot*100));}
+  document.getElementById('barStart').style.width=w(P)+'%';
+  document.getElementById('barContrib').style.width=w(contrib)+'%';
+  document.getElementById('barInt').style.width=w(interest)+'%';
+
+  set('vTarget', gbp(T));
+  set('vStart', gbp(P));
+  set('vContrib', gbp(contrib));
+  set('vInt', gbp(interest));
+  set('vDate', dateIn(n));
+
+  set('sWeek', gbp(M*12/52));
+  set('sDay', gbp(M*12/365));
+  set('sIntShare', T>0 ? (interest/T*100).toFixed(1)+'% of the target' : '—');
+  set('sRate', (i*100).toFixed(4)+'% a month');
+
+  var affEl=document.getElementById('afford');
+  var aff=parseFloat(affEl.value);
+  var box=document.getElementById('affordBox');
+  var hasAff=!isNaN(aff)&&aff>=0&&affEl.value!=='';
+  if(hasAff){
+    box.style.display='';
+    var have=fv(P,aff,i,n);
+    var gap=have-T;
+    var nn=monthsTo(P,T,aff,i);
+    set('aHave', gbp0(have));
+    set('aGap', (gap>=0?'+ ':'− ')+gbp0(Math.abs(gap)));
+    document.getElementById('aGap').style.color = gap>=0?'var(--green)':'var(--coral)';
+    set('aWhen', !isFinite(nn) ? 'Not on this amount' : (nn<=0?'Already there':dateIn(Math.ceil(nn-1e-9))+'  ('+fmtMonths(nn)+')'));
+  } else { box.style.display='none'; }
+
+  var v=document.getElementById('verdict'),h='';
+  if(T<=0){
+    v.className='note blue'; h='<div class="note-l">Start here</div>Enter the amount you need and when you need it.';
+  } else if(M<=0){
+    v.className='note';
+    h='<div class="note-l">Already funded</div>What you have will grow to <b>'+gbp0(fv(P,0,i,n))+'</b> by '+dateIn(n)+' without any further contributions, which covers the <b>'+gbp0(T)+'</b> target. Anything you add from here is ahead of schedule.';
+  } else if(hasAff && aff+1e-9 < M){
+    var nn2=monthsTo(P,T,aff,i);
+    v.className='note amber';
+    h='<div class="note-l">The deadline does not hold</div>Reaching <b>'+gbp0(T)+'</b> by '+dateIn(n)+' needs <b>'+gbp(M)+'</b> a month, and you have said you can manage <b>'+gbp(aff)+'</b> &mdash; a shortfall of <b>'+gbp(M-aff)+'</b>. On what you can actually manage you would have <b>'+gbp0(fv(P,aff,i,n))+'</b> by the deadline and hit the target in <b>'+fmtMonths(nn2)+'</b>. Moving the date is usually easier than finding the difference.';
+  } else if(hasAff){
+    v.className='note';
+    h='<div class="note-l">The plan works</div>You need <b>'+gbp(M)+'</b> a month and can manage <b>'+gbp(aff)+'</b>, so you are <b>'+gbp(aff-M)+'</b> a month ahead. At that rate you would reach <b>'+gbp0(T)+'</b> by <b>'+dateIn(Math.ceil(monthsTo(P,T,aff,i)-1e-9))+'</b>, ahead of your deadline.';
+  } else {
+    v.className='note';
+    h='<div class="note-l">What this takes</div><b>'+gbp(M)+'</b> a month for '+n+' months, which is <b>'+gbp(M*12/52)+'</b> a week. You would pay in <b>'+gbp0(contrib)+'</b> and interest would add <b>'+gbp0(interest)+'</b> on top of your opening balance. Add what you can realistically manage above to test whether the date holds.';
+  }
+  v.innerHTML=h;
+}
+
+['target','current','months','aer','afford'].forEach(function(id){document.getElementById(id).addEventListener('input',calc)});
+calc();
+
+
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    var i=q.parentNode, was=i.classList.contains('open');
+    document.querySelectorAll('.faq-i').forEach(function(x){x.classList.remove('open')});
+    if(!was) i.classList.add('open');
+  });
+});
+
+})();
+</script>
+</body>
+</html>

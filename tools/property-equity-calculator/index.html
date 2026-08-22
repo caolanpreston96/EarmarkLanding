@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Property Equity Calculator UK | House Price Index Estimate | earmarkIQ</title>
+<meta name="description" content="Estimate what your UK property is worth now from the official House Price Index, subtract your mortgage, and see your equity and loan-to-value. Free, no sign-up.">
+<link rel="canonical" href="https://earmarkiq.app/tools/property-equity-calculator">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://earmarkiq.app/tools/property-equity-calculator">
+<meta property="og:title" content="Property Equity Calculator UK | House Price Index Estimate | earmarkIQ">
+<meta property="og:description" content="Estimate what your UK property is worth now from the official House Price Index, subtract your mortgage, and see your equity and loan-to-value. Free, no sign-up.">
+<meta property="og:image" content="https://earmarkiq.app/api/og?title=Property%20Equity%20Calculator&subtitle=House%20Price%20Index%20estimate%20minus%20your%20mortgage">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="earmarkIQ">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@earmarkiq">
+<meta name="twitter:title" content="Property Equity Calculator UK | House Price Index Estimate | earmarkIQ">
+<meta name="twitter:description" content="Estimate what your UK property is worth now from the official House Price Index, subtract your mortgage, and see your equity and loan-to-value. Free, no sign-up.">
+<meta name="twitter:image" content="https://earmarkiq.app/api/og?title=Property%20Equity%20Calculator&subtitle=House%20Price%20Index%20estimate%20minus%20your%20mortgage">
+<meta name="theme-color" content="#06080f">
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Property Equity Calculator UK",
+      "applicationCategory": "FinanceApplication",
+      "applicationSubCategory": "Calculator",
+      "operatingSystem": "Web browser",
+      "browserRequirements": "Requires JavaScript",
+      "url": "https://earmarkiq.app/tools/property-equity-calculator",
+      "description": "Free UK property equity calculator. Applies official UK House Price Index regional movement to your purchase price to estimate current value, then subtracts your mortgage balance to show equity and loan-to-value. Includes a manual valuation override.",
+      "inLanguage": "en-GB",
+      "isAccessibleForFree": true,
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "GBP"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "earmarkIQ Ltd",
+        "url": "https://earmarkiq.app"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does this property equity calculator estimate my home’s value?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "By indexation. It takes the price you paid, finds the average price for your region in the year you bought and in the latest published month of the UK House Price Index, and multiplies your purchase price by the ratio between them. The result is what your property would be worth today if it had moved exactly in line with the average property in your region. Contains HM Land Registry data © Crown copyright and database right 2026. Licensed under the Open Government Licence v3.0."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How accurate is an index-based property estimate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is accurate about regional market movement and silent about your specific property. Because a region averages together flats, terraces and detached houses across many towns, an individual property can easily diverge from it by a wide margin in either direction. Treat the figure as a reasonable directional estimate for tracking net worth, and not as a number to rely on for a sale, a remortgage, probate or anything with legal consequences. Anyone who has extended or renovated should override it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What data does the calculator use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Regional average prices from the UK House Price Index, which is produced by HM Land Registry together with Registers of Scotland, Land and Property Services Northern Ireland and the Office for National Statistics. It is built from registered sale completions rather than asking prices, which is why it lags by around two months and why earlier months are occasionally revised. The figures here are from the June 2026 release and cover 1995 onwards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does the calculator ask for a year rather than a month?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because the difference rarely justifies the extra input. Using the average across your whole purchase year also smooths out the possibility that you happened to buy in an unusually strong or weak month, which makes the starting point more robust. The ending figure is the single latest published month, since that is the most current reading available."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a good loan-to-value?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lenders price in bands, and the common thresholds are 90%, 85%, 80%, 75% and 60%. Crossing below one of them typically opens up better rates, so someone at 76% approaching the end of a fixed rate has a concrete reason to check whether overpaying a little would tip them under 75%. This calculator gives an indicative figure based on an indexed estimate; a lender will use its own valuation, which may differ, so treat a borderline result as a prompt to investigate rather than a conclusion."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does earmarkIQ value my property from an estate agent or a portal?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. There is no integration with Zoopla, Rightmove or any estate agency, and no agent is involved. Nobody visits or inspects the property, and it is never listed or introduced to anyone. The standard estimate is calculated from the official UK House Price Index, exactly as this calculator does it. In the app, address-level valuation is available on the Pro tier; every other tier uses the index estimate, and any tier can override it."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://earmarkiq.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tools",
+          "item": "https://earmarkiq.app/tools"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Property Equity Calculator",
+          "item": "https://earmarkiq.app/tools/property-equity-calculator"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+:root{--bg:#06080f;--bg2:#0a0d17;--sf:#141929;--sf2:#191f33;--bd:#1e2540;--bd2:#283050;--tx:#eaecf5;--tx2:#a0a5bc;--tx3:#686e88;--tx4:#464c64;--mint:#4ECDC4;--mintG:rgba(78,205,196,0.15);--green:#4ADE80;--amber:#F5A623;--blue:#5B8DEF;--purple:#9B8FE8;--coral:#FF6B6B;--f:'DM Sans',-apple-system,sans-serif;--m:'IBM Plex Mono',monospace;--ease:cubic-bezier(0.16,1,0.3,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}::selection{background:rgba(78,205,196,0.25);color:#fff}html{scroll-behavior:smooth}body{font-family:var(--f);background:var(--bg);color:var(--tx);overflow-x:hidden;-webkit-font-smoothing:antialiased;line-height:1.6}a{text-decoration:none;color:inherit}button{cursor:pointer;font-family:var(--f)}
+
+/* Nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 0;background:rgba(6,8,15,.92);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid var(--bd)}.nav-i{max-width:1200px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:20px}.nav-l{font-size:22px;font-weight:400;letter-spacing:-.02em;color:var(--tx);flex-shrink:0}.nav-l b{font-weight:800;color:var(--mint)}.nav-l span{display:block;font-family:var(--m);font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--tx3);font-weight:500}.nav-links{display:flex;align-items:center;gap:28px}.nav-a{color:var(--tx2);font-size:14px;font-weight:500;transition:color .2s}.nav-a:hover,.nav-a.active{color:var(--tx)}.nav-cta{padding:9px 22px;background:var(--mint);color:var(--bg);font-size:13px;font-weight:700;border-radius:100px;border:none;transition:all .3s;white-space:nowrap}.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(78,205,196,.3)}
+@media(max-width:860px){.nav-links{display:none}}
+
+/* Ambient */
+.amb{position:fixed;inset:0;pointer-events:none;z-index:0}.amb-o{position:absolute;border-radius:50%;filter:blur(120px);opacity:.3}.amb-o1{width:600px;height:600px;top:-200px;right:-100px;background:radial-gradient(circle,rgba(78,205,196,0.08),transparent 70%)}.amb-o2{width:400px;height:400px;bottom:30%;left:-150px;background:radial-gradient(circle,rgba(91,141,239,0.06),transparent 70%)}
+main{position:relative;z-index:1}
+
+/* Page hero */
+.page-hero{padding:120px 32px 40px;max-width:1200px;margin:0 auto}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--tx3);margin-bottom:20px;flex-wrap:wrap}.breadcrumb a{color:var(--tx3);transition:color .2s}.breadcrumb a:hover{color:var(--mint)}.breadcrumb svg{width:14px;height:14px;opacity:.5}
+.page-hero h1{font-size:clamp(28px,4vw,44px);font-weight:800;letter-spacing:-.03em;line-height:1.15;margin-bottom:12px}.page-hero h1 em{font-style:normal;color:var(--mint)}
+.page-hero .subtitle{font-size:17px;color:var(--tx2);max-width:680px;line-height:1.7}
+.page-hero .badges{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+.page-hero .badge{display:inline-flex;align-items:center;gap:6px;padding:5px 14px;background:rgba(78,205,196,.06);border:1px solid rgba(78,205,196,.15);border-radius:100px;font-size:12px;font-weight:600;color:var(--mint);font-family:var(--m)}
+
+/* Calculator layout */
+.calc-section{padding:0 32px 60px;max-width:1200px;margin:0 auto}
+.calc-wrap{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.calc-inputs{display:flex;flex-direction:column;gap:20px}
+.calc-results{position:sticky;top:100px;display:flex;flex-direction:column;gap:16px}
+
+/* Input cards */
+.input-card{background:var(--sf);border:1px solid var(--bd);border-radius:16px;padding:26px 24px}
+.input-card-h{font-size:15px;font-weight:700;margin-bottom:20px;display:flex;align-items:center;gap:10px}.input-card-h svg{color:var(--mint);flex-shrink:0}
+.field{margin-bottom:18px}.field:last-child{margin-bottom:0}
+.field label{display:block;font-size:13px;font-weight:600;color:var(--tx2);margin-bottom:6px}
+.field-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.input-wrap{position:relative}
+.input-wrap .prefix{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-size:14px;color:var(--tx3);font-family:var(--m);font-weight:600;pointer-events:none}
+.input-wrap .suffix{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:13px;color:var(--tx3);font-family:var(--m);pointer-events:none}
+input[type="number"],input[type="text"],input[type="month"],select{width:100%;padding:12px 14px;background:var(--bg);border:1px solid var(--bd2);border-radius:10px;color:var(--tx);font-family:var(--f);font-size:14px;outline:none;transition:border-color .2s,box-shadow .2s;-moz-appearance:textfield}
+input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+input:focus,select:focus{border-color:var(--mint);box-shadow:0 0 0 3px var(--mintG)}
+select{cursor:pointer;-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23686e88' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px}
+select option{background:var(--sf);color:var(--tx)}
+.has-prefix input{padding-left:32px}.has-suffix input{padding-right:52px}
+.field-hint{font-size:11px;color:var(--tx4);margin-top:5px;line-height:1.55}
+input[type="range"]{width:100%;height:5px;-webkit-appearance:none;appearance:none;background:var(--bd2);border-radius:4px;outline:none;padding:0;margin:10px 0 4px}
+input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--mint);cursor:pointer;border:3px solid var(--bg);box-shadow:0 2px 8px rgba(0,0,0,.4)}
+input[type="range"]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--mint);cursor:pointer;border:3px solid var(--bg)}
+
+/* Segmented control */
+.seg{display:flex;background:var(--bg);border-radius:10px;padding:4px;gap:4px}
+.seg button{flex:1;padding:9px 10px;border:none;background:transparent;color:var(--tx3);font-size:13px;font-weight:600;border-radius:7px;transition:all .2s;font-family:var(--f)}
+.seg button.active{background:var(--sf2);color:var(--mint);box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.seg button:hover:not(.active){color:var(--tx2)}
+
+/* Results */
+.results-card{background:var(--sf);border:1px solid var(--bd);border-radius:20px;padding:28px 24px}
+.res-hero{text-align:center;padding-bottom:22px;margin-bottom:22px;border-bottom:1px solid var(--bd)}
+.res-label{font-size:13px;color:var(--tx2);margin-bottom:6px}
+.res-big{font-family:var(--m);font-size:clamp(32px,4.6vw,46px);font-weight:800;color:var(--mint);letter-spacing:-.03em;line-height:1}
+.res-big.green{color:var(--green)}.res-big.amber{color:var(--amber)}.res-big.coral{color:var(--coral)}
+.res-sub{font-size:13px;color:var(--tx3);margin-top:8px;font-family:var(--m)}
+.res-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:10px 0;border-bottom:1px solid rgba(30,37,64,.5);font-size:14px}
+.res-row:last-child{border-bottom:none}
+.res-row .rl{color:var(--tx2)}
+.res-row .rv{font-family:var(--m);font-weight:600;white-space:nowrap}
+.res-row.total{border-top:2px solid var(--bd);border-bottom:none;margin-top:6px;padding-top:14px;font-weight:700}
+.res-row.total .rv{color:var(--green);font-size:16px}
+.res-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.stat-box{background:var(--bg);border-radius:10px;padding:14px}
+.stat-box .sb-l{font-size:11px;color:var(--tx3);margin-bottom:3px}
+.stat-box .sb-v{font-family:var(--m);font-size:18px;font-weight:700;color:var(--tx)}
+.stat-box.wide{grid-column:1/-1;text-align:center;background:rgba(78,205,196,.06);border:1px solid rgba(78,205,196,.15)}
+.stat-box.wide .sb-v{font-size:22px;color:var(--mint)}
+
+/* Stacked allocation bar */
+.alloc-bar{height:26px;border-radius:8px;overflow:hidden;display:flex;background:var(--bg);margin:4px 0 12px}
+.alloc-bar i{display:block;height:100%;transition:width .45s var(--ease)}
+.alloc-key{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--tx2);margin-bottom:18px}
+.alloc-key span{display:inline-flex;align-items:center;gap:6px}
+.alloc-key em{width:9px;height:9px;border-radius:3px;display:inline-block;font-style:normal}
+
+/* Repeatable rows (subscriptions) */
+.rowlist{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
+.rowitem{display:grid;grid-template-columns:1fr 110px 116px 36px;gap:8px;align-items:center}
+.rowitem input,.rowitem select{padding:10px 12px;font-size:13px}
+.rowitem .has-prefix input{padding-left:28px}
+.rowitem .prefix{left:11px;font-size:13px}
+.btn-del{width:36px;height:38px;border-radius:9px;background:var(--bg);border:1px solid var(--bd2);color:var(--tx4);font-size:16px;line-height:1;transition:all .2s;display:flex;align-items:center;justify-content:center}
+.btn-del:hover{color:var(--coral);border-color:var(--coral)}
+.btn-add{width:100%;padding:11px;border-radius:10px;background:transparent;border:1px dashed var(--bd2);color:var(--tx3);font-size:13px;font-weight:600;transition:all .2s}
+.btn-add:hover{border-color:var(--mint);color:var(--mint)}
+@media(max-width:520px){.rowitem{grid-template-columns:1fr 1fr 36px}.rowitem select{grid-column:1/3}}
+
+/* Notes / warnings */
+.note{border-radius:12px;padding:16px 18px;border:1px solid var(--bd);border-left:3px solid var(--mint);background:rgba(78,205,196,.04);font-size:13.5px;color:var(--tx2);line-height:1.7}
+.note.amber{border-left-color:var(--amber);background:rgba(245,166,35,.04)}
+.note.blue{border-left-color:var(--blue);background:rgba(91,141,239,.04)}
+.note.coral{border-left-color:var(--coral);background:rgba(255,107,107,.04)}
+.note b{color:var(--tx)}
+.note-l{font-family:var(--m);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--mint);margin-bottom:7px}
+.note.amber .note-l{color:var(--amber)}.note.blue .note-l{color:var(--blue)}.note.coral .note-l{color:var(--coral)}
+
+/* Assumptions */
+.assump{max-width:1200px;margin:0 auto;padding:0 32px 20px}
+.assump-box{background:var(--bg2);border:1px solid var(--bd);border-radius:16px;padding:26px 28px}
+.assump-box h2{font-size:15px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:9px}
+.assump-box h2 svg{color:var(--amber)}
+.assump-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
+@media(max-width:760px){.assump-list{grid-template-columns:1fr}}
+.assump-list li{font-size:13px;color:var(--tx2);line-height:1.65;padding-left:18px;position:relative}
+.assump-list li::before{content:'';position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:2px;background:var(--bd2)}
+.assump-src{font-size:12px;color:var(--tx4);margin-top:16px;padding-top:14px;border-top:1px solid var(--bd);line-height:1.7}
+.assump-src a{color:var(--tx3);text-decoration:underline;text-underline-offset:2px}.assump-src a:hover{color:var(--mint)}
+
+/* Content */
+.content-section{max-width:1200px;margin:0 auto;padding:56px 32px}
+.content-section.tight{padding-top:0}
+.content-section h2{font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:-.02em;margin-bottom:16px;line-height:1.2}
+.content-section h3{font-size:17px;font-weight:700;margin:24px 0 10px;color:var(--tx)}
+.content-section p{font-size:15px;color:var(--tx2);line-height:1.8;margin-bottom:14px;max-width:760px}
+.content-section a{color:var(--mint);font-weight:500}.content-section a:hover{text-decoration:underline}
+.content-section ul{margin:0 0 16px 20px;color:var(--tx2);font-size:15px;line-height:1.8;max-width:760px}
+.content-section li{margin-bottom:8px}
+.content-divider{max-width:1200px;margin:0 auto;padding:0 32px}.content-divider hr{border:none;border-top:1px solid var(--bd)}
+
+/* Worked example */
+.worked{background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:24px 26px;margin:22px 0;max-width:760px}
+.worked-h{font-family:var(--m);font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--tx3);margin-bottom:14px}
+.worked-row{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:9px 0;border-bottom:1px solid rgba(30,37,64,.6);font-size:14px;color:var(--tx2)}
+.worked-row:last-of-type{border-bottom:none}
+.worked-row b{font-family:var(--m);color:var(--tx);font-weight:600;white-space:nowrap}
+.worked-row.total{border-top:1px solid var(--bd);border-bottom:none;margin-top:5px;padding-top:13px}
+.worked-row.total b{color:var(--mint);font-size:17px}
+
+/* Data table */
+.table-wrap{overflow-x:auto;margin:20px 0;border:1px solid var(--bd);border-radius:12px;max-width:760px}
+table.dt{width:100%;border-collapse:collapse;font-size:14px}
+table.dt thead{background:var(--sf)}
+table.dt th{text-align:left;padding:11px 16px;font-size:11px;font-weight:700;color:var(--tx3);text-transform:uppercase;letter-spacing:.07em;border-bottom:1px solid var(--bd);white-space:nowrap}
+table.dt td{padding:11px 16px;color:var(--tx2);border-bottom:1px solid rgba(30,37,64,.6)}
+table.dt tr:last-child td{border-bottom:none}
+table.dt td.n{font-family:var(--m);text-align:right;white-space:nowrap;color:var(--tx)}
+table.dt td.nm{font-weight:600;color:var(--tx)}
+
+/* FAQ */
+.faq-list{max-width:760px;margin-top:20px}
+.faq-i{border:1px solid var(--bd);border-radius:12px;margin-bottom:10px;overflow:hidden;background:var(--sf)}
+.faq-q{padding:16px 20px;font-weight:600;font-size:15.5px;color:var(--tx);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq-q:hover{background:var(--sf2)}
+.faq-ch{color:var(--mint);flex-shrink:0;font-size:17px;transition:transform .2s}
+.faq-a{padding:0 20px 16px;color:var(--tx2);font-size:14.5px;line-height:1.75;display:none}
+.faq-i.open .faq-a{display:block}
+.faq-i.open .faq-ch{transform:rotate(180deg)}
+.faq-a a{color:var(--mint)}
+
+/* Related tools */
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+@media(max-width:860px){.rel-grid{grid-template-columns:1fr}}
+.rel-card{display:block;background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:20px;transition:all .3s}
+.rel-card:hover{border-color:var(--mint);transform:translateY(-3px)}
+.rel-ic{font-size:22px;margin-bottom:10px}
+.rel-t{font-size:15px;font-weight:700;margin-bottom:5px;color:var(--tx)}
+.rel-d{font-size:13px;color:var(--tx2);line-height:1.6}
+
+/* Soft route into app */
+.soft{max-width:1200px;margin:0 auto;padding:20px 32px 80px}
+.soft-box{background:var(--bg2);border:1px solid var(--bd);border-left:3px solid var(--mint);border-radius:16px;padding:28px 30px;max-width:760px}
+.soft-box h2{font-size:19px;font-weight:700;letter-spacing:-.01em;margin-bottom:9px}
+.soft-box p{font-size:14.5px;color:var(--tx2);line-height:1.75;margin-bottom:14px}
+.soft-links{display:flex;gap:22px;flex-wrap:wrap;font-size:14px}
+.soft-links a{color:var(--mint);font-weight:600}
+.soft-links a:hover{text-decoration:underline}
+
+/* Footer */
+.footer{position:relative;z-index:1;border-top:1px solid var(--bd);padding:48px 32px 32px;background:var(--bg)}.footer-i{max-width:1200px;margin:0 auto}.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:36px}.footer-bt{font-size:13px;color:var(--tx2);line-height:1.7;margin-top:12px;max-width:280px}.footer-hd{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--tx4);margin-bottom:14px}.footer-ul{list-style:none;display:flex;flex-direction:column;gap:8px}.footer-ul a{color:var(--tx2);font-size:13px;transition:color .2s}.footer-ul a:hover{color:var(--mint)}.footer-mid{padding-top:24px;border-top:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:16px}.footer-cp{font-size:11px;color:var(--tx4)}.footer-fca{font-size:11px;color:var(--tx4);text-align:center}.footer-fca a{color:var(--tx3);text-decoration:underline}.footer-disc{font-size:10.5px;color:var(--tx4);line-height:1.8;padding-top:16px;border-top:1px solid var(--bd)}
+
+@media(max-width:960px){
+  .calc-wrap{grid-template-columns:1fr}
+  .calc-results{position:static}
+  .footer-top{grid-template-columns:1fr 1fr;gap:24px}
+  .footer-mid{flex-direction:column;text-align:center}
+}
+@media(max-width:600px){
+  .page-hero{padding:100px 20px 32px}
+  .calc-section{padding:0 20px 48px}
+  .assump{padding:0 20px 20px}
+  .content-section{padding:44px 20px}
+  .content-divider{padding:0 20px}
+  .soft{padding:16px 20px 60px}
+  .res-grid{grid-template-columns:1fr}
+  .field-2{grid-template-columns:1fr}
+  .footer{padding:40px 20px 28px}
+  .footer-top{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+<script>
+window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+
+<div class="amb"><div class="amb-o amb-o1"></div><div class="amb-o amb-o2"></div></div>
+
+<nav class="nav"><div class="nav-i">
+  <a href="/" class="nav-l">earmark<b>IQ</b><span>Smart Money</span></a>
+  <div class="nav-links">
+    <a href="/#features" class="nav-a">Features</a>
+    <a href="/property" class="nav-a">Property</a>
+    <a href="/#pricing" class="nav-a">Pricing</a>
+    <a href="/blog" class="nav-a">Blog</a>
+    <a href="/tools" class="nav-a active">Tools</a>
+  </div>
+  <a href="/download" class="nav-cta">Download Free &rarr;</a>
+</div></nav>
+
+<main>
+<section class="page-hero">
+  <div class="breadcrumb">
+    <a href="/">Home</a>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+    <a href="/tools">Tools</a>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+    <span>Property Equity Calculator</span>
+  </div>
+  <h1>Property Equity <em>Calculator</em></h1>
+  <p class="subtitle">Enter what you paid, when, and where. The calculator applies the official regional House Price Index movement to your purchase price, takes off your mortgage balance, and shows the equity and loan-to-value that leaves.</p>
+  <div class="badges"><span class="badge">UK House Price Index</span><span class="badge">Data to June 2026</span><span class="badge">No sign-up</span><span class="badge">Override anytime</span></div>
+</section>
+
+<section class="calc-section">
+
+<div class="calc-wrap">
+  <div class="calc-inputs">
+
+    <div class="input-card">
+      <div class="input-card-h"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>When you bought</div>
+      <div class="field">
+        <label for="price">Purchase price</label>
+        <div class="input-wrap has-prefix"><span class="prefix">&pound;</span><input type="number" id="price" value="265000" min="0" step="1000"></div>
+        <div class="field-hint">What you actually paid, not the asking price.</div>
+      </div>
+      <div class="field-2">
+        <div class="field">
+          <label for="year">Year of purchase</label>
+          <select id="year"><option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option><option value="2023">2023</option><option value="2022">2022</option><option value="2021">2021</option><option value="2020">2020</option><option value="2019" selected>2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option><option value="1998">1998</option><option value="1997">1997</option><option value="1996">1996</option><option value="1995">1995</option></select>
+        </div>
+        <div class="field">
+          <label for="region">Region</label>
+          <select id="region"><option value="uk">United Kingdom</option><option value="ne">North East</option><option value="nw">North West</option><option value="yh">Yorkshire and The Humber</option><option value="em">East Midlands</option><option value="wm">West Midlands</option><option value="ee">East of England</option><option value="london">London</option><option value="se" selected>South East</option><option value="sw">South West</option><option value="wales">Wales</option><option value="scotland">Scotland</option><option value="ni">Northern Ireland</option></select>
+        </div>
+      </div>
+      <div class="field-hint" style="margin-top:-6px">The index is published for each region. Pick the one your property sits in, not where you live now if you have moved.</div>
+    </div>
+
+    <div class="input-card">
+      <div class="input-card-h"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M2 10h20"/></svg>What you still owe</div>
+      <div class="field">
+        <label for="mortgage">Outstanding mortgage balance</label>
+        <div class="input-wrap has-prefix"><span class="prefix">&pound;</span><input type="number" id="mortgage" value="168000" min="0" step="1000"></div>
+        <div class="field-hint">The balance on your latest statement. Enter 0 if the property is owned outright.</div>
+      </div>
+      <div class="field">
+        <label for="override">Use my own valuation instead <span style="color:var(--tx4);font-weight:400">&mdash; optional</span></label>
+        <div class="input-wrap has-prefix"><span class="prefix">&pound;</span><input type="number" id="override" value="" min="0" step="1000" placeholder="Leave blank to use the index"></div>
+        <div class="field-hint">If you have a survey, a lender&rsquo;s valuation or an agent&rsquo;s appraisal, that beats an index estimate. Enter it here and everything below recalculates from your figure.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="calc-results">
+    <div class="results-card">
+      <div class="res-hero">
+        <div class="res-label" id="valLabel">Estimated value today</div>
+        <div class="res-big" id="valOut">&pound;0</div>
+        <div class="res-sub" id="valSub"></div>
+      </div>
+
+      <div style="font-size:12px;color:var(--tx3);font-family:var(--m);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px">Value split</div>
+      <div class="alloc-bar">
+        <i id="barEq" style="background:var(--green)"></i>
+        <i id="barMort" style="background:var(--bd2)"></i>
+      </div>
+      <div class="alloc-key">
+        <span><em style="background:var(--green)"></em>Your equity</span>
+        <span><em style="background:var(--bd2)"></em>Mortgage</span>
+      </div>
+
+      <div class="res-row"><span class="rl">Purchase price</span><span class="rv" id="vPrice"></span></div>
+      <div class="res-row"><span class="rl">Estimated value now</span><span class="rv" id="vValue"></span></div>
+      <div class="res-row"><span class="rl">Change since purchase</span><span class="rv" id="vGrowth"></span></div>
+      <div class="res-row"><span class="rl">Mortgage outstanding</span><span class="rv" id="vMort"></span></div>
+      <div class="res-row total"><span class="rl">Estimated equity</span><span class="rv" id="vEquity"></span></div>
+
+      <div class="res-grid">
+        <div class="stat-box"><div class="sb-l">Loan to value</div><div class="sb-v" id="sLtv"></div></div>
+        <div class="stat-box"><div class="sb-l">Annualised growth</div><div class="sb-v" id="sCagr"></div></div>
+        <div class="stat-box"><div class="sb-l">Regional average then</div><div class="sb-v" id="sThen"></div></div>
+        <div class="stat-box"><div class="sb-l">Regional average now</div><div class="sb-v" id="sNow"></div></div>
+        <div class="stat-box wide"><div class="sb-l">Index movement applied</div><div class="sb-v" id="sFactor"></div></div>
+      </div>
+    </div>
+
+    <div class="note" id="verdict"></div>
+
+    <div class="note blue">
+      <div class="note-l">Data attribution</div>
+      Contains HM Land Registry data &copy; Crown copyright and database right 2026. Licensed under the Open Government Licence v3.0.
+    </div>
+  </div>
+</div>
+
+</section>
+
+<div class="assump">
+  <div class="assump-box">
+    <h2><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>What this calculator assumes</h2>
+    <ul class="assump-list"><li>The estimate is your purchase price multiplied by the change in the average price for your region between the year you bought and the latest published month. Nothing about your individual property enters the calculation.</li><li>Regional figures come from the UK House Price Index, which is built from registered sale completions rather than asking prices. The latest month in this dataset is June 2026.</li><li>The starting figure is the average across the whole of your purchase year, because you tell the calculator a year rather than a month. The ending figure is the single latest published month.</li><li>A region is a very large area containing flats, terraces and detached houses in neighbourhoods that move at different speeds. One average movement is applied to all of them.</li><li>The index cannot see extensions, conversions, renovations, condition, your street or your outlook. If your property has materially changed since you bought it, override the estimate.</li><li>This is not a valuation. It is not suitable for a sale, a mortgage application, probate, inheritance tax or any legal purpose &mdash; those need a valuation from an appropriately qualified professional.</li><li>Mortgage balance is whatever you type. It is not read from a lender and does not update on its own.</li><li>Nothing you type leaves your browser. There is no account, no sign-up and no data stored.</li></ul>
+    <p class="assump-src">Contains HM Land Registry data &copy; Crown copyright and database right 2026. Licensed under the Open Government Licence v3.0. Regional average prices are taken from the UK House Price Index, produced by HM Land Registry with Registers of Scotland, Land and Property Services Northern Ireland and the Office for National Statistics. Data as at the June 2026 release. earmarkIQ is not affiliated with, endorsed by, or acting on behalf of any of these bodies, and the estimate is earmarkIQ&rsquo;s own calculation.</p>
+  </div>
+</div>
+
+
+<div class="content-divider"><hr></div>
+<section class="content-section">
+  <h2>How the estimate is worked out</h2>
+  <p>The method is indexation, and it is deliberately reproducible. Take the price you paid. Look up the average price for your region in the year you bought, and again for the most recent published month. Multiply your purchase price by the ratio between the two. That is the whole calculation, and you could run it yourself on a calculator with the published figures.</p>
+  <div class="worked">
+    <div class="worked-h">Worked example &mdash; &pound;265,000 in the South East, 2019</div>
+    <div class="worked-row"><span>You paid, during 2019</span><b>&pound;265,000</b></div>
+    <div class="worked-row"><span>South East average, 2019</span><b>&pound;323,442</b></div>
+    <div class="worked-row"><span>South East average, June 2026</span><b>&pound;380,380</b></div>
+    <div class="worked-row"><span>Movement (380,380 &divide; 323,442)</span><b>&times; 1.176</b></div>
+    <div class="worked-row"><span>Estimated value today</span><b>&pound;311,650</b></div>
+    <div class="worked-row"><span>Mortgage outstanding</span><b>&minus; &pound;168,000</b></div>
+    <div class="worked-row total"><span>Estimated equity</span><b>&pound;143,650</b></div>
+  </div>
+  <p>That is growth of &pound;46,650, or 17.6% across seven years &mdash; an annualised 2.34%. The loan-to-value falls to 53.9%, which matters more than the headline value if you are approaching the end of a fixed rate, because lenders price in bands and crossing below 60% or 75% can change what you are offered.</p>
+  <p>Notice how modest the annualised figure is. Regional averages over a specific seven-year window rarely produce the numbers people expect from headlines about the housing market, and the South East in particular has been close to flat in cash terms since 2022. Choosing a different region changes the answer substantially: the same purchase in the North West would have moved by a factor of 1.44 over the same period, and in London by 1.10.</p>
+</section>
+
+<div class="content-divider"><hr></div>
+<section class="content-section">
+  <h2>What an indexed estimate can and cannot tell you</h2>
+  <p>The estimate answers one question well: <strong style="color:var(--tx)">how has the market in my region moved since I bought?</strong> It does not answer <strong style="color:var(--tx)">what would my house sell for?</strong> Those are different questions and the gap between them is worth stating plainly.</p>
+  <p>A region contains an enormous variety of property. Terraces and new-build flats and detached houses in dozens of towns are all averaged into one number, and your street is not the average street. If your area has run ahead of the region, the estimate understates. If a large new-build development has pulled the regional average up, an older property may be overstated.</p>
+  <p>The index also has no record of your property specifically. The extension, the loft conversion, the new roof, the rewiring, the damp in the back bedroom: none of it is an input. The only property-specific fact in the sum is a purchase price from years ago, which described a house that may no longer exist in that form.</p>
+  <p>Finally, there is timing. The index is compiled from registered completions, so it is published with a lag of roughly two months, and recent months are revised as further sales are registered. That is a property of the official statistic rather than a defect in this calculator.</p>
+  <div class="note amber" style="max-width:760px;margin-top:24px">
+    <div class="note-l">When to override</div>
+    Enter your own figure whenever you hold better evidence than an indexed purchase price: a RICS survey, a lender&rsquo;s valuation from a recent application, two or three agents&rsquo; appraisals with a sensible midpoint taken, a completed sale of a near-identical neighbour, your completion price if you have only just bought, or any point after you have materially changed the property.
+  </div>
+  <p style="margin-top:20px">There is a fuller treatment of the method, including how it differs from an automated valuation model, in <a href="/blog/how-earmarkiq-values-your-property">how earmarkIQ values your property</a>, and of the feature itself on the <a href="/property">property and equity page</a>.</p>
+</section>
+
+<div class="content-divider"><hr></div>
+<section class="content-section">
+  <h2>Why equity is the number that matters</h2>
+  <p>A property value on its own is not much use for planning. What you are worth is the value less the debt secured against it, and equity grows from two directions at once: the balance falls every month as you repay, which is certain, and the estimated value moves with the index, which is not.</p>
+  <p>Keeping those two apart is worth the effort. The repayment half is real money you have committed and cannot lose. The index half is an estimate that can go backwards &mdash; and did, across most of the UK, in parts of 2023 and 2024. Someone whose net worth rose entirely because a regional average moved has not become more able to pay a bill this month, because equity is not spendable without selling, remortgaging or borrowing against the property.</p>
+  <p>Loan-to-value is the practical output. It determines which mortgage products you qualify for, and because lenders price in bands, watching it approach 80%, 75% or 60% gives you a reason to get a proper valuation before your fixed rate ends. Use the <a href="/tools/mortgage-affordability">mortgage affordability calculator</a> if you are working the other way round and want to know what you could borrow.</p>
+</section>
+
+
+<div class="content-divider"><hr></div>
+<section class="content-section">
+  <h2>Frequently asked questions</h2>
+  <div class="faq-list">
+  <div class="faq-i"><div class="faq-q">How does this property equity calculator estimate my home&rsquo;s value?<span class="faq-ch">&#9662;</span></div><div class="faq-a">By indexation. It takes the price you paid, finds the average price for your region in the year you bought and in the latest published month of the UK House Price Index, and multiplies your purchase price by the ratio between them. The result is what your property would be worth today if it had moved exactly in line with the average property in your region. Contains HM Land Registry data &copy; Crown copyright and database right 2026. Licensed under the Open Government Licence v3.0.</div></div>
+  <div class="faq-i"><div class="faq-q">How accurate is an index-based property estimate?<span class="faq-ch">&#9662;</span></div><div class="faq-a">It is accurate about regional market movement and silent about your specific property. Because a region averages together flats, terraces and detached houses across many towns, an individual property can easily diverge from it by a wide margin in either direction. Treat the figure as a reasonable directional estimate for tracking net worth, and not as a number to rely on for a sale, a remortgage, probate or anything with legal consequences. Anyone who has extended or renovated should override it.</div></div>
+  <div class="faq-i"><div class="faq-q">What data does the calculator use?<span class="faq-ch">&#9662;</span></div><div class="faq-a">Regional average prices from the UK House Price Index, which is produced by HM Land Registry together with Registers of Scotland, Land and Property Services Northern Ireland and the Office for National Statistics. It is built from registered sale completions rather than asking prices, which is why it lags by around two months and why earlier months are occasionally revised. The figures here are from the June 2026 release and cover 1995 onwards.</div></div>
+  <div class="faq-i"><div class="faq-q">Why does the calculator ask for a year rather than a month?<span class="faq-ch">&#9662;</span></div><div class="faq-a">Because the difference rarely justifies the extra input. Using the average across your whole purchase year also smooths out the possibility that you happened to buy in an unusually strong or weak month, which makes the starting point more robust. The ending figure is the single latest published month, since that is the most current reading available.</div></div>
+  <div class="faq-i"><div class="faq-q">What is a good loan-to-value?<span class="faq-ch">&#9662;</span></div><div class="faq-a">Lenders price in bands, and the common thresholds are 90%, 85%, 80%, 75% and 60%. Crossing below one of them typically opens up better rates, so someone at 76% approaching the end of a fixed rate has a concrete reason to check whether overpaying a little would tip them under 75%. This calculator gives an indicative figure based on an indexed estimate; a lender will use its own valuation, which may differ, so treat a borderline result as a prompt to investigate rather than a conclusion.</div></div>
+  <div class="faq-i"><div class="faq-q">Does earmarkIQ value my property from an estate agent or a portal?<span class="faq-ch">&#9662;</span></div><div class="faq-a">No. There is no integration with Zoopla, Rightmove or any estate agency, and no agent is involved. Nobody visits or inspects the property, and it is never listed or introduced to anyone. The standard estimate is calculated from the official UK House Price Index, exactly as this calculator does it. In the app, address-level valuation is available on the Pro tier; every other tier uses the index estimate, and any tier can override it.</div></div>
+</div>
+</section>
+
+<div class="content-divider"><hr></div>
+<section class="content-section">
+  <h2>Other calculators</h2>
+  
+<div class="rel-grid">
+  <a href="/tools/mortgage-affordability" class="rel-card"><div class="rel-ic">&#127968;</div><div class="rel-t">Mortgage Affordability Calculator</div><div class="rel-d">What you could borrow on your income, stress-tested the way lenders check it.</div></a>
+  <a href="/tools/payday-allocation-calculator" class="rel-card"><div class="rel-ic">&#128181;</div><div class="rel-t">Payday Allocation Calculator</div><div class="rel-d">Where a mortgage payment sits against the rest of your committed costs.</div></a>
+  <a href="/tools/savings-goal-calculator" class="rel-card"><div class="rel-ic">&#127919;</div><div class="rel-t">Savings Goal Calculator</div><div class="rel-d">Saving a deposit? What you need each month to hit a target by a date.</div></a>
+</div>
+
+</section>
+
+<div class="soft">
+
+<div class="soft-box">
+  <h2>Keeping this up to date without re-typing it</h2>
+  <p>The figures above are a snapshot. In earmarkIQ the same calculation runs on its own: add your address once, and the estimate refreshes each month as new index data is published, with your mortgage balance beside it and the resulting equity feeding into your net worth alongside your accounts, investments and debts. You can override the estimate at any time.</p>
+  <div class="soft-links">
+    <a href="/property">How property valuation works &rarr;</a>
+    <a href="/blog/how-earmarkiq-values-your-property">The method in full &rarr;</a>
+    <a href="/download">Get the app &rarr;</a>
+  </div>
+</div>
+
+</div>
+</main>
+
+<footer class="footer"><div class="footer-i">
+  <div class="footer-top">
+    <div><a href="/" class="nav-l" style="font-size:20px">earmark<b>IQ</b><span>Smart Money</span></a><p class="footer-bt">Payday salary allocation and money tracking for UK professionals.</p></div>
+    <div><h5 class="footer-hd">Product</h5><ul class="footer-ul"><li><a href="/#how">How it works</a></li><li><a href="/#features">Features</a></li><li><a href="/property">Property valuation</a></li><li><a href="/#pricing">Pricing</a></li><li><a href="/#security">Security</a></li></ul></div>
+    <div><h5 class="footer-hd">Resources</h5><ul class="footer-ul"><li><a href="/tools">All calculators</a></li><li><a href="/blog">Blog</a></li><li><a href="/budgeting/salary">Salary Guides</a></li><li><a href="/budgeting/profession">Profession Guides</a></li></ul></div>
+    <div><h5 class="footer-hd">Legal</h5><ul class="footer-ul"><li><a href="/privacy">Privacy Policy</a></li><li><a href="/terms">Terms of Service</a></li><li><a href="mailto:hello@earmarkiq.app">Support</a></li></ul></div>
+  </div>
+  <div class="footer-mid">
+    <div class="footer-cp">&copy; 2026 earmarkIQ Ltd. All rights reserved.</div>
+    <div class="footer-fca">earmarkIQ is an FCA Appointed Representative of Finexer Ltd (FRN 925695). <a href="https://register.fca.org.uk/s/firm?id=001Sk000010irOJIAY" rel="nofollow" target="_blank">Verify on the FCA register</a>. Content on this site is for guidance only and does not constitute financial advice.</div>
+  </div>
+  <div class="footer-disc">earmarkIQ provides financial information and tools, not regulated financial advice. The property figure produced here is an estimate derived by applying published regional House Price Index movement to the purchase price you enter. It is not a valuation, not a survey, and not suitable for a sale, mortgage application, remortgage, probate, inheritance tax or any legal purpose. Contains HM Land Registry data &copy; Crown copyright and database right 2026. Licensed under the Open Government Licence v3.0.</div>
+</div></footer>
+
+<script>
+(function(){
+var HPI_YEARS=1995;
+var HPI={
+  uk:[51529,53415,58112,64770,71816,82534,89254,103650,119904,134131,143921,155230,170598,162912,148445,156936,154654,155269,159262,172048,182291,195035,203950,210354,212434,218522,236312,258236,258956,260532,267458,270264],
+  london:[79993,83681,96290,109315,123848,152026,170460,200617,225995,244743,251932,269010,307371,302923,276046,304618,311050,325370,352392,413367,455129,500487,514130,511558,504314,517773,535454,565955,558024,556104,561862,549462],
+  se:[64965,66606,75510,85115,94911,114719,128894,152416,176496,193456,200485,211523,232912,223988,203161,222140,220532,225421,233117,256119,279031,306046,319930,325868,323442,329555,348428,381020,379222,374675,380083,379502],
+  sw:[52325,53444,58865,64688,72103,85737,97298,119703,143866,164829,172724,183169,199543,188570,172595,185350,182435,184116,187559,199428,211362,225124,236673,245513,246748,254572,272328,303885,303559,300062,301098,302491],
+  ee:[55708,56201,62262,68988,75952,90383,102976,125800,149634,167542,175265,184915,201608,193336,175499,189338,188126,191568,197270,216117,237207,263719,280397,287489,286451,291010,307257,335998,333809,329196,334582,337429],
+  em:[43987,44449,47427,50281,53764,59930,67647,83217,106061,125675,134855,141114,150050,141558,129147,135330,132888,133492,136368,145584,153654,163698,173556,182655,185853,192311,209216,230580,232440,231829,238075,241354],
+  wm:[44020,44296,46923,49459,52570,58174,65811,78592,99441,118128,127452,133968,141213,136088,122966,129119,125314,125503,127945,134806,141377,152230,162590,172378,177283,181148,199348,218741,223235,224353,230691,233483],
+  yh:[42261,42187,43602,44855,46582,49994,54478,65056,82474,104472,118463,128840,138774,133007,122110,126263,122765,121940,122568,128396,133533,140259,145722,150530,153801,159281,175034,191156,192742,196802,203350,207978],
+  nw:[40879,40879,42691,44361,46664,50112,54947,63958,79438,102699,117585,128088,138197,132235,121090,123953,120240,119378,119968,125528,130207,137136,144015,149200,153007,158971,177965,195741,198163,203147,211994,216914],
+  ne:[40009,40045,41543,42937,44466,46653,49846,58529,75436,98411,111904,121298,128961,123933,114437,116012,111099,110074,109678,112179,114778,117724,119773,121422,121669,123916,137432,148134,149708,151900,158788,162789],
+  wales:[40455,40785,43071,45079,47462,51120,55541,64977,82358,106704,120863,129873,138500,131282,120873,124012,121586,121101,121598,127711,131264,136750,142564,149036,154792,160432,178929,200121,201222,203051,208966,212935],
+  scotland:[40482,42202,44252,46542,48042,49642,51912,58983,67113,86405,100907,114985,131878,131484,124986,126930,124609,120528,121015,126702,131728,133519,137452,143484,146094,150204,164974,177998,177712,182008,189183,191656],
+  ni:[40562,44216,48795,53530,58720,65731,73040,80503,87522,96839,113322,145642,202198,167045,133799,124658,109575,97340,94565,101844,109245,116375,120765,126284,130685,135509,147058,161848,166237,176816,189530,200374],
+};
+var HPI_NOW={uk:272188,london:553870,se:380380,sw:304562,ee:338707,em:240457,wm:234731,yh:207948,nw:219922,ne:165550,wales:213162,scotland:195355,ni:202487};
+
+var REGION_NAMES={uk:'the UK',london:'London',se:'the South East',sw:'the South West',ee:'the East of England',em:'the East Midlands',wm:'the West Midlands',yh:'Yorkshire and The Humber',nw:'the North West',ne:'the North East',wales:'Wales',scotland:'Scotland',ni:'Northern Ireland'};
+var LATEST_LABEL='June 2026';
+
+function num(id){var e=document.getElementById(id);var v=parseFloat(e.value);return isNaN(v)||v<0?0:v;}
+function gbp0(n){return '£'+Math.round(n).toLocaleString('en-GB');}
+function set(id,t){document.getElementById(id).textContent=t;}
+
+function calc(){
+  var price=num('price');
+  var year=parseInt(document.getElementById('year').value,10);
+  var reg=document.getElementById('region').value;
+  var mort=num('mortgage');
+  var ovEl=document.getElementById('override');
+  var ov=parseFloat(ovEl.value);
+  var hasOv=!isNaN(ov)&&ov>0;
+
+  var series=HPI[reg]||HPI.uk;
+  var idx=year-HPI_YEARS;
+  if(idx<0) idx=0; if(idx>=series.length) idx=series.length-1;
+  var then=series[idx], now=HPI_NOW[reg];
+  var factor=then>0?now/then:1;
+
+  var value = hasOv ? ov : price*factor;
+  var growth=value-price;
+  var equity=value-mort;
+  var ltv = value>0 ? mort/value*100 : 0;
+  var elapsed=2026-year;
+
+  set('valLabel', hasOv?'Your valuation':'Estimated value today');
+  set('valOut', gbp0(value));
+  var vo=document.getElementById('valOut');
+  vo.className='res-big'+(growth<0?' coral':'');
+  set('valSub', hasOv ? 'Your own figure, used in place of the index'
+                      : 'Index movement applied to '+gbp0(price)+' since '+year);
+
+  var eqPct = value>0 ? Math.max(0,Math.min(100,equity/value*100)) : 0;
+  document.getElementById('barEq').style.width=eqPct+'%';
+  document.getElementById('barMort').style.width=(100-eqPct)+'%';
+
+  set('vPrice', gbp0(price));
+  set('vValue', gbp0(value));
+  set('vGrowth', (growth>=0?'+ ':'− ')+gbp0(Math.abs(growth))+'  ('+(growth>=0?'+':'−')+(price>0?Math.abs(growth/price*100).toFixed(1):'0.0')+'%)');
+  document.getElementById('vGrowth').style.color = growth>=0?'var(--green)':'var(--coral)';
+  set('vMort', '− '+gbp0(mort));
+  set('vEquity', gbp0(equity));
+  document.getElementById('vEquity').style.color = equity>=0?'var(--green)':'var(--coral)';
+
+  set('sLtv', value>0 ? ltv.toFixed(1)+'%' : '—');
+  set('sCagr', (elapsed>0 && price>0 && value>0) ? (((Math.pow(value/price,1/elapsed))-1)*100).toFixed(2)+'%' : '—');
+  set('sThen', gbp0(then));
+  set('sNow', gbp0(now));
+  set('sFactor', hasOv ? 'Overridden' : '× '+factor.toFixed(3));
+
+  var v=document.getElementById('verdict'),h='';
+  if(price<=0){
+    v.className='note blue'; h='<div class="note-l">Start here</div>Enter what you paid and when to see an estimate.';
+  } else if(hasOv){
+    v.className='note';
+    h='<div class="note-l">Using your figure</div>The index estimate for '+REGION_NAMES[reg]+' would have been <b>'+gbp0(price*factor)+'</b>. You have entered <b>'+gbp0(ov)+'</b>, and everything above is calculated from your number instead. Clear the override field to go back to the index.';
+  } else if(equity<0){
+    v.className='note coral';
+    h='<div class="note-l">Negative equity on this estimate</div>The estimated value is <b>'+gbp0(Math.abs(equity))+'</b> below your outstanding balance. Bear in mind this is a regional average applied to your purchase price, not a valuation of your property &mdash; a lender&rsquo;s valuation could differ substantially in either direction. If this is a live concern, speak to your lender, who has options that are not visible from the outside.';
+  } else if(growth<0){
+    v.className='note amber';
+    h='<div class="note-l">Below what you paid, on this measure</div>Average prices in '+REGION_NAMES[reg]+' are <b>'+Math.abs(growth/price*100).toFixed(1)+'%</b> lower than in '+year+'. Your equity of <b>'+gbp0(equity)+'</b> is therefore coming from repayment rather than growth. Regional averages move differently from individual properties, so this is a signal about the market, not about your house.';
+  } else {
+    v.className='note';
+    h='<div class="note-l">Where this leaves you</div>Average prices in '+REGION_NAMES[reg]+' rose <b>'+(growth/price*100).toFixed(1)+'%</b> between '+year+' and '+LATEST_LABEL+'. Applied to your purchase price that is <b>'+gbp0(value)+'</b>, giving estimated equity of <b>'+gbp0(equity)+'</b> at a loan-to-value of <b>'+ltv.toFixed(1)+'%</b>. Remember this is index movement, not a valuation of your property.';
+  }
+  v.innerHTML=h;
+}
+
+['price','mortgage','override'].forEach(function(id){document.getElementById(id).addEventListener('input',calc)});
+['year','region'].forEach(function(id){document.getElementById(id).addEventListener('change',calc)});
+calc();
+
+
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('click',function(){
+    var i=q.parentNode, was=i.classList.contains('open');
+    document.querySelectorAll('.faq-i').forEach(function(x){x.classList.remove('open')});
+    if(!was) i.classList.add('open');
+  });
+});
+
+})();
+</script>
+</body>
+</html>

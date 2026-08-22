@@ -236,6 +236,17 @@ select option{background:var(--sf);color:var(--tx)}
   .footer-top{grid-template-columns:1fr}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+.xrel{max-width:1200px;margin:0 auto;padding:0 32px}
+.xrel-h{font-size:clamp(20px,2.6vw,26px);font-weight:800;letter-spacing:-.02em;margin-bottom:6px}
+.xrel-s{font-size:14px;color:var(--tx2);margin-bottom:22px}
+.xrel-g{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:860px){.xrel-g{grid-template-columns:1fr}}
+.xrel-c{display:block;background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:20px;transition:all .3s}
+.xrel-c:hover{border-color:var(--mint);transform:translateY(-3px)}
+.xrel-t{font-size:15px;font-weight:700;color:var(--tx);margin-bottom:5px}
+.xrel-d{font-size:13px;color:var(--tx2);line-height:1.6}
+@media(max-width:600px){.xrel{padding:0 20px}}
 </style>
 <script>
 window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -525,6 +536,17 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 
 <!-- CTA -->
 <div class="content-divider"><hr></div>
+<div class="content-divider"><hr></div>
+<section class="content-section" style="padding-bottom:24px">
+  <h2 class="xrel-h">More calculators</h2>
+  <p class="xrel-s">All free, all in your browser, no sign-up. <a href="/tools" style="color:var(--mint)">See all eleven &rarr;</a></p>
+  <div class="xrel-g">
+    <a href="/tools/take-home-pay-calculator" class="xrel-c"><div class="xrel-t">Take-Home Pay Calculator</div><div class="xrel-d">Compare against a PAYE salary on 2026/27 rates.</div></a>
+    <a href="/tools/emergency-fund-calculator" class="xrel-c"><div class="xrel-t">Emergency Fund Calculator</div><div class="xrel-d">Irregular income usually needs a deeper buffer &mdash; size it here.</div></a>
+    <a href="/tools/payday-allocation-calculator" class="xrel-c"><div class="xrel-t">Payday Allocation Calculator</div><div class="xrel-d">Allocate from your lowest realistic month rather than your average.</div></a>
+  </div>
+</section>
+
 <section class="cta-section">
   <div class="cta-box">
     <h2>Track your contractor income in earmarkIQ</h2>
