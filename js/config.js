@@ -12,6 +12,7 @@ window.DOWNLOAD_URL = "/download";
 // Web app destinations — the single source of truth for all outbound web
 // app links. /login and /signup read these at load; no other page hardcodes
 // them. Change the base here and every routing page follows.
-window.WEB_APP_BASE = "https://earmarkiq-web.vercel.app";
+window.WEB_APP_BASE = "https://my.earmarkiq.app";
 window.CONSUMER_WEB_URL = window.WEB_APP_BASE + "/app/login";
 window.ADVISER_WEB_URL = window.WEB_APP_BASE + "/adviser/login";
+window.CONSUMER_SIGNUP_URL = window.WEB_APP_BASE + "/app/signup";

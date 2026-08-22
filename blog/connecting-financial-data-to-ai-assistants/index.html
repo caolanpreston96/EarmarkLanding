@@ -33,56 +33,102 @@
   <meta name="twitter:image" content="https://earmarkiq.app/assets/og-image.webp" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Article",
-        "headline": "Connecting Your Financial Data to AI Assistants: MCP Explained",
-        "description": "What MCP is, why read-only access matters, and how connecting your money data to Claude and other AI assistants will actually work.",
-        "datePublished": "2026-08-15",
-        "dateModified": "2026-08-15",
-        "author": { "@type": "Organization", "name": "earmarkIQ" },
-        "publisher": { "@type": "Organization", "name": "earmarkIQ", "url": "https://earmarkiq.app", "logo": { "@type": "ImageObject", "url": "https://earmarkiq.app/assets/logo.png" } },
-        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://earmarkiq.app/blog/connecting-financial-data-to-ai-assistants" },
-        "inLanguage": "en-GB"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Connecting Your Financial Data to AI Assistants: MCP Explained",
+      "description": "What MCP is, why read-only access matters, and how connecting your money data to Claude and other AI assistants will actually work.",
+      "datePublished": "2026-08-15",
+      "dateModified": "2026-08-15",
+      "author": {
+        "@type": "Organization",
+        "name": "earmarkIQ"
       },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://earmarkiq.app/" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://earmarkiq.app/blog" },
-          { "@type": "ListItem", "position": 3, "name": "Connecting Your Financial Data to AI Assistants" }
-        ]
+      "publisher": {
+        "@type": "Organization",
+        "name": "earmarkIQ",
+        "url": "https://earmarkiq.app",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://earmarkiq.app/assets/logo.png"
+        }
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What is MCP (Model Context Protocol)?",
-            "acceptedAnswer": { "@type": "Answer", "text": "MCP is an open standard that lets AI assistants such as Claude connect to outside sources of information and tools, with the user's permission. An MCP server acts as the bridge between the assistant and a specific data source — so the assistant can answer questions using your real data instead of general knowledge." }
-          },
-          {
-            "@type": "Question",
-            "name": "Is it safe to connect financial data to an AI assistant?",
-            "acceptedAnswer": { "@type": "Answer", "text": "The safety hinges on the design of the connection, not the assistant. The standard to look for: read-only access (the assistant can ask, never act), permissioned scope (you choose what's exposed), and a regulated data chain underneath. earmarkIQ Context is being built to that standard — read-only by design, on top of earmarkIQ's read-only Open Banking access via Finexer, an FCA-authorised provider." }
-          },
-          {
-            "@type": "Question",
-            "name": "Can an AI assistant connected to my finances move my money?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Not through earmarkIQ. The entire chain is read-only: earmarkIQ accesses bank data under Account Information Services (AIS), which structurally cannot initiate payments, and earmarkIQ Context adds no write access of any kind. An assistant can query your data; it cannot touch your accounts." }
-          },
-          {
-            "@type": "Question",
-            "name": "When can I connect earmarkIQ to Claude?",
-            "acceptedAnswer": { "@type": "Answer", "text": "earmarkIQ Context is live now: get your Context address from your earmarkIQ account, add it as a custom connector in Claude (verified) or any MCP-capable assistant, and approve read-only access. Setup steps are at earmarkiq.app/context." }
-          }
-        ]
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://earmarkiq.app/blog/connecting-financial-data-to-ai-assistants"
+      },
+      "inLanguage": "en-GB",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://earmarkiq.app/api/og?title=Connecting%20financial%20data%20to%20AI%20assistants&subtitle=MCP%2C%20explained%20in%20plain%20English",
+        "width": 1200,
+        "height": 630
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://earmarkiq.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://earmarkiq.app/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Connecting Your Financial Data to AI Assistants"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is MCP (Model Context Protocol)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MCP is an open standard that lets AI assistants such as Claude connect to outside sources of information and tools, with the user's permission. An MCP server acts as the bridge between the assistant and a specific data source — so the assistant can answer questions using your real data instead of general knowledge."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it safe to connect financial data to an AI assistant?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The safety hinges on the design of the connection, not the assistant. The standard to look for: read-only access (the assistant can ask, never act), permissioned scope (you choose what's exposed), and a regulated data chain underneath. earmarkIQ Context is being built to that standard — read-only by design, on top of earmarkIQ's read-only Open Banking access via Finexer, an FCA-authorised provider."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can an AI assistant connected to my finances move my money?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not through earmarkIQ. The entire chain is read-only: earmarkIQ accesses bank data under Account Information Services (AIS), which structurally cannot initiate payments, and earmarkIQ Context adds no write access of any kind. An assistant can query your data; it cannot touch your accounts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When can I connect earmarkIQ to Claude?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "earmarkIQ Context is live now: get your Context address from your earmarkIQ account, add it as a custom connector in Claude (verified) or any MCP-capable assistant, and approve read-only access. Setup steps are at earmarkiq.app/context."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

@@ -188,6 +188,61 @@
 .pv-foot{font-size:11.5px;color:var(--tx4);line-height:1.7;margin-top:18px;border-top:1px solid var(--bd);padding-top:16px}
 @media(max-width:960px){.prop-s{padding:80px 20px}.prop-i{grid-template-columns:1fr;gap:36px}}
 
+/* Context Section */
+.ctx-s{position:relative;z-index:1;padding:110px 32px;background:linear-gradient(180deg,rgba(155,143,232,.05) 0%,rgba(91,141,239,.03) 60%,transparent 100%);border-top:1px solid var(--bd);border-bottom:1px solid var(--bd)}
+.ctx-i{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:start}
+.ctx-l{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:600;color:var(--purple);text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px;font-family:var(--m)}
+.ctx-dot{width:8px;height:8px;border-radius:50%;background:var(--purple);animation:ctxp 2s ease infinite}
+@keyframes ctxp{0%,100%{box-shadow:0 0 0 0 rgba(155,143,232,.45)}50%{box-shadow:0 0 0 7px rgba(155,143,232,0)}}
+.ctx-h{font-size:clamp(28px,3.5vw,46px);font-weight:800;line-height:1.1;letter-spacing:-.035em;margin-bottom:16px}
+.ctx-d{font-size:17px;color:var(--tx2);line-height:1.75;margin-bottom:26px}
+.ctx-pts{margin-bottom:24px}
+.ctx-pt{display:flex;gap:14px;padding:13px 0;border-bottom:1px solid var(--bd)}
+.ctx-pt:last-child{border-bottom:none}
+.ctx-ic{flex-shrink:0;width:26px;height:26px;border-radius:8px;background:rgba(155,143,232,.1);border:1px solid rgba(155,143,232,.25);color:var(--purple);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.ctx-pt-t{font-size:15px;font-weight:700;letter-spacing:-.01em;margin-bottom:3px}
+.ctx-pt-d{font-size:14px;color:var(--tx2);line-height:1.7}
+.ctx-note{border:1px solid var(--bd);border-left:3px solid var(--purple);background:rgba(155,143,232,.04);border-radius:12px;padding:18px 22px;margin-bottom:18px}
+.ctx-note-l{font-family:var(--m);font-size:11px;font-weight:600;color:var(--purple);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
+.ctx-note p{font-size:14px;color:var(--tx2);line-height:1.7;margin:0}
+.ctx-cta{display:inline-flex;align-items:center;gap:8px;margin-top:8px;padding:12px 26px;border:2px solid var(--purple);color:var(--purple);font-size:14px;font-weight:700;border-radius:100px;transition:all .3s}
+.ctx-cta:hover{background:var(--purple);color:var(--bg)}
+.ctx-card{background:var(--sf);border:1px solid var(--bd);border-radius:20px;padding:26px 24px}
+.ctx-card-h{display:flex;align-items:center;gap:9px;font-family:var(--m);font-size:11px;color:var(--tx3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px}
+.ctx-q{font-family:var(--m);font-size:13.5px;color:var(--tx);background:var(--bg);border:1px solid var(--bd);border-left:3px solid var(--purple);border-radius:0 8px 8px 0;padding:11px 14px;margin-bottom:10px;line-height:1.6}
+.ctx-reads{margin-top:20px;padding-top:18px;border-top:1px solid var(--bd)}
+.ctx-r{display:flex;align-items:flex-start;gap:9px;font-size:13.5px;color:var(--tx2);padding:6px 0}
+.ctx-r b{color:var(--tx);font-weight:600}
+.ctx-tick{color:var(--green);font-weight:700;flex-shrink:0}
+.ctx-cross{color:var(--coral);font-weight:700;flex-shrink:0}
+.ctx-foot{font-size:11.5px;color:var(--tx4);line-height:1.7;margin-top:18px;border-top:1px solid var(--bd);padding-top:15px}
+@media(max-width:960px){.ctx-s{padding:80px 20px}.ctx-i{grid-template-columns:1fr;gap:36px}}
+
+/* Web App Section */
+.web-s{position:relative;z-index:1;padding:100px 32px;border-top:1px solid var(--bd)}
+.web-i{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start}
+.web-l{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:var(--mint);text-transform:uppercase;letter-spacing:.12em;margin-bottom:14px;font-family:var(--m)}
+.web-l::before{content:'';width:20px;height:1.5px;background:var(--mint);border-radius:1px}
+.web-h{font-size:clamp(27px,3.3vw,42px);font-weight:800;line-height:1.12;letter-spacing:-.035em;margin-bottom:16px}
+.web-d{font-size:16.5px;color:var(--tx2);line-height:1.75;margin-bottom:16px}
+.web-split{border:1px solid var(--bd);border-left:3px solid var(--amber);background:rgba(245,166,35,.04);border-radius:12px;padding:17px 21px;margin:22px 0 24px}
+.web-split-l{font-family:var(--m);font-size:11px;font-weight:600;color:var(--amber);text-transform:uppercase;letter-spacing:.1em;margin-bottom:7px}
+.web-split p{font-size:14px;color:var(--tx2);line-height:1.7;margin:0}
+.web-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+.web-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;background:var(--mint);color:var(--bg);font-size:14px;font-weight:700;border-radius:100px;transition:all .3s}
+.web-btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(78,205,196,.3)}
+.web-btn.ghost{background:transparent;border:2px solid var(--bd2);color:var(--tx2)}
+.web-btn.ghost:hover{border-color:var(--mint);color:var(--mint);box-shadow:none}
+.web-card{background:var(--sf);border:1px solid var(--bd);border-radius:20px;padding:28px 26px}
+.web-card-h{font-family:var(--m);font-size:11px;color:var(--tx3);text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px}
+.web-list{list-style:none;display:grid;gap:1px}
+.web-list li{display:flex;gap:11px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--bd);font-size:14px;color:var(--tx2);line-height:1.6}
+.web-list li:last-child{border-bottom:none}
+.web-list b{color:var(--tx);font-weight:600}
+.web-tick{color:var(--mint);font-weight:700;flex-shrink:0;font-size:13px;margin-top:2px}
+.web-foot{font-size:11.5px;color:var(--tx4);line-height:1.7;margin-top:18px;border-top:1px solid var(--bd);padding-top:15px}
+@media(max-width:960px){.web-s{padding:74px 20px}.web-i{grid-template-columns:1fr;gap:34px}}
+
 /* Responsive */
 @media(max-width:960px){.hero-i{grid-template-columns:1fr;text-align:center}.hero-p{margin-left:auto;margin-right:auto}.hero-btns{justify-content:center}.hero-trust{justify-content:center}.hero-vis{margin-top:32px}.iph-hero{width:260px}.fc{display:none}.fr,.fr.rev{grid-template-columns:1fr;direction:ltr;gap:32px}.fr.rev>*{direction:ltr}.ft{max-width:100%}.iph-feat{transform:none;opacity:0}.iph-feat.in-view,.fr.rev .iph-feat.in-view{transform:none;opacity:1;box-shadow:0 25px 60px rgba(0,0,0,.5),0 8px 40px var(--glow,transparent)}.feat-glow{margin-top:16px}.partner-ill{margin:0 auto}.xp-ill{margin:0 auto}.steps{grid-template-columns:1fr}.stats-g{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2)::after{display:none}.tg{grid-template-columns:1fr}.footer-top{grid-template-columns:1fr 1fr;gap:28px}.nav-links{display:none}.mob-tog{display:block}.footer-mid{flex-direction:column;text-align:center}.tools-cards{grid-template-columns:1fr}}
 @media(max-width:600px){.hero{padding:120px 20px 48px}.sec{padding:80px 20px}.iph-hero{width:250px}.iph-step{width:180px}.iph-step::before{width:50px;height:14px;top:6px}.iph-feat{width:230px}.stats-g{grid-template-columns:1fr 1fr}.tool-grid{grid-template-columns:1fr}.footer-top{grid-template-columns:1fr}}
@@ -378,6 +433,7 @@
 window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
+<script src="/js/config.js"></script>
 </head>
 <body>
 <div class="amb"><div class="amb-g"></div><div class="amb-o amb-o1"></div><div class="amb-o amb-o2"></div></div>
@@ -643,6 +699,46 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 
 </div></section>
 
+<!-- CONTEXT -->
+<section class="ctx-s" id="context"><div class="ctx-i">
+
+  <div>
+    <div class="r"><div class="ctx-l"><span class="ctx-dot"></span>earmarkIQ Context &mdash; live</div></div>
+    <h2 class="ctx-h r d1">Ask your own AI<br>assistant about<br>your own money.</h2>
+    <p class="ctx-d r d2">earmarkIQ Context is a read-only MCP server. Connect it to Claude &mdash; verified &mdash; or any MCP-capable assistant, and it can answer from your actual accounts instead of general knowledge. It can read. It cannot act. Not because we have promised not to, but because no capability to act exists inside it.</p>
+
+    <div class="ctx-pts r d2">
+      <div class="ctx-pt"><div class="ctx-ic">1</div><div><div class="ctx-pt-t">The permission it runs on is a reading permission</div><div class="ctx-pt-d">earmarkIQ connects to your bank under Account Information Services through Finexer Ltd (FRN 925695). AIS cannot construct a payment instruction, so there is nothing to reach even before Context is involved.</div></div></div>
+      <div class="ctx-pt"><div class="ctx-ic">2</div><div><div class="ctx-pt-t">Context publishes reads only</div><div class="ctx-pt-d">An MCP server exposes a list of operations and an assistant can invoke what is on it, nothing else. Ours contains read operations and no others &mdash; there is no mutating call to trigger, or to be argued into.</div></div></div>
+      <div class="ctx-pt"><div class="ctx-ic">3</div><div><div class="ctx-pt-t">A test fails the build if that ever changes</div><div class="ctx-pt-d">Guarantees erode through changes that seemed reasonable at the time. So it is enforced in the build: adding any mutating capability breaks it, visibly, and someone has to consciously delete the test to proceed.</div></div></div>
+    </div>
+
+    <div class="ctx-note r d3">
+      <div class="ctx-note-l">Audited and revocable</div>
+      <p>Every access through Context is recorded, so &ldquo;we would never&rdquo; can be replaced with a record of what actually happened. You can revoke the connection yourself from your earmarkIQ account at any moment &mdash; immediately, without contacting anyone, and without affecting your bank connections or the app.</p>
+    </div>
+
+    <a href="/context" class="ctx-cta r d3">How earmarkIQ Context works <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+  </div>
+
+  <div class="ctx-card r d2">
+    <div class="ctx-card-h"><span class="ctx-dot" style="background:var(--purple)"></span>Questions it can answer</div>
+    <div class="ctx-q">&ldquo;What did I spend on eating out last month?&rdquo;</div>
+    <div class="ctx-q">&ldquo;Which of my subscriptions went up this year?&rdquo;</div>
+    <div class="ctx-q">&ldquo;How much equity do I have in the flat?&rdquo;</div>
+    <div class="ctx-q">&ldquo;Given what I usually spend, is a &pound;900 holiday in March realistic?&rdquo;</div>
+
+    <div class="ctx-reads">
+      <div class="ctx-r"><span class="ctx-tick">&#10003;</span><span><b>Reads</b> accounts, categorised spending, subscriptions, net worth and property equity, and your payday plan</span></div>
+      <div class="ctx-r"><span class="ctx-cross">&#10007;</span><span><b>Cannot</b> move money, make a payment, cancel anything or change a setting</span></div>
+      <div class="ctx-r"><span class="ctx-cross">&#10007;</span><span><b>Cannot</b> see your banking credentials &mdash; nobody can, including us</span></div>
+    </div>
+
+    <div class="ctx-foot">Claude is verified. Other MCP-capable assistants connect the same way, though we have not verified each one individually. earmarkIQ does not initiate payments &mdash; payment initiation is within our permissions and on the roadmap, but it is not enabled.</div>
+  </div>
+
+</div></section>
+
 <!-- FREE TOOLS -->
 <section class="sec" id="tools"><div class="sec-i sec-c">
   <div class="r"><div class="sec-l">Free Tools</div></div>
@@ -664,7 +760,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
       <span class="tcrd-btn">Try the calculator <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
     </a>
   </div>
-  <p class="r d3" style="font-size:14px;color:var(--tx3);text-align:center;margin-top:28px">Also available &mdash; <a href="/tools/property-equity-calculator" style="color:var(--mint)">property equity</a>, <a href="/tools/subscription-cost-calculator" style="color:var(--mint)">subscription cost</a>, <a href="/tools/emergency-fund-calculator" style="color:var(--mint)">emergency fund</a>, <a href="/tools/salary-sacrifice" style="color:var(--mint)">salary sacrifice</a>, <a href="/tools/nhs-pay-calculator" style="color:var(--mint)">NHS pay</a> and <a href="/tools">six more</a>.</p>
+  <p class="r d3" style="font-size:14px;color:var(--tx3);text-align:center;margin-top:28px">Also available &mdash; <a href="/tools/property-equity-calculator" style="color:var(--mint)">property equity</a>, <a href="/tools/subscription-cost-calculator" style="color:var(--mint)">subscription cost</a>, <a href="/tools/emergency-fund-calculator" style="color:var(--mint)">emergency fund</a>, <a href="/tools/salary-sacrifice" style="color:var(--mint)">salary sacrifice</a>, <a href="/tools/nhs-pay-calculator" style="color:var(--mint)">NHS pay</a> and <a href="/tools">six more</a>. Going through something big? The <a href="/life-events" style="color:var(--mint)">life-event guides</a> cover redundancy, parental leave, a first job, a first home, moving in together and a pay rise.</p>
 </div></section>
 
 <!-- PRICING -->
@@ -746,6 +842,45 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
   </div>
 </div></section>
 
+<!-- WEB APP -->
+<section class="web-s" id="web"><div class="web-i">
+
+  <div>
+    <div class="r"><div class="web-l">earmarkIQ on the web</div></div>
+    <h2 class="web-h r d1">A bigger screen for<br>the things you actually<br>sit down to do.</h2>
+    <p class="web-d r d2">The app is for glancing &mdash; a balance, a budget, a notification on the way to work. The web is for the other kind of session: reviewing a quarter properly, pulling an export your accountant or your mortgage broker has asked for, or checking which assistants have read your data and what they were allowed to see.</p>
+    <p class="web-d r d2">One subscription covers both. It is the same account and the same data, opened on whichever screen suits what you are doing.</p>
+
+    <div class="web-split r d2">
+      <div class="web-split-l">The honest split</div>
+      <p>The web complements the iOS app rather than replacing it. <b style="color:var(--tx)">Bank connections are set up in the app</b>, and Ask IQ chat, payday allocation actions, notifications, biometric unlock, and creating budgets and goals all live there too. The web reads and reviews what the app has collected, and handles properties, exports and assistant permissions in full.</p>
+    </div>
+
+    <div class="web-btns r d3">
+      <a href="/signup" id="web-signup" class="web-btn">Create a web account <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="/login" id="web-login" class="web-btn ghost">Log in</a>
+    </div>
+  </div>
+
+  <div class="web-card r d2">
+    <div class="web-card-h">What you can do on the web today</div>
+    <ul class="web-list">
+      <li><span class="web-tick">&#10003;</span><span><b>Overview and net worth</b> &mdash; everything in one place on a screen big enough to read it</span></li>
+      <li><span class="web-tick">&#10003;</span><span><b>Spending breakdowns</b> &mdash; and drill down from any category to the transactions behind it</span></li>
+      <li><span class="web-tick">&#10003;</span><span><b>Properties</b> &mdash; add and edit them in full, with mortgage balance and equity</span></li>
+      <li><span class="web-tick">&#10003;</span><span><b>Subscriptions audit</b> &mdash; every recurring payment and what it costs a year</span></li>
+      <li><span class="web-tick">&#10003;</span><span><b>Budgets and goals</b> &mdash; see where each one stands</span></li>
+      <li><span class="web-tick">&#10003;</span><span><b>Partner finance</b> &mdash; the shared picture, side by side with your own</span></li>
+      <li><span class="web-tick">&#10003;</span><span><b>Exports</b> &mdash; CSV, PDF, and a full data download for a GDPR request</span></li>
+      <li><span class="web-tick">&#10003;</span><span><b>Connected assistants</b> &mdash; see what each one can read, and change its scope</span></li>
+      <li><span class="web-tick">&#10003;</span><span><b>Access log</b> &mdash; who read your data, and exactly when</span></li>
+      <li><span class="web-tick">&#10003;</span><span><b>Sign up and subscribe</b> &mdash; billing handled by Stripe</span></li>
+    </ul>
+    <div class="web-foot">Budgets and goals are created in the iOS app and viewed here. Bank accounts are connected in the app. Everything listed above is live on the web today.</div>
+  </div>
+
+</div></section>
+
 <!-- FOR ADVISERS -->
 <section class="sec" id="for-advisers" style="padding-top:0"><div class="sec-i">
   <div class="r" style="background:var(--bg2);border:1px solid var(--bd2);border-left:3px solid var(--blue);border-radius:16px;padding:36px 32px;display:flex;flex-wrap:wrap;align-items:center;gap:24px;justify-content:space-between">
@@ -773,8 +908,8 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 <footer class="footer"><div class="footer-i">
   <div class="footer-top">
     <div><a href="#" class="nav-l" style="font-size:22px">earmark<b>IQ</b><span style="display:block;font-family:var(--m);font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--tx3);font-weight:500;margin-top:2px">Smart Money</span></a><p class="footer-bt">AI-powered salary allocation for UK professionals.</p></div>
-    <div><h5 class="footer-hd">Product</h5><ul class="footer-ul"><li><a href="#how">How it works</a></li><li><a href="#features">Features</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#security">Security</a></li><li><a href="/property">Property valuation</a></li></ul></div>
-    <div><h5 class="footer-hd">Resources</h5><ul class="footer-ul"><li><a href="/blog">Blog</a></li><li><a href="/tools/payday-allocation-calculator">Payday Allocation Calculator</a></li><li><a href="/tools/take-home-pay-calculator">Take-Home Pay Calculator</a></li><li><a href="/tools">All Calculators &rarr;</a></li><li><a href="/budgeting/salary">Salary Guides</a></li><li><a href="/budgeting/profession">Profession Guides</a></li></ul></div>
+    <div><h5 class="footer-hd">Product</h5><ul class="footer-ul"><li><a href="#how">How it works</a></li><li><a href="#features">Features</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#security">Security</a></li><li><a href="/property">Property valuation</a></li><li><a href="/context">earmarkIQ Context</a></li></ul></div>
+    <div><h5 class="footer-hd">Resources</h5><ul class="footer-ul"><li><a href="/blog">Blog</a></li><li><a href="/tools/payday-allocation-calculator">Payday Allocation Calculator</a></li><li><a href="/tools/take-home-pay-calculator">Take-Home Pay Calculator</a></li><li><a href="/tools">All Calculators &rarr;</a></li><li><a href="/budgeting/salary">Salary Guides</a></li><li><a href="/budgeting/profession">Profession Guides</a></li><li><a href="/life-events">Life-Event Guides</a></li></ul></div>
     <div><h5 class="footer-hd">Legal</h5><ul class="footer-ul"><li><a href="/privacy">Privacy Policy</a></li><li><a href="/terms">Terms of Service</a></li><li><a href="mailto:hello@earmarkiq.app">Support</a></li></ul></div>
   </div>
   <div class="footer-mid">
@@ -803,6 +938,16 @@ var fps=document.querySelectorAll('.iph-feat');if(fps.length&&!rm){var fpObs=new
 var sps=document.querySelectorAll('.iph-step');if(sps.length&&!rm){var spObs=new IntersectionObserver(function(ens){ens.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in-view');spObs.unobserve(en.target)}})},{threshold:.2});sps.forEach(function(ph){spObs.observe(ph)})}
 // Parallax (desktop only)
 if(!rm&&window.innerWidth>=768){var pvs=[];document.querySelectorAll('.feat-glow').forEach(function(g){var fv=g.closest('.fv');if(fv)pvs.push(fv)});if(pvs.length){var ptk=false;window.addEventListener('scroll',function(){if(!ptk){requestAnimationFrame(function(){var wh=window.innerHeight;pvs.forEach(function(fv){var r=fv.getBoundingClientRect(),c=r.top+r.height/2,o=(c-wh/2)*.15;o=Math.max(-30,Math.min(30,o));fv.style.transform='translateY('+o+'px)'});ptk=false});ptk=true}})}}
+})();
+</script>
+<script>
+// Web app destinations come from /js/config.js — the single source for these
+// URLs. The static hrefs above (/signup, /login) are working no-JS fallbacks.
+(function () {
+  var su = window.CONSUMER_SIGNUP_URL, li = window.CONSUMER_WEB_URL;
+  var a = document.getElementById('web-signup'), b = document.getElementById('web-login');
+  if (su && a) { a.href = su; }
+  if (li && b) { b.href = li; }
 })();
 </script>
 </body>
