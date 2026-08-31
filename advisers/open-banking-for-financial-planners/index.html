@@ -71,7 +71,7 @@
           {
             "@type": "Question",
             "name": "Is Open Banking data collection safe enough for advice firms?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Open Banking runs on the same regulated rails UK banks use, overseen by the FCA under the Payment Services Regulations 2017. Only authorised firms — or their Appointed Representatives — can access the APIs, data is encrypted in transit and at rest, and access is read-only under AIS. For most firms this is a stronger security posture than clients emailing bank statements as PDF attachments." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Open Banking runs on the same regulated rails UK banks use, overseen by the FCA under the Payment Services Regulations 2017. Only authorised firms — or agents acting under them — can access the APIs, data is encrypted in transit and at rest, and access is read-only under AIS. For most firms this is a stronger security posture than clients emailing bank statements as PDF attachments." }
           },
           {
             "@type": "Question",
@@ -212,7 +212,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 
     <p>Open Banking came out of a 2016 Competition and Markets Authority ruling requiring the UK's largest banks to let customers share their account data with authorised third parties. It's now a mature piece of national infrastructure: standardised, secure APIs that every major UK bank operates, overseen by the FCA under the Payment Services Regulations 2017, with millions of active UK users.</p>
 
-    <p>The key word is <strong>authorised</strong>. Not any company can call these APIs. Access is restricted to firms the FCA has authorised for the purpose — or firms operating as Appointed Representatives of an authorised principal. When a client connects a bank account to an app, there is a regulated entity accountable for that connection, which is precisely what makes the framework different from the screen-scraping era it replaced, when tools asked users to hand over their actual banking passwords.</p>
+    <p>The key word is <strong>authorised</strong>. Not any company can call these APIs. Access is restricted to firms the FCA has authorised for the purpose — or firms accessing them as agents of an authorised firm. When a client connects a bank account to an app, there is a regulated entity accountable for that connection, which is precisely what makes the framework different from the screen-scraping era it replaced, when tools asked users to hand over their actual banking passwords.</p>
 
     <h2 id="ais-pis">AIS and PIS: the two permissions that matter</h2>
 
@@ -268,7 +268,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 
     <h2 id="security-chain">The security and regulatory chain, end to end</h2>
 
-    <p>For a firm's data-governance file, the chain looks like this: the client's bank (FCA-regulated) exposes data through Open Banking APIs → an FCA-authorised AIS provider operates the connection — in earmarkIQ's case, Finexer Ltd (FRN 925695) → earmarkIQ operates as an FCA Appointed Representative of Finexer, with data encrypted in transit and at rest to 256-bit standard and ICO registration (CSN2001882) for UK GDPR. Every link is regulated, auditable, and — unlike a PDF bank statement forwarded over email — access can be terminated by the client instantly.</p>
+    <p>For a firm's data-governance file, the chain looks like this: the client's bank (FCA-regulated) exposes data through Open Banking APIs → an FCA-authorised AIS provider operates the connection — in earmarkIQ's case, Finexer Ltd (FRN 925695) → earmarkIQ operates as an agent of Finexer Ltd, with data encrypted in transit and at rest to 256-bit standard and ICO registration (CSN2001882) for UK GDPR. Every link is regulated, auditable, and — unlike a PDF bank statement forwarded over email — access can be terminated by the client instantly.</p>
 
     <h2 id="for-firms">What this means for a planning firm</h2>
 
@@ -291,7 +291,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
       </div>
       <div class="faq-item">
         <div class="faq-q">Is Open Banking data collection safe enough for advice firms? <span class="faq-chevron">›</span></div>
-        <div class="faq-a">Open Banking runs on the same regulated rails UK banks use, overseen by the FCA under the Payment Services Regulations 2017. Only authorised firms — or their Appointed Representatives — can access the APIs, data is encrypted in transit and at rest, and access is read-only under AIS. For most firms this is a stronger security posture than clients emailing bank statements as PDF attachments.</div>
+        <div class="faq-a">Open Banking runs on the same regulated rails UK banks use, overseen by the FCA under the Payment Services Regulations 2017. Only authorised firms — or agents acting under them — can access the APIs, data is encrypted in transit and at rest, and access is read-only under AIS. For most firms this is a stronger security posture than clients emailing bank statements as PDF attachments.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Can an adviser get direct access to a client's Open Banking data? <span class="faq-chevron">›</span></div>
@@ -334,7 +334,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 
 <footer>
   <p>© 2026 earmarkIQ Ltd · <a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms</a> · <a href="mailto:hello@earmarkiq.app">Contact</a></p>
-  <p style="margin-top:8px">earmarkIQ is an FCA Appointed Representative of Finexer Ltd (FRN 925695). <a href="https://register.fca.org.uk/s/firm?id=001Sk000010irOJIAY" rel="nofollow" target="_blank">Verify on the FCA register</a>. Content on this site is for guidance only and does not constitute financial advice.</p>
+  <p style="margin-top:8px">earmarkIQ is acting as an agent of Finexer Ltd (FRN 925695), which is authorised by the Financial Conduct Authority as an Authorised Payment Institution. <a href="/terms#regulatory-status">Read the full authorisation statement</a>. <a href="https://register.fca.org.uk/s/firm?id=001Sk000010irOJIAY" rel="nofollow" target="_blank">Verify Finexer on the FCA register</a>. Content on this site is for guidance only and does not constitute financial advice.</p>
 </footer>
 
 <script>

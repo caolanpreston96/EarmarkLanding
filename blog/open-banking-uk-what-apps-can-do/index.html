@@ -38,7 +38,7 @@
       "@type": "Article",
       "headline": "Open Banking in the UK: What Apps Can and Cannot Do With Your Data",
       "name": "Open Banking in the UK: What Apps Can and Cannot Do With Your Data",
-      "description": "A practical guide to UK Open Banking for consumers: the difference between Account Information Services and Payment Initiation Services, what an AIS app can and cannot do, how consent scope and the 90-day reconfirmation rule work, how to revoke access, and what FCA authorisation and Appointed Representative status get you.",
+      "description": "A practical guide to UK Open Banking for consumers: the difference between Account Information Services and Payment Initiation Services, what an AIS app can and cannot do, how consent scope and the 90-day reconfirmation rule work, how to revoke access, and what FCA authorisation and acting as an agent of an authorised firm get you.",
       "datePublished": "2026-08-22",
       "dateModified": "2026-08-22",
       "inLanguage": "en-GB",
@@ -401,7 +401,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 
     <h2 id="fca">What FCA regulation gets you in practice</h2>
 
-    <p>&ldquo;FCA regulated&rdquo; is used loosely enough to be worth unpacking. A firm is either <strong>directly authorised</strong>, or an <strong>Appointed Representative</strong> operating under a principal firm that is and which carries regulatory responsibility for its conduct. Both appear on the <a href="https://register.fca.org.uk" rel="nofollow" target="_blank">FCA register</a>, which is public, free and not controlled by the firm. Checking takes a minute and is the single most useful thing you can do.</p>
+    <p>&ldquo;FCA regulated&rdquo; is used loosely enough to be worth unpacking. A firm is either <strong>directly authorised</strong>, or it reaches regulated services <strong>as an agent</strong> of a firm that is and which carries regulatory responsibility for that access. Directly authorised firms appear on the <a href="https://register.fca.org.uk" rel="nofollow" target="_blank">FCA register</a>, which is public, free and not controlled by the firm. Checking takes a minute and is the single most useful thing you can do.</p>
 
     <p>What regulation actually gets you:</p>
     <ul class="plain">
@@ -421,7 +421,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 
     <h2 id="where-earmarkiq-sits">Where earmarkIQ sits</h2>
 
-    <p>earmarkIQ operates under AIS only. Bank connections run through Finexer Ltd (FRN 925695), an FCA-authorised provider, with earmarkIQ as an Appointed Representative &mdash; verifiable on the register. The connection is read-only: earmarkIQ reads balances and transactions, categorises them, and builds things like a payday allocation and a net worth figure on top. It cannot move money, because AIS does not permit it to.</p>
+    <p>earmarkIQ operates under AIS only. Bank connections run through Finexer Ltd (FRN 925695), an FCA-authorised provider, with earmarkIQ acting as an agent of Finexer &mdash; Finexer's authorisation is verifiable on the register. The connection is read-only: earmarkIQ reads balances and transactions, categorises them, and builds things like a payday allocation and a net worth figure on top. It cannot move money, because AIS does not permit it to.</p>
 
     <p>On payment initiation, the accurate position is this: <strong>PIS sits within the permissions earmarkIQ operates under and is on the roadmap, but it is not enabled today.</strong> earmarkIQ does not initiate payments. If it is ever switched on, it will work the way PIS works everywhere &mdash; a payment you start, with an amount and a payee you see and confirm, authenticated by you at your own bank, one at a time. It would not be a standing power, and nothing automated, including any assistant connected through <a href="/context">earmarkIQ Context</a>, would be able to trigger it.</p>
 
@@ -442,7 +442,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 
     <div class="about-box">
       <h3>About earmarkIQ</h3>
-      <p>earmarkIQ is a UK personal finance app for iOS and the web. It is an FCA Appointed Representative of Finexer Ltd (FRN 925695) and ICO registered (CSN2001882). It connects to UK bank accounts through read-only Open Banking, categorises spending automatically, builds a payday allocation plan, and tracks subscriptions, property equity and net worth. Website: earmarkiq.app</p>
+      <p>earmarkIQ is a UK personal finance app for iOS and the web. It is acting as an agent of Finexer Ltd (FRN 925695), which is authorised by the Financial Conduct Authority as an Authorised Payment Institution, and is ICO registered (CSN2001882). It connects to UK bank accounts through read-only Open Banking, categorises spending automatically, builds a payday allocation plan, and tracks subscriptions, property equity and net worth. Website: earmarkiq.app</p>
     </div>
 
     <div class="next-step">
@@ -459,7 +459,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
     <div class="related">
       <a href="/blog/apps-that-show-vs-move-your-money"><div class="related-t">Showing versus moving</div><div class="related-d">Why the guidance and action distinction is the one to ask every provider about.</div></a>
       <a href="/blog/connect-bank-account-to-ai-assistant"><div class="related-t">Should you connect?</div><div class="related-d">Four questions to ask before granting any assistant access to your finances.</div></a>
-      <a href="/fca-regulated"><div class="related-t">How earmarkIQ is regulated</div><div class="related-d">Appointed Representative status, Consumer Duty, and how to verify it yourself.</div></a>
+      <a href="/fca-regulated"><div class="related-t">How earmarkIQ is regulated</div><div class="related-d">Acting as an agent of Finexer Ltd, Consumer Duty, and how to verify it yourself.</div></a>
       <a href="/context"><div class="related-t">earmarkIQ Context</div><div class="related-d">The read-only MCP server that sits on top of this data.</div></a>
     </div>
 
@@ -495,7 +495,7 @@ window.va = window.va || function () { (window.vaq = window.vaq || []).push(argu
 
 <footer>
   <p>&copy; 2026 earmarkIQ Ltd &middot; <a href="/">Home</a> &middot; <a href="/blog">Blog</a> &middot; <a href="/privacy">Privacy Policy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="mailto:hello@earmarkiq.app">Contact</a></p>
-  <p style="margin-top:8px">earmarkIQ is an FCA Appointed Representative of Finexer Ltd (FRN 925695). <a href="https://register.fca.org.uk/s/firm?id=001Sk000010irOJIAY" rel="nofollow" target="_blank">Verify on the FCA register</a>. Content on this site is for guidance only and does not constitute financial advice.</p>
+  <p style="margin-top:8px">earmarkIQ is acting as an agent of Finexer Ltd (FRN 925695), which is authorised by the Financial Conduct Authority as an Authorised Payment Institution. <a href="/terms#regulatory-status">Read the full authorisation statement</a>. <a href="https://register.fca.org.uk/s/firm?id=001Sk000010irOJIAY" rel="nofollow" target="_blank">Verify Finexer on the FCA register</a>. Content on this site is for guidance only and does not constitute financial advice.</p>
   <p class="footer-note">earmarkIQ operates under Account Information Services via Finexer Ltd (FRN 925695). earmarkIQ does not initiate payments; payment initiation is within earmarkIQ's permissions and on the roadmap but is not enabled. Regulatory references are to FCA PS21/19 and the SCA-RTS as in force at the date of publication.</p>
 </footer>
 
