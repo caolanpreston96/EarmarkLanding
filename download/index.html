@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Download earmarkIQ</title>
-<meta name="description" content="earmarkIQ launches on the App Store this week. Leave your email and you'll get the link the moment it's live.">
+<title>Get earmarkIQ</title>
+<meta name="description" content="earmarkIQ is live on the App Store for iPhone. On Android or a desktop, earmarkIQ runs in your browser.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#06080f">
 <link rel="icon" href="/favicon.ico">
@@ -18,10 +18,16 @@
 
 <script src="/js/config.js"></script>
 <script>
-// If DOWNLOAD_URL has been switched to the App Store listing, forward immediately.
+// iPhone and iPad go straight to the App Store listing. Everyone else stays on
+// this page: the Apple listing cannot install anything on Android or desktop,
+// so forwarding them there would be a dead end. They get the web app instead.
 (function () {
-  var u = window.DOWNLOAD_URL;
-  if (u && u !== "/download") { window.location.replace(u); }
+  var u = window.APP_STORE_URL;
+  if (!u) { return; }
+  var ua = navigator.userAgent || "";
+  var iOS = /iPad|iPhone|iPod/.test(ua) ||
+            (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  if (iOS) { window.location.replace(u); }
 })();
 </script>
 
@@ -59,25 +65,19 @@ h1{font-size:clamp(26px,5vw,34px);font-weight:900;letter-spacing:-.03em;line-hei
 h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .sub{font-size:16px;color:var(--tx2);line-height:1.7;margin-bottom:28px}
 
-.dl-form{display:flex;gap:10px}
-.dl-in{flex:1;min-width:0;padding:15px 20px;background:var(--bg);border:1px solid var(--bd2);border-radius:100px;color:var(--tx);font-family:var(--f);font-size:15px;outline:none;transition:border-color .2s,box-shadow .2s}
-.dl-in::placeholder{color:var(--tx4)}
-.dl-in:focus{border-color:var(--mint);box-shadow:0 0 0 3px var(--mintG)}
-.dl-btn{padding:15px 26px;background:var(--mint);color:var(--bg);font-family:var(--f);font-size:15px;font-weight:700;border:none;border-radius:100px;cursor:pointer;transition:all .3s;white-space:nowrap}
+.dl-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;width:100%;padding:15px 26px;background:var(--mint);color:var(--bg);font-family:var(--f);font-size:15px;font-weight:700;border:none;border-radius:100px;cursor:pointer;transition:all .3s}
 .dl-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(78,205,196,.3)}
-.dl-btn:disabled{opacity:.6;cursor:default;transform:none;box-shadow:none}
-.msg{font-size:13px;margin-top:12px;min-height:20px}
-.msg.err{color:var(--coral)}
-.success{display:none;font-size:18px;font-weight:700;color:var(--green);padding:14px 0 4px}
+.dl-alt{display:inline-flex;align-items:center;justify-content:center;gap:9px;width:100%;padding:14px 26px;margin-top:12px;background:transparent;color:var(--tx);font-size:15px;font-weight:600;border:1px solid var(--bd2);border-radius:100px;transition:all .3s}
+.dl-alt:hover{border-color:var(--mint);color:var(--mint)}
+.split{margin-top:22px;padding-top:20px;border-top:1px solid var(--bd);font-size:14px;color:var(--tx2);line-height:1.7}
+.split b{color:var(--tx);font-weight:700}
 .note{font-size:12px;color:var(--tx4);margin-top:20px}
-.manual-link{display:none;margin-top:16px;font-size:14px}
-.manual-link a{color:var(--mint);font-weight:600;text-decoration:underline;text-underline-offset:3px}
 
 footer{padding:24px;text-align:center;font-size:11px;color:var(--tx4)}
 footer a{color:var(--tx3)}
 footer a:hover{color:var(--mint)}
 
-@media(max-width:480px){.dl-form{flex-direction:column}.card{padding:36px 24px}}
+@media(max-width:480px){.card{padding:36px 24px}}
 </style>
 </head>
 <body>
@@ -86,20 +86,17 @@ footer a:hover{color:var(--mint)}
 
 <main>
   <div class="card">
-    <div class="badge"><span class="dot"></span>Launch week</div>
-    <h1>earmarkIQ launches on the <em>App Store this week.</em></h1>
-    <p class="sub">Leave your email and you'll get the link the moment it's live.</p>
+    <div class="badge"><span class="dot"></span>Live on the App Store</div>
+    <h1>earmarkIQ is <em>live on the App Store.</em></h1>
+    <p class="sub">Free to download on iPhone. On Android or a desktop, earmarkIQ runs in your browser &mdash; the same account and the same data, opened on whichever screen suits you.</p>
 
-    <form class="dl-form" id="dl-form" novalidate>
-      <input type="email" class="dl-in" id="dl-email" placeholder="Enter your email" autocomplete="email" inputmode="email">
-      <button type="submit" class="dl-btn" id="dl-submit">Notify me</button>
-    </form>
-    <div class="msg" id="dl-msg"></div>
-    <div class="success" id="dl-success">Done. You'll get the link as soon as we're live.</div>
+    <a class="dl-btn" id="appstore-btn" href="https://apps.apple.com/gb/app/earmarkiq/id6759535975">Download on the App Store <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
 
-    <p class="manual-link" id="manual-link">If you're not redirected automatically, <a id="manual-link-a" href="/download">tap here to open the App Store</a>.</p>
+    <a class="dl-alt" id="web-btn" href="/signup">Use earmarkIQ on the web <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
 
-    <p class="note">No spam — one email with the download link, that's it.</p>
+    <p class="split"><b>Not on an iPhone?</b> Take the web route. Bank connections, Ask IQ, spending, subscriptions, properties and exports all work in the browser. Biometric unlock, notifications, acting on your payday allocation, and creating budgets and goals are the parts that need the iOS app.</p>
+
+    <p class="note">UK bank connections only. One account works across iOS and the web.</p>
   </div>
 </main>
 
@@ -109,58 +106,14 @@ footer a:hover{color:var(--mint)}
 
 <script>
 (function () {
-  // If the config constant now points at the App Store, show a manual fallback
-  // link in case location.replace was blocked (the redirect in <head> handles
-  // the normal case).
-  var u = window.DOWNLOAD_URL;
-  if (u && u !== "/download") {
-    var wrap = document.getElementById('manual-link');
-    var a = document.getElementById('manual-link-a');
-    a.href = u;
-    wrap.style.display = 'block';
-  }
+  // Destinations come from /js/config.js — the single source for these URLs.
+  // Both anchors carry a working static href so the page is functional with
+  // JavaScript disabled; this only keeps them in sync with the config.
+  var store = window.APP_STORE_URL;
+  if (store) { document.getElementById('appstore-btn').href = store; }
 
-  // Email capture — reuses the existing Google Sheets endpoint (same one the
-  // old sign-up form on the homepage posted to). Do not modify the endpoint.
-  var ENDPOINT = 'https://script.google.com/macros/s/AKfycbw_e7qnzBvo7o7SpR2T9Vzc3R4zJT35YlrqfNFjfobjho6BlIl9mCYAnrOmaA-djRnhrA/exec';
-  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  var form = document.getElementById('dl-form');
-  var input = document.getElementById('dl-email');
-  var btn = document.getElementById('dl-submit');
-  var msg = document.getElementById('dl-msg');
-  var success = document.getElementById('dl-success');
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var email = input.value.trim();
-
-    if (!EMAIL_RE.test(email)) {
-      msg.textContent = 'Please enter a valid email address.';
-      msg.className = 'msg err';
-      input.focus();
-      return;
-    }
-
-    msg.textContent = '';
-    msg.className = 'msg';
-    btn.disabled = true;
-    btn.textContent = 'Sending\u2026';
-
-    fetch(ENDPOINT, {
-      method: 'POST',
-      body: JSON.stringify({ email: email, source: 'download_page' })
-    }).then(function () {
-      form.style.display = 'none';
-      msg.style.display = 'none';
-      success.style.display = 'block';
-    }).catch(function () {
-      msg.textContent = 'Something went wrong \u2014 please try again.';
-      msg.className = 'msg err';
-      btn.disabled = false;
-      btn.textContent = 'Notify me';
-    });
-  });
+  var web = window.CONSUMER_SIGNUP_URL;
+  if (web) { document.getElementById('web-btn').href = web; }
 })();
 </script>
 </body>

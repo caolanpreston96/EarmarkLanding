@@ -1,17 +1,16 @@
 // earmarkIQ site config
-//
-// DOWNLOAD_URL is the single source of truth for where "download" CTAs resolve.
-// Every CTA on the site links to /download, and the /download page reads this
-// constant on load:
-//   - While it equals "/download", the page shows the email capture form.
-//   - APPROVAL DAY: set it to the live App Store listing URL. The /download
-//     page will immediately forward every visitor there — one change, every
-//     CTA site-wide retargets.
-window.DOWNLOAD_URL = "/download";
+
+// APP_STORE_URL is the single source of truth for the live iOS listing.
+// Every "download" CTA on the site links to /download, and that page routes:
+//   - on iPhone/iPad it forwards straight to this listing;
+//   - on Android or desktop it stays put and offers the web app instead,
+//     because the Apple listing is a dead end on those devices.
+// If the listing URL ever changes, change it here and nowhere else.
+window.APP_STORE_URL = "https://apps.apple.com/gb/app/earmarkiq/id6759535975";
 
 // Web app destinations — the single source of truth for all outbound web
-// app links. /login and /signup read these at load; no other page hardcodes
-// them. Change the base here and every routing page follows.
+// app links. /login, /signup and /download read these at load; no other page
+// hardcodes them. Change the base here and every routing page follows.
 window.WEB_APP_BASE = "https://my.earmarkiq.app";
 window.CONSUMER_WEB_URL = window.WEB_APP_BASE + "/app/login";
 window.ADVISER_WEB_URL = window.WEB_APP_BASE + "/adviser/login";
