@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unsubscribe — earmarkIQ</title>
+<meta name="description" content="Unsubscribe from earmarkIQ marketing email.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#06080f">
+<link rel="icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script src="/js/config.js"></script>
+
+<style>
+:root{--bg:#06080f;--sf:#141929;--bd:#1e2540;--bd2:#283050;--tx:#eaecf5;--tx2:#a0a5bc;--tx3:#686e88;--tx4:#464c64;--mint:#4ECDC4;--mintG:rgba(78,205,196,0.15);--green:#4ADE80;--coral:#FF6B6B;--grad:linear-gradient(135deg,#4ECDC4 0%,#5B8DEF 60%,#9B8FE8 100%);--f:'DM Sans',-apple-system,sans-serif;--m:'IBM Plex Mono',monospace}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}::selection{background:rgba(78,205,196,0.25);color:#fff}
+body{font-family:var(--f);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
+a{text-decoration:none;color:inherit}
+
+.nav{padding:20px 24px;display:flex;justify-content:center}
+.nav-l{font-size:24px;font-weight:400;letter-spacing:-.02em}
+.nav-l b{font-weight:800;color:var(--mint)}
+.nav-l span{display:block;font-family:var(--m);font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--tx3);font-weight:500;text-align:center}
+
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:24px}
+.card{max-width:560px;width:100%;background:var(--sf);border:1px solid var(--bd);border-radius:20px;padding:44px 36px;text-align:center;position:relative;overflow:hidden}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad)}
+
+.icon{width:56px;height:56px;border-radius:50%;margin:0 auto 22px;display:flex;align-items:center;justify-content:center}
+.icon-ok{background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.25)}
+.icon-err{background:rgba(255,107,107,.08);border:1px solid rgba(255,107,107,.22)}
+.icon-ask{background:rgba(78,205,196,.08);border:1px solid rgba(78,205,196,.22)}
+
+h1{font-size:clamp(22px,4.4vw,29px);font-weight:900;letter-spacing:-.03em;line-height:1.25;margin-bottom:14px}
+.sub{font-size:15px;color:var(--tx2);line-height:1.75;margin-bottom:24px}
+.sub strong{color:var(--tx);font-weight:700}
+
+.keeps{text-align:left;margin:24px auto 0;max-width:430px;padding-top:20px;border-top:1px solid var(--bd);font-size:13.5px;color:var(--tx2);line-height:1.75}
+.keeps b{color:var(--tx);font-weight:700}
+
+.uf{display:flex;gap:10px;margin-top:4px}
+.uf-in{flex:1;min-width:0;padding:14px 20px;background:var(--bg);border:1px solid var(--bd2);border-radius:100px;color:var(--tx);font-family:var(--f);font-size:15px;outline:none;transition:border-color .2s,box-shadow .2s}
+.uf-in::placeholder{color:var(--tx4)}
+.uf-in:focus{border-color:var(--mint);box-shadow:0 0 0 3px var(--mintG)}
+.uf-btn{padding:14px 26px;background:var(--mint);color:var(--bg);font-family:var(--f);font-size:15px;font-weight:700;border:none;border-radius:100px;cursor:pointer;transition:all .3s;white-space:nowrap}
+.uf-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(78,205,196,.3)}
+.uf-btn:disabled{opacity:.55;cursor:default;transform:none;box-shadow:none}
+.msg{font-size:13px;margin-top:12px;min-height:18px;color:var(--coral)}
+
+.spin{width:34px;height:34px;border:3px solid var(--bd2);border-top-color:var(--mint);border-radius:50%;margin:0 auto 20px;animation:sp .8s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+
+.alt{font-size:13px;color:var(--tx3);margin-top:22px}
+.alt a{color:var(--mint);text-decoration:underline;text-underline-offset:3px}
+.note{font-size:12px;color:var(--tx4);margin-top:18px;line-height:1.7}
+
+.state{display:none}
+.state.on{display:block}
+
+footer{padding:24px;text-align:center;font-size:11px;color:var(--tx4)}
+footer a{color:var(--tx3)}
+footer a:hover{color:var(--mint)}
+
+@media(max-width:480px){.uf{flex-direction:column}.card{padding:36px 24px}}
+</style>
+</head>
+<body>
+
+<nav class="nav"><a href="/" class="nav-l">earmark<b>IQ</b><span>Smart Money</span></a></nav>
+
+<main>
+  <div class="card">
+
+    <!-- Working: a token was present and we are submitting it. -->
+    <div class="state on" id="s-working">
+      <div class="spin"></div>
+      <h1>Unsubscribing you&hellip;</h1>
+      <p class="sub">One moment.</p>
+    </div>
+
+    <!-- Done -->
+    <div class="state" id="s-done">
+      <div class="icon icon-ok">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h1>You&rsquo;ve been unsubscribed from earmarkIQ emails.</h1>
+      <p class="sub" id="done-addr">You will not receive any further marketing email from us.</p>
+      <div class="keeps">
+        <b>You will still receive service email</b> where it relates to your account &mdash; password resets, security alerts, email verification and payment receipts. Those are not marketing, and you cannot opt out of them while you hold an account. If you want to close your account entirely, you can do that in the app or by emailing <a href="mailto:support@earmarkiq.app" style="color:var(--mint);text-decoration:underline">support@earmarkiq.app</a>.
+      </div>
+      <p class="alt">Changed your mind? Email <a href="mailto:support@earmarkiq.app">support@earmarkiq.app</a> and we will add you back.</p>
+    </div>
+
+    <!-- Fallback: no token in the link, so we have to ask who they are. -->
+    <div class="state" id="s-form">
+      <div class="icon icon-ask">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--mint)" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22 6 12 13 2 6"/></svg>
+      </div>
+      <h1>Unsubscribe from earmarkIQ emails</h1>
+      <p class="sub">Confirm the address you want removed and we will stop sending marketing email to it.</p>
+      <form class="uf" id="uf" novalidate>
+        <input type="email" class="uf-in" id="uf-email" placeholder="you@example.com" autocomplete="email" inputmode="email">
+        <button type="submit" class="uf-btn" id="uf-btn">Unsubscribe</button>
+      </form>
+      <div class="msg" id="uf-msg"></div>
+      <p class="note">We only use this address to add you to our suppression list. Nothing else.</p>
+    </div>
+
+    <!-- Error -->
+    <div class="state" id="s-error">
+      <div class="icon icon-err">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--coral)" stroke-width="2.5"><line x1="12" y1="8" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/><circle cx="12" cy="12" r="9"/></svg>
+      </div>
+      <h1>We could not complete that</h1>
+      <p class="sub">Something went wrong on our side, so we have not been able to confirm your request. Nothing has changed yet.</p>
+      <p class="sub">Email <a href="mailto:support@earmarkiq.app" style="color:var(--mint);text-decoration:underline">support@earmarkiq.app</a> and we will unsubscribe you by hand, usually the same day. We are required to action it either way.</p>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 earmarkIQ Ltd &middot; <a href="/">Home</a> &middot; <a href="/privacy">Privacy</a> &middot; <a href="/terms">Terms</a></p>
+</footer>
+
+<script>
+(function () {
+  // The suppression list lives in the backend, not here — a static page cannot
+  // hold one, and the send job has to be able to read it. This page is only the
+  // front door: it posts to API_BASE and reports what came back.
+  var API = (window.API_BASE || "").replace(/\/+$/, "");
+  var ENDPOINT = API + "/api/email/unsubscribe";
+
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  var qs = new URLSearchParams(window.location.search);
+  var token = qs.get("token") || qs.get("t") || "";
+  var email = qs.get("email") || qs.get("e") || "";
+
+  function show(id) {
+    var all = document.querySelectorAll(".state");
+    for (var i = 0; i < all.length; i++) { all[i].className = "state"; }
+    document.getElementById(id).className = "state on";
+  }
+
+  function done(addr) {
+    if (addr) {
+      document.getElementById("done-addr").innerHTML =
+        "We have removed <strong>" + addr.replace(/[<>&"]/g, "") +
+        "</strong>. You will not receive any further marketing email from us.";
+    }
+    show("s-done");
+  }
+
+  function submit(payload, addr) {
+    if (!API) { show("s-error"); return; }
+    fetch(ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    }).then(function (r) {
+      // 200 = now suppressed. 409/404 on an already-suppressed or spent token
+      // is still the outcome the reader wants, so treat it as done rather than
+      // telling someone who is already off the list that something failed.
+      if (r.ok || r.status === 404 || r.status === 409 || r.status === 410) {
+        done(addr);
+      } else {
+        show("s-error");
+      }
+    }).catch(function () { show("s-error"); });
+  }
+
+  // ── One click: a signed token in the link needs no further interaction. ──
+  if (token) {
+    submit({ token: token }, email || null);
+    return;
+  }
+
+  // ── Fallback: the link carried an address but no token. Still one click:
+  //    pre-fill it and submit on load rather than making them retype it. ──
+  if (email && EMAIL_RE.test(email)) {
+    submit({ email: email }, email);
+    return;
+  }
+
+  // ── Last resort: the link carried nothing identifying at all. We have no
+  //    choice but to ask. This is the case for every email currently sent. ──
+  show("s-form");
+  if (email) { document.getElementById("uf-email").value = email; }
+
+  var form = document.getElementById("uf");
+  var input = document.getElementById("uf-email");
+  var btn = document.getElementById("uf-btn");
+  var msg = document.getElementById("uf-msg");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var v = input.value.trim();
+    if (!EMAIL_RE.test(v)) {
+      msg.textContent = "Please enter a valid email address.";
+      input.focus();
+      return;
+    }
+    msg.textContent = "";
+    btn.disabled = true;
+    btn.textContent = "Unsubscribing…";
+    submit({ email: v }, v);
+  });
+})();
+</script>
+</body>
+</html>

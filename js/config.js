@@ -8,6 +8,12 @@
 // If the listing URL ever changes, change it here and nowhere else.
 window.APP_STORE_URL = "https://apps.apple.com/gb/app/earmarkiq/id6759535975";
 
+// Backend API base. /unsubscribe posts here; the suppression list lives in
+// the backend because the send job has to be able to read it.
+// MUST match the deployed API origin, and that origin MUST allow
+// https://earmarkiq.app in CORS or the unsubscribe POST is blocked.
+window.API_BASE = "https://web-production-61fc3.up.railway.app";
+
 // Web app destinations — the single source of truth for all outbound web
 // app links. /login, /signup and /download read these at load; no other page
 // hardcodes them. Change the base here and every routing page follows.

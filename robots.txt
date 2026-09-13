@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /bank-callback
+Disallow: /unsubscribe
 Disallow: /budgeting/salary/template
 
 User-agent: GPTBot
