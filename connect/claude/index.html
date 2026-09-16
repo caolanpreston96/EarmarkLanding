@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connect earmarkIQ to Claude</title>
+  <meta name="description" content="Give Claude read-only access to your real spending, subscriptions, income and net worth. The connector address, the five scopes, and how to revoke it." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://earmarkiq.app/connect/claude">
+  <meta name="theme-color" content="#080b12" />
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://earmarkiq.app/connect/claude" />
+  <meta property="og:title" content="Connect earmarkIQ to Claude" />
+  <meta property="og:description" content="Give Claude read-only access to your real spending, subscriptions, income and net worth. The connector address, the five scopes, and how to revoke it." />
+  <meta property="og:image" content="https://earmarkiq.app/api/og?title=Connect%20earmarkIQ%20to%20Claude&subtitle=Read-only%20access%20to%20your%20real%20numbers" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="earmarkIQ" />
+  <meta property="og:locale" content="en_GB" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@earmarkiq" />
+  <meta name="twitter:title" content="Connect earmarkIQ to Claude" />
+  <meta name="twitter:description" content="Give Claude read-only access to your real spending, subscriptions, income and net worth. The connector address, the five scopes, and how to revoke it." />
+  <meta name="twitter:image" content="https://earmarkiq.app/assets/og-image.webp" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "Connect earmarkIQ to Claude",
+      "description": "Give Claude read-only access to your real spending, subscriptions, income and net worth. The connector address, the five scopes, and how to revoke it.",
+      "url": "https://earmarkiq.app/connect/claude",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "earmarkIQ",
+        "url": "https://earmarkiq.app"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "earmarkIQ Ltd",
+        "url": "https://earmarkiq.app"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://earmarkiq.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Connect to your AI",
+          "item": "https://earmarkiq.app/connect"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Claude"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I connect Claude to my bank account?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You do not connect Claude to your bank. You connect your bank to earmarkIQ under Open Banking, then add earmarkIQ Context to Claude as a custom connector using the address https://api.earmarkiq.app/mcp. Claude reads the picture earmarkIQ has already built. It never talks to your bank and never sees your banking credentials."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this work with the free version of Claude?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Custom MCP connectors are a paid-plan feature in Claude, and Context is a Pro feature in earmarkIQ, so you need a paid plan on both sides. Anthropic's own documentation is the authority on which Claude plans include custom connectors."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is earmarkIQ an official Claude integration?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. earmarkIQ Context is built on the Model Context Protocol, which is an open standard, and it works with Claude the way any custom connector does. It is not listed, reviewed, approved or endorsed by Anthropic, and we would not claim otherwise."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Claude spend my money or change anything?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Context contains no tool that writes, moves or changes anything, and a test fails the build if one is added. earmarkIQ connects to your bank under account information services only, and payment initiation is not enabled. Claude can read what you have granted and nothing else."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does Claude do with my financial data once it has it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That is governed by Anthropic's terms, not ours. Read-only describes what Context will do with your data, not what happens to the conversation afterwards. Grant the narrowest scopes that answer your question and read Anthropic's privacy terms before you connect."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I disconnect Claude from earmarkIQ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Either revoke the connection in earmarkIQ under Connected assistants, which stops it on the next request, or remove the connector in Claude, which stops earmarkIQ being called at all. Neither affects your bank connection or your earmarkIQ account."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-62JW90868T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-62JW90868T');
+  </script>
+  <script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --bg:#080b12; --surface:#0f1420; --border:#1e2536; --text:#e2e8f0; --text-dim:#94a3b8; --text-muted:#475569; --mint:#6ee7b7; --mint-dim:rgba(110,231,183,0.12); --blue:#60a5fa; --amber:#fbbf24; --red:#f87171; --purple:#a78bfa; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 17px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(8,11,18,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-weight: 700; font-size: 18px; text-decoration: none; color: var(--text); letter-spacing: -0.02em; }
+    .nav-logo span { color: var(--mint); }
+    .nav-cta { background: var(--mint); color: #080b12; font-weight: 600; font-size: 13px; padding: 8px 18px; border-radius: 8px; text-decoration: none; transition: opacity 0.2s; }
+    .nav-cta:hover { opacity: 0.85; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px 80px; }
+    .hero { padding: 64px 0 12px; }
+    .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
+    .breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--mint); }
+    .hero-tag { display: inline-flex; align-items: center; gap: 8px; background: var(--mint-dim); border: 1px solid rgba(110,231,183,0.25); color: var(--mint); font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 20px; }
+    .live-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--mint); animation: pd 2s ease infinite; }
+    @keyframes pd { 0%,100% { box-shadow: 0 0 0 0 rgba(110,231,183,.4); } 50% { box-shadow: 0 0 0 7px rgba(110,231,183,0); } }
+    h1 { font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(30px, 5vw, 46px); line-height: 1.12; letter-spacing: -0.02em; color: var(--text); margin-bottom: 20px; }
+    h1 em { font-style: italic; color: var(--mint); }
+    h2 { font-family: 'Instrument Serif', Georgia, serif; font-size: 27px; line-height: 1.2; color: var(--text); margin: 48px 0 14px; letter-spacing: -0.01em; }
+    h3 { font-size: 17px; font-weight: 600; color: var(--text); margin: 26px 0 10px; }
+    p { margin-bottom: 18px; color: var(--text-dim); }
+    strong { color: var(--text); font-weight: 600; }
+    a { color: var(--mint); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul.plain { margin: 0 0 18px 22px; color: var(--text-dim); }
+    ul.plain li { margin-bottom: 9px; }
+    hr.divider { border: none; border-top: 1px solid var(--border); margin: 44px 0; }
+
+    ul.reads { list-style: none; margin: 0 0 18px; }
+    ul.reads li { display: flex; gap: 12px; align-items: flex-start; padding: 11px 0; border-bottom: 1px solid rgba(30,37,54,0.5); font-size: 15px; color: var(--text-dim); }
+    ul.reads li:last-child { border-bottom: none; }
+    ul.reads .tick { color: var(--mint); flex-shrink: 0; font-weight: 700; }
+    ul.reads .cross { color: var(--red); flex-shrink: 0; font-weight: 700; }
+
+    .example-q { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--mint); border-radius: 0 8px 8px 0; padding: 12px 16px; margin: 10px 0; }
+
+    .callout { border-radius: 12px; padding: 20px 24px; margin: 24px 0; border: 1px solid; }
+    .callout-mint { border-color: rgba(110,231,183,0.2); background: rgba(110,231,183,0.06); }
+    .callout-amber { border-color: rgba(251,191,36,0.2); background: rgba(251,191,36,0.06); }
+    .callout-blue { border-color: rgba(96,165,250,0.2); background: rgba(96,165,250,0.06); }
+    .callout-label { font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+    .callout-mint .callout-label { color: var(--mint); }
+    .callout-amber .callout-label { color: var(--amber); }
+    .callout-blue .callout-label { color: var(--blue); }
+    .callout p { margin-bottom: 0; }
+    .callout p + p { margin-top: 12px; }
+
+    .layers { margin: 24px 0; }
+    .layer { display: flex; gap: 18px; padding: 20px 0; border-bottom: 1px solid rgba(30,37,54,0.7); }
+    .layer:last-child { border-bottom: none; }
+    .layer-n { flex-shrink: 0; width: 38px; height: 38px; border-radius: 10px; background: var(--mint-dim); border: 1px solid rgba(110,231,183,0.25); color: var(--mint); font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center; margin-top: 3px; }
+    .layer h3 { margin: 0 0 6px; font-size: 16px; }
+    .layer p { margin: 0; font-size: 14.5px; }
+
+    .table-wrap { overflow-x: auto; margin: 24px 0; border-radius: 12px; border: 1px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+    thead { background: var(--surface); }
+    th { padding: 12px 16px; text-align: left; font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 1px solid var(--border); }
+    td { padding: 12px 16px; color: var(--text-dim); border-bottom: 1px solid rgba(30,37,54,0.6); vertical-align: top; }
+    tr:last-child td { border-bottom: none; }
+    .td-name { font-weight: 600; color: var(--text); white-space: nowrap; }
+    .st-live { color: var(--mint); font-weight: 600; white-space: nowrap; }
+    .st-planned { color: var(--amber); font-weight: 600; white-space: nowrap; }
+    .st-no { color: var(--red); font-weight: 600; white-space: nowrap; }
+
+    .steps { counter-reset: step; margin: 20px 0 8px; }
+    .step { display: flex; gap: 16px; margin-bottom: 18px; align-items: flex-start; }
+    .step::before { counter-increment: step; content: counter(step); flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: var(--mint-dim); border: 1px solid rgba(110,231,183,0.25); color: var(--mint); font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; }
+    .step h3 { font-size: 16px; font-weight: 600; color: var(--text); margin: 0 0 2px; }
+    .step p { font-size: 14px; margin-bottom: 0; }
+
+    .faq { margin: 16px 0; }
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 10px; overflow: hidden; }
+    .faq-q { padding: 15px 18px; font-weight: 600; font-size: 15px; color: var(--text); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .faq-q:hover { background: rgba(255,255,255,0.02); }
+    .faq-chevron { color: var(--mint); flex-shrink: 0; transition: transform 0.2s; font-size: 18px; }
+    .faq-a { padding: 0 18px 15px; color: var(--text-dim); font-size: 14px; line-height: 1.7; display: none; }
+    .faq-item.open .faq-a { display: block; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+
+    .related { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 22px 0 0; }
+    @media (max-width: 620px) { .related { grid-template-columns: 1fr; } }
+    .related a { display: block; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; text-decoration: none; transition: border-color 0.2s, transform 0.25s; }
+    .related a:hover { border-color: rgba(110,231,183,0.4); text-decoration: none; transform: translateY(-2px); }
+    .related-t { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+    .related-d { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+
+    .pilot-block { background: linear-gradient(135deg, rgba(110,231,183,0.08), rgba(96,165,250,0.05)); border: 1px solid rgba(110,231,183,0.2); border-radius: 16px; padding: 32px; text-align: center; margin: 44px 0; }
+    .pilot-block h2 { margin-top: 0; font-size: 24px; }
+    .pilot-block p { max-width: 440px; margin: 0 auto 22px; }
+    .pilot-form { display: flex; gap: 10px; max-width: 440px; margin: 0 auto; }
+    .pilot-in { flex: 1; min-width: 0; padding: 14px 20px; background: var(--bg); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 15px; outline: none; transition: border-color 0.2s; }
+    .pilot-in::placeholder { color: var(--text-muted); }
+    .pilot-in:focus { border-color: var(--mint); }
+    .pilot-btn { padding: 14px 24px; background: var(--mint); color: #080b12; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 700; border: none; border-radius: 10px; cursor: pointer; transition: opacity 0.2s; white-space: nowrap; }
+    .pilot-btn:hover { opacity: 0.85; }
+    .pilot-btn:disabled { opacity: 0.6; cursor: default; }
+    .pilot-msg { font-size: 13px; margin-top: 10px; min-height: 20px; }
+    .pilot-msg.err { color: var(--red); }
+    .pilot-success { display: none; font-size: 17px; font-weight: 700; color: var(--mint); padding: 10px 0 0; }
+    .pilot-sub { font-size: 13px; color: var(--text-muted); margin-top: 12px; margin-bottom: 0; }
+    @media (max-width: 480px) { .pilot-form { flex-direction: column; } }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; font-size: 13px; color: var(--text-muted); }
+    footer a { color: var(--text-muted); }
+    footer a:hover { color: var(--mint); }
+    .footer-note { max-width: 760px; margin: 10px auto 0; font-size: 12px; line-height: 1.7; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">earmark<span>IQ</span></a>
+  <a href="/connect" class="nav-cta">Connect to your AI &rarr;</a>
+</nav>
+
+<div class="wrap">
+<div class="hero">
+  <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a> <span>&rsaquo;</span> <a href="/connect">Connect to your AI</a> <span>&rsaquo;</span> <span>Claude</span></nav>
+  <div class="hero-tag"><span class="live-dot"></span>Verified end to end</div>
+  <h1>Connect earmarkIQ to <em>Claude</em>.</h1>
+  <p>Claude is the assistant we have tested the whole way through, from authorisation to answer. Once connected, it can answer questions about your actual spending, subscriptions, income and net worth &mdash; and it cannot change any of them.</p>
+</div>
+
+<div class="callout callout-blue">
+  <div class="callout-label">What you need</div>
+  <p><strong>An earmarkIQ account on Pro</strong>, with at least one bank connected, and an assistant that supports custom MCP connectors. Context is a Pro feature; it is not on the free tier or on Plus.</p>
+</div>
+
+<h2>How to connect it</h2>
+<div class="steps">
+  <div class="step"><div><h3>Open Claude's connector settings</h3><p>Custom MCP connectors live in Claude's settings on its paid plans. Look for <strong>Connectors</strong>, sometimes shown as <strong>Custom connectors</strong>. The exact location moves between releases and differs across web, desktop and mobile &mdash; <a href="https://support.anthropic.com" rel="nofollow" target="_blank">Anthropic's own documentation</a> is the authority if what you see does not match.</p></div></div>
+  <div class="step"><div><h3>Add earmarkIQ Context as a custom connector</h3><p>Paste the address below. It is the same address for every user &mdash; it is not a secret and not a token.</p></div></div>
+  <div class="step"><div><h3>Authorise, and choose your scopes</h3><p>Claude will send you to earmarkIQ to sign in. You will see the five scopes listed and can grant them individually. Approve only what you want Claude to read.</p></div></div>
+  <div class="step"><div><h3>Ask it something</h3><p>If it is working, Claude will answer from your real figures rather than asking you for them.</p></div></div>
+</div>
+
+<h2>The connector address</h2>
+<p>This is the same for everyone. It is not a secret and it is not a token &mdash; authorisation happens in the next step, and the connection is bound to your account then.</p>
+<div class="example-q">https://api.earmarkiq.app/mcp</div>
+
+<div class="callout callout-blue">
+  <div class="callout-label">If your assistant asks for a token instead</div>
+  <p>Some clients cannot do the browser sign-in and ask for a bearer token instead. You can create one in earmarkIQ under Connected assistants. Manually created tokens expire after 90 days, and are shown once &mdash; if you lose one, revoke it and create another.</p>
+</div>
+
+<h2>What to grant</h2>
+<p>Five scopes, each granted and revoked on its own. You do not have to grant all of them, and you can change your mind later without reconnecting.</p>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Scope</th><th>What it lets the assistant read</th></tr></thead>
+  <tbody>
+    <tr><td class="td-name">Spending</td><td>Category totals and how they move over time &mdash; groceries, transport, eating out.</td></tr>
+    <tr><td class="td-name">Transactions</td><td>Individual transactions: merchant, amount, date, category.</td></tr>
+    <tr><td class="td-name">Balances &amp; assets</td><td>Account balances, property values and the net worth figure built from them.</td></tr>
+    <tr><td class="td-name">Income</td><td>Pay, when it lands, and how regular it is.</td></tr>
+    <tr><td class="td-name">Subscriptions</td><td>Recurring payments, what they cost, and price rises.</td></tr>
+  </tbody>
+</table>
+</div>
+<p>Transaction history goes back 12 months by default and is capped at 24 months. There is no setting that lifts the cap.</p>
+
+<h3>What Claude can then answer</h3>
+<div class="example-q">What did I spend on groceries last month, and is that normal for me?</div>
+<div class="example-q">Which subscriptions have gone up in price since January?</div>
+<div class="example-q">How much is genuinely spare after my bills and savings?</div>
+
+<h2>What it cannot do</h2>
+<p>Context is read-only by construction rather than by policy. There is no tool in it that writes, moves or changes anything, because no such tool has been built &mdash; and a test fails the build if one is ever added. That is a stronger guarantee than a setting you could switch off by accident.</p>
+<ul class="reads">
+  <li><span class="cross">&#10007;</span><span><strong>It cannot move money.</strong> earmarkIQ connects to your bank under account information services only. Payment initiation is not enabled.</span></li>
+  <li><span class="cross">&#10007;</span><span><strong>It cannot change your earmarkIQ data.</strong> No budgets, no goals, no categories, no edits of any kind.</span></li>
+  <li><span class="cross">&#10007;</span><span><strong>It cannot reach your bank.</strong> Your banking credentials never leave your bank, and the assistant never sees them.</span></li>
+  <li><span class="cross">&#10007;</span><span><strong>It cannot give you financial advice.</strong> earmarkIQ is not authorised by the Financial Conduct Authority. It shows you your own numbers; what you do with them is your decision.</span></li>
+</ul>
+
+<div class="callout callout-amber">
+  <div class="callout-label">What read-only does not cover</div>
+  <p>Read-only describes what Context can do to your data. It says nothing about what happens to the conversation once your data is inside the assistant. Whatever you ask Claude, ChatGPT or any other assistant is handled under <em>that provider's</em> privacy terms, not ours &mdash; and may be retained or reviewed according to their policy, not this one.</p>
+  <p>Grant the narrowest scopes that answer your question, and read the assistant provider's own terms before connecting anything. We would rather say that plainly than let read-only sound like a privacy guarantee it is not.</p>
+</div>
+
+<h2>The access log</h2>
+<p>Every request an assistant makes is recorded and readable by you in the app: which tool ran, which scope it used, and when. It is not a summary or a sample &mdash; it is the list.</p>
+<p>That matters more than any promise on a marketing page. A read-only claim you cannot audit is a claim you are taking on trust; a log you can open yourself is a claim you can check. If you connect an assistant and later wonder what it looked at, the answer is already written down.</p>
+
+<h2>How to revoke it</h2>
+<p>Two routes, both immediate:</p>
+<ul class="plain">
+  <li><strong>In earmarkIQ</strong> &mdash; open Connected assistants, and revoke the connection or narrow its scopes. It stops working on the next request.</li>
+  <li><strong>In your assistant</strong> &mdash; remove the connector. earmarkIQ stops being called at all.</li>
+</ul>
+<p>Revoking access to Context does not touch your bank connection or your earmarkIQ account. It only closes the door the assistant was reading through.</p>
+
+<h2>Questions</h2>
+<div class="faq">
+  <div class="faq-item"><div class="faq-q">How do I connect Claude to my bank account?<span class="faq-chevron">&#9662;</span></div><div class="faq-a">You do not connect Claude to your bank. You connect your bank to earmarkIQ under Open Banking, then add earmarkIQ Context to Claude as a custom connector using the address https://api.earmarkiq.app/mcp. Claude reads the picture earmarkIQ has already built. It never talks to your bank and never sees your banking credentials.</div></div>
+  <div class="faq-item"><div class="faq-q">Does this work with the free version of Claude?<span class="faq-chevron">&#9662;</span></div><div class="faq-a">Custom MCP connectors are a paid-plan feature in Claude, and Context is a Pro feature in earmarkIQ, so you need a paid plan on both sides. Anthropic's own documentation is the authority on which Claude plans include custom connectors.</div></div>
+  <div class="faq-item"><div class="faq-q">Is earmarkIQ an official Claude integration?<span class="faq-chevron">&#9662;</span></div><div class="faq-a">No. earmarkIQ Context is built on the Model Context Protocol, which is an open standard, and it works with Claude the way any custom connector does. It is not listed, reviewed, approved or endorsed by Anthropic, and we would not claim otherwise.</div></div>
+  <div class="faq-item"><div class="faq-q">Can Claude spend my money or change anything?<span class="faq-chevron">&#9662;</span></div><div class="faq-a">No. Context contains no tool that writes, moves or changes anything, and a test fails the build if one is added. earmarkIQ connects to your bank under account information services only, and payment initiation is not enabled. Claude can read what you have granted and nothing else.</div></div>
+  <div class="faq-item"><div class="faq-q">What does Claude do with my financial data once it has it?<span class="faq-chevron">&#9662;</span></div><div class="faq-a">That is governed by Anthropic's terms, not ours. Read-only describes what Context will do with your data, not what happens to the conversation afterwards. Grant the narrowest scopes that answer your question and read Anthropic's privacy terms before you connect.</div></div>
+  <div class="faq-item"><div class="faq-q">How do I disconnect Claude from earmarkIQ?<span class="faq-chevron">&#9662;</span></div><div class="faq-a">Either revoke the connection in earmarkIQ under Connected assistants, which stops it on the next request, or remove the connector in Claude, which stops earmarkIQ being called at all. Neither affects your bank connection or your earmarkIQ account.</div></div>
+</div>
+
+<div class="related">
+  <a href="/connect/any-assistant"><div class="related-t">Any other MCP assistant</div><div class="related-d">The same address and flow, for clients we have not individually verified.</div></a>
+  <a href="/context"><div class="related-t">How the guarantee is enforced</div><div class="related-d">Why read-only is a property of the build rather than a setting.</div></a>
+</div>
+
+</div>
+
+<footer>
+  <p>&copy; 2026 earmarkIQ Ltd &middot; <a href="/">Home</a> &middot; <a href="/connect">Connect to your AI</a> &middot; <a href="/context">Context</a> &middot; <a href="/blog">Blog</a> &middot; <a href="/privacy">Privacy Policy</a> &middot; <a href="/terms">Terms</a> &middot; <a href="mailto:hello@earmarkiq.app">Contact</a></p>
+  <p style="margin-top:8px">earmarkIQ is acting as an agent of Finexer Ltd (FRN 925695), which is authorised by the Financial Conduct Authority as an Authorised Payment Institution. <a href="/terms#regulatory-status">Read the full authorisation statement</a>. <a href="https://register.fca.org.uk/s/firm?id=001Sk000010irOJIAY" rel="nofollow" target="_blank">Verify Finexer on the FCA register</a>. Content on this site is for guidance only and does not constitute financial advice.</p>
+  <p class="footer-note">Capability statements on this page describe earmarkIQ as at September 2026. earmarkIQ Context is live and read-only. Claude is the assistant we have verified end to end; other MCP-capable assistants use the same open standard and are expected to work, but we have not verified each one. earmarkIQ is not authorised by the Financial Conduct Authority and does not give financial advice. earmarkIQ does not initiate payments.</p>
+</footer>
+<script>
+document.querySelectorAll('.faq-q').forEach(function (q) {
+  q.addEventListener('click', function () { q.parentElement.classList.toggle('open'); });
+});
+</script>
+</body>
+</html>
