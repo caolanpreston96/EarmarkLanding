@@ -3,7 +3,8 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/blog/iran-war-uk-inflation-cost-of-living-2026", "destination": "/news/iran-war-uk-inflation-cost-of-living-2026", "permanent": true }
+    { "source": "/blog/iran-war-uk-inflation-cost-of-living-2026", "destination": "/news/iran-war-uk-inflation-cost-of-living-2026", "permanent": true },
+    { "source": "/r/:slug", "destination": "https://api.earmarkiq.app/r/:slug", "statusCode": 302 }
   ],
   "headers": [
     {
